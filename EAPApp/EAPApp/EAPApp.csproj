@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class13.cs" />
-    <Compile Include="Class5.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
