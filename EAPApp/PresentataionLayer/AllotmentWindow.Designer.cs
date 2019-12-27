@@ -68,6 +68,7 @@
             this.btnCandidate.TabIndex = 2;
             this.btnCandidate.Text = "CANDIDATE";
             this.btnCandidate.UseVisualStyleBackColor = true;
+            this.btnCandidate.Click += new System.EventHandler(this.btnCandidate_Click);
             // 
             // btnAdmin
             // 
