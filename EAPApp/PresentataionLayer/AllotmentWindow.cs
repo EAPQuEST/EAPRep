@@ -23,7 +23,7 @@ namespace PresentataionLayer
             dynamicPanel.Location = new System.Drawing.Point(300, 190);
             dynamicPanel.Name = "Panel1";
             dynamicPanel.Size = new System.Drawing.Size(450, 350);
-            dynamicPanel.BackColor = Color.LightBlue;
+            dynamicPanel.BackColor = Color.AntiqueWhite;
             Label lblheader = new Label();
             lblheader.Location = new Point(150, 20);
             lblheader.Size = new Size(350, 350);
