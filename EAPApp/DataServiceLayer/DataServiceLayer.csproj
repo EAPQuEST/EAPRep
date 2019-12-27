@@ -79,12 +79,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataLayer\EapDSL.cs" />
     <Compile Include="Helper\DatabaseHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataLayer\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Database\EngineeringAllotmentDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
