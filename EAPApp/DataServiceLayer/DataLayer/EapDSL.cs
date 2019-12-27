@@ -14,7 +14,7 @@ namespace DataServiceLayer.DataLayer
 {
     public class EapDSL
     {
-        public static int CollegeDetailsInsert(CollegeDetails collegeDetails)
+        public static int CollegeDetailsInsert(CollegeDetails collegeDetails)  //college insert
         {
             int output = 0;
             string sql = "";
