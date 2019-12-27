@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EAPApp
-{ 
-
-    //going to update 
-    class SukrithaTestClass
+namespace BusinessLayer
+{
+    class AsniyaTestClass1
     {
     }
 }
