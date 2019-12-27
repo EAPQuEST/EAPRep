@@ -42,12 +42,12 @@
             this.lblCollegeName = new System.Windows.Forms.Label();
             this.lblCollegeDetails = new System.Windows.Forms.Label();
             this.pnlCourseDetails = new System.Windows.Forms.Panel();
+            this.btnAddCollege = new System.Windows.Forms.Button();
             this.clbCoursesAvailable = new System.Windows.Forms.CheckedListBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.lblCourseDetails = new System.Windows.Forms.Label();
             this.lblCourseAvailable = new System.Windows.Forms.Label();
             this.lblCourseSeatsAvailable = new System.Windows.Forms.Label();
-            this.btnAddCollege = new System.Windows.Forms.Button();
             this.tlsAddCollege = new System.Windows.Forms.ToolStrip();
             this.tlsBtnHomeAdd = new System.Windows.Forms.ToolStripButton();
             this.pnlCollegeDetails.SuspendLayout();
@@ -185,6 +185,16 @@
             this.pnlCourseDetails.Size = new System.Drawing.Size(427, 406);
             this.pnlCourseDetails.TabIndex = 5;
             // 
+            // btnAddCollege
+            // 
+            this.btnAddCollege.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCollege.Location = new System.Drawing.Point(280, 352);
+            this.btnAddCollege.Name = "btnAddCollege";
+            this.btnAddCollege.Size = new System.Drawing.Size(131, 33);
+            this.btnAddCollege.TabIndex = 13;
+            this.btnAddCollege.Text = "INSERT";
+            this.btnAddCollege.UseVisualStyleBackColor = true;
+            // 
             // clbCoursesAvailable
             // 
             this.clbCoursesAvailable.FormattingEnabled = true;
@@ -203,7 +213,8 @@
             "Architectural Engineering or Architecture",
             "Aerospace Engineering",
             "Genetic Engineering",
-            "Ocean and Marine Engineering"});
+            "Ocean and Marine Engineering",
+            "Industrial Engineering"});
             this.clbCoursesAvailable.Location = new System.Drawing.Point(175, 97);
             this.clbCoursesAvailable.Name = "clbCoursesAvailable";
             this.clbCoursesAvailable.Size = new System.Drawing.Size(236, 199);
@@ -245,16 +256,6 @@
             this.lblCourseSeatsAvailable.Size = new System.Drawing.Size(131, 23);
             this.lblCourseSeatsAvailable.TabIndex = 8;
             this.lblCourseSeatsAvailable.Text = "SEATS AVAILABLE          :";
-            // 
-            // btnAddCollege
-            // 
-            this.btnAddCollege.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCollege.Location = new System.Drawing.Point(280, 352);
-            this.btnAddCollege.Name = "btnAddCollege";
-            this.btnAddCollege.Size = new System.Drawing.Size(131, 33);
-            this.btnAddCollege.TabIndex = 13;
-            this.btnAddCollege.Text = "INSERT";
-            this.btnAddCollege.UseVisualStyleBackColor = true;
             // 
             // tlsAddCollege
             // 
