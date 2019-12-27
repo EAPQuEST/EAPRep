@@ -258,9 +258,22 @@ namespace PresentataionLayer
 
         private void btnAdminLogin1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Administrator administrator = new Administrator();
             administrator.Show();
            
+        }
+
+        private void btnNewUser1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCandidateLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Candidate candidate = new Candidate();
+            candidate.Show();
         }
     }
 }

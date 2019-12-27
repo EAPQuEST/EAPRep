@@ -91,18 +91,20 @@ namespace DataServiceLayer.DataLayer
             SqlCommand cmd = null;
             try
             {
-                sql = "insert into candidate_details(candidate_id,candidate_name,candidate_dob,candidate_address,candidate_10th_school,candidate_10th_percentage,candidate_12th_school,candidate_12th_percentage,candidate_physics,candidate_chemistry,candidate_maths) values(";
+                sql = "insert into candidate_details(candidate_id,candidate_name,candidate_dob,candidate_address," +
+                    "candidate_10th_school,candidate_10th_percentage,candidate_12th_school,candidate_12th_percentage," +
+                    "candiate_physics,candiate_chemistry,candiate_maths) values(";
                 sql = sql + "'" + candidateDetails.CandidateId + "',";
                 sql = sql + "'" + candidateDetails.CandidateName + "',";
                 sql = sql + "'" + candidateDetails.CandidateDOB + "',";
                 sql = sql + "'" + candidateDetails.CandidateAddress + "',";
                 sql = sql + "'" + candidateDetails.CandidateSchoolName10 + "',";
-                sql = sql + "" + candidateDetails.Candidatemark10 + ",";
+                sql = sql  + candidateDetails.Candidatemark10 + ",";
                 sql = sql + "'" + candidateDetails.CandidateSchoolName12 + "',";
-                sql = sql + "" + candidateDetails.Candidatemark12 + ",";
-                sql = sql + "" + candidateDetails.CandidatePhysics + ",";
-                sql = sql + "" + candidateDetails.CandidateChemistry + ",";
-                sql = sql + "" + candidateDetails.CandidateMaths + ")";
+                sql = sql  + candidateDetails.Candidatemark12 + ",";
+                sql = sql + candidateDetails.CandidatePhysics + ",";
+                sql = sql  + candidateDetails.CandidateChemistry + ",";
+                sql = sql  + candidateDetails.CandidateMaths + ")";
 
 
             }

@@ -86,6 +86,12 @@
     <Compile Include="AllotmentWindow.Designer.cs">
       <DependentUpon>AllotmentWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Candidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate.Designer.cs">
+      <DependentUpon>Candidate.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteCollege.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllotmentWindow.resx">
       <DependentUpon>AllotmentWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidate.resx">
+      <DependentUpon>Candidate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteCollege.resx">
       <DependentUpon>DeleteCollege.cs</DependentUpon>

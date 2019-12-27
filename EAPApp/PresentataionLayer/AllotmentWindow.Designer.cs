@@ -42,11 +42,12 @@
             this.lblCollegePassword = new System.Windows.Forms.Label();
             this.lblCollegeUsername = new System.Windows.Forms.Label();
             this.tbcAdmin = new System.Windows.Forms.TabPage();
-            this.btnAdminLogin1 = new System.Windows.Forms.Button();
-            this.lblAdminuserName = new System.Windows.Forms.Label();
-            this.lblAdminPassword = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblAdminPassword = new System.Windows.Forms.Label();
+            this.lblAdminuserName = new System.Windows.Forms.Label();
+            this.btnAdminLogin1 = new System.Windows.Forms.Button();
+            this.btnCandidateLogin = new System.Windows.Forms.Button();
             this.tbcLogin.SuspendLayout();
             this.tbcCandidate.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -81,6 +82,7 @@
             // 
             // tbcCandidate
             // 
+            this.tbcCandidate.Controls.Add(this.btnCandidateLogin);
             this.tbcCandidate.Controls.Add(this.toolStrip1);
             this.tbcCandidate.Controls.Add(this.btnNewUser1);
             this.tbcCandidate.Controls.Add(this.btnExistingUser1);
@@ -121,6 +123,7 @@
             this.btnNewUser1.TabIndex = 2;
             this.btnNewUser1.Text = "New User";
             this.btnNewUser1.UseVisualStyleBackColor = true;
+            this.btnNewUser1.Click += new System.EventHandler(this.btnNewUser1_Click);
             // 
             // btnExistingUser1
             // 
@@ -203,24 +206,19 @@
             this.tbcAdmin.Text = "Admin";
             this.tbcAdmin.UseVisualStyleBackColor = true;
             // 
-            // btnAdminLogin1
+            // textBox2
             // 
-            this.btnAdminLogin1.Location = new System.Drawing.Point(389, 301);
-            this.btnAdminLogin1.Name = "btnAdminLogin1";
-            this.btnAdminLogin1.Size = new System.Drawing.Size(109, 33);
-            this.btnAdminLogin1.TabIndex = 0;
-            this.btnAdminLogin1.Text = "Login";
-            this.btnAdminLogin1.UseVisualStyleBackColor = true;
-            this.btnAdminLogin1.Click += new System.EventHandler(this.btnAdminLogin1_Click);
+            this.textBox2.Location = new System.Drawing.Point(348, 208);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(207, 26);
+            this.textBox2.TabIndex = 4;
             // 
-            // lblAdminuserName
+            // textBox1
             // 
-            this.lblAdminuserName.AutoSize = true;
-            this.lblAdminuserName.Location = new System.Drawing.Point(214, 134);
-            this.lblAdminuserName.Name = "lblAdminuserName";
-            this.lblAdminuserName.Size = new System.Drawing.Size(85, 19);
-            this.lblAdminuserName.TabIndex = 1;
-            this.lblAdminuserName.Text = "User Name";
+            this.textBox1.Location = new System.Drawing.Point(348, 134);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(207, 26);
+            this.textBox1.TabIndex = 3;
             // 
             // lblAdminPassword
             // 
@@ -231,19 +229,34 @@
             this.lblAdminPassword.TabIndex = 2;
             this.lblAdminPassword.Text = "Password";
             // 
-            // textBox1
+            // lblAdminuserName
             // 
-            this.textBox1.Location = new System.Drawing.Point(348, 134);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 26);
-            this.textBox1.TabIndex = 3;
+            this.lblAdminuserName.AutoSize = true;
+            this.lblAdminuserName.Location = new System.Drawing.Point(214, 134);
+            this.lblAdminuserName.Name = "lblAdminuserName";
+            this.lblAdminuserName.Size = new System.Drawing.Size(85, 19);
+            this.lblAdminuserName.TabIndex = 1;
+            this.lblAdminuserName.Text = "User Name";
             // 
-            // textBox2
+            // btnAdminLogin1
             // 
-            this.textBox2.Location = new System.Drawing.Point(348, 208);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(207, 26);
-            this.textBox2.TabIndex = 4;
+            this.btnAdminLogin1.Location = new System.Drawing.Point(389, 301);
+            this.btnAdminLogin1.Name = "btnAdminLogin1";
+            this.btnAdminLogin1.Size = new System.Drawing.Size(109, 33);
+            this.btnAdminLogin1.TabIndex = 0;
+            this.btnAdminLogin1.Text = "Login";
+            this.btnAdminLogin1.UseVisualStyleBackColor = true;
+            this.btnAdminLogin1.Click += new System.EventHandler(this.btnAdminLogin1_Click);
+            // 
+            // btnCandidateLogin
+            // 
+            this.btnCandidateLogin.Location = new System.Drawing.Point(299, 407);
+            this.btnCandidateLogin.Name = "btnCandidateLogin";
+            this.btnCandidateLogin.Size = new System.Drawing.Size(114, 53);
+            this.btnCandidateLogin.TabIndex = 4;
+            this.btnCandidateLogin.Text = "LOGIN";
+            this.btnCandidateLogin.UseVisualStyleBackColor = true;
+            this.btnCandidateLogin.Click += new System.EventHandler(this.btnCandidateLogin_Click);
             // 
             // AllotmentWindow
             // 
@@ -292,5 +305,6 @@
         private System.Windows.Forms.Label lblAdminPassword;
         private System.Windows.Forms.Label lblAdminuserName;
         private System.Windows.Forms.Button btnAdminLogin1;
+        private System.Windows.Forms.Button btnCandidateLogin;
     }
 }
