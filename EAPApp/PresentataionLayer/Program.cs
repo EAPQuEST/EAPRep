@@ -17,7 +17,7 @@ namespace PresentataionLayer
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
            // Application.Run(new Form1());
-            Application.Run(new Administrator());
+            Application.Run(new AllotmentWindow());
         }
     }
 }
