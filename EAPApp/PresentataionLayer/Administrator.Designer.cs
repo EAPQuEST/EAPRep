@@ -47,7 +47,7 @@
             this.addCollegeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(886, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(957, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -108,7 +108,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PresentataionLayer.Properties.Resources.Kerala_Government_Emblem1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(886, 535);
+            this.ClientSize = new System.Drawing.Size(957, 600);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.IsMdiContainer = true;

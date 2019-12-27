@@ -11,10 +11,7 @@ namespace DataServiceLayer.DataLayer
 {
     public class EapDSL
     {
-        public static int CollegeDetailsInsert(CollegeDetails collegeDetails)
-        {
-
-        }
+        
 
     }
 }
