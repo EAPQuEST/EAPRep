@@ -1,0 +1,1 @@
+﻿ insert into college_details(college_id,college_name,total_seats,college_address,college_phone) values('ggfrr4','rgtrgtrgtr',45,'ffthrthhh','345455')
