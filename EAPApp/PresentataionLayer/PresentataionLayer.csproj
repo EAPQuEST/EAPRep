@@ -68,6 +68,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllotmentWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllotmentWindow.Designer.cs">
+      <DependentUpon>AllotmentWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="EngineeringAllotmentDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -81,6 +87,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AllotmentWindow.resx">
+      <DependentUpon>AllotmentWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
