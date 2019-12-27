@@ -25,7 +25,7 @@ namespace PresentataionLayer
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            Panel dynamicPanel = new Panel();
+            Panel dynamicPanel = new Panel();  //panel
             dynamicPanel.Location = new System.Drawing.Point(300, 190);
             dynamicPanel.Name = "Panel1";
             dynamicPanel.Size = new System.Drawing.Size(450, 350);
