@@ -40,9 +40,9 @@ namespace DataTransactionObject.DTO
             set { collegeAddress = value; }
         }
 
-        private string collegePhone;
+        private long collegePhone;
 
-        public string CollegePhone
+        public long CollegePhone
         {
             get { return collegePhone; }
             set { collegePhone = value; }
