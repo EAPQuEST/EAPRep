@@ -58,6 +58,7 @@
             this.btnCollge.TabIndex = 3;
             this.btnCollge.Text = "COLLEGE";
             this.btnCollge.UseVisualStyleBackColor = true;
+            this.btnCollge.Click += new System.EventHandler(this.btnCollge_Click);
             // 
             // btnCandidate
             // 
@@ -68,6 +69,7 @@
             this.btnCandidate.TabIndex = 2;
             this.btnCandidate.Text = "CANDIDATE";
             this.btnCandidate.UseVisualStyleBackColor = true;
+            this.btnCandidate.Click += new System.EventHandler(this.btnCandidate_Click);
             // 
             // btnAdmin
             // 
