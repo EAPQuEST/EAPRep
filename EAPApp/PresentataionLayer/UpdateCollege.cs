@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PresentataionLayer
 {
-    public partial class Form1 : Form
+    public partial class UpdateCollege : Form
     {
-        public Form1()
+        public UpdateCollege()
         {
             InitializeComponent();
         }
