@@ -1,1 +1,1 @@
-﻿insert into candidate_details(candidate_id,candidate_name,candidate_dob,candidate_address,candidate_10th_school,candidate_10th_percentage,candidate_12th_school,candidate_12th_percentage,candiate_physics,candiate_chemistry,candiate_maths) values('gvy','vgy','Friday, December 27, 2019','vgy','vgy',89,'vgy',65,87,45,78)
+﻿

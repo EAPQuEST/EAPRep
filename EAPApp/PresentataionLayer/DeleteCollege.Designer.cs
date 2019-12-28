@@ -30,12 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteCollege));
             this.tlsDeleteCollege = new System.Windows.Forms.ToolStrip();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblDeleteId = new System.Windows.Forms.Label();
-            this.dgvDeleteView = new System.Windows.Forms.DataGridView();
-            this.txtDelete = new System.Windows.Forms.TextBox();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.tlsBtnHomeDelete = new System.Windows.Forms.ToolStripButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.txtDelete = new System.Windows.Forms.TextBox();
+            this.dgvDeleteView = new System.Windows.Forms.DataGridView();
+            this.lblDeleteId = new System.Windows.Forms.Label();
+            this.lblMessage = new System.Windows.Forms.Label();
             this.tlsDeleteCollege.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeleteView)).BeginInit();
@@ -52,9 +53,19 @@
             this.tlsDeleteCollege.TabIndex = 2;
             this.tlsDeleteCollege.Text = "toolStrip1";
             // 
+            // tlsBtnHomeDelete
+            // 
+            this.tlsBtnHomeDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tlsBtnHomeDelete.Image = ((System.Drawing.Image)(resources.GetObject("tlsBtnHomeDelete.Image")));
+            this.tlsBtnHomeDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tlsBtnHomeDelete.Name = "tlsBtnHomeDelete";
+            this.tlsBtnHomeDelete.Size = new System.Drawing.Size(23, 22);
+            this.tlsBtnHomeDelete.Text = "Home";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblMessage);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.txtDelete);
             this.panel1.Controls.Add(this.dgvDeleteView);
@@ -64,15 +75,25 @@
             this.panel1.Size = new System.Drawing.Size(861, 431);
             this.panel1.TabIndex = 3;
             // 
-            // lblDeleteId
+            // btnDelete
             // 
-            this.lblDeleteId.AutoSize = true;
-            this.lblDeleteId.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeleteId.Location = new System.Drawing.Point(60, 33);
-            this.lblDeleteId.Name = "lblDeleteId";
-            this.lblDeleteId.Size = new System.Drawing.Size(171, 23);
-            this.lblDeleteId.TabIndex = 2;
-            this.lblDeleteId.Text = "ENTER COLLEGE ID/NAME     : ";
+            this.btnDelete.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(643, 19);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(109, 50);
+            this.btnDelete.TabIndex = 5;
+            this.btnDelete.Text = "DELETE";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // txtDelete
+            // 
+            this.txtDelete.Location = new System.Drawing.Point(316, 35);
+            this.txtDelete.Name = "txtDelete";
+            this.txtDelete.Size = new System.Drawing.Size(221, 20);
+            this.txtDelete.TabIndex = 4;
+            this.txtDelete.TextChanged += new System.EventHandler(this.txtDelete_TextChanged);
             // 
             // dgvDeleteView
             // 
@@ -81,33 +102,25 @@
             this.dgvDeleteView.Name = "dgvDeleteView";
             this.dgvDeleteView.Size = new System.Drawing.Size(858, 369);
             this.dgvDeleteView.TabIndex = 3;
+            this.dgvDeleteView.SelectionChanged += new System.EventHandler(this.dgvDeleteView_SelectionChanged);
             // 
-            // txtDelete
+            // lblDeleteId
             // 
-            this.txtDelete.Location = new System.Drawing.Point(316, 35);
-            this.txtDelete.Name = "txtDelete";
-            this.txtDelete.Size = new System.Drawing.Size(221, 20);
-            this.txtDelete.TabIndex = 4;
+            this.lblDeleteId.AutoSize = true;
+            this.lblDeleteId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeleteId.Location = new System.Drawing.Point(60, 33);
+            this.lblDeleteId.Name = "lblDeleteId";
+            this.lblDeleteId.Size = new System.Drawing.Size(270, 20);
+            this.lblDeleteId.TabIndex = 2;
+            this.lblDeleteId.Text = "ENTER COLLEGE ID/NAME     : ";
             // 
-            // btnDelete
+            // lblMessage
             // 
-            this.btnDelete.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Uighur", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(643, 19);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(96, 50);
-            this.btnDelete.TabIndex = 5;
-            this.btnDelete.Text = "DELETE";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // tlsBtnHomeDelete
-            // 
-            this.tlsBtnHomeDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tlsBtnHomeDelete.Image = ((System.Drawing.Image)(resources.GetObject("tlsBtnHomeDelete.Image")));
-            this.tlsBtnHomeDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tlsBtnHomeDelete.Name = "tlsBtnHomeDelete";
-            this.tlsBtnHomeDelete.Size = new System.Drawing.Size(23, 22);
-            this.tlsBtnHomeDelete.Text = "Home";
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(51, 17);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(0, 13);
+            this.lblMessage.TabIndex = 6;
             // 
             // DeleteCollege
             // 
@@ -136,5 +149,6 @@
         private System.Windows.Forms.TextBox txtDelete;
         private System.Windows.Forms.DataGridView dgvDeleteView;
         private System.Windows.Forms.Label lblDeleteId;
+        private System.Windows.Forms.Label lblMessage;
     }
 }

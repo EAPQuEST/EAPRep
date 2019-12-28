@@ -54,8 +54,7 @@ namespace PresentataionLayer
                     {
                         collegeDetails.CourseName= (string)clbCoursesAvailable.Items[i];
                         outputcourse = EapBL.CollegeCourseInsert(collegeDetails);
-                        //string str = (string)clbCoursesAvailable.Items[i];
-                        //MessageBox.Show(str);
+                        
                     }
                 }
 

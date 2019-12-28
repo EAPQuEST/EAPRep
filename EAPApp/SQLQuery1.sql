@@ -1,1 +1,1 @@
-﻿insert into college_coures(collegeid,courseid)values('334d',( select course_id from course_details where course_name='Civil Engineering' ))
+﻿update college_details set college_name ='ttytf',total_seats ='10',college_address ='huhk',college_phone =852 where college_id = '665465'
