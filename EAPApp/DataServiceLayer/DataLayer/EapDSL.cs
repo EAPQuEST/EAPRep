@@ -57,11 +57,13 @@ namespace DataServiceLayer.DataLayer
             SqlCommand cmd = null;
             try
             {
-                sql = "insert into course_details(course_id,course_name,course_seats) values(";
+                string sqltmp = "select course_id from course_details where course_name='" + collegeDetails.CourseName + "'";
+                sql = "insert into college_coures(collegeid,courseid) values(";
 
-                sql = sql + "'" + collegeDetails.CourseId + "',";
-                sql = sql + "'" + collegeDetails.CourseName + "',";
-                sql = sql + "" + collegeDetails.CourseSeat+ ")";
+                sql = sql + "'" + collegeDetails.CollegeID + "',";
+                //sql = sql + "'" + collegeDetails.CourseId + "')";
+                sql = sql + "("+ sqltmp +"))";
+                //sql = sql + "" + collegeDetails.CourseSeat+ ")";
               
 
                 con = DatabaseHelper.GetConnection();
