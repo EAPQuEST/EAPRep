@@ -86,6 +86,24 @@
     <Compile Include="AllotmentWindow.Designer.cs">
       <DependentUpon>AllotmentWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Candidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate.Designer.cs">
+      <DependentUpon>Candidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CandidateLogin.Designer.cs">
+      <DependentUpon>CandidateLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateRegistration2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CandidateRegistration2.Designer.cs">
+      <DependentUpon>CandidateRegistration2.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteCollege.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,8 +115,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EngineeringAllotmentDatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EngineeringAllotmentDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EngineeringAllotmentDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateCollege.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +143,15 @@
     <EmbeddedResource Include="AllotmentWindow.resx">
       <DependentUpon>AllotmentWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Candidate.resx">
+      <DependentUpon>Candidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CandidateLogin.resx">
+      <DependentUpon>CandidateLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CandidateRegistration2.resx">
+      <DependentUpon>CandidateRegistration2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteCollege.resx">
       <DependentUpon>DeleteCollege.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +165,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateCollege.resx">
       <DependentUpon>UpdateCollege.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +181,17 @@
     </None>
     <None Include="EngineeringAllotmentDatabaseDataSet.xss">
       <DependentUpon>EngineeringAllotmentDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EngineeringAllotmentDatabaseDataSet1.xsc">
+      <DependentUpon>EngineeringAllotmentDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EngineeringAllotmentDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EngineeringAllotmentDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EngineeringAllotmentDatabaseDataSet1.xss">
+      <DependentUpon>EngineeringAllotmentDatabaseDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -179,6 +231,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Kerala_Government_Emblem1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\275093275002211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thA3H5LBHN.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_username_login_1172579.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

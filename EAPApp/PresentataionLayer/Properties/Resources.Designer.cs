@@ -73,6 +73,26 @@ namespace PresentataionLayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _275093275002211 {
+            get {
+                object obj = ResourceManager.GetObject("275093275002211", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _username_login_1172579 {
+            get {
+                object obj = ResourceManager.GetObject("_username_login_1172579", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap adminhome2 {
             get {
                 object obj = ResourceManager.GetObject("adminhome2", resourceCulture);
@@ -106,6 +126,16 @@ namespace PresentataionLayer.Properties {
         internal static System.Drawing.Bitmap keralaGovt1 {
             get {
                 object obj = ResourceManager.GetObject("keralaGovt1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thA3H5LBHN {
+            get {
+                object obj = ResourceManager.GetObject("thA3H5LBHN", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
