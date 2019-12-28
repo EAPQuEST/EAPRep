@@ -266,14 +266,15 @@ namespace PresentataionLayer
 
         private void btnNewUser1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Candidate candidate = new Candidate();
+            candidate.Show();
+           
         }
 
         private void btnCandidateLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Candidate candidate = new Candidate();
-            candidate.Show();
+           
         }
     }
 }

@@ -30,7 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateCollege));
             this.tlsAddCollege = new System.Windows.Forms.ToolStrip();
+            this.tlsBtnHomeAdd = new System.Windows.Forms.ToolStripButton();
             this.pnlCollegeDetails = new System.Windows.Forms.Panel();
+            this.cmbCollegeId = new System.Windows.Forms.ComboBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtContactNumber = new System.Windows.Forms.TextBox();
             this.txtTotalSeats = new System.Windows.Forms.TextBox();
@@ -44,12 +46,8 @@
             this.pnlCourseDetails = new System.Windows.Forms.Panel();
             this.btnUpdateCollege = new System.Windows.Forms.Button();
             this.clbCoursesAvailable = new System.Windows.Forms.CheckedListBox();
-            this.txtCourseSeatsAvailable = new System.Windows.Forms.TextBox();
             this.lblCourseDetails = new System.Windows.Forms.Label();
             this.lblCourseAvailable = new System.Windows.Forms.Label();
-            this.lblCourseSeatsAvailable = new System.Windows.Forms.Label();
-            this.tlsBtnHomeAdd = new System.Windows.Forms.ToolStripButton();
-            this.cmbCollegeId = new System.Windows.Forms.ComboBox();
             this.tlsAddCollege.SuspendLayout();
             this.pnlCollegeDetails.SuspendLayout();
             this.pnlCourseDetails.SuspendLayout();
@@ -66,6 +64,15 @@
             this.tlsAddCollege.Size = new System.Drawing.Size(845, 25);
             this.tlsAddCollege.TabIndex = 9;
             this.tlsAddCollege.Text = "toolStrip1";
+            // 
+            // tlsBtnHomeAdd
+            // 
+            this.tlsBtnHomeAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tlsBtnHomeAdd.Image = ((System.Drawing.Image)(resources.GetObject("tlsBtnHomeAdd.Image")));
+            this.tlsBtnHomeAdd.ImageTransparentColor = System.Drawing.Color.MediumAquamarine;
+            this.tlsBtnHomeAdd.Name = "tlsBtnHomeAdd";
+            this.tlsBtnHomeAdd.Size = new System.Drawing.Size(23, 22);
+            this.tlsBtnHomeAdd.Text = "Home";
             // 
             // pnlCollegeDetails
             // 
@@ -85,6 +92,15 @@
             this.pnlCollegeDetails.Name = "pnlCollegeDetails";
             this.pnlCollegeDetails.Size = new System.Drawing.Size(409, 411);
             this.pnlCollegeDetails.TabIndex = 7;
+            // 
+            // cmbCollegeId
+            // 
+            this.cmbCollegeId.FormattingEnabled = true;
+            this.cmbCollegeId.Location = new System.Drawing.Point(195, 97);
+            this.cmbCollegeId.Name = "cmbCollegeId";
+            this.cmbCollegeId.Size = new System.Drawing.Size(176, 21);
+            this.cmbCollegeId.TabIndex = 11;
+            this.cmbCollegeId.Text = "(Select ID)";
             // 
             // txtAddress
             // 
@@ -118,50 +134,50 @@
             // lblContactNumber
             // 
             this.lblContactNumber.AutoSize = true;
-            this.lblContactNumber.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContactNumber.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContactNumber.Location = new System.Drawing.Point(30, 262);
             this.lblContactNumber.Name = "lblContactNumber";
-            this.lblContactNumber.Size = new System.Drawing.Size(130, 23);
+            this.lblContactNumber.Size = new System.Drawing.Size(140, 15);
             this.lblContactNumber.TabIndex = 5;
             this.lblContactNumber.Text = "CONTACT NUMBER    :";
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.Location = new System.Drawing.Point(30, 317);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(130, 23);
+            this.lblAddress.Size = new System.Drawing.Size(166, 15);
             this.lblAddress.TabIndex = 4;
             this.lblAddress.Text = "ADDRESS                                :";
             // 
             // lblCollegeId
             // 
             this.lblCollegeId.AutoSize = true;
-            this.lblCollegeId.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCollegeId.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCollegeId.Location = new System.Drawing.Point(30, 97);
             this.lblCollegeId.Name = "lblCollegeId";
-            this.lblCollegeId.Size = new System.Drawing.Size(130, 23);
+            this.lblCollegeId.Size = new System.Drawing.Size(160, 15);
             this.lblCollegeId.TabIndex = 3;
             this.lblCollegeId.Text = "COLLEGE ID                         :";
             // 
             // lblCollegeTotalSeats
             // 
             this.lblCollegeTotalSeats.AutoSize = true;
-            this.lblCollegeTotalSeats.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCollegeTotalSeats.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCollegeTotalSeats.Location = new System.Drawing.Point(30, 208);
             this.lblCollegeTotalSeats.Name = "lblCollegeTotalSeats";
-            this.lblCollegeTotalSeats.Size = new System.Drawing.Size(130, 23);
+            this.lblCollegeTotalSeats.Size = new System.Drawing.Size(160, 15);
             this.lblCollegeTotalSeats.TabIndex = 2;
             this.lblCollegeTotalSeats.Text = "TOTAL SEATS                      :";
             // 
             // lblCollegeName
             // 
             this.lblCollegeName.AutoSize = true;
-            this.lblCollegeName.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCollegeName.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCollegeName.Location = new System.Drawing.Point(30, 154);
             this.lblCollegeName.Name = "lblCollegeName";
-            this.lblCollegeName.Size = new System.Drawing.Size(130, 23);
+            this.lblCollegeName.Size = new System.Drawing.Size(150, 15);
             this.lblCollegeName.TabIndex = 1;
             this.lblCollegeName.Text = "COLLEGE NAME              :";
             // 
@@ -180,10 +196,8 @@
             this.pnlCourseDetails.BackColor = System.Drawing.Color.White;
             this.pnlCourseDetails.Controls.Add(this.btnUpdateCollege);
             this.pnlCourseDetails.Controls.Add(this.clbCoursesAvailable);
-            this.pnlCourseDetails.Controls.Add(this.txtCourseSeatsAvailable);
             this.pnlCourseDetails.Controls.Add(this.lblCourseDetails);
             this.pnlCourseDetails.Controls.Add(this.lblCourseAvailable);
-            this.pnlCourseDetails.Controls.Add(this.lblCourseSeatsAvailable);
             this.pnlCourseDetails.Location = new System.Drawing.Point(415, 28);
             this.pnlCourseDetails.Name = "pnlCourseDetails";
             this.pnlCourseDetails.Size = new System.Drawing.Size(430, 411);
@@ -191,7 +205,7 @@
             // 
             // btnUpdateCollege
             // 
-            this.btnUpdateCollege.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateCollege.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateCollege.Location = new System.Drawing.Point(280, 352);
             this.btnUpdateCollege.Name = "btnUpdateCollege";
             this.btnUpdateCollege.Size = new System.Drawing.Size(131, 33);
@@ -218,17 +232,10 @@
             "Aerospace Engineering",
             "Genetic Engineering",
             "Ocean and Marine Engineering"});
-            this.clbCoursesAvailable.Location = new System.Drawing.Point(175, 97);
+            this.clbCoursesAvailable.Location = new System.Drawing.Point(138, 112);
             this.clbCoursesAvailable.Name = "clbCoursesAvailable";
             this.clbCoursesAvailable.Size = new System.Drawing.Size(236, 199);
             this.clbCoursesAvailable.TabIndex = 12;
-            // 
-            // txtCourseSeatsAvailable
-            // 
-            this.txtCourseSeatsAvailable.Location = new System.Drawing.Point(175, 320);
-            this.txtCourseSeatsAvailable.Name = "txtCourseSeatsAvailable";
-            this.txtCourseSeatsAvailable.Size = new System.Drawing.Size(85, 20);
-            this.txtCourseSeatsAvailable.TabIndex = 11;
             // 
             // lblCourseDetails
             // 
@@ -243,40 +250,12 @@
             // lblCourseAvailable
             // 
             this.lblCourseAvailable.AutoSize = true;
-            this.lblCourseAvailable.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourseAvailable.Location = new System.Drawing.Point(18, 97);
+            this.lblCourseAvailable.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCourseAvailable.Location = new System.Drawing.Point(20, 82);
             this.lblCourseAvailable.Name = "lblCourseAvailable";
-            this.lblCourseAvailable.Size = new System.Drawing.Size(132, 23);
+            this.lblCourseAvailable.Size = new System.Drawing.Size(143, 15);
             this.lblCourseAvailable.TabIndex = 7;
             this.lblCourseAvailable.Text = "COURSES AVAILABLE :";
-            // 
-            // lblCourseSeatsAvailable
-            // 
-            this.lblCourseSeatsAvailable.AutoSize = true;
-            this.lblCourseSeatsAvailable.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourseSeatsAvailable.Location = new System.Drawing.Point(18, 317);
-            this.lblCourseSeatsAvailable.Name = "lblCourseSeatsAvailable";
-            this.lblCourseSeatsAvailable.Size = new System.Drawing.Size(131, 23);
-            this.lblCourseSeatsAvailable.TabIndex = 8;
-            this.lblCourseSeatsAvailable.Text = "SEATS AVAILABLE          :";
-            // 
-            // tlsBtnHomeAdd
-            // 
-            this.tlsBtnHomeAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tlsBtnHomeAdd.Image = ((System.Drawing.Image)(resources.GetObject("tlsBtnHomeAdd.Image")));
-            this.tlsBtnHomeAdd.ImageTransparentColor = System.Drawing.Color.MediumAquamarine;
-            this.tlsBtnHomeAdd.Name = "tlsBtnHomeAdd";
-            this.tlsBtnHomeAdd.Size = new System.Drawing.Size(23, 22);
-            this.tlsBtnHomeAdd.Text = "Home";
-            // 
-            // cmbCollegeId
-            // 
-            this.cmbCollegeId.FormattingEnabled = true;
-            this.cmbCollegeId.Location = new System.Drawing.Point(195, 97);
-            this.cmbCollegeId.Name = "cmbCollegeId";
-            this.cmbCollegeId.Size = new System.Drawing.Size(176, 21);
-            this.cmbCollegeId.TabIndex = 11;
-            this.cmbCollegeId.Text = "(Select ID)";
             // 
             // UpdateCollege
             // 
@@ -317,10 +296,8 @@
         private System.Windows.Forms.Panel pnlCourseDetails;
         private System.Windows.Forms.Button btnUpdateCollege;
         private System.Windows.Forms.CheckedListBox clbCoursesAvailable;
-        private System.Windows.Forms.TextBox txtCourseSeatsAvailable;
         private System.Windows.Forms.Label lblCourseDetails;
         private System.Windows.Forms.Label lblCourseAvailable;
-        private System.Windows.Forms.Label lblCourseSeatsAvailable;
         private System.Windows.Forms.ComboBox cmbCollegeId;
     }
 }

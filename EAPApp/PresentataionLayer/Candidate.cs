@@ -36,13 +36,13 @@ namespace PresentataionLayer
                 candidateDetails.CandidateName = txtCandidateName.Text;
                 candidateDetails.CandidateDOB = dtpDOB.Value.ToShortDateString();
                 candidateDetails.CandidateAddress = txtAddress.Text;
-                candidateDetails.CandidateSchoolName10 = cmb10thSchoolName.Text;
-                candidateDetails.Candidatemark10 = Convert.ToInt32(txt10thMark.Text);
-                candidateDetails.CandidateSchoolName12 = cmb12thSchoolName.Text;
-                candidateDetails.Candidatemark12 = Convert.ToInt32(txt12thMark.Text);
-                candidateDetails.CandidatePhysics = Convert.ToInt32(txtPhysics.Text);
-                candidateDetails.CandidateChemistry = Convert.ToInt32(txtChemistry.Text);
-                candidateDetails.CandidateMaths = Convert.ToInt32(txtMaths.Text);
+                //candidateDetails.CandidateSchoolName10 = cmb10thSchoolName.Text;
+                //candidateDetails.Candidatemark10 = Convert.ToInt32(txt10thMark.Text);
+                //candidateDetails.CandidateSchoolName12 = cmb12thSchoolName.Text;
+                //candidateDetails.Candidatemark12 = Convert.ToInt32(txt12thMark.Text);
+                //candidateDetails.CandidatePhysics = Convert.ToInt32(txtPhysics.Text);
+                //candidateDetails.CandidateChemistry = Convert.ToInt32(txtChemistry.Text);
+                //candidateDetails.CandidateMaths = Convert.ToInt32(txtMaths.Text);
 
                 output = EapBL.StudentDetailsInsert(candidateDetails);
                 if (output > 0)
@@ -53,11 +53,19 @@ namespace PresentataionLayer
                 {
                     lblMessage.Text = "Failed";
                 }
+                this.Hide();
+                CandidateLogin candidateLogin = new CandidateLogin();
+                candidateLogin.Show();
             }
             catch (Exception ex)
             {
 
             }
+        }
+
+        private void Candidate_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
