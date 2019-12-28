@@ -12,9 +12,9 @@ using BusinessLayer.BL;
 
 namespace PresentataionLayer
 {
-    public partial class Candidate : Form
+    public partial class CandidateRegistration : Form
     {
-        public Candidate()
+        public CandidateRegistration()
         {
             InitializeComponent();
         }
@@ -36,13 +36,19 @@ namespace PresentataionLayer
                 candidateDetails.CandidateName = txtCandidateName.Text;
                 candidateDetails.CandidateDOB = dtpDOB.Value.ToShortDateString();
                 candidateDetails.CandidateAddress = txtAddress.Text;
-                //candidateDetails.CandidateSchoolName10 = cmb10thSchoolName.Text;
-                //candidateDetails.Candidatemark10 = Convert.ToInt32(txt10thMark.Text);
-                //candidateDetails.CandidateSchoolName12 = cmb12thSchoolName.Text;
-                //candidateDetails.Candidatemark12 = Convert.ToInt32(txt12thMark.Text);
-                //candidateDetails.CandidatePhysics = Convert.ToInt32(txtPhysics.Text);
-                //candidateDetails.CandidateChemistry = Convert.ToInt32(txtChemistry.Text);
-                //candidateDetails.CandidateMaths = Convert.ToInt32(txtMaths.Text);
+                candidateDetails.CandidateEmail = txtEmail.Text;
+                candidateDetails.CandidateNumber = Convert.ToInt64(txtContactNumber.Text);
+
+                if (rbtMale.Checked)
+                {
+                    candidateDetails.CandidateGender = "Male";
+
+                }
+                else
+                {
+                    candidateDetails.CandidateGender = "Female";
+
+                }
 
                 output = EapBL.StudentDetailsInsert(candidateDetails);
                 if (output > 0)
@@ -61,9 +67,29 @@ namespace PresentataionLayer
             {
 
             }
+            
         }
 
         private void Candidate_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tspBtnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AllotmentWindow allotmentWindow = new AllotmentWindow();
+            allotmentWindow.Show();
+        }
+
+        private void tspHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AllotmentWindow allotmentWindow = new AllotmentWindow();
+            allotmentWindow.Show();
+        }
+
+        private void dtpDOB_ValueChanged(object sender, EventArgs e)
         {
 
         }

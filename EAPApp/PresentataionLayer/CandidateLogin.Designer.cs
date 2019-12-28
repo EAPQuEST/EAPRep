@@ -28,13 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtCandidateUsername = new System.Windows.Forms.TextBox();
-            this.txtCandidatePassword = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnExistingLogin = new System.Windows.Forms.Button();
+            this.txtCandidatePassword = new System.Windows.Forms.TextBox();
+            this.txtCandidateUsername = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::PresentataionLayer.Properties.Resources._username_login_1172579;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(340, 48);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(123, 93);
+            this.panel1.TabIndex = 2;
             // 
             // panel2
             // 
@@ -42,32 +52,24 @@
             this.panel2.Controls.Add(this.btnExistingLogin);
             this.panel2.Controls.Add(this.txtCandidatePassword);
             this.panel2.Controls.Add(this.txtCandidateUsername);
-            this.panel2.Location = new System.Drawing.Point(222, 102);
+            this.panel2.Location = new System.Drawing.Point(233, 80);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(334, 320);
-            this.panel2.TabIndex = 1;
+            this.panel2.TabIndex = 3;
             // 
-            // panel1
+            // btnExistingLogin
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::PresentataionLayer.Properties.Resources._username_login_1172579;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(358, 72);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(65, 52);
-            this.panel1.TabIndex = 1;
-            // 
-            // txtCandidateUsername
-            // 
-            this.txtCandidateUsername.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCandidateUsername.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtCandidateUsername.Location = new System.Drawing.Point(58, 110);
-            this.txtCandidateUsername.Multiline = true;
-            this.txtCandidateUsername.Name = "txtCandidateUsername";
-            this.txtCandidateUsername.Size = new System.Drawing.Size(232, 28);
-            this.txtCandidateUsername.TabIndex = 0;
-            this.txtCandidateUsername.Text = "Username";
-            this.txtCandidateUsername.TextChanged += new System.EventHandler(this.txtCandidateUsername_TextChanged);
+            this.btnExistingLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnExistingLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExistingLogin.Font = new System.Drawing.Font("Poor Richard", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExistingLogin.ForeColor = System.Drawing.Color.FloralWhite;
+            this.btnExistingLogin.Location = new System.Drawing.Point(107, 248);
+            this.btnExistingLogin.Name = "btnExistingLogin";
+            this.btnExistingLogin.Size = new System.Drawing.Size(133, 38);
+            this.btnExistingLogin.TabIndex = 2;
+            this.btnExistingLogin.Text = "LOGIN";
+            this.btnExistingLogin.UseVisualStyleBackColor = false;
+            this.btnExistingLogin.Click += new System.EventHandler(this.btnExistingLogin_Click);
             // 
             // txtCandidatePassword
             // 
@@ -79,27 +81,28 @@
             this.txtCandidatePassword.Size = new System.Drawing.Size(232, 28);
             this.txtCandidatePassword.TabIndex = 1;
             this.txtCandidatePassword.Text = "Password";
-            this.txtCandidatePassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtCandidatePassword.MouseEnter += new System.EventHandler(this.txtCandidatePassword_MouseEnter);
+            this.txtCandidatePassword.MouseLeave += new System.EventHandler(this.txtCandidatePassword_MouseLeave);
             // 
-            // btnExistingLogin
+            // txtCandidateUsername
             // 
-            this.btnExistingLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btnExistingLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExistingLogin.Font = new System.Drawing.Font("Poor Richard", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExistingLogin.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnExistingLogin.Location = new System.Drawing.Point(107, 248);
-            this.btnExistingLogin.Name = "btnExistingLogin";
-            this.btnExistingLogin.Size = new System.Drawing.Size(133, 38);
-            this.btnExistingLogin.TabIndex = 2;
-            this.btnExistingLogin.Text = "LOGIN";
-            this.btnExistingLogin.UseVisualStyleBackColor = false;
+            this.txtCandidateUsername.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCandidateUsername.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtCandidateUsername.Location = new System.Drawing.Point(58, 112);
+            this.txtCandidateUsername.Multiline = true;
+            this.txtCandidateUsername.Name = "txtCandidateUsername";
+            this.txtCandidateUsername.Size = new System.Drawing.Size(232, 28);
+            this.txtCandidateUsername.TabIndex = 0;
+            this.txtCandidateUsername.Text = "Username";
+            this.txtCandidateUsername.MouseEnter += new System.EventHandler(this.txtCandidateUsername_MouseEnter);
+            this.txtCandidateUsername.MouseLeave += new System.EventHandler(this.txtCandidateUsername_MouseLeave);
             // 
             // CandidateLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.BackgroundImage = global::PresentataionLayer.Properties.Resources.thA3H5LBHN;
+            this.BackgroundImage = global::PresentataionLayer.Properties.Resources._7557127;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
@@ -114,10 +117,10 @@
 
         #endregion
 
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnExistingLogin;
         private System.Windows.Forms.TextBox txtCandidatePassword;
         private System.Windows.Forms.TextBox txtCandidateUsername;
-        private System.Windows.Forms.Panel panel1;
     }
 }

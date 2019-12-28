@@ -86,11 +86,17 @@
     <Compile Include="AllotmentWindow.Designer.cs">
       <DependentUpon>AllotmentWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Candidate.cs">
+    <Compile Include="CandidateEntrance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Candidate.Designer.cs">
-      <DependentUpon>Candidate.cs</DependentUpon>
+    <Compile Include="CandidateEntrance.Designer.cs">
+      <DependentUpon>CandidateEntrance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CandidateRegistration.Designer.cs">
+      <DependentUpon>CandidateRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="CandidateLogin.cs">
       <SubType>Form</SubType>
@@ -98,11 +104,11 @@
     <Compile Include="CandidateLogin.Designer.cs">
       <DependentUpon>CandidateLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="CandidateRegistration2.cs">
+    <Compile Include="CandidateEducationalDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CandidateRegistration2.Designer.cs">
-      <DependentUpon>CandidateRegistration2.cs</DependentUpon>
+    <Compile Include="CandidateEducationalDetails.Designer.cs">
+      <DependentUpon>CandidateEducationalDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="DeleteCollege.cs">
       <SubType>Form</SubType>
@@ -143,14 +149,17 @@
     <EmbeddedResource Include="AllotmentWindow.resx">
       <DependentUpon>AllotmentWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Candidate.resx">
-      <DependentUpon>Candidate.cs</DependentUpon>
+    <EmbeddedResource Include="CandidateEntrance.resx">
+      <DependentUpon>CandidateEntrance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CandidateRegistration.resx">
+      <DependentUpon>CandidateRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CandidateLogin.resx">
       <DependentUpon>CandidateLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CandidateRegistration2.resx">
-      <DependentUpon>CandidateRegistration2.cs</DependentUpon>
+    <EmbeddedResource Include="CandidateEducationalDetails.resx">
+      <DependentUpon>CandidateEducationalDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteCollege.resx">
       <DependentUpon>DeleteCollege.cs</DependentUpon>
@@ -240,6 +249,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\_username_login_1172579.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7557127.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
