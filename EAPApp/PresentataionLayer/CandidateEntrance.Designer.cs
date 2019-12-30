@@ -44,6 +44,7 @@
             this.tspBtnBack = new System.Windows.Forms.ToolStripButton();
             this.btnCandidateEntranceSubmit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblMessage = new System.Windows.Forms.Label();
             this.lblPreference2 = new System.Windows.Forms.Label();
             this.lblPreference3 = new System.Windows.Forms.Label();
             this.cmbCollegePreference3 = new System.Windows.Forms.ComboBox();
@@ -65,7 +66,6 @@
             this.cmbCoursePreference12 = new System.Windows.Forms.ComboBox();
             this.cmbCoursePreference11 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.lblMessage = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -108,7 +108,7 @@
             this.button1.Size = new System.Drawing.Size(814, 35);
             this.button1.TabIndex = 49;
             this.button1.Text = "      Entrance Details";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // txtRank
@@ -233,6 +233,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(406, 275);
             this.panel2.TabIndex = 71;
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(378, 19);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(0, 13);
+            this.lblMessage.TabIndex = 121;
             // 
             // lblPreference2
             // 
@@ -440,14 +448,6 @@
             this.button3.Text = "      Course Preferences";
             this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button3.UseVisualStyleBackColor = false;
-            // 
-            // lblMessage
-            // 
-            this.lblMessage.AutoSize = true;
-            this.lblMessage.Location = new System.Drawing.Point(378, 19);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(0, 13);
-            this.lblMessage.TabIndex = 121;
             // 
             // CandidateEntrance
             // 
