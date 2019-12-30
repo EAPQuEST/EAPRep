@@ -62,7 +62,7 @@ namespace DataServiceLayer.DataLayer
 
                 sql = sql + "'" + collegeDetails.CollegeID + "',";
                 //sql = sql + "'" + collegeDetails.CourseId + "')";
-                sql = sql + "("+ sqlnested +"))";
+                sql = sql + "(" + sqlnested + "))" ;
                 //sql = sql + "" + collegeDetails.CourseSeat+ ")";
               
 
@@ -93,13 +93,9 @@ namespace DataServiceLayer.DataLayer
             SqlCommand cmd = null;
             try
             {
-                sql = "insert into candidate_details(candidate_id,candidate_name,candidate_dob,candidate_address," +
-                    "candidate_10th_school,candidate_10th_percentage,candidate_12th_school,candidate_12th_percentage," +
+                sql = "insert into candidate_details (candidate_10th_school,candidate_10th_percentage,candidate_12th_school,candidate_12th_percentage," +
                     "candiate_physics,candiate_chemistry,candiate_maths) values(";
-                sql = sql + "'" + candidateDetails.CandidateId + "',";
-                sql = sql + "'" + candidateDetails.CandidateName + "',";
-                sql = sql + "'" + candidateDetails.CandidateDOB + "',";
-                sql = sql + "'" + candidateDetails.CandidateAddress + "',";
+              
                 sql = sql + "'" + candidateDetails.CandidateSchoolName10 + "',";
                 sql = sql  + candidateDetails.Candidatemark10 + ",";
                 sql = sql + "'" + candidateDetails.CandidateSchoolName12 + "',";
@@ -107,6 +103,13 @@ namespace DataServiceLayer.DataLayer
                 sql = sql + candidateDetails.CandidatePhysics + ",";
                 sql = sql  + candidateDetails.CandidateChemistry + ",";
                 sql = sql  + candidateDetails.CandidateMaths + ")";
+              
+
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+
+                output = cmd.ExecuteNonQuery();
 
 
             }
@@ -121,6 +124,45 @@ namespace DataServiceLayer.DataLayer
             }
             return output;
 
+
+        }
+        public static int CandidateRegistrationInsert(CandidateDetails candidateDetails)
+        {
+            int output = 0;
+            string sql = "";
+            SqlConnection con = null;
+            SqlCommand cmd = null;
+
+            try
+            {
+                sql = "insert into candidate_registration(candidate_id,candidate_name,candidate_gender,candidate_dob," +
+                      "candidate_phone,candidate_email,candidate_address) values(";
+
+                sql = sql + "'" + candidateDetails.CandidateId + "',";
+                sql = sql + "'" + candidateDetails.CandidateName + "',";
+                sql = sql + "'" + candidateDetails.CandidateGender + "',";
+                sql = sql + "'" + candidateDetails.CandidateDOB + "',";
+                sql = sql + "'" + candidateDetails.CandidateNumber + "',";
+                sql = sql + "'" + candidateDetails.CandidateEmail + "',";
+                sql = sql + "'" + candidateDetails.CandidateAddress + "')";
+
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+
+                output = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:CandidateRegistrationInsert", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                cmd.Dispose();
+            }
+
+            return output;
 
         }
         public static int StudentCoursePreferenceInsert(CandidateDetails candidateDetails)
@@ -199,6 +241,42 @@ namespace DataServiceLayer.DataLayer
             return output;
         }
 
+        public static int CollegeCourseUpdate(CollegeDetails collegeDetails)
+        {
+            int output = 0;
+            string sql = "";
+            SqlConnection con = null;
+            SqlCommand cmd = null;
+
+            try
+            {
+                string sqlnested = "select course_id from course_details where course_name='" + collegeDetails.CourseName + "'";
+                sql = "update college_coures set ";
+               
+           
+                sql = sql + "(" + sqlnested + ")";
+                sql = sql + "where college_id = '" + collegeDetails.CollegeID + "'";
+
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+
+                output = cmd.ExecuteNonQuery();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:CollegeDetailsUpdate()", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                cmd.Dispose();
+            }
+            return output;
+        }
+
         public static DataSet GetCollegeIds()
         {
             string sql = "";
@@ -241,6 +319,7 @@ namespace DataServiceLayer.DataLayer
             {
                 sql = "select *  from college_details where college_id='" + collegeId + "'";
                 string s = "select courseid from college_coures where collegeid'" + collegeId + "'";
+                string t = "select course_name from course_details where course_id'" + s + "'";
                 con = DatabaseHelper.GetConnection();
                 con.Open();
                 dsCollegeDetails = new DataSet();

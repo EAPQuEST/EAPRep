@@ -33,7 +33,7 @@ namespace PresentataionLayer
             try
             {
 
-
+                candidateDetails = new CandidateDetails();
                 candidateDetails.CandidateSchoolName10 = cmb10thSchoolName.Text;
                 candidateDetails.Candidatemark10 = Convert.ToInt32(txt10thMark.Text);
                 candidateDetails.CandidateSchoolName12 = cmb12thSchoolName.Text;
@@ -46,6 +46,9 @@ namespace PresentataionLayer
                 if (output > 0)
                 {
                     lblMessage.Text = "Successfully added";
+                    this.Hide();
+                    CandidateEntrance candidateEntrance = new CandidateEntrance();
+                    candidateEntrance.Show();
                 }
                 else
                 {
@@ -55,11 +58,9 @@ namespace PresentataionLayer
             }
             catch (Exception ex)
             {
-
+                lblMessage.Text = ex.Message.ToString();
             }
-            this.Hide();
-            CandidateEntrance candidateEntrance = new CandidateEntrance();
-            candidateEntrance.Show();
+            
 
         }
 

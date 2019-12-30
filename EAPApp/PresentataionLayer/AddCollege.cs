@@ -59,7 +59,7 @@ namespace PresentataionLayer
                 }
 
                 output = EapBL.CollegeDetailsInsert(collegeDetails);
-                if(output>0 && outputcourse>0)
+                if(output>0 || outputcourse>0)
                 {
                     lblMessage.Text = "Successfully added";
                 }

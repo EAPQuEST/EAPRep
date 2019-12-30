@@ -46,6 +46,7 @@ namespace PresentataionLayer
 
             try
             {
+                candidateDetails = new CandidateDetails();
                 candidateDetails.RegisterNumber = Convert.ToInt32(txtRegisterNumber.Text);
                 candidateDetails.EntranceRank = Convert.ToInt32(txtRank.Text);
                 candidateDetails.EntranceScienceMark = Convert.ToInt32(txtScienceMark.Text);
@@ -70,14 +71,15 @@ namespace PresentataionLayer
                 if (output > 0 && outputentrance>0)
                 {
                     lblMessage.Text = "Successfully added";
+                    this.Hide();
+                    CandidateLogin candidateLogin = new CandidateLogin();
+                    candidateLogin.Show();
                 }
                 else
                 {
                     lblMessage.Text = "Failed";
                 }
-                this.Hide();
-                CandidateLogin candidateLogin = new CandidateLogin();
-                candidateLogin.Show();
+                
             }
             catch (Exception ex)
             {

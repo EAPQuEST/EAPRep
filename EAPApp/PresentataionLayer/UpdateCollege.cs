@@ -24,6 +24,7 @@ namespace PresentataionLayer
         {
             CollegeDetails collegeDetails = null;
             int output = 0;
+            int outputcourse = 0;
             try
             {
                 collegeDetails = new CollegeDetails();
@@ -32,6 +33,16 @@ namespace PresentataionLayer
                 collegeDetails.TotalSeats = Convert.ToInt32(txtTotalSeats.Text);
                 collegeDetails.CollegeAddress = txtAddress.Text;
                 collegeDetails.CollegePhone = Convert.ToInt32(txtContactNumber.Text);
+                for (int i = 0; i < clbCoursesAvailable.Items.Count; i++)
+                {
+                    if (clbCoursesAvailable.GetItemChecked(i))
+                    {
+                        collegeDetails.CourseName = (string)clbCoursesAvailable.Items[i];
+                        outputcourse = EapBL.CollegeCourseUpdate(collegeDetails);
+
+                    }
+                }
+
 
                 output = EapBL.CollegeDetailsUpdate(collegeDetails);
                 if (output > 0)
@@ -93,18 +104,18 @@ namespace PresentataionLayer
                     txtTotalSeats.Text = collegeDetails.TotalSeats.ToString();
                     txtContactNumber.Text = collegeDetails.CollegePhone.ToString();
                     txtAddress.Text = collegeDetails.CollegeAddress;
-                    //for(int i=0;i< dsCollegeDetails.Tables[0].Rows.Count; i++)
-                    //{
-                    //    var item = dsCollegeDetails.Tables[0].Rows[i]["Courses Available"].ToString();
-                    //    for(int j=0; j < clbCoursesAvailable.Items.Count; j++)
-                    //    {
-                    //        if (clbCoursesAvailable.Items[j].ToString() == item)
-                    //        {
-                    //            clbCoursesAvailable.SetItemChecked(j, true);
-                    //            break;
-                    //        }
-                    //    }
-                    //}
+                    for (int i = 0; i < dsCollegeDetails.Tables[0].Rows.Count; i++)
+                    {
+                        var item = dsCollegeDetails.Tables[0].Rows[i]["course_name"].ToString();
+                        for (int j = 0; j < clbCoursesAvailable.Items.Count; j++)
+                        {
+                            if (clbCoursesAvailable.Items[j].ToString() == item)
+                            {
+                                clbCoursesAvailable.SetItemChecked(j, true);
+                                break;
+                            }
+                        }
+                    }
 
                 }
 

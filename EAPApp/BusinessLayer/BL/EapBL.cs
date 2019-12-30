@@ -59,6 +59,24 @@ namespace BusinessLayer.BL
 
 
         }
+        public static int CandidateRegistrationInsert(CandidateDetails candidateDetails)
+        {
+            int output = 0;
+            try
+            {
+
+                output = EapDSL.CandidateRegistrationInsert(candidateDetails);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:CandidateRegistrationInsert", ex.Message.ToString());
+            }
+
+            return output;
+
+
+        }
         public static int StudentCoursePreferenceInsert(CandidateDetails candidateDetails)
         {
             int output = 0;
@@ -130,6 +148,24 @@ namespace BusinessLayer.BL
                 Console.Out.WriteLine("*** Error : EapBL.cs:CollegeDetailsUpdate()", ex.Message.ToString());
             }
            
+            return output;
+        }
+        public static int CollegeCourseUpdate(CollegeDetails collegeDetails)
+        {
+            int output = 0;
+
+
+            try
+            {
+
+                output = EapDSL.CollegeCourseUpdate(collegeDetails);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:CollegeCourseUpdate()", ex.Message.ToString());
+            }
+
             return output;
         }
         public static DataSet GetCollegeDetails()
