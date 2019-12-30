@@ -60,8 +60,8 @@ namespace PresentataionLayer
                     lblMessage.Text = "Failed";
                 }
                 this.Hide();
-                CandidateLogin candidateLogin = new CandidateLogin();
-                candidateLogin.Show();
+                AllotmentWindow allotmentWindow = new AllotmentWindow();
+                allotmentWindow.Show();
             }
             catch (Exception ex)
             {

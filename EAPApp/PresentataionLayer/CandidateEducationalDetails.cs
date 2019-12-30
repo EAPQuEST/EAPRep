@@ -66,8 +66,8 @@ namespace PresentataionLayer
         private void tspBtnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CandidateLogin candidateLogin = new CandidateLogin();
-            candidateLogin.Show();
+            AllotmentWindow allotmentWindow = new AllotmentWindow();
+            allotmentWindow.Show();
         }
 
         private void tspHome_Click(object sender, EventArgs e)

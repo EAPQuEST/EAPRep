@@ -40,8 +40,6 @@
             this.lblRank = new System.Windows.Forms.Label();
             this.lblRegisterNumber = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tspHome = new System.Windows.Forms.ToolStripButton();
-            this.tspBtnBack = new System.Windows.Forms.ToolStripButton();
             this.btnCandidateEntranceSubmit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblMessage = new System.Windows.Forms.Label();
@@ -66,6 +64,15 @@
             this.cmbCoursePreference12 = new System.Windows.Forms.ComboBox();
             this.cmbCoursePreference11 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tspHome = new System.Windows.Forms.ToolStripButton();
+            this.tspBtnBack = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -74,6 +81,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.lblScience);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtRank);
@@ -184,27 +195,6 @@
             this.toolStrip1.TabIndex = 27;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // tspHome
-            // 
-            this.tspHome.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tspHome.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tspHome.Image = ((System.Drawing.Image)(resources.GetObject("tspHome.Image")));
-            this.tspHome.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tspHome.Name = "tspHome";
-            this.tspHome.Size = new System.Drawing.Size(23, 22);
-            this.tspHome.Text = "Home";
-            this.tspHome.Click += new System.EventHandler(this.tspHome_Click);
-            // 
-            // tspBtnBack
-            // 
-            this.tspBtnBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tspBtnBack.Image = ((System.Drawing.Image)(resources.GetObject("tspBtnBack.Image")));
-            this.tspBtnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tspBtnBack.Name = "tspBtnBack";
-            this.tspBtnBack.Size = new System.Drawing.Size(23, 22);
-            this.tspBtnBack.Text = "Back";
-            this.tspBtnBack.Click += new System.EventHandler(this.tspBtnBack_Click);
-            // 
             // btnCandidateEntranceSubmit
             // 
             this.btnCandidateEntranceSubmit.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -224,6 +214,8 @@
             this.panel2.Controls.Add(this.lblMessage);
             this.panel2.Controls.Add(this.lblPreference2);
             this.panel2.Controls.Add(this.lblPreference3);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.cmbCollegePreference3);
             this.panel2.Controls.Add(this.cmbCollegePreference2);
             this.panel2.Controls.Add(this.lblPreference1);
@@ -267,18 +259,106 @@
             // cmbCollegePreference3
             // 
             this.cmbCollegePreference3.FormattingEnabled = true;
+            this.cmbCollegePreference3.Items.AddRange(new object[] {
+            "National Institute of Technology Calicut",
+            "ER&DCI Institute of Technology, Trivandrum",
+            "Indian Institute of Space Science and Technology, Trivandrum",
+            "Indian Institute of Information Technology Kottayam",
+            "College of Engineering, Trivandrum",
+            "Government Engineering College, Thrissur",
+            "Thangal Kunju Musaliar College of Engineering, Kollam",
+            "NSS College of Engineering, Palakkad",
+            "Mar Athanasius College of Engineering, Kothamangalam",
+            "Government College of Engineering, Kannur",
+            "Rajiv Gandhi Institute of Technology, Kottayam",
+            "Government Engineering College, Trivandrum",
+            "Government Engineering College, Kozhikode",
+            "Government Engineering College, Sreekrishnapuram",
+            "Government Engineering College, Wayanad",
+            "Government Engineering College, Idukki",
+            "Adi Shankara Institute of Engineering Technology",
+            "Ahalia School of Engineering and Technology",
+            "Al-Ameen Engineering College",
+            "Albertian Institute of Science and Technology",
+            "Amal Jyothi College of Engineering",
+            "Baselios Thomas I Catholicose College of Engineering and Technology",
+            "Carmel College of Engineering and Technology",
+            "Christ College of Engineering",
+            "Jai Bharath College of Management and Engineering Technology",
+            "Jyothi Engineering College",
+            "K M E A Engineering College",
+            "Kottayam Institute of Technology and Science",
+            "Matha College of Technology",
+            "Providence College of Engineering",
+            "Rajadhani Institute of Engineering and Technology",
+            "Rajagiri School of Engineering and Technology",
+            "Royal College of Engineering and Technology",
+            "Sahrdaya College of Engineering and Technology",
+            "SCMS School of Engineering and Technology",
+            "Sree Buddha College of Engineering",
+            "Sree Narayana Guru Institute of Science and Technology",
+            "St. Gregorios College of Engineering",
+            "TKM Institute of Technology",
+            "Vimal Jyothi Engineering College",
+            "Viswajyothi College of Engineering and Technology",
+            "Younus College of Engineering"});
             this.cmbCollegePreference3.Location = new System.Drawing.Point(133, 215);
             this.cmbCollegePreference3.Name = "cmbCollegePreference3";
             this.cmbCollegePreference3.Size = new System.Drawing.Size(245, 21);
             this.cmbCollegePreference3.TabIndex = 117;
+            this.cmbCollegePreference3.Text = "Not Selected";
             // 
             // cmbCollegePreference2
             // 
             this.cmbCollegePreference2.FormattingEnabled = true;
+            this.cmbCollegePreference2.Items.AddRange(new object[] {
+            "National Institute of Technology Calicut",
+            "ER&DCI Institute of Technology, Trivandrum",
+            "Indian Institute of Space Science and Technology, Trivandrum",
+            "Indian Institute of Information Technology Kottayam",
+            "College of Engineering, Trivandrum",
+            "Government Engineering College, Thrissur",
+            "Thangal Kunju Musaliar College of Engineering, Kollam",
+            "NSS College of Engineering, Palakkad",
+            "Mar Athanasius College of Engineering, Kothamangalam",
+            "Government College of Engineering, Kannur",
+            "Rajiv Gandhi Institute of Technology, Kottayam",
+            "Government Engineering College, Trivandrum",
+            "Government Engineering College, Kozhikode",
+            "Government Engineering College, Sreekrishnapuram",
+            "Government Engineering College, Wayanad",
+            "Government Engineering College, Idukki",
+            "Adi Shankara Institute of Engineering Technology",
+            "Ahalia School of Engineering and Technology",
+            "Al-Ameen Engineering College",
+            "Albertian Institute of Science and Technology",
+            "Amal Jyothi College of Engineering",
+            "Baselios Thomas I Catholicose College of Engineering and Technology",
+            "Carmel College of Engineering and Technology",
+            "Christ College of Engineering",
+            "Jai Bharath College of Management and Engineering Technology",
+            "Jyothi Engineering College",
+            "K M E A Engineering College",
+            "Kottayam Institute of Technology and Science",
+            "Matha College of Technology",
+            "Providence College of Engineering",
+            "Rajadhani Institute of Engineering and Technology",
+            "Rajagiri School of Engineering and Technology",
+            "Royal College of Engineering and Technology",
+            "Sahrdaya College of Engineering and Technology",
+            "SCMS School of Engineering and Technology",
+            "Sree Buddha College of Engineering",
+            "Sree Narayana Guru Institute of Science and Technology",
+            "St. Gregorios College of Engineering",
+            "TKM Institute of Technology",
+            "Vimal Jyothi Engineering College",
+            "Viswajyothi College of Engineering and Technology",
+            "Younus College of Engineering"});
             this.cmbCollegePreference2.Location = new System.Drawing.Point(133, 167);
             this.cmbCollegePreference2.Name = "cmbCollegePreference2";
             this.cmbCollegePreference2.Size = new System.Drawing.Size(245, 21);
             this.cmbCollegePreference2.TabIndex = 116;
+            this.cmbCollegePreference2.Text = "Not Selected";
             // 
             // lblPreference1
             // 
@@ -294,10 +374,54 @@
             // cmbCollegePreference1
             // 
             this.cmbCollegePreference1.FormattingEnabled = true;
+            this.cmbCollegePreference1.Items.AddRange(new object[] {
+            "National Institute of Technology Calicut",
+            "ER&DCI Institute of Technology, Trivandrum",
+            "Indian Institute of Space Science and Technology, Trivandrum",
+            "Indian Institute of Information Technology Kottayam",
+            "College of Engineering, Trivandrum",
+            "Government Engineering College, Thrissur",
+            "Thangal Kunju Musaliar College of Engineering, Kollam",
+            "NSS College of Engineering, Palakkad",
+            "Mar Athanasius College of Engineering, Kothamangalam",
+            "Government College of Engineering, Kannur",
+            "Rajiv Gandhi Institute of Technology, Kottayam",
+            "Government Engineering College, Trivandrum",
+            "Government Engineering College, Kozhikode",
+            "Government Engineering College, Sreekrishnapuram",
+            "Government Engineering College, Wayanad",
+            "Government Engineering College, Idukki",
+            "Adi Shankara Institute of Engineering Technology",
+            "Ahalia School of Engineering and Technology",
+            "Al-Ameen Engineering College",
+            "Albertian Institute of Science and Technology",
+            "Amal Jyothi College of Engineering",
+            "Baselios Thomas I Catholicose College of Engineering and Technology",
+            "Carmel College of Engineering and Technology",
+            "Christ College of Engineering ",
+            "Jai Bharath College of Management and Engineering Technology",
+            "Jyothi Engineering College",
+            "K M E A Engineering College",
+            "Kottayam Institute of Technology and Science",
+            "Matha College of Technology",
+            "Providence College of Engineering",
+            "Rajadhani Institute of Engineering and Technology",
+            "Rajagiri School of Engineering and Technology",
+            "Royal College of Engineering and Technology",
+            "Sahrdaya College of Engineering and Technology",
+            "SCMS School of Engineering and Technology",
+            "Sree Buddha College of Engineering",
+            "Sree Narayana Guru Institute of Science and Technology",
+            "St. Gregorios College of Engineering",
+            "TKM Institute of Technology",
+            "Vimal Jyothi Engineering College",
+            "Viswajyothi College of Engineering and Technology",
+            "Younus College of Engineering"});
             this.cmbCollegePreference1.Location = new System.Drawing.Point(133, 118);
             this.cmbCollegePreference1.Name = "cmbCollegePreference1";
             this.cmbCollegePreference1.Size = new System.Drawing.Size(245, 21);
             this.cmbCollegePreference1.TabIndex = 114;
+            this.cmbCollegePreference1.Text = "Not Selected";
             // 
             // button2
             // 
@@ -313,6 +437,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.cmbCoursePreference33);
             this.panel3.Controls.Add(this.cmbCoursePreference32);
             this.panel3.Controls.Add(this.cmbCoursePreference31);
@@ -338,6 +463,7 @@
             this.cmbCoursePreference33.Name = "cmbCoursePreference33";
             this.cmbCoursePreference33.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference33.TabIndex = 145;
+            this.cmbCoursePreference33.Text = "Not Selected";
             // 
             // cmbCoursePreference32
             // 
@@ -346,6 +472,7 @@
             this.cmbCoursePreference32.Name = "cmbCoursePreference32";
             this.cmbCoursePreference32.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference32.TabIndex = 144;
+            this.cmbCoursePreference32.Text = "Not Selected";
             // 
             // cmbCoursePreference31
             // 
@@ -354,6 +481,7 @@
             this.cmbCoursePreference31.Name = "cmbCoursePreference31";
             this.cmbCoursePreference31.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference31.TabIndex = 143;
+            this.cmbCoursePreference31.Text = "Not Selected";
             // 
             // cmbCoursePreference23
             // 
@@ -362,6 +490,7 @@
             this.cmbCoursePreference23.Name = "cmbCoursePreference23";
             this.cmbCoursePreference23.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference23.TabIndex = 142;
+            this.cmbCoursePreference23.Text = "Not Selected";
             // 
             // cmbCoursePreference22
             // 
@@ -370,6 +499,7 @@
             this.cmbCoursePreference22.Name = "cmbCoursePreference22";
             this.cmbCoursePreference22.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference22.TabIndex = 141;
+            this.cmbCoursePreference22.Text = "Not Selected";
             // 
             // cmbCoursePreference21
             // 
@@ -378,6 +508,7 @@
             this.cmbCoursePreference21.Name = "cmbCoursePreference21";
             this.cmbCoursePreference21.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference21.TabIndex = 140;
+            this.cmbCoursePreference21.Text = "Not Selected";
             this.cmbCoursePreference21.SelectedIndexChanged += new System.EventHandler(this.comboBox9_SelectedIndexChanged);
             // 
             // lblCoursePreference2
@@ -420,6 +551,7 @@
             this.cmbCoursePreference13.Name = "cmbCoursePreference13";
             this.cmbCoursePreference13.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference13.TabIndex = 136;
+            this.cmbCoursePreference13.Text = "Not Selected";
             // 
             // cmbCoursePreference12
             // 
@@ -428,6 +560,7 @@
             this.cmbCoursePreference12.Name = "cmbCoursePreference12";
             this.cmbCoursePreference12.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference12.TabIndex = 135;
+            this.cmbCoursePreference12.Text = "Not Selected";
             // 
             // cmbCoursePreference11
             // 
@@ -436,6 +569,7 @@
             this.cmbCoursePreference11.Name = "cmbCoursePreference11";
             this.cmbCoursePreference11.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference11.TabIndex = 134;
+            this.cmbCoursePreference11.Text = "Not Selected";
             // 
             // button3
             // 
@@ -448,6 +582,104 @@
             this.button3.Text = "      Course Preferences";
             this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button3.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(203, 67);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(14, 18);
+            this.label5.TabIndex = 73;
+            this.label5.Text = "*";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(108, 166);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(14, 18);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(108, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(14, 18);
+            this.label2.TabIndex = 75;
+            this.label2.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(174, 209);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(14, 18);
+            this.label3.TabIndex = 76;
+            this.label3.Text = "*";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(184, 164);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(14, 18);
+            this.label4.TabIndex = 77;
+            this.label4.Text = "*";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(123, 115);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(14, 18);
+            this.label6.TabIndex = 78;
+            this.label6.Text = "*";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(113, 82);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(14, 18);
+            this.label8.TabIndex = 80;
+            this.label8.Text = "*";
+            // 
+            // tspHome
+            // 
+            this.tspHome.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tspHome.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tspHome.Image = ((System.Drawing.Image)(resources.GetObject("tspHome.Image")));
+            this.tspHome.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tspHome.Name = "tspHome";
+            this.tspHome.Size = new System.Drawing.Size(23, 22);
+            this.tspHome.Text = "Home";
+            this.tspHome.Click += new System.EventHandler(this.tspHome_Click);
+            // 
+            // tspBtnBack
+            // 
+            this.tspBtnBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tspBtnBack.Image = ((System.Drawing.Image)(resources.GetObject("tspBtnBack.Image")));
+            this.tspBtnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tspBtnBack.Name = "tspBtnBack";
+            this.tspBtnBack.Size = new System.Drawing.Size(23, 22);
+            this.tspBtnBack.Text = "Back";
+            this.tspBtnBack.Click += new System.EventHandler(this.tspBtnBack_Click);
             // 
             // CandidateEntrance
             // 
@@ -513,5 +745,12 @@
         private System.Windows.Forms.ComboBox cmbCoursePreference11;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label8;
     }
 }

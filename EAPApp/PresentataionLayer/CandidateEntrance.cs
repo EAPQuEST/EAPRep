@@ -75,9 +75,9 @@ namespace PresentataionLayer
                 {
                     lblMessage.Text = "Failed";
                 }
-                this.Hide();
-                CandidateLogin candidateLogin = new CandidateLogin();
-                candidateLogin.Show();
+                //this.Hide();
+                //CandidateLogin candidateLogin = new CandidateLogin();
+                //candidateLogin.Show();
             }
             catch (Exception ex)
             {

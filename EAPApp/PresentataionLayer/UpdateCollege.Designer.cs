@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateCollege));
             this.tlsAddCollege = new System.Windows.Forms.ToolStrip();
-            this.tlsBtnHomeAdd = new System.Windows.Forms.ToolStripButton();
             this.pnlCollegeDetails = new System.Windows.Forms.Panel();
             this.cmbCollegeId = new System.Windows.Forms.ComboBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -48,6 +47,7 @@
             this.clbCoursesAvailable = new System.Windows.Forms.CheckedListBox();
             this.lblCourseDetails = new System.Windows.Forms.Label();
             this.lblCourseAvailable = new System.Windows.Forms.Label();
+            this.tlsBtnHomeAdd = new System.Windows.Forms.ToolStripButton();
             this.tlsAddCollege.SuspendLayout();
             this.pnlCollegeDetails.SuspendLayout();
             this.pnlCourseDetails.SuspendLayout();
@@ -65,18 +65,10 @@
             this.tlsAddCollege.TabIndex = 9;
             this.tlsAddCollege.Text = "toolStrip1";
             // 
-            // tlsBtnHomeAdd
-            // 
-            this.tlsBtnHomeAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tlsBtnHomeAdd.Image = ((System.Drawing.Image)(resources.GetObject("tlsBtnHomeAdd.Image")));
-            this.tlsBtnHomeAdd.ImageTransparentColor = System.Drawing.Color.MediumAquamarine;
-            this.tlsBtnHomeAdd.Name = "tlsBtnHomeAdd";
-            this.tlsBtnHomeAdd.Size = new System.Drawing.Size(23, 22);
-            this.tlsBtnHomeAdd.Text = "Home";
-            // 
             // pnlCollegeDetails
             // 
             this.pnlCollegeDetails.BackColor = System.Drawing.Color.White;
+            this.pnlCollegeDetails.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlCollegeDetails.Controls.Add(this.cmbCollegeId);
             this.pnlCollegeDetails.Controls.Add(this.txtAddress);
             this.pnlCollegeDetails.Controls.Add(this.txtContactNumber);
@@ -194,6 +186,7 @@
             // pnlCourseDetails
             // 
             this.pnlCourseDetails.BackColor = System.Drawing.Color.White;
+            this.pnlCourseDetails.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlCourseDetails.Controls.Add(this.btnUpdateCollege);
             this.pnlCourseDetails.Controls.Add(this.clbCoursesAvailable);
             this.pnlCourseDetails.Controls.Add(this.lblCourseDetails);
@@ -205,13 +198,16 @@
             // 
             // btnUpdateCollege
             // 
-            this.btnUpdateCollege.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateCollege.Location = new System.Drawing.Point(280, 352);
+            this.btnUpdateCollege.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnUpdateCollege.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdateCollege.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateCollege.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateCollege.Location = new System.Drawing.Point(255, 328);
             this.btnUpdateCollege.Name = "btnUpdateCollege";
-            this.btnUpdateCollege.Size = new System.Drawing.Size(131, 33);
+            this.btnUpdateCollege.Size = new System.Drawing.Size(138, 57);
             this.btnUpdateCollege.TabIndex = 13;
             this.btnUpdateCollege.Text = "UPDATE";
-            this.btnUpdateCollege.UseVisualStyleBackColor = true;
+            this.btnUpdateCollege.UseVisualStyleBackColor = false;
             // 
             // clbCoursesAvailable
             // 
@@ -232,7 +228,7 @@
             "Aerospace Engineering",
             "Genetic Engineering",
             "Ocean and Marine Engineering"});
-            this.clbCoursesAvailable.Location = new System.Drawing.Point(138, 112);
+            this.clbCoursesAvailable.Location = new System.Drawing.Point(172, 97);
             this.clbCoursesAvailable.Name = "clbCoursesAvailable";
             this.clbCoursesAvailable.Size = new System.Drawing.Size(236, 199);
             this.clbCoursesAvailable.TabIndex = 12;
@@ -251,11 +247,20 @@
             // 
             this.lblCourseAvailable.AutoSize = true;
             this.lblCourseAvailable.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourseAvailable.Location = new System.Drawing.Point(20, 82);
+            this.lblCourseAvailable.Location = new System.Drawing.Point(23, 97);
             this.lblCourseAvailable.Name = "lblCourseAvailable";
             this.lblCourseAvailable.Size = new System.Drawing.Size(143, 15);
             this.lblCourseAvailable.TabIndex = 7;
             this.lblCourseAvailable.Text = "COURSES AVAILABLE :";
+            // 
+            // tlsBtnHomeAdd
+            // 
+            this.tlsBtnHomeAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tlsBtnHomeAdd.Image = ((System.Drawing.Image)(resources.GetObject("tlsBtnHomeAdd.Image")));
+            this.tlsBtnHomeAdd.ImageTransparentColor = System.Drawing.Color.MediumAquamarine;
+            this.tlsBtnHomeAdd.Name = "tlsBtnHomeAdd";
+            this.tlsBtnHomeAdd.Size = new System.Drawing.Size(23, 22);
+            this.tlsBtnHomeAdd.Text = "Home";
             // 
             // UpdateCollege
             // 

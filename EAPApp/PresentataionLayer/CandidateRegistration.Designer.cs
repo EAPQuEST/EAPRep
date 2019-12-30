@@ -32,8 +32,10 @@
             this.btnCandidateRegister = new System.Windows.Forms.Button();
             this.lblTitleCandidate = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tspHome = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rbtFemale = new System.Windows.Forms.RadioButton();
+            this.rbtMale = new System.Windows.Forms.RadioButton();
+            this.lblGender = new System.Windows.Forms.Label();
             this.txtContactNumber = new System.Windows.Forms.TextBox();
             this.lblContactNumber = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -48,10 +50,15 @@
             this.lblCandidateDOB = new System.Windows.Forms.Label();
             this.lblCandidateName = new System.Windows.Forms.Label();
             this.lblCandidateId = new System.Windows.Forms.Label();
+            this.tspHome = new System.Windows.Forms.ToolStripButton();
             this.tspBtnBack = new System.Windows.Forms.ToolStripButton();
-            this.lblGender = new System.Windows.Forms.Label();
-            this.rbtMale = new System.Windows.Forms.RadioButton();
-            this.rbtFemale = new System.Windows.Forms.RadioButton();
+            this.lblStar = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -94,21 +101,17 @@
             this.toolStrip1.TabIndex = 25;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // tspHome
-            // 
-            this.tspHome.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tspHome.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tspHome.Image = ((System.Drawing.Image)(resources.GetObject("tspHome.Image")));
-            this.tspHome.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tspHome.Name = "tspHome";
-            this.tspHome.Size = new System.Drawing.Size(23, 22);
-            this.tspHome.Text = "Home";
-            this.tspHome.Click += new System.EventHandler(this.tspHome_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblStar);
             this.panel1.Controls.Add(this.rbtFemale);
             this.panel1.Controls.Add(this.rbtMale);
             this.panel1.Controls.Add(this.lblGender);
@@ -131,6 +134,39 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 473);
             this.panel1.TabIndex = 23;
+            // 
+            // rbtFemale
+            // 
+            this.rbtFemale.AutoSize = true;
+            this.rbtFemale.Location = new System.Drawing.Point(539, 164);
+            this.rbtFemale.Name = "rbtFemale";
+            this.rbtFemale.Size = new System.Drawing.Size(75, 22);
+            this.rbtFemale.TabIndex = 55;
+            this.rbtFemale.TabStop = true;
+            this.rbtFemale.Text = "Female";
+            this.rbtFemale.UseVisualStyleBackColor = true;
+            // 
+            // rbtMale
+            // 
+            this.rbtMale.AutoSize = true;
+            this.rbtMale.Location = new System.Drawing.Point(407, 164);
+            this.rbtMale.Name = "rbtMale";
+            this.rbtMale.Size = new System.Drawing.Size(58, 22);
+            this.rbtMale.TabIndex = 54;
+            this.rbtMale.TabStop = true;
+            this.rbtMale.Text = "Male";
+            this.rbtMale.UseVisualStyleBackColor = true;
+            // 
+            // lblGender
+            // 
+            this.lblGender.AutoSize = true;
+            this.lblGender.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGender.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblGender.Location = new System.Drawing.Point(105, 169);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(141, 15);
+            this.lblGender.TabIndex = 53;
+            this.lblGender.Text = "GENDER                           :";
             // 
             // txtContactNumber
             // 
@@ -266,6 +302,17 @@
             this.lblCandidateId.TabIndex = 26;
             this.lblCandidateId.Text = "CANDIDATE ID               :";
             // 
+            // tspHome
+            // 
+            this.tspHome.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tspHome.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tspHome.Image = ((System.Drawing.Image)(resources.GetObject("tspHome.Image")));
+            this.tspHome.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tspHome.Name = "tspHome";
+            this.tspHome.Size = new System.Drawing.Size(23, 22);
+            this.tspHome.Text = "Home";
+            this.tspHome.Click += new System.EventHandler(this.tspHome_Click);
+            // 
             // tspBtnBack
             // 
             this.tspBtnBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -276,38 +323,75 @@
             this.tspBtnBack.Text = "Back";
             this.tspBtnBack.Click += new System.EventHandler(this.tspBtnBack_Click);
             // 
-            // lblGender
+            // lblStar
             // 
-            this.lblGender.AutoSize = true;
-            this.lblGender.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblGender.Location = new System.Drawing.Point(105, 169);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(141, 15);
-            this.lblGender.TabIndex = 53;
-            this.lblGender.Text = "GENDER                           :";
+            this.lblStar.AutoSize = true;
+            this.lblStar.ForeColor = System.Drawing.Color.Red;
+            this.lblStar.Location = new System.Drawing.Point(195, 71);
+            this.lblStar.Name = "lblStar";
+            this.lblStar.Size = new System.Drawing.Size(14, 18);
+            this.lblStar.TabIndex = 56;
+            this.lblStar.Text = "*";
             // 
-            // rbtMale
+            // label1
             // 
-            this.rbtMale.AutoSize = true;
-            this.rbtMale.Location = new System.Drawing.Point(407, 164);
-            this.rbtMale.Name = "rbtMale";
-            this.rbtMale.Size = new System.Drawing.Size(58, 22);
-            this.rbtMale.TabIndex = 54;
-            this.rbtMale.TabStop = true;
-            this.rbtMale.Text = "Male";
-            this.rbtMale.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(218, 125);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(14, 18);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "*";
             // 
-            // rbtFemale
+            // label2
             // 
-            this.rbtFemale.AutoSize = true;
-            this.rbtFemale.Location = new System.Drawing.Point(539, 164);
-            this.rbtFemale.Name = "rbtFemale";
-            this.rbtFemale.Size = new System.Drawing.Size(75, 22);
-            this.rbtFemale.TabIndex = 55;
-            this.rbtFemale.TabStop = true;
-            this.rbtFemale.Text = "Female";
-            this.rbtFemale.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(159, 168);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(14, 18);
+            this.label2.TabIndex = 58;
+            this.label2.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(204, 210);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(14, 18);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "*";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(227, 263);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(14, 18);
+            this.label4.TabIndex = 60;
+            this.label4.Text = "*";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(149, 312);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(14, 18);
+            this.label5.TabIndex = 61;
+            this.label5.Text = "*";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(168, 365);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(14, 18);
+            this.label6.TabIndex = 62;
+            this.label6.Text = "*";
             // 
             // CandidateRegistration
             // 
@@ -357,5 +441,12 @@
         private System.Windows.Forms.RadioButton rbtFemale;
         private System.Windows.Forms.RadioButton rbtMale;
         private System.Windows.Forms.Label lblGender;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblStar;
     }
 }
