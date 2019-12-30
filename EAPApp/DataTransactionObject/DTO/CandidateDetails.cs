@@ -24,6 +24,34 @@ namespace DataTransactionObject.DTO
             set { candidateName = value; }
         }
 
+        private string candidateGender;
+
+        public string CandidateGender
+        {
+            get { return candidateGender; }
+            set { candidateGender = value; }
+        }
+
+
+        private string candidateEmail;
+
+        public string CandidateEmail
+        {
+            get { return candidateEmail; }
+            set { candidateEmail = value; }
+        }
+
+
+        private long candidateNumber;
+
+        public long CandidateNumber
+        {
+            get { return candidateNumber; }
+            set { candidateNumber = value; }
+        }
+
+
+
         private string candidateDOB;
 
         public  string CandidateDOB
@@ -195,7 +223,37 @@ namespace DataTransactionObject.DTO
             set { collegeCourse33 = value; }
         }
 
+        private int registerNumber;
 
+        public int RegisterNumber
+        {
+            get { return registerNumber; }
+            set { registerNumber = value; }
+        }
+
+        private int entranceRank;
+
+        public int EntranceRank
+        {
+            get { return entranceRank; }
+            set { entranceRank = value; }
+        }
+
+        private int entranceScienceMark;
+
+        public int EntranceScienceMark
+        {
+            get { return entranceScienceMark; }
+            set { entranceScienceMark = value; }
+        }
+
+        private int entranceMathsMark;
+
+        public int EntranceMathsMark
+        {
+            get { return entranceMathsMark; }
+            set { entranceMathsMark = value; }
+        }
 
     }
 }

@@ -267,7 +267,7 @@ namespace PresentataionLayer
         private void btnNewUser1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Candidate candidate = new Candidate();
+            CandidateRegistration candidate = new CandidateRegistration();
             candidate.Show();
            
         }

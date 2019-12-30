@@ -121,6 +121,9 @@
   <data name="thA3H5LBHN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thA3H5LBHN.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="7557127" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7557127.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="adminhome2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\adminhome2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -129,6 +132,9 @@
   </data>
   <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_username_login_1172579" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_username_login_1172579.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="keralaGovt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\keralaGovt1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,7 +145,7 @@
   <data name="275093275002211" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\275093275002211.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_username_login_1172579" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\_username_login_1172579.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Untitled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
