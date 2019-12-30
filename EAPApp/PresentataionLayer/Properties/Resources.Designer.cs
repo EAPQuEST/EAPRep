@@ -83,6 +83,16 @@ namespace PresentataionLayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _7557127 {
+            get {
+                object obj = ResourceManager.GetObject("7557127", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _username_login_1172579 {
             get {
                 object obj = ResourceManager.GetObject("_username_login_1172579", resourceCulture);
@@ -136,6 +146,16 @@ namespace PresentataionLayer.Properties {
         internal static System.Drawing.Bitmap thA3H5LBHN {
             get {
                 object obj = ResourceManager.GetObject("thA3H5LBHN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled {
+            get {
+                object obj = ResourceManager.GetObject("Untitled", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
