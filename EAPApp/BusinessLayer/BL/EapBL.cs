@@ -59,6 +59,24 @@ namespace BusinessLayer.BL
 
 
         }
+        public static int CandidateRegistrationInsert(CandidateDetails candidateDetails)
+        {
+            int output = 0;
+            try
+            {
+
+                output = EapDSL.CandidateRegistrationInsert(candidateDetails);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:CandidateRegistrationInsert", ex.Message.ToString());
+            }
+
+            return output;
+
+
+        }
         public static int StudentCoursePreferenceInsert(CandidateDetails candidateDetails)
         {
             int output = 0;
@@ -73,6 +91,132 @@ namespace BusinessLayer.BL
                 Console.Out.WriteLine("*** Error : EapBL.cs:StudentCoursePreferenceInsert", ex.Message.ToString());
             }
            
+            return output;
+
+
+        }
+        public static DataSet GetCollegeIds()
+        {
+            string sql = "";
+
+            DataSet dsCollegeId = null;
+
+            try
+            {
+                dsCollegeId = EapDSL.GetCollegeIds();
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:GetCollegeIds()", ex.Message.ToString());
+            }
+
+            return dsCollegeId;
+        }
+
+        public static CollegeDetails GetCollegeDetailsUsingId(string courseId)
+        {
+
+            CollegeDetails collegeDetails = null;
+
+            try
+            {
+                collegeDetails = EapDSL.GetCollegeDetailsUsingId(courseId);
+                
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:GetCollegeDetailsUsingId()", ex.Message.ToString());
+            }
+            
+            return collegeDetails;
+        }
+        public static int CollegeDetailsUpdate(CollegeDetails collegeDetails)
+        {
+            int output = 0;
+           
+
+            try
+            {
+
+                output = EapDSL.CollegeDetailsUpdate(collegeDetails);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:CollegeDetailsUpdate()", ex.Message.ToString());
+            }
+           
+            return output;
+        }
+        public static int CollegeCourseUpdate(CollegeDetails collegeDetails)
+        {
+            int output = 0;
+
+
+            try
+            {
+
+                output = EapDSL.CollegeCourseUpdate(collegeDetails);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:CollegeCourseUpdate()", ex.Message.ToString());
+            }
+
+            return output;
+        }
+        public static DataSet GetCollegeDetails()
+        {
+            string sql = "";
+            DataSet dsCollegeDetails = null;
+
+
+            try
+            {
+
+                dsCollegeDetails = EapDSL.GetCollegeDetails();
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:GetCollegeDetails()", ex.Message.ToString());
+            }
+
+
+            return dsCollegeDetails;
+
+        }
+        public static DataSet GetDataLike(string likeCollegeName)
+        {
+
+            DataSet dsData = null;
+
+            try
+            {
+                dsData = EapDSL.GetDataLike(likeCollegeName);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:GetDataLike()", ex.Message.ToString());
+            }
+
+            return dsData;
+        }
+        public static int CollegeDelete(string collegeName)
+        {
+            int output = 0;
+            try
+            {
+
+                output = EapDSL.CollegeDelete(collegeName);
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs: CollegeDelete", ex.Message.ToString());
+            }
             return output;
 
 

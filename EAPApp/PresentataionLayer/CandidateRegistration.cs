@@ -37,7 +37,7 @@ namespace PresentataionLayer
                 candidateDetails.CandidateDOB = dtpDOB.Value.ToShortDateString();
                 candidateDetails.CandidateAddress = txtAddress.Text;
                 candidateDetails.CandidateEmail = txtEmail.Text;
-                candidateDetails.CandidateNumber = Convert.ToInt64(txtContactNumber.Text);
+                candidateDetails.CandidateNumber = Convert.ToInt32(txtContactNumber.Text);
 
                 if (rbtMale.Checked)
                 {
@@ -50,18 +50,19 @@ namespace PresentataionLayer
 
                 }
 
-                output = EapBL.StudentDetailsInsert(candidateDetails);
+                output = EapBL.CandidateRegistrationInsert(candidateDetails);
                 if (output > 0)
                 {
                     lblMessage.Text = "Successfully added";
+                    this.Hide();
+                    CandidateLogin candidateLogin = new CandidateLogin();
+                    candidateLogin.Show();
                 }
                 else
                 {
                     lblMessage.Text = "Failed";
                 }
-                this.Hide();
-                AllotmentWindow allotmentWindow = new AllotmentWindow();
-                allotmentWindow.Show();
+                
             }
             catch (Exception ex)
             {

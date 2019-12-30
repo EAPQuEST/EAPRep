@@ -38,6 +38,7 @@ namespace PresentataionLayer
         {
             CollegeDetails collegeDetails = null;
             int output = 0;
+            int outputcourse = 0;
 
             try
             {
@@ -47,9 +48,18 @@ namespace PresentataionLayer
                 collegeDetails.TotalSeats =Convert.ToInt32( txtTotalSeat.Text);
                 collegeDetails.CollegeAddress = txtAddress.Text;
                 collegeDetails.CollegePhone = Convert.ToInt32(txtContactNumber.Text);
+                for (int i = 0; i < clbCoursesAvailable.Items.Count; i++)
+                {
+                    if (clbCoursesAvailable.GetItemChecked(i))
+                    {
+                        collegeDetails.CourseName= (string)clbCoursesAvailable.Items[i];
+                        outputcourse = EapBL.CollegeCourseInsert(collegeDetails);
+                        
+                    }
+                }
 
                 output = EapBL.CollegeDetailsInsert(collegeDetails);
-                if(output>0)
+                if(output>0 || outputcourse>0)
                 {
                     lblMessage.Text = "Successfully added";
                 }

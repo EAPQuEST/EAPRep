@@ -57,11 +57,13 @@ namespace DataServiceLayer.DataLayer
             SqlCommand cmd = null;
             try
             {
-                sql = "insert into course_details(course_id,course_name,course_seats) values(";
+                string sqlnested = "select course_id from course_details where course_name='" + collegeDetails.CourseName + "'";
+                sql = "insert into college_coures(collegeid,courseid) values(";
 
-                sql = sql + "'" + collegeDetails.CourseId + "',";
-                sql = sql + "'" + collegeDetails.CourseName + "',";
-                sql = sql + "" + collegeDetails.CourseSeat+ ")";
+                sql = sql + "'" + collegeDetails.CollegeID + "',";
+                //sql = sql + "'" + collegeDetails.CourseId + "')";
+                sql = sql + "(" + sqlnested + "))" ;
+                //sql = sql + "" + collegeDetails.CourseSeat+ ")";
               
 
                 con = DatabaseHelper.GetConnection();
@@ -91,13 +93,9 @@ namespace DataServiceLayer.DataLayer
             SqlCommand cmd = null;
             try
             {
-                sql = "insert into candidate_details(candidate_id,candidate_name,candidate_dob,candidate_address," +
-                    "candidate_10th_school,candidate_10th_percentage,candidate_12th_school,candidate_12th_percentage," +
+                sql = "insert into candidate_details (candidate_10th_school,candidate_10th_percentage,candidate_12th_school,candidate_12th_percentage," +
                     "candiate_physics,candiate_chemistry,candiate_maths) values(";
-                sql = sql + "'" + candidateDetails.CandidateId + "',";
-                sql = sql + "'" + candidateDetails.CandidateName + "',";
-                sql = sql + "'" + candidateDetails.CandidateDOB + "',";
-                sql = sql + "'" + candidateDetails.CandidateAddress + "',";
+              
                 sql = sql + "'" + candidateDetails.CandidateSchoolName10 + "',";
                 sql = sql  + candidateDetails.Candidatemark10 + ",";
                 sql = sql + "'" + candidateDetails.CandidateSchoolName12 + "',";
@@ -105,6 +103,13 @@ namespace DataServiceLayer.DataLayer
                 sql = sql + candidateDetails.CandidatePhysics + ",";
                 sql = sql  + candidateDetails.CandidateChemistry + ",";
                 sql = sql  + candidateDetails.CandidateMaths + ")";
+              
+
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+
+                output = cmd.ExecuteNonQuery();
 
 
             }
@@ -119,6 +124,45 @@ namespace DataServiceLayer.DataLayer
             }
             return output;
 
+
+        }
+        public static int CandidateRegistrationInsert(CandidateDetails candidateDetails)
+        {
+            int output = 0;
+            string sql = "";
+            SqlConnection con = null;
+            SqlCommand cmd = null;
+
+            try
+            {
+                sql = "insert into candidate_registration(candidate_id,candidate_name,candidate_gender,candidate_dob," +
+                      "candidate_phone,candidate_email,candidate_address) values(";
+
+                sql = sql + "'" + candidateDetails.CandidateId + "',";
+                sql = sql + "'" + candidateDetails.CandidateName + "',";
+                sql = sql + "'" + candidateDetails.CandidateGender + "',";
+                sql = sql + "'" + candidateDetails.CandidateDOB + "',";
+                sql = sql + "'" + candidateDetails.CandidateNumber + "',";
+                sql = sql + "'" + candidateDetails.CandidateEmail + "',";
+                sql = sql + "'" + candidateDetails.CandidateAddress + "')";
+
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+
+                output = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:CandidateRegistrationInsert", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                cmd.Dispose();
+            }
+
+            return output;
 
         }
         public static int StudentCoursePreferenceInsert(CandidateDetails candidateDetails)
@@ -158,6 +202,252 @@ namespace DataServiceLayer.DataLayer
             return output;
 
 
+        }
+        public static int CollegeDetailsUpdate(CollegeDetails collegeDetails)
+        {
+            int output = 0;
+            string sql = "";
+            SqlConnection con = null;
+            SqlCommand cmd = null;
+
+            try
+            {
+                sql = "update college_details set ";
+               // sql = sql + "college_id ='" + collegeDetails.CollegeID + "',";
+                sql = sql + "college_name ='" + collegeDetails.CollegeName + "',";
+                sql = sql + "total_seats ='" + collegeDetails.TotalSeats + "',";
+                sql = sql + "college_address ='" + collegeDetails.CollegeAddress + "',";
+                sql = sql + "college_phone =" + collegeDetails.CollegePhone + " ";
+                
+                sql = sql + "where college_id = '" + collegeDetails.CollegeID + "'";
+
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+
+                output = cmd.ExecuteNonQuery();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:CollegeDetailsUpdate()", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                cmd.Dispose();
+            }
+            return output;
+        }
+
+        public static int CollegeCourseUpdate(CollegeDetails collegeDetails)
+        {
+            int output = 0;
+            string sql = "";
+            SqlConnection con = null;
+            SqlCommand cmd = null;
+
+            try
+            {
+                string sqlnested = "select course_id from course_details where course_name='" + collegeDetails.CourseName + "'";
+                sql = "update college_coures set ";
+               
+           
+                sql = sql + "(" + sqlnested + ")";
+                sql = sql + "where college_id = '" + collegeDetails.CollegeID + "'";
+
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+
+                output = cmd.ExecuteNonQuery();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:CollegeDetailsUpdate()", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                cmd.Dispose();
+            }
+            return output;
+        }
+
+        public static DataSet GetCollegeIds()
+        {
+            string sql = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            DataSet dsCollegeIds = null;
+
+            try
+            {
+                sql = "select college_id  from college_details";
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                dsCollegeIds = new DataSet();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dsCollegeIds);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:GetCollegeIds()", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+            return dsCollegeIds;
+        }
+
+        public static CollegeDetails GetCollegeDetailsUsingId(string collegeId)
+        {
+            string sql = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            DataSet dsCollegeDetails = null;
+            CollegeDetails collegeDetails = null;
+           
+
+            try
+            {
+                sql = "select *  from college_details where college_id='" + collegeId + "'";
+                string s = "select courseid from college_coures where collegeid'" + collegeId + "'";
+                string t = "select course_name from course_details where course_id'" + s + "'";
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                dsCollegeDetails = new DataSet();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dsCollegeDetails);
+                Object[] Data = null;
+
+                if (dsCollegeDetails.Tables[0].Rows.Count > 0)
+                {
+                    Data = dsCollegeDetails.Tables[0].Rows[0].ItemArray;
+                    collegeDetails = new CollegeDetails();
+                    collegeDetails.CollegeID = Data[0].ToString();
+                    collegeDetails.CollegeName = Data[1].ToString();
+                    collegeDetails.TotalSeats = Convert.ToInt32(Data[2].ToString());
+                    collegeDetails.CollegeAddress = Data[3].ToString();
+                    collegeDetails.CollegePhone = Convert.ToInt64(Data[4].ToString());
+                    collegeDetails.CourseName = Data[5].ToString();
+                    
+
+
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:GetCollegeDetailsUsingId()", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+            return collegeDetails;
+        }
+        public static DataSet GetCollegeDetails()
+        {
+            string sql = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            DataSet dsCollege = null;
+
+            try
+            {
+                sql = "select * from college_details";
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                dsCollege = new DataSet();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dsCollege);
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:GetCollegeDetails()", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+
+            return dsCollege;
+
+        }
+        public static DataSet GetDataLike(string likeCollegeName)
+        {
+            string sql = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            DataSet dsData = null;
+
+            try
+            {
+                sql = "select * from college_details where college_name like '" + likeCollegeName + "%'";
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                dsData = new DataSet();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dsData);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:GetDataLike", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+            return dsData;
+        }
+        public static int CollegeDelete(string collegeName)
+        {
+            int output = 0;
+            string sql = "";
+            SqlConnection con = null;
+            SqlCommand cmd = null;
+
+            try
+            {
+                sql = "delete from college_details where college_name='" + collegeName + "'";
+
+
+
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+
+                output = cmd.ExecuteNonQuery();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:CollegeDelete", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                cmd.Dispose();
+            }
+
+
+            return output;
         }
 
     }

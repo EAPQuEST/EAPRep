@@ -1,1 +1,1 @@
-﻿insert into college_details(college_id,college_name,total_seats,college_address,college_phone) values('45er','drfgbfd',44,'dfbh cb','4654')
+﻿update college_details set college_name ='ttytf',total_seats ='10',college_address ='huhk',college_phone =852 where college_id = '665465'
