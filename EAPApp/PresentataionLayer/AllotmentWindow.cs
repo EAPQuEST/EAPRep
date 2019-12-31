@@ -281,27 +281,43 @@ namespace PresentataionLayer
 
         private void btnExistingLogin_Click(object sender, EventArgs e)
         {
-
-
-            CandidateDetails candidateDetails = null;
-            int output = 0;
-
+            string username;
+            string password;
+            LoginInfo.userID = txtCandidateUsername.Text;
+            username = LoginInfo.userID;
+            LoginInfo.password = txtCandidatePassword.Text;
+            password = LoginInfo.password;
+            //DataSet dsLogin = null;
+            DataTable dtLogin = null;
+            //if (dsLogin.Rows[0][0].ToString() == "1")
             try
-            {
-                candidateDetails = new CandidateDetails();
+            { 
 
+                dtLogin = EapBL.CandidateLogin(username, password);
+                //if (dtLogin.Rows[0][0].ToString() == "1")
+                if(dtLogin.Rows.Count>0)
+                {
+                    MessageBox.Show("Login successfully");
+                    this.Hide();
+                    CandidateEducationalDetails candidateEducationalDetails = new CandidateEducationalDetails();
+                    candidateEducationalDetails.Show();
 
-                this.Hide();
-                CandidateEducationalDetails candidateEducationalDetails = new CandidateEducationalDetails();
-                candidateEducationalDetails.Show();
-
+                }
+                else
+                {
+                    MessageBox.Show("Failed to Login");
+                }
 
             }
-            catch (Exception ex)
+            catch (FormatException ex)
             {
-
+                //lblMessage.Text = ex.Message.ToString();
             }
 
+
+
+
+            
 
         }
         //Candidate Login

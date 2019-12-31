@@ -221,5 +221,44 @@ namespace BusinessLayer.BL
 
 
         }
+        public static DataTable CandidateLogin(string user,string password)
+        {
+            //DataSet dsData = null;
+            DataTable dtLogin = null;
+
+            try
+            {
+                dtLogin = EapDSL.CandidateLogin(user, password);
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:CandidateLogin()", ex.Message.ToString());
+            }
+
+
+            return dtLogin;
+
+        }
+        public static DataSet LoadCollegePreference(string collegeName)
+        {
+            DataSet dsData = null;
+
+            try
+            {
+                dsData = EapDSL.LoadCollegePreference(collegeName);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:LoadCollegePreference()", ex.Message.ToString());
+            }
+           
+
+            return dsData;
+
+        }
+
     }
 }

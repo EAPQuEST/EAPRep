@@ -17,6 +17,7 @@ namespace PresentataionLayer
         public CandidateEducationalDetails()
         {
             InitializeComponent();
+            lblUserId.Text = LoginInfo.userID;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -41,6 +42,7 @@ namespace PresentataionLayer
                 candidateDetails.CandidatePhysics = Convert.ToInt32(txtPhysics.Text);
                 candidateDetails.CandidateChemistry = Convert.ToInt32(txtChemistry.Text);
                 candidateDetails.CandidateMaths = Convert.ToInt32(txtMaths.Text);
+
 
                 output = EapBL.StudentDetailsInsert(candidateDetails);
                 if (output > 0)

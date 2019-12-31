@@ -449,6 +449,76 @@ namespace DataServiceLayer.DataLayer
 
             return output;
         }
+        public static DataTable CandidateLogin(string user, string password)
+        {
+            string sql = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            //DataSet dsLogin = null;
+            DataTable dtLogin = null;
 
+
+            try
+            {
+                //sql = "select count(*) as cnt from login_database"
+                sql = "select candidate_id,candidate_dob from candidate_registration where candidate_id='" + user + "'and candidate_dob='" + password + "'";
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                //dsLogin = new DataSet();
+                dtLogin = new DataTable();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dtLogin);
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:CandidateLogin()", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+
+            return dtLogin;
+        }
+
+            public static DataSet LoadCollegePreference(string collegeName)
+            {
+                string sql = "";
+                string nestedsql;
+                SqlConnection con = null;
+                SqlDataAdapter adapter = null;
+                DataSet dsPreference = null;
+
+                try
+                {
+                    string sql1="select college_id from college_details where college_name='" + collegeName + "'";
+                    nestedsql = "select course_id from college_coures where college_id='" + sql1 + "'";
+                    sql = "select course_name from course_details where course_id'"+nestedsql+"'";
+                    con = DatabaseHelper.GetConnection();
+                    con.Open();
+                    dsPreference = new DataSet();
+                    adapter = new SqlDataAdapter(sql, con);
+                    adapter.Fill(dsPreference);
+
+
+                }
+                catch (Exception ex)
+                {
+                    Console.Out.WriteLine("*** Error : EapDSL.cs:LoadCollegePreference()", ex.Message.ToString());
+                }
+                finally
+                {
+                    con.Close();
+                    adapter.Dispose();
+                }
+
+                return dsPreference;
+
+            }
+
+        }
     }
-}
+

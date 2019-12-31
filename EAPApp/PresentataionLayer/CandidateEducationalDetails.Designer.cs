@@ -60,6 +60,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tspHome = new System.Windows.Forms.ToolStripButton();
             this.btnCandidateNext = new System.Windows.Forms.Button();
+            this.lblUserId = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +68,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblUserId);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
@@ -180,7 +182,7 @@
             // lblMessage
             // 
             this.lblMessage.AutoSize = true;
-            this.lblMessage.Location = new System.Drawing.Point(489, 62);
+            this.lblMessage.Location = new System.Drawing.Point(517, 83);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(0, 13);
             this.lblMessage.TabIndex = 69;
@@ -253,7 +255,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.LightBlue;
             this.button1.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 12);
+            this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(800, 35);
             this.button1.TabIndex = 49;
@@ -451,6 +453,14 @@
             this.btnCandidateNext.UseVisualStyleBackColor = false;
             this.btnCandidateNext.Click += new System.EventHandler(this.btnCandidateNext_Click);
             // 
+            // lblUserId
+            // 
+            this.lblUserId.AutoSize = true;
+            this.lblUserId.Location = new System.Drawing.Point(679, 54);
+            this.lblUserId.Name = "lblUserId";
+            this.lblUserId.Size = new System.Drawing.Size(0, 13);
+            this.lblUserId.TabIndex = 78;
+            // 
             // CandidateEducationalDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -503,5 +513,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblUserId;
     }
 }

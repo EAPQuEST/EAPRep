@@ -38,13 +38,13 @@ namespace PresentataionLayer
         {
 
         }
-       
-       
 
-          
+
+
+
         private void btnCandidateEntranceSubmit_Click(object sender, EventArgs e)
         {
-            
+
             int output = 0;
             int outputentrance = 0;
 
@@ -72,7 +72,7 @@ namespace PresentataionLayer
 
                 output = EapBL.StudentCoursePreferenceInsert(candidateDetails);
                 outputentrance = EapBL.StudentDetailsInsert(candidateDetails);
-                if (output > 0 && outputentrance>0)
+                if (output > 0 && outputentrance > 0)
                 {
                     lblMessage.Text = "Successfully added";
 
@@ -84,7 +84,7 @@ namespace PresentataionLayer
                 {
                     lblMessage.Text = "Failed";
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -103,7 +103,43 @@ namespace PresentataionLayer
                 candidateDetails.EntranceScienceMark + "\nEmail\t\t:" + candidateDetails.EntranceMathsMark + "\nMob\t\t :" + candidateDetails.Collegeprefernce1 + "\nDOB\t\t:" + candidateDetails.Collegeprefernce2 + "\nGender\t\t:" +
                 candidateDetails.CollegePrefernce3 + "\nHobbies\t\t:" + candidateDetails.CollegeCourse11);
 
-            
+
+        }
+
+        public void LoadCoursePreference()
+        {
+
+            CollegeDetails coursePreference = null;
+            DataSet dsCoursePreference = new DataSet();
+            try
+            {
+                coursePreference = EapBL.GetCollegeDetailsUsingId(cmbCollegePreference1.Text);
+                if (coursePreference != null)
+                {
+
+                    //for (int i = 0; i < dsCoursePreference.Tables[0].Rows.Count; i++)
+                    //{
+                    //    var item = dsCoursePreference.Tables[0].Rows[i]["course_name"].ToString();
+                    //    //for (int j = 0; j < clbCoursesAvailable.Items.Count; j++)
+                    //    //{
+                    //    //    if (clbCoursesAvailable.Items[j].ToString() == item)
+                    //    //    {
+                    //    //        clbCoursesAvailable.SetItemChecked(j, true);
+                    //    //        break;
+                    //    //    }
+                    //    //}
+                    //}
+                    cmbCoursePreference11.DataSource = dsCoursePreference.Tables[0];
+                    cmbCoursePreference11.ValueMember = "course_name";
+                    cmbCoursePreference11.DisplayMember = "course_name";
+                }
+
+
+            }
+            catch (FormatException ex)
+            {
+                lblMessage.Text = ex.Message.ToString();
+            }
         }
     }
 }
