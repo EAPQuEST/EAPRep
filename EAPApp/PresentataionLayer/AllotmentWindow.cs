@@ -310,6 +310,10 @@ namespace PresentataionLayer
         //Candidate Login
         private void txtCandidateUsername_MouseEnter(object sender, EventArgs e)
         {
+        }
+        private void txtCandidateUsername_MouseClick(object sender, MouseEventArgs e)
+        {
+
             if (txtCandidateUsername.Text == "Username")
             {
                 txtCandidateUsername.Text = "";
@@ -318,7 +322,6 @@ namespace PresentataionLayer
 
             }
         }
-
         private void txtCandidateUsername_MouseLeave(object sender, EventArgs e)
         {
 
@@ -331,6 +334,10 @@ namespace PresentataionLayer
         }
 
         private void txtCandidatePassword_MouseEnter(object sender, EventArgs e)
+        {
+           
+        }
+        private void txtCandidatePassword_MouseClick(object sender, MouseEventArgs e)
         {
             if (txtCandidatePassword.Text == "Password")
             {
@@ -348,10 +355,10 @@ namespace PresentataionLayer
 
             if (txtCandidatePassword.Text == "")
             {
-               
-              txtCandidatePassword.Text = "Password";
-                txtCandidatePassword.ForeColor = Color.Gray;
                 txtCandidatePassword.Font = new Font(txtCandidatePassword.Font.FontFamily, txtCandidatePassword.Font.Size, FontStyle.Italic);
+                txtCandidatePassword.Text = "Password";
+                txtCandidatePassword.ForeColor = Color.Gray;
+               
             }
         }
 
@@ -367,6 +374,9 @@ namespace PresentataionLayer
      //college Login
         private void txtCollegeUsername_MouseEnter(object sender, EventArgs e)
         {
+        }
+        private void txtCollegeUsername_MouseClick(object sender, MouseEventArgs e)
+        {
             if (txtCollegeUsername.Text == "Username")
             {
                 txtCollegeUsername.Text = "";
@@ -375,7 +385,6 @@ namespace PresentataionLayer
 
             }
         }
-
         private void txtCollegeUsername_MouseLeave(object sender, EventArgs e)
         {
 
@@ -390,6 +399,10 @@ namespace PresentataionLayer
         private void txtCollegePassword_MouseEnter(object sender, EventArgs e)
         {
 
+          
+        }
+        private void txtCollegePassword_MouseClick(object sender, MouseEventArgs e)
+        {
             if (txtCollegePassword.Text == "Password")
             {
                 txtCollegePassword.Text = "";
@@ -400,7 +413,6 @@ namespace PresentataionLayer
                 txtCollegePassword.MaxLength = 14;
             }
         }
-
         private void txtCollegePassword_MouseLeave(object sender, EventArgs e)
         {
             if (txtCollegePassword.Text == "")
@@ -415,6 +427,10 @@ namespace PresentataionLayer
 
         private void txtAdminUsername_MouseEnter(object sender, EventArgs e)
         {
+           
+        }
+        private void txtAdminUsername_MouseClick(object sender, MouseEventArgs e)
+        {
             if (txtAdminUsername.Text == "Username")
             {
                 txtAdminUsername.Text = "";
@@ -423,7 +439,6 @@ namespace PresentataionLayer
 
             }
         }
-
         private void txtAdminUsername_MouseLeave(object sender, EventArgs e)
         {
 
@@ -437,6 +452,10 @@ namespace PresentataionLayer
 
         private void txtAdminPassword_MouseEnter(object sender, EventArgs e)
         {
+        }
+        private void txtAdminPassword_MouseClick(object sender, MouseEventArgs e)
+        {
+
             if (txtAdminPassword.Text == "Password")
             {
                 txtAdminPassword.Text = "";
@@ -447,7 +466,6 @@ namespace PresentataionLayer
                 txtAdminPassword.MaxLength = 10;
             }
         }
-
         private void txtAdminPassword_MouseLeave(object sender, EventArgs e)
         {
 
@@ -494,5 +512,14 @@ namespace PresentataionLayer
                 epCandidateLogin.SetError(txtCandidateUsername, "");
             }
         }
+
+        private void label1_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.Hide();
+            CandidateRegistration candidate = new CandidateRegistration();
+            candidate.Show();
+        }
+
+        
     }
 }

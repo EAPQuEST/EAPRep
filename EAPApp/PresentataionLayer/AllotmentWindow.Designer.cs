@@ -116,13 +116,15 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(295, 442);
+            this.label1.Location = new System.Drawing.Point(302, 455);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(187, 19);
             this.label1.TabIndex = 6;
             this.label1.Text = "Not an Existing User? Sign In";
+            this.label1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label1_MouseClick);
             // 
             // panel1
             // 
@@ -147,10 +149,10 @@
             // 
             // btnExistingLogin
             // 
-            this.btnExistingLogin.BackColor = System.Drawing.Color.White;
+            this.btnExistingLogin.BackColor = System.Drawing.Color.Transparent;
             this.btnExistingLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExistingLogin.Font = new System.Drawing.Font("Poor Richard", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExistingLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnExistingLogin.ForeColor = System.Drawing.Color.DarkBlue;
             this.btnExistingLogin.Location = new System.Drawing.Point(107, 248);
             this.btnExistingLogin.Name = "btnExistingLogin";
             this.btnExistingLogin.Size = new System.Drawing.Size(133, 38);
@@ -169,6 +171,7 @@
             this.txtCandidatePassword.Size = new System.Drawing.Size(232, 28);
             this.txtCandidatePassword.TabIndex = 1;
             this.txtCandidatePassword.Text = "Password";
+            this.txtCandidatePassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtCandidatePassword_MouseClick);
             this.txtCandidatePassword.TextChanged += new System.EventHandler(this.txtCandidatePassword_TextChanged);
             this.txtCandidatePassword.MouseEnter += new System.EventHandler(this.txtCandidatePassword_MouseEnter);
             this.txtCandidatePassword.MouseLeave += new System.EventHandler(this.txtCandidatePassword_MouseLeave);
@@ -183,6 +186,7 @@
             this.txtCandidateUsername.Size = new System.Drawing.Size(232, 28);
             this.txtCandidateUsername.TabIndex = 0;
             this.txtCandidateUsername.Text = "Username";
+            this.txtCandidateUsername.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtCandidateUsername_MouseClick);
             this.txtCandidateUsername.MouseEnter += new System.EventHandler(this.txtCandidateUsername_MouseEnter);
             this.txtCandidateUsername.MouseLeave += new System.EventHandler(this.txtCandidateUsername_MouseLeave);
             this.txtCandidateUsername.Validating += new System.ComponentModel.CancelEventHandler(this.txtCandidateUsername_Validating);
@@ -214,8 +218,8 @@
             // 
             this.btnCandidateSignIn.BackColor = System.Drawing.Color.Transparent;
             this.btnCandidateSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCandidateSignIn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCandidateSignIn.Location = new System.Drawing.Point(337, 406);
+            this.btnCandidateSignIn.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnCandidateSignIn.Location = new System.Drawing.Point(337, 408);
             this.btnCandidateSignIn.Name = "btnCandidateSignIn";
             this.btnCandidateSignIn.Size = new System.Drawing.Size(114, 33);
             this.btnCandidateSignIn.TabIndex = 2;
@@ -303,6 +307,7 @@
             this.txtCollegePassword.Size = new System.Drawing.Size(232, 28);
             this.txtCollegePassword.TabIndex = 1;
             this.txtCollegePassword.Text = "Password";
+            this.txtCollegePassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtCollegePassword_MouseClick);
             this.txtCollegePassword.MouseEnter += new System.EventHandler(this.txtCollegePassword_MouseEnter);
             this.txtCollegePassword.MouseLeave += new System.EventHandler(this.txtCollegePassword_MouseLeave);
             // 
@@ -316,6 +321,7 @@
             this.txtCollegeUsername.Size = new System.Drawing.Size(232, 28);
             this.txtCollegeUsername.TabIndex = 0;
             this.txtCollegeUsername.Text = "Username";
+            this.txtCollegeUsername.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtCollegeUsername_MouseClick);
             this.txtCollegeUsername.TextChanged += new System.EventHandler(this.txtCollegeUsername_TextChanged);
             this.txtCollegeUsername.MouseEnter += new System.EventHandler(this.txtCollegeUsername_MouseEnter);
             this.txtCollegeUsername.MouseLeave += new System.EventHandler(this.txtCollegeUsername_MouseLeave);
@@ -400,6 +406,7 @@
             this.txtAdminPassword.Size = new System.Drawing.Size(232, 28);
             this.txtAdminPassword.TabIndex = 1;
             this.txtAdminPassword.Text = "Password";
+            this.txtAdminPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAdminPassword_MouseClick);
             this.txtAdminPassword.MouseEnter += new System.EventHandler(this.txtAdminPassword_MouseEnter);
             this.txtAdminPassword.MouseLeave += new System.EventHandler(this.txtAdminPassword_MouseLeave);
             // 
@@ -413,6 +420,7 @@
             this.txtAdminUsername.Size = new System.Drawing.Size(232, 28);
             this.txtAdminUsername.TabIndex = 0;
             this.txtAdminUsername.Text = "Username";
+            this.txtAdminUsername.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAdminUsername_MouseClick);
             this.txtAdminUsername.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.txtAdminUsername.MouseEnter += new System.EventHandler(this.txtAdminUsername_MouseEnter);
             this.txtAdminUsername.MouseLeave += new System.EventHandler(this.txtAdminUsername_MouseLeave);
