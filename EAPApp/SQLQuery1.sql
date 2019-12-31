@@ -1,1 +1,1 @@
-﻿update college_details set college_name ='ttytf',total_seats ='10',college_address ='huhk',college_phone =852 where college_id = '665465'
+﻿alter table entrance_details add candidate_id varchar(20)
