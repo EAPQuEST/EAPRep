@@ -14,7 +14,7 @@ namespace PresentataionLayer
 {
     public partial class CandidateEntrance : Form
     {
-        CandidateDetails candidateDetails = null;
+     
         public CandidateEntrance()
         {
             InitializeComponent();
@@ -44,7 +44,7 @@ namespace PresentataionLayer
           
         private void btnCandidateEntranceSubmit_Click(object sender, EventArgs e)
         {
-            
+            CandidateDetails candidateDetails = null;
             int output = 0;
             int outputentrance = 0;
 
@@ -74,6 +74,13 @@ namespace PresentataionLayer
                 outputentrance = EapBL.StudentDetailsInsert(candidateDetails);
                 if (output > 0 && outputentrance>0)
                 {
+                    MessageBox.Show("Register Number \t\t:" + candidateDetails.RegisterNumber +
+                "\nRank\t:" + candidateDetails.EntranceRank +
+                "\nEntrance Science Mark\t:" + candidateDetails.EntranceScienceMark +
+                "\nEntrance Maths Mark\t\t:" + candidateDetails.EntranceMathsMark +
+                "\nCollege Preference 1\t\t :" + candidateDetails.Collegeprefernce1 +
+                "\nCollege Preference 2\t\t:" + candidateDetails.Collegeprefernce2 +
+                "\nCollege Preference 3\t\t:" + candidateDetails.CollegePrefernce3);
                     lblMessage.Text = "Successfully added";
 
                     this.Hide();
@@ -99,11 +106,19 @@ namespace PresentataionLayer
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Register Number \t\t:" + candidateDetails.RegisterNumber + "\nRank\t:" + candidateDetails.EntranceRank + "\nDepartment\t:" +
-                candidateDetails.EntranceScienceMark + "\nEmail\t\t:" + candidateDetails.EntranceMathsMark + "\nMob\t\t :" + candidateDetails.Collegeprefernce1 + "\nDOB\t\t:" + candidateDetails.Collegeprefernce2 + "\nGender\t\t:" +
-                candidateDetails.CollegePrefernce3 + "\nHobbies\t\t:" + candidateDetails.CollegeCourse11);
-
             
+                //"\nCourse Preference 11\t\t:" + candidateDetails.CollegeCourse11 +
+                //"\nCourse Preference 12\t\t:" + candidateDetails.CollegeCourse12 +
+                //"\nCourse Preference 12\t\t:" + candidateDetails.CollegeCourse13 +
+                //"\nCourse Preference 21\t\t:" + candidateDetails.CollegeCourse21 +
+                //"\nCourse Preference 22\t\t:" + candidateDetails.CollegeCourse22 +
+                //"\nCourse Preference 23\t\t:" + candidateDetails.CollegeCourse23 +
+                //"\nCourse Preference 31\t\t:" + candidateDetails.CollegeCourse31 +
+                //"\nCourse Preference 32\t\t:" + candidateDetails.CollegeCourse32 +
+                //"\nCourse Preference 33\t\t:" + candidateDetails.CollegeCourse33);
+
+
+
         }
     }
 }

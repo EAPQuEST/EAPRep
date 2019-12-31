@@ -45,6 +45,16 @@ namespace PresentataionLayer
                 output = EapBL.StudentDetailsInsert(candidateDetails);
                 if (output > 0)
                 {
+
+                    MessageBox.Show("10th School Name :" + candidateDetails.CandidateSchoolName10 +
+                "\n10th Mark\t:" + candidateDetails.Candidatemark10 +
+                "\n12th School Name\t:" + candidateDetails.CandidateSchoolName12 +
+                "\n12th Mark\t:" + candidateDetails.Candidatemark12 +
+                "\nPhysics Mark 1\t:" + candidateDetails.CandidatePhysics +
+                "\nChemistry Mark\t:" + candidateDetails.CandidateChemistry +
+                "\nMaths Mark\t:" + candidateDetails.CandidateMaths);
+
+
                     lblMessage.Text = "Successfully added";
                     this.Hide();
                     CandidateEntrance candidateEntrance = new CandidateEntrance();

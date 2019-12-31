@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllotmentWindow));
             this.lblHeading = new System.Windows.Forms.Label();
             this.tbcLogin = new System.Windows.Forms.TabControl();
@@ -57,6 +58,7 @@
             this.btnAdminLogin = new System.Windows.Forms.Button();
             this.txtAdminPassword = new System.Windows.Forms.TextBox();
             this.txtAdminUsername = new System.Windows.Forms.TextBox();
+            this.epCandidateLogin = new System.Windows.Forms.ErrorProvider(this.components);
             this.tbcLogin.SuspendLayout();
             this.tbcCandidate.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -67,6 +69,7 @@
             this.tbcAdmin.SuspendLayout();
             this.toolStrip3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epCandidateLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // lblHeading
@@ -166,6 +169,7 @@
             this.txtCandidatePassword.Size = new System.Drawing.Size(232, 28);
             this.txtCandidatePassword.TabIndex = 1;
             this.txtCandidatePassword.Text = "Password";
+            this.txtCandidatePassword.TextChanged += new System.EventHandler(this.txtCandidatePassword_TextChanged);
             this.txtCandidatePassword.MouseEnter += new System.EventHandler(this.txtCandidatePassword_MouseEnter);
             this.txtCandidatePassword.MouseLeave += new System.EventHandler(this.txtCandidatePassword_MouseLeave);
             // 
@@ -181,6 +185,7 @@
             this.txtCandidateUsername.Text = "Username";
             this.txtCandidateUsername.MouseEnter += new System.EventHandler(this.txtCandidateUsername_MouseEnter);
             this.txtCandidateUsername.MouseLeave += new System.EventHandler(this.txtCandidateUsername_MouseLeave);
+            this.txtCandidateUsername.Validating += new System.ComponentModel.CancelEventHandler(this.txtCandidateUsername_Validating);
             // 
             // toolStrip1
             // 
@@ -412,6 +417,10 @@
             this.txtAdminUsername.MouseEnter += new System.EventHandler(this.txtAdminUsername_MouseEnter);
             this.txtAdminUsername.MouseLeave += new System.EventHandler(this.txtAdminUsername_MouseLeave);
             // 
+            // epCandidateLogin
+            // 
+            this.epCandidateLogin.ContainerControl = this;
+            // 
             // AllotmentWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -444,6 +453,7 @@
             this.toolStrip3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epCandidateLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,5 +489,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStrip toolStrip3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ErrorProvider epCandidateLogin;
     }
 }

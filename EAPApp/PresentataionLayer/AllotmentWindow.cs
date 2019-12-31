@@ -302,7 +302,10 @@ namespace PresentataionLayer
 
             }
 
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
 
+            }
         }
         //Candidate Login
         private void txtCandidateUsername_MouseEnter(object sender, EventArgs e)
@@ -345,7 +348,8 @@ namespace PresentataionLayer
 
             if (txtCandidatePassword.Text == "")
             {
-                txtCandidatePassword.Text = "Password";
+               
+              txtCandidatePassword.Text = "Password";
                 txtCandidatePassword.ForeColor = Color.Gray;
                 txtCandidatePassword.Font = new Font(txtCandidatePassword.Font.FontFamily, txtCandidatePassword.Font.Size, FontStyle.Italic);
             }
@@ -440,7 +444,7 @@ namespace PresentataionLayer
                 txtAdminPassword.ForeColor = Color.Black;
                 txtAdminPassword.Font = new Font(txtAdminPassword.Font.FontFamily, txtAdminPassword.Font.Size, FontStyle.Regular);
                 txtAdminPassword.PasswordChar = '*';
-                txtAdminPassword.MaxLength = 14;
+                txtAdminPassword.MaxLength = 10;
             }
         }
 
@@ -450,6 +454,7 @@ namespace PresentataionLayer
             if (txtAdminPassword.Text == "")
             {
                 txtAdminPassword.Text = "Password";
+               
                 txtAdminPassword.ForeColor = Color.Gray;
                 txtAdminPassword.Font = new Font(txtAdminPassword.Font.FontFamily, txtAdminPassword.Font.Size, FontStyle.Italic);
             }
@@ -468,6 +473,26 @@ namespace PresentataionLayer
             this.Hide();
             Administrator administrator = new Administrator();
             administrator.Show();
+        }
+
+        private void txtCandidatePassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCandidateUsername_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtCandidateUsername.Text) && txtCandidateUsername.Text=="Username")
+            {
+                e.Cancel = true;
+                txtCandidateUsername.Focus();
+                epCandidateLogin.SetError(txtCandidateUsername, "Username is required!!");
+            }
+            else
+            {
+                e.Cancel = false;
+                epCandidateLogin.SetError(txtCandidateUsername, "");
+            }
         }
     }
 }

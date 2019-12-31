@@ -1,0 +1,40 @@
+﻿'PresentataionLayer.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'PresentataionLayer.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\Users\1028272\Desktop\project\EAPApp\EAPApp\PresentataionLayer\bin\Debug\PresentataionLayer.exe'. Symbols loaded.
+'PresentataionLayer.exe' (CLR v4.0.30319: PresentataionLayer.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'PresentataionLayer.exe' (CLR v4.0.30319: PresentataionLayer.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'PresentataionLayer.exe' (CLR v4.0.30319: PresentataionLayer.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'PresentataionLayer.exe' (CLR v4.0.30319: PresentataionLayer.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'PresentataionLayer.exe' (CLR v4.0.30319: PresentataionLayer.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'PresentataionLayer.exe' (CLR v4.0.30319: PresentataionLayer.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'PresentataionLayer.exe' (CLR v4.0.30319: PresentataionLayer.exe): Loaded 'C:\Users\1028272\Desktop\project\EAPApp\EAPApp\PresentataionLayer\bin\Debug\DataTransactionObject.dll'. Symbols loaded.
+'PresentataionLayer.exe' (CLR v4.0.30319: PresentataionLayer.exe): Loaded 'C:\Users\1028272\Desktop\project\EAPApp\EAPApp\PresentataionLayer\bin\Debug\BusinessLayer.dll'. Symbols loaded.
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+Exception thrown: 'System.FormatException' in mscorlib.dll
+'PresentataionLayer.exe' (CLR v4.0.30319: PresentataionLayer.exe): Loaded 'C:\Users\1028272\Desktop\project\EAPApp\EAPApp\PresentataionLayer\bin\Debug\DataServiceLayer.dll'. Symbols loaded.
+'PresentataionLayer.exe' (CLR v4.0.30319: PresentataionLayer.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'PresentataionLayer.exe' (CLR v4.0.30319: PresentataionLayer.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Transactions\v4.0_4.0.0.0__b77a5c561934e089\System.Transactions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'PresentataionLayer.exe' (CLR v4.0.30319: PresentataionLayer.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'PresentataionLayer.exe' (CLR v4.0.30319: PresentataionLayer.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.Wrapper.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+The program '[10788] PresentataionLayer.exe' has exited with code -1 (0xffffffff).
