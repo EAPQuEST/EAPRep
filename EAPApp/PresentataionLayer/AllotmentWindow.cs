@@ -335,6 +335,8 @@ namespace PresentataionLayer
 
                 txtCandidatePassword.ForeColor = Color.Black;
                 txtCandidatePassword.Font = new Font(txtCandidatePassword.Font.FontFamily, txtCandidatePassword.Font.Size, FontStyle.Regular);
+                txtCandidatePassword.PasswordChar = '*';
+                txtCandidatePassword.MaxLength = 14;
             }
         }
 
@@ -390,6 +392,8 @@ namespace PresentataionLayer
 
                 txtCollegePassword.ForeColor = Color.Black;
                 txtCollegePassword.Font = new Font(txtCollegePassword.Font.FontFamily, txtCollegePassword.Font.Size, FontStyle.Regular);
+                txtCollegePassword.PasswordChar = '*';
+                txtCollegePassword.MaxLength = 14;
             }
         }
 
@@ -435,6 +439,8 @@ namespace PresentataionLayer
 
                 txtAdminPassword.ForeColor = Color.Black;
                 txtAdminPassword.Font = new Font(txtAdminPassword.Font.FontFamily, txtAdminPassword.Font.Size, FontStyle.Regular);
+                txtAdminPassword.PasswordChar = '*';
+                txtAdminPassword.MaxLength = 14;
             }
         }
 

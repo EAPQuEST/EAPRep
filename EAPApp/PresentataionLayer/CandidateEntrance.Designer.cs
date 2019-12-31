@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CandidateEntrance));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.lblScience = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtRank = new System.Windows.Forms.TextBox();
@@ -40,17 +44,22 @@
             this.lblRank = new System.Windows.Forms.Label();
             this.lblRegisterNumber = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tspHome = new System.Windows.Forms.ToolStripButton();
+            this.tspBtnBack = new System.Windows.Forms.ToolStripButton();
             this.btnCandidateEntranceSubmit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblMessage = new System.Windows.Forms.Label();
             this.lblPreference2 = new System.Windows.Forms.Label();
             this.lblPreference3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.cmbCollegePreference3 = new System.Windows.Forms.ComboBox();
             this.cmbCollegePreference2 = new System.Windows.Forms.ComboBox();
             this.lblPreference1 = new System.Windows.Forms.Label();
             this.cmbCollegePreference1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.lblMessage = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.cmbCoursePreference33 = new System.Windows.Forms.ComboBox();
             this.cmbCoursePreference32 = new System.Windows.Forms.ComboBox();
             this.cmbCoursePreference31 = new System.Windows.Forms.ComboBox();
@@ -64,15 +73,7 @@
             this.cmbCoursePreference12 = new System.Windows.Forms.ComboBox();
             this.cmbCoursePreference11 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tspHome = new System.Windows.Forms.ToolStripButton();
-            this.tspBtnBack = new System.Windows.Forms.ToolStripButton();
+            this.btnView = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -99,6 +100,50 @@
             this.panel1.Size = new System.Drawing.Size(814, 240);
             this.panel1.TabIndex = 1;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(123, 115);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(14, 18);
+            this.label6.TabIndex = 78;
+            this.label6.Text = "*";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(184, 164);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(14, 18);
+            this.label4.TabIndex = 77;
+            this.label4.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(174, 209);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(14, 18);
+            this.label3.TabIndex = 76;
+            this.label3.Text = "*";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(203, 67);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(14, 18);
+            this.label5.TabIndex = 73;
+            this.label5.Text = "*";
+            // 
             // lblScience
             // 
             this.lblScience.AutoSize = true;
@@ -113,13 +158,15 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightBlue;
-            this.button1.Font = new System.Drawing.Font("Poor Richard", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 12);
+            this.button1.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(814, 35);
+            this.button1.Size = new System.Drawing.Size(814, 36);
             this.button1.TabIndex = 49;
-            this.button1.Text = "      Entrance Details";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Text = "   Entrance Details";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // txtRank
@@ -195,6 +242,27 @@
             this.toolStrip1.TabIndex = 27;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // tspHome
+            // 
+            this.tspHome.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tspHome.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tspHome.Image = ((System.Drawing.Image)(resources.GetObject("tspHome.Image")));
+            this.tspHome.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tspHome.Name = "tspHome";
+            this.tspHome.Size = new System.Drawing.Size(23, 22);
+            this.tspHome.Text = "Home";
+            this.tspHome.Click += new System.EventHandler(this.tspHome_Click);
+            // 
+            // tspBtnBack
+            // 
+            this.tspBtnBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tspBtnBack.Image = ((System.Drawing.Image)(resources.GetObject("tspBtnBack.Image")));
+            this.tspBtnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tspBtnBack.Name = "tspBtnBack";
+            this.tspBtnBack.Size = new System.Drawing.Size(23, 22);
+            this.tspBtnBack.Text = "Back";
+            this.tspBtnBack.Click += new System.EventHandler(this.tspBtnBack_Click);
+            // 
             // btnCandidateEntranceSubmit
             // 
             this.btnCandidateEntranceSubmit.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -211,7 +279,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.lblMessage);
             this.panel2.Controls.Add(this.lblPreference2);
             this.panel2.Controls.Add(this.lblPreference3);
             this.panel2.Controls.Add(this.label1);
@@ -225,14 +292,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(406, 275);
             this.panel2.TabIndex = 71;
-            // 
-            // lblMessage
-            // 
-            this.lblMessage.AutoSize = true;
-            this.lblMessage.Location = new System.Drawing.Point(378, 19);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(0, 13);
-            this.lblMessage.TabIndex = 121;
             // 
             // lblPreference2
             // 
@@ -255,6 +314,28 @@
             this.lblPreference3.Size = new System.Drawing.Size(73, 15);
             this.lblPreference3.TabIndex = 119;
             this.lblPreference3.Text = "Preference 3";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(108, 166);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(14, 18);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(108, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(14, 18);
+            this.label2.TabIndex = 75;
+            this.label2.Text = "*";
             // 
             // cmbCollegePreference3
             // 
@@ -426,14 +507,22 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.LightBlue;
-            this.button2.Font = new System.Drawing.Font("Poor Richard", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 38);
+            this.button2.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(-3, 39);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(405, 35);
             this.button2.TabIndex = 113;
-            this.button2.Text = "      College Preferences";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Text = "   College Preferences";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(253, 571);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(0, 13);
+            this.lblMessage.TabIndex = 121;
             // 
             // panel3
             // 
@@ -455,6 +544,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(407, 275);
             this.panel3.TabIndex = 72;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(113, 82);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(14, 18);
+            this.label8.TabIndex = 80;
+            this.label8.Text = "*";
             // 
             // cmbCoursePreference33
             // 
@@ -574,118 +674,36 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.LightBlue;
-            this.button3.Font = new System.Drawing.Font("Poor Richard", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(0, 38);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(407, 35);
             this.button3.TabIndex = 133;
-            this.button3.Text = "      Course Preferences";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button3.Text = "   Course Preferences";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // label5
+            // btnView
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(203, 67);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(14, 18);
-            this.label5.TabIndex = 73;
-            this.label5.Text = "*";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(108, 166);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(14, 18);
-            this.label1.TabIndex = 74;
-            this.label1.Text = "*";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(108, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(14, 18);
-            this.label2.TabIndex = 75;
-            this.label2.Text = "*";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(174, 209);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(14, 18);
-            this.label3.TabIndex = 76;
-            this.label3.Text = "*";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(184, 164);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(14, 18);
-            this.label4.TabIndex = 77;
-            this.label4.Text = "*";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(123, 115);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(14, 18);
-            this.label6.TabIndex = 78;
-            this.label6.Text = "*";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(113, 82);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(14, 18);
-            this.label8.TabIndex = 80;
-            this.label8.Text = "*";
-            // 
-            // tspHome
-            // 
-            this.tspHome.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tspHome.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tspHome.Image = ((System.Drawing.Image)(resources.GetObject("tspHome.Image")));
-            this.tspHome.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tspHome.Name = "tspHome";
-            this.tspHome.Size = new System.Drawing.Size(23, 22);
-            this.tspHome.Text = "Home";
-            this.tspHome.Click += new System.EventHandler(this.tspHome_Click);
-            // 
-            // tspBtnBack
-            // 
-            this.tspBtnBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tspBtnBack.Image = ((System.Drawing.Image)(resources.GetObject("tspBtnBack.Image")));
-            this.tspBtnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tspBtnBack.Name = "tspBtnBack";
-            this.tspBtnBack.Size = new System.Drawing.Size(23, 22);
-            this.tspBtnBack.Text = "Back";
-            this.tspBtnBack.Click += new System.EventHandler(this.tspBtnBack_Click);
+            this.btnView.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnView.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnView.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.Location = new System.Drawing.Point(523, 555);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(124, 42);
+            this.btnView.TabIndex = 122;
+            this.btnView.Text = "VIEW";
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // CandidateEntrance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(828, 606);
+            this.Controls.Add(this.btnView);
+            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnCandidateEntranceSubmit);
@@ -752,5 +770,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnView;
     }
 }

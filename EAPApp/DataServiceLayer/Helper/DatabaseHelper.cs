@@ -16,7 +16,7 @@ namespace DataServiceLayer.Helper
 
             try
             {
-                String connectionstring = ConfigurationManager.ConnectionStrings["PresentataionLayer.Properties.Settings.EngineeringAllotmentDatabaseConnectionString"].ConnectionString;
+                String connectionstring = ConfigurationManager.ConnectionStrings["PresentataionLayer.Properties.Settings.EngineeringAllotmentDatabaseConnectionString1"].ConnectionString;
 
                 con = new SqlConnection(connectionstring);
             }

@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CollegeAuthority));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnConfirmCandidate = new System.Windows.Forms.Button();
+            this.rtbConfirmCandidate = new System.Windows.Forms.RichTextBox();
             this.tspCollegeAuthority = new System.Windows.Forms.ToolStrip();
             this.tspHome = new System.Windows.Forms.ToolStripButton();
             this.tspBtnBack = new System.Windows.Forms.ToolStripButton();
-            this.dgvCollegeAllotedList = new System.Windows.Forms.DataGridView();
             this.tspViewAllotedList = new System.Windows.Forms.ToolStripLabel();
+            this.dgvCollegeAllotedList = new System.Windows.Forms.DataGridView();
             this.cmbSearchId = new System.Windows.Forms.ComboBox();
-            this.btnConfirmCandidate = new System.Windows.Forms.Button();
-            this.rtbConfirmCandidate = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.tspCollegeAuthority.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCollegeAllotedList)).BeginInit();
@@ -52,6 +52,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(270, 369);
             this.panel1.TabIndex = 0;
+            // 
+            // btnConfirmCandidate
+            // 
+            this.btnConfirmCandidate.BackColor = System.Drawing.Color.White;
+            this.btnConfirmCandidate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConfirmCandidate.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmCandidate.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnConfirmCandidate.Location = new System.Drawing.Point(11, 318);
+            this.btnConfirmCandidate.Name = "btnConfirmCandidate";
+            this.btnConfirmCandidate.Size = new System.Drawing.Size(246, 38);
+            this.btnConfirmCandidate.TabIndex = 1;
+            this.btnConfirmCandidate.Text = "CONFIRM";
+            this.btnConfirmCandidate.UseVisualStyleBackColor = false;
+            this.btnConfirmCandidate.Click += new System.EventHandler(this.btnConfirmCandidate_Click);
+            // 
+            // rtbConfirmCandidate
+            // 
+            this.rtbConfirmCandidate.Location = new System.Drawing.Point(3, 3);
+            this.rtbConfirmCandidate.Name = "rtbConfirmCandidate";
+            this.rtbConfirmCandidate.ReadOnly = true;
+            this.rtbConfirmCandidate.Size = new System.Drawing.Size(264, 309);
+            this.rtbConfirmCandidate.TabIndex = 0;
+            this.rtbConfirmCandidate.Text = "";
             // 
             // tspCollegeAuthority
             // 
@@ -85,6 +108,12 @@
             this.tspBtnBack.Size = new System.Drawing.Size(23, 22);
             this.tspBtnBack.Text = "Back";
             // 
+            // tspViewAllotedList
+            // 
+            this.tspViewAllotedList.Name = "tspViewAllotedList";
+            this.tspViewAllotedList.Size = new System.Drawing.Size(70, 22);
+            this.tspViewAllotedList.Text = "Allotted List";
+            // 
             // dgvCollegeAllotedList
             // 
             this.dgvCollegeAllotedList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -93,44 +122,16 @@
             this.dgvCollegeAllotedList.Size = new System.Drawing.Size(525, 369);
             this.dgvCollegeAllotedList.TabIndex = 30;
             // 
-            // tspViewAllotedList
-            // 
-            this.tspViewAllotedList.Name = "tspViewAllotedList";
-            this.tspViewAllotedList.Size = new System.Drawing.Size(70, 22);
-            this.tspViewAllotedList.Text = "Allotted List";
-            // 
             // cmbSearchId
             // 
             this.cmbSearchId.BackColor = System.Drawing.Color.White;
+            this.cmbSearchId.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbSearchId.FormattingEnabled = true;
             this.cmbSearchId.Location = new System.Drawing.Point(69, 39);
             this.cmbSearchId.Name = "cmbSearchId";
             this.cmbSearchId.Size = new System.Drawing.Size(257, 21);
             this.cmbSearchId.TabIndex = 31;
             this.cmbSearchId.Text = "(Search Candidate Id)";
-            // 
-            // btnConfirmCandidate
-            // 
-            this.btnConfirmCandidate.BackColor = System.Drawing.Color.White;
-            this.btnConfirmCandidate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConfirmCandidate.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmCandidate.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnConfirmCandidate.Location = new System.Drawing.Point(11, 318);
-            this.btnConfirmCandidate.Name = "btnConfirmCandidate";
-            this.btnConfirmCandidate.Size = new System.Drawing.Size(246, 38);
-            this.btnConfirmCandidate.TabIndex = 1;
-            this.btnConfirmCandidate.Text = "CONFIRM";
-            this.btnConfirmCandidate.UseVisualStyleBackColor = false;
-            this.btnConfirmCandidate.Click += new System.EventHandler(this.btnConfirmCandidate_Click);
-            // 
-            // rtbConfirmCandidate
-            // 
-            this.rtbConfirmCandidate.Location = new System.Drawing.Point(3, 3);
-            this.rtbConfirmCandidate.Name = "rtbConfirmCandidate";
-            this.rtbConfirmCandidate.ReadOnly = true;
-            this.rtbConfirmCandidate.Size = new System.Drawing.Size(264, 309);
-            this.rtbConfirmCandidate.TabIndex = 0;
-            this.rtbConfirmCandidate.Text = "";
             // 
             // CollegeAuthority
             // 
