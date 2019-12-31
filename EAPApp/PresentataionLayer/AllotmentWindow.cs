@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataTransactionObject.DTO;
+using BusinessLayer.BL;
 
 namespace PresentataionLayer
 {
@@ -275,6 +277,197 @@ namespace PresentataionLayer
         private void btnCandidateLogin_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void btnExistingLogin_Click(object sender, EventArgs e)
+        {
+
+
+            CandidateDetails candidateDetails = null;
+            int output = 0;
+
+            try
+            {
+                candidateDetails = new CandidateDetails();
+
+
+                this.Hide();
+                CandidateEducationalDetails candidateEducationalDetails = new CandidateEducationalDetails();
+                candidateEducationalDetails.Show();
+
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+
+        }
+        //Candidate Login
+        private void txtCandidateUsername_MouseEnter(object sender, EventArgs e)
+        {
+            if (txtCandidateUsername.Text == "Username")
+            {
+                txtCandidateUsername.Text = "";
+                txtCandidateUsername.ForeColor = Color.Black;
+                txtCandidateUsername.Font = new Font(txtCandidateUsername.Font.FontFamily, txtCandidateUsername.Font.Size, FontStyle.Regular);
+
+            }
+        }
+
+        private void txtCandidateUsername_MouseLeave(object sender, EventArgs e)
+        {
+
+            if (txtCandidateUsername.Text == "")
+            {
+                txtCandidateUsername.Text = "Username";
+                txtCandidateUsername.ForeColor = Color.Gray;
+                txtCandidateUsername.Font = new Font(txtCandidateUsername.Font.FontFamily, txtCandidateUsername.Font.Size, FontStyle.Italic);
+            }
+        }
+
+        private void txtCandidatePassword_MouseEnter(object sender, EventArgs e)
+        {
+            if (txtCandidatePassword.Text == "Password")
+            {
+                txtCandidatePassword.Text = "";
+
+                txtCandidatePassword.ForeColor = Color.Black;
+                txtCandidatePassword.Font = new Font(txtCandidatePassword.Font.FontFamily, txtCandidatePassword.Font.Size, FontStyle.Regular);
+                txtCandidatePassword.PasswordChar = '*';
+                txtCandidatePassword.MaxLength = 14;
+            }
+        }
+
+        private void txtCandidatePassword_MouseLeave(object sender, EventArgs e)
+        {
+
+            if (txtCandidatePassword.Text == "")
+            {
+                txtCandidatePassword.Text = "Password";
+                txtCandidatePassword.ForeColor = Color.Gray;
+                txtCandidatePassword.Font = new Font(txtCandidatePassword.Font.FontFamily, txtCandidatePassword.Font.Size, FontStyle.Italic);
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCollegeUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+     //college Login
+        private void txtCollegeUsername_MouseEnter(object sender, EventArgs e)
+        {
+            if (txtCollegeUsername.Text == "Username")
+            {
+                txtCollegeUsername.Text = "";
+                txtCollegeUsername.ForeColor = Color.Black;
+                txtCollegeUsername.Font = new Font(txtCollegeUsername.Font.FontFamily, txtCollegeUsername.Font.Size, FontStyle.Regular);
+
+            }
+        }
+
+        private void txtCollegeUsername_MouseLeave(object sender, EventArgs e)
+        {
+
+            if (txtCollegeUsername.Text == "")
+            {
+                txtCollegeUsername.Text = "Username";
+                txtCollegeUsername.ForeColor = Color.Gray;
+                txtCollegeUsername.Font = new Font(txtCollegeUsername.Font.FontFamily, txtCollegeUsername.Font.Size, FontStyle.Italic);
+            }
+        }
+
+        private void txtCollegePassword_MouseEnter(object sender, EventArgs e)
+        {
+
+            if (txtCollegePassword.Text == "Password")
+            {
+                txtCollegePassword.Text = "";
+
+                txtCollegePassword.ForeColor = Color.Black;
+                txtCollegePassword.Font = new Font(txtCollegePassword.Font.FontFamily, txtCollegePassword.Font.Size, FontStyle.Regular);
+                txtCollegePassword.PasswordChar = '*';
+                txtCollegePassword.MaxLength = 14;
+            }
+        }
+
+        private void txtCollegePassword_MouseLeave(object sender, EventArgs e)
+        {
+            if (txtCollegePassword.Text == "")
+            {
+                txtCollegePassword.Text = "Password";
+                txtCollegePassword.ForeColor = Color.Gray;
+                txtCollegePassword.Font = new Font(txtCollegePassword.Font.FontFamily, txtCollegePassword.Font.Size, FontStyle.Italic);
+            } 
+        }
+
+        //Admin Login
+
+        private void txtAdminUsername_MouseEnter(object sender, EventArgs e)
+        {
+            if (txtAdminUsername.Text == "Username")
+            {
+                txtAdminUsername.Text = "";
+                txtAdminUsername.ForeColor = Color.Black;
+                txtAdminUsername.Font = new Font(txtAdminUsername.Font.FontFamily, txtAdminUsername.Font.Size, FontStyle.Regular);
+
+            }
+        }
+
+        private void txtAdminUsername_MouseLeave(object sender, EventArgs e)
+        {
+
+            if (txtAdminUsername.Text == "")
+            {
+                txtAdminUsername.Text = "Username";
+                txtAdminUsername.ForeColor = Color.Gray;
+                txtAdminUsername.Font = new Font(txtAdminUsername.Font.FontFamily, txtAdminUsername.Font.Size, FontStyle.Italic);
+            }
+        }
+
+        private void txtAdminPassword_MouseEnter(object sender, EventArgs e)
+        {
+            if (txtAdminPassword.Text == "Password")
+            {
+                txtAdminPassword.Text = "";
+
+                txtAdminPassword.ForeColor = Color.Black;
+                txtAdminPassword.Font = new Font(txtAdminPassword.Font.FontFamily, txtAdminPassword.Font.Size, FontStyle.Regular);
+                txtAdminPassword.PasswordChar = '*';
+                txtAdminPassword.MaxLength = 14;
+            }
+        }
+
+        private void txtAdminPassword_MouseLeave(object sender, EventArgs e)
+        {
+
+            if (txtAdminPassword.Text == "")
+            {
+                txtAdminPassword.Text = "Password";
+                txtAdminPassword.ForeColor = Color.Gray;
+                txtAdminPassword.Font = new Font(txtAdminPassword.Font.FontFamily, txtAdminPassword.Font.Size, FontStyle.Italic);
+            }
+          
+        }
+
+        private void btnCollegeLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CollegeAuthority collegeAuthority = new CollegeAuthority();
+            collegeAuthority.Show();
+        }
+
+        private void btnAdminLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Administrator administrator = new Administrator();
+            administrator.Show();
         }
     }
 }

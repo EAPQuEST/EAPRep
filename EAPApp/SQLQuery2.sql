@@ -1,1 +1,1 @@
-﻿
+﻿insert into candidate_registration(candidate_id,candidate_name,candidate_gender,candidate_DOB,candidate_phone,candidate_email,candidate_address) values('23','fg','Female','12/30/2019','23','wef','g')

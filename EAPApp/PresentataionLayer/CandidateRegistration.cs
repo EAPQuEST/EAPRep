@@ -55,8 +55,8 @@ namespace PresentataionLayer
                 {
                     lblMessage.Text = "Successfully added";
                     this.Hide();
-                    CandidateLogin candidateLogin = new CandidateLogin();
-                    candidateLogin.Show();
+                    AllotmentWindow allotmentWindow = new AllotmentWindow();
+                    allotmentWindow.Show();
                 }
                 else
                 {

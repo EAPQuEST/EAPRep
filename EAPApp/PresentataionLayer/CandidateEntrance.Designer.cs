@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CandidateEntrance));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.lblScience = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtRank = new System.Windows.Forms.TextBox();
@@ -44,15 +48,18 @@
             this.tspBtnBack = new System.Windows.Forms.ToolStripButton();
             this.btnCandidateEntranceSubmit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblMessage = new System.Windows.Forms.Label();
             this.lblPreference2 = new System.Windows.Forms.Label();
             this.lblPreference3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.cmbCollegePreference3 = new System.Windows.Forms.ComboBox();
             this.cmbCollegePreference2 = new System.Windows.Forms.ComboBox();
             this.lblPreference1 = new System.Windows.Forms.Label();
             this.cmbCollegePreference1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.lblMessage = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.cmbCoursePreference33 = new System.Windows.Forms.ComboBox();
             this.cmbCoursePreference32 = new System.Windows.Forms.ComboBox();
             this.cmbCoursePreference31 = new System.Windows.Forms.ComboBox();
@@ -66,6 +73,7 @@
             this.cmbCoursePreference12 = new System.Windows.Forms.ComboBox();
             this.cmbCoursePreference11 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.btnView = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -74,6 +82,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.lblScience);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtRank);
@@ -87,6 +99,50 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(814, 240);
             this.panel1.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(123, 115);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(14, 18);
+            this.label6.TabIndex = 78;
+            this.label6.Text = "*";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(184, 164);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(14, 18);
+            this.label4.TabIndex = 77;
+            this.label4.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(174, 209);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(14, 18);
+            this.label3.TabIndex = 76;
+            this.label3.Text = "*";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(203, 67);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(14, 18);
+            this.label5.TabIndex = 73;
+            this.label5.Text = "*";
             // 
             // lblScience
             // 
@@ -102,13 +158,15 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightBlue;
-            this.button1.Font = new System.Drawing.Font("Poor Richard", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 12);
+            this.button1.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(814, 35);
+            this.button1.Size = new System.Drawing.Size(814, 36);
             this.button1.TabIndex = 49;
-            this.button1.Text = "      Entrance Details";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Text = "   Entrance Details";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // txtRank
@@ -221,9 +279,10 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.lblMessage);
             this.panel2.Controls.Add(this.lblPreference2);
             this.panel2.Controls.Add(this.lblPreference3);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.cmbCollegePreference3);
             this.panel2.Controls.Add(this.cmbCollegePreference2);
             this.panel2.Controls.Add(this.lblPreference1);
@@ -233,14 +292,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(406, 275);
             this.panel2.TabIndex = 71;
-            // 
-            // lblMessage
-            // 
-            this.lblMessage.AutoSize = true;
-            this.lblMessage.Location = new System.Drawing.Point(378, 19);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(0, 13);
-            this.lblMessage.TabIndex = 121;
             // 
             // lblPreference2
             // 
@@ -264,21 +315,131 @@
             this.lblPreference3.TabIndex = 119;
             this.lblPreference3.Text = "Preference 3";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(108, 166);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(14, 18);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(108, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(14, 18);
+            this.label2.TabIndex = 75;
+            this.label2.Text = "*";
+            // 
             // cmbCollegePreference3
             // 
             this.cmbCollegePreference3.FormattingEnabled = true;
+            this.cmbCollegePreference3.Items.AddRange(new object[] {
+            "National Institute of Technology Calicut",
+            "ER&DCI Institute of Technology, Trivandrum",
+            "Indian Institute of Space Science and Technology, Trivandrum",
+            "Indian Institute of Information Technology Kottayam",
+            "College of Engineering, Trivandrum",
+            "Government Engineering College, Thrissur",
+            "Thangal Kunju Musaliar College of Engineering, Kollam",
+            "NSS College of Engineering, Palakkad",
+            "Mar Athanasius College of Engineering, Kothamangalam",
+            "Government College of Engineering, Kannur",
+            "Rajiv Gandhi Institute of Technology, Kottayam",
+            "Government Engineering College, Trivandrum",
+            "Government Engineering College, Kozhikode",
+            "Government Engineering College, Sreekrishnapuram",
+            "Government Engineering College, Wayanad",
+            "Government Engineering College, Idukki",
+            "Adi Shankara Institute of Engineering Technology",
+            "Ahalia School of Engineering and Technology",
+            "Al-Ameen Engineering College",
+            "Albertian Institute of Science and Technology",
+            "Amal Jyothi College of Engineering",
+            "Baselios Thomas I Catholicose College of Engineering and Technology",
+            "Carmel College of Engineering and Technology",
+            "Christ College of Engineering",
+            "Jai Bharath College of Management and Engineering Technology",
+            "Jyothi Engineering College",
+            "K M E A Engineering College",
+            "Kottayam Institute of Technology and Science",
+            "Matha College of Technology",
+            "Providence College of Engineering",
+            "Rajadhani Institute of Engineering and Technology",
+            "Rajagiri School of Engineering and Technology",
+            "Royal College of Engineering and Technology",
+            "Sahrdaya College of Engineering and Technology",
+            "SCMS School of Engineering and Technology",
+            "Sree Buddha College of Engineering",
+            "Sree Narayana Guru Institute of Science and Technology",
+            "St. Gregorios College of Engineering",
+            "TKM Institute of Technology",
+            "Vimal Jyothi Engineering College",
+            "Viswajyothi College of Engineering and Technology",
+            "Younus College of Engineering"});
             this.cmbCollegePreference3.Location = new System.Drawing.Point(133, 215);
             this.cmbCollegePreference3.Name = "cmbCollegePreference3";
             this.cmbCollegePreference3.Size = new System.Drawing.Size(245, 21);
             this.cmbCollegePreference3.TabIndex = 117;
+            this.cmbCollegePreference3.Text = "Not Selected";
             // 
             // cmbCollegePreference2
             // 
             this.cmbCollegePreference2.FormattingEnabled = true;
+            this.cmbCollegePreference2.Items.AddRange(new object[] {
+            "National Institute of Technology Calicut",
+            "ER&DCI Institute of Technology, Trivandrum",
+            "Indian Institute of Space Science and Technology, Trivandrum",
+            "Indian Institute of Information Technology Kottayam",
+            "College of Engineering, Trivandrum",
+            "Government Engineering College, Thrissur",
+            "Thangal Kunju Musaliar College of Engineering, Kollam",
+            "NSS College of Engineering, Palakkad",
+            "Mar Athanasius College of Engineering, Kothamangalam",
+            "Government College of Engineering, Kannur",
+            "Rajiv Gandhi Institute of Technology, Kottayam",
+            "Government Engineering College, Trivandrum",
+            "Government Engineering College, Kozhikode",
+            "Government Engineering College, Sreekrishnapuram",
+            "Government Engineering College, Wayanad",
+            "Government Engineering College, Idukki",
+            "Adi Shankara Institute of Engineering Technology",
+            "Ahalia School of Engineering and Technology",
+            "Al-Ameen Engineering College",
+            "Albertian Institute of Science and Technology",
+            "Amal Jyothi College of Engineering",
+            "Baselios Thomas I Catholicose College of Engineering and Technology",
+            "Carmel College of Engineering and Technology",
+            "Christ College of Engineering",
+            "Jai Bharath College of Management and Engineering Technology",
+            "Jyothi Engineering College",
+            "K M E A Engineering College",
+            "Kottayam Institute of Technology and Science",
+            "Matha College of Technology",
+            "Providence College of Engineering",
+            "Rajadhani Institute of Engineering and Technology",
+            "Rajagiri School of Engineering and Technology",
+            "Royal College of Engineering and Technology",
+            "Sahrdaya College of Engineering and Technology",
+            "SCMS School of Engineering and Technology",
+            "Sree Buddha College of Engineering",
+            "Sree Narayana Guru Institute of Science and Technology",
+            "St. Gregorios College of Engineering",
+            "TKM Institute of Technology",
+            "Vimal Jyothi Engineering College",
+            "Viswajyothi College of Engineering and Technology",
+            "Younus College of Engineering"});
             this.cmbCollegePreference2.Location = new System.Drawing.Point(133, 167);
             this.cmbCollegePreference2.Name = "cmbCollegePreference2";
             this.cmbCollegePreference2.Size = new System.Drawing.Size(245, 21);
             this.cmbCollegePreference2.TabIndex = 116;
+            this.cmbCollegePreference2.Text = "Not Selected";
             // 
             // lblPreference1
             // 
@@ -294,25 +455,78 @@
             // cmbCollegePreference1
             // 
             this.cmbCollegePreference1.FormattingEnabled = true;
+            this.cmbCollegePreference1.Items.AddRange(new object[] {
+            "National Institute of Technology Calicut",
+            "ER&DCI Institute of Technology, Trivandrum",
+            "Indian Institute of Space Science and Technology, Trivandrum",
+            "Indian Institute of Information Technology Kottayam",
+            "College of Engineering, Trivandrum",
+            "Government Engineering College, Thrissur",
+            "Thangal Kunju Musaliar College of Engineering, Kollam",
+            "NSS College of Engineering, Palakkad",
+            "Mar Athanasius College of Engineering, Kothamangalam",
+            "Government College of Engineering, Kannur",
+            "Rajiv Gandhi Institute of Technology, Kottayam",
+            "Government Engineering College, Trivandrum",
+            "Government Engineering College, Kozhikode",
+            "Government Engineering College, Sreekrishnapuram",
+            "Government Engineering College, Wayanad",
+            "Government Engineering College, Idukki",
+            "Adi Shankara Institute of Engineering Technology",
+            "Ahalia School of Engineering and Technology",
+            "Al-Ameen Engineering College",
+            "Albertian Institute of Science and Technology",
+            "Amal Jyothi College of Engineering",
+            "Baselios Thomas I Catholicose College of Engineering and Technology",
+            "Carmel College of Engineering and Technology",
+            "Christ College of Engineering ",
+            "Jai Bharath College of Management and Engineering Technology",
+            "Jyothi Engineering College",
+            "K M E A Engineering College",
+            "Kottayam Institute of Technology and Science",
+            "Matha College of Technology",
+            "Providence College of Engineering",
+            "Rajadhani Institute of Engineering and Technology",
+            "Rajagiri School of Engineering and Technology",
+            "Royal College of Engineering and Technology",
+            "Sahrdaya College of Engineering and Technology",
+            "SCMS School of Engineering and Technology",
+            "Sree Buddha College of Engineering",
+            "Sree Narayana Guru Institute of Science and Technology",
+            "St. Gregorios College of Engineering",
+            "TKM Institute of Technology",
+            "Vimal Jyothi Engineering College",
+            "Viswajyothi College of Engineering and Technology",
+            "Younus College of Engineering"});
             this.cmbCollegePreference1.Location = new System.Drawing.Point(133, 118);
             this.cmbCollegePreference1.Name = "cmbCollegePreference1";
             this.cmbCollegePreference1.Size = new System.Drawing.Size(245, 21);
             this.cmbCollegePreference1.TabIndex = 114;
+            this.cmbCollegePreference1.Text = "Not Selected";
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.LightBlue;
-            this.button2.Font = new System.Drawing.Font("Poor Richard", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 38);
+            this.button2.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(-3, 39);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(405, 35);
             this.button2.TabIndex = 113;
-            this.button2.Text = "      College Preferences";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Text = "   College Preferences";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(253, 571);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(0, 13);
+            this.lblMessage.TabIndex = 121;
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.cmbCoursePreference33);
             this.panel3.Controls.Add(this.cmbCoursePreference32);
             this.panel3.Controls.Add(this.cmbCoursePreference31);
@@ -331,6 +545,17 @@
             this.panel3.Size = new System.Drawing.Size(407, 275);
             this.panel3.TabIndex = 72;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(113, 82);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(14, 18);
+            this.label8.TabIndex = 80;
+            this.label8.Text = "*";
+            // 
             // cmbCoursePreference33
             // 
             this.cmbCoursePreference33.FormattingEnabled = true;
@@ -338,6 +563,7 @@
             this.cmbCoursePreference33.Name = "cmbCoursePreference33";
             this.cmbCoursePreference33.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference33.TabIndex = 145;
+            this.cmbCoursePreference33.Text = "Not Selected";
             // 
             // cmbCoursePreference32
             // 
@@ -346,6 +572,7 @@
             this.cmbCoursePreference32.Name = "cmbCoursePreference32";
             this.cmbCoursePreference32.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference32.TabIndex = 144;
+            this.cmbCoursePreference32.Text = "Not Selected";
             // 
             // cmbCoursePreference31
             // 
@@ -354,6 +581,7 @@
             this.cmbCoursePreference31.Name = "cmbCoursePreference31";
             this.cmbCoursePreference31.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference31.TabIndex = 143;
+            this.cmbCoursePreference31.Text = "Not Selected";
             // 
             // cmbCoursePreference23
             // 
@@ -362,6 +590,7 @@
             this.cmbCoursePreference23.Name = "cmbCoursePreference23";
             this.cmbCoursePreference23.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference23.TabIndex = 142;
+            this.cmbCoursePreference23.Text = "Not Selected";
             // 
             // cmbCoursePreference22
             // 
@@ -370,6 +599,7 @@
             this.cmbCoursePreference22.Name = "cmbCoursePreference22";
             this.cmbCoursePreference22.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference22.TabIndex = 141;
+            this.cmbCoursePreference22.Text = "Not Selected";
             // 
             // cmbCoursePreference21
             // 
@@ -378,6 +608,7 @@
             this.cmbCoursePreference21.Name = "cmbCoursePreference21";
             this.cmbCoursePreference21.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference21.TabIndex = 140;
+            this.cmbCoursePreference21.Text = "Not Selected";
             this.cmbCoursePreference21.SelectedIndexChanged += new System.EventHandler(this.comboBox9_SelectedIndexChanged);
             // 
             // lblCoursePreference2
@@ -420,6 +651,7 @@
             this.cmbCoursePreference13.Name = "cmbCoursePreference13";
             this.cmbCoursePreference13.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference13.TabIndex = 136;
+            this.cmbCoursePreference13.Text = "Not Selected";
             // 
             // cmbCoursePreference12
             // 
@@ -428,6 +660,7 @@
             this.cmbCoursePreference12.Name = "cmbCoursePreference12";
             this.cmbCoursePreference12.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference12.TabIndex = 135;
+            this.cmbCoursePreference12.Text = "Not Selected";
             // 
             // cmbCoursePreference11
             // 
@@ -436,24 +669,41 @@
             this.cmbCoursePreference11.Name = "cmbCoursePreference11";
             this.cmbCoursePreference11.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference11.TabIndex = 134;
+            this.cmbCoursePreference11.Text = "Not Selected";
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.LightBlue;
-            this.button3.Font = new System.Drawing.Font("Poor Richard", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(0, 38);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(407, 35);
             this.button3.TabIndex = 133;
-            this.button3.Text = "      Course Preferences";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button3.Text = "   Course Preferences";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button3.UseVisualStyleBackColor = false;
+            // 
+            // btnView
+            // 
+            this.btnView.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnView.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnView.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.Location = new System.Drawing.Point(523, 555);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(124, 42);
+            this.btnView.TabIndex = 122;
+            this.btnView.Text = "VIEW";
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // CandidateEntrance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(828, 606);
+            this.Controls.Add(this.btnView);
+            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnCandidateEntranceSubmit);
@@ -513,5 +763,13 @@
         private System.Windows.Forms.ComboBox cmbCoursePreference11;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnView;
     }
 }

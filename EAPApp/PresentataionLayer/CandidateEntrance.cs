@@ -14,6 +14,7 @@ namespace PresentataionLayer
 {
     public partial class CandidateEntrance : Form
     {
+        CandidateDetails candidateDetails = null;
         public CandidateEntrance()
         {
             InitializeComponent();
@@ -37,10 +38,13 @@ namespace PresentataionLayer
         {
 
         }
+       
+       
 
+          
         private void btnCandidateEntranceSubmit_Click(object sender, EventArgs e)
         {
-            CandidateDetails candidateDetails = null;
+            
             int output = 0;
             int outputentrance = 0;
 
@@ -71,9 +75,10 @@ namespace PresentataionLayer
                 if (output > 0 && outputentrance>0)
                 {
                     lblMessage.Text = "Successfully added";
+
                     this.Hide();
-                    CandidateLogin candidateLogin = new CandidateLogin();
-                    candidateLogin.Show();
+                    AllotmentWindow allotmentWindow = new AllotmentWindow();
+                    allotmentWindow.Show();
                 }
                 else
                 {
@@ -90,6 +95,15 @@ namespace PresentataionLayer
         private void comboBox9_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Register Number \t\t:" + candidateDetails.RegisterNumber + "\nRank\t:" + candidateDetails.EntranceRank + "\nDepartment\t:" +
+                candidateDetails.EntranceScienceMark + "\nEmail\t\t:" + candidateDetails.EntranceMathsMark + "\nMob\t\t :" + candidateDetails.Collegeprefernce1 + "\nDOB\t\t:" + candidateDetails.Collegeprefernce2 + "\nGender\t\t:" +
+                candidateDetails.CollegePrefernce3 + "\nHobbies\t\t:" + candidateDetails.CollegeCourse11);
+
+            
         }
     }
 }

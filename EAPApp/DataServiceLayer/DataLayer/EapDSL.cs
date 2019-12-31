@@ -135,7 +135,7 @@ namespace DataServiceLayer.DataLayer
 
             try
             {
-                sql = "insert into candidate_registration(candidate_id,candidate_name,candidate_gender,candidate_dob," +
+                sql = "insert into candidate_registration(candidate_id,candidate_name,candidate_gender,candidate_DOB," +
                       "candidate_phone,candidate_email,candidate_address) values(";
 
                 sql = sql + "'" + candidateDetails.CandidateId + "',";

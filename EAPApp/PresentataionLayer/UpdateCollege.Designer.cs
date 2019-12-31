@@ -78,6 +78,7 @@
             // pnlCollegeDetails
             // 
             this.pnlCollegeDetails.BackColor = System.Drawing.Color.White;
+            this.pnlCollegeDetails.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlCollegeDetails.Controls.Add(this.lblMessage);
             this.pnlCollegeDetails.Controls.Add(this.cmbCollegeId);
             this.pnlCollegeDetails.Controls.Add(this.txtAddress);
@@ -103,7 +104,6 @@
             this.cmbCollegeId.Size = new System.Drawing.Size(176, 21);
             this.cmbCollegeId.TabIndex = 11;
             this.cmbCollegeId.Text = "(Select ID)";
-            this.cmbCollegeId.SelectedIndexChanged += new System.EventHandler(this.cmbCollegeId_SelectedIndexChanged);
             // 
             // txtAddress
             // 
@@ -197,6 +197,7 @@
             // pnlCourseDetails
             // 
             this.pnlCourseDetails.BackColor = System.Drawing.Color.White;
+            this.pnlCourseDetails.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlCourseDetails.Controls.Add(this.btnUpdateCollege);
             this.pnlCourseDetails.Controls.Add(this.clbCoursesAvailable);
             this.pnlCourseDetails.Controls.Add(this.lblCourseDetails);
@@ -208,14 +209,16 @@
             // 
             // btnUpdateCollege
             // 
-            this.btnUpdateCollege.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateCollege.Location = new System.Drawing.Point(280, 352);
+            this.btnUpdateCollege.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnUpdateCollege.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdateCollege.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateCollege.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateCollege.Location = new System.Drawing.Point(255, 328);
             this.btnUpdateCollege.Name = "btnUpdateCollege";
-            this.btnUpdateCollege.Size = new System.Drawing.Size(131, 33);
+            this.btnUpdateCollege.Size = new System.Drawing.Size(138, 57);
             this.btnUpdateCollege.TabIndex = 13;
             this.btnUpdateCollege.Text = "UPDATE";
-            this.btnUpdateCollege.UseVisualStyleBackColor = true;
-            this.btnUpdateCollege.Click += new System.EventHandler(this.btnUpdateCollege_Click);
+            this.btnUpdateCollege.UseVisualStyleBackColor = false;
             // 
             // clbCoursesAvailable
             // 
@@ -236,7 +239,7 @@
             "Aerospace Engineering",
             "Genetic Engineering",
             "Ocean and Marine Engineering"});
-            this.clbCoursesAvailable.Location = new System.Drawing.Point(138, 112);
+            this.clbCoursesAvailable.Location = new System.Drawing.Point(172, 97);
             this.clbCoursesAvailable.Name = "clbCoursesAvailable";
             this.clbCoursesAvailable.Size = new System.Drawing.Size(236, 199);
             this.clbCoursesAvailable.TabIndex = 12;
@@ -255,7 +258,7 @@
             // 
             this.lblCourseAvailable.AutoSize = true;
             this.lblCourseAvailable.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourseAvailable.Location = new System.Drawing.Point(20, 82);
+            this.lblCourseAvailable.Location = new System.Drawing.Point(23, 97);
             this.lblCourseAvailable.Name = "lblCourseAvailable";
             this.lblCourseAvailable.Size = new System.Drawing.Size(143, 15);
             this.lblCourseAvailable.TabIndex = 7;
@@ -264,7 +267,8 @@
             // lblMessage
             // 
             this.lblMessage.AutoSize = true;
-            this.lblMessage.Location = new System.Drawing.Point(108, 68);
+            this.lblMessage.ForeColor = System.Drawing.Color.Red;
+            this.lblMessage.Location = new System.Drawing.Point(46, 14);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(0, 13);
             this.lblMessage.TabIndex = 12;
