@@ -11,36 +11,36 @@ namespace BusinessLayer.BL
 {
     public class EapBL
     {
-        public static int CollegeDetailsInsert(CollegeDetails collegeDetails)
-        {
-            int output = 0;
-            try
-            {
+        //public static int CollegeDetailsInsert(CollegeDetails collegeDetails)
+        //{
+        //    int output = 0;
+        //    try
+        //    {
 
-                output = EapDSL.CollegeDetailsInsert(collegeDetails);
-            }
-            catch (Exception ex)
-            {
-                Console.Out.WriteLine("*** Error : EapBL.cs:CollegeDetailsInsert", ex.Message.ToString());
-            }
-            return output;
+        //        output = EapDSL.CollegeDetailsInsert(collegeDetails);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.Out.WriteLine("*** Error : EapBL.cs:CollegeDetailsInsert", ex.Message.ToString());
+        //    }
+        //    return output;
 
-        }
-        public static int CollegeCourseInsert(CollegeDetails collegeDetails)
-        {
-            int output = 0;
-            try
-            {
+        //}
+        //public static int CollegeCourseInsert(CollegeDetails collegeDetails)
+        //{
+        //    int output = 0;
+        //    try
+        //    {
 
-                output = EapDSL.CollegeCourseInsert(collegeDetails);
-            }
-            catch (Exception ex)
-            {
-                Console.Out.WriteLine("*** Error : EapBL.cs:CollegeCourseInsert", ex.Message.ToString());
-            }
-            return output;
+        //        output = EapDSL.CollegeCourseInsert(collegeDetails);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.Out.WriteLine("*** Error : EapBL.cs:CollegeCourseInsert", ex.Message.ToString());
+        //    }
+        //    return output;
 
-        }
+        //}
         public static int StudentDetailsInsert(CandidateDetails candidateDetails)
         {
             int output = 0;
@@ -95,131 +95,170 @@ namespace BusinessLayer.BL
 
 
         }
-        public static DataSet GetCollegeIds()
-        {
-            string sql = "";
+        //public static DataSet GetCollegeIds()
+        //{
+        //    string sql = "";
 
-            DataSet dsCollegeId = null;
+        //    DataSet dsCollegeId = null;
+
+        //    try
+        //    {
+        //        dsCollegeId = EapDSL.GetCollegeIds();
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.Out.WriteLine("*** Error : EapBL.cs:GetCollegeIds()", ex.Message.ToString());
+        //    }
+
+        //    return dsCollegeId;
+        //}
+
+        //public static CollegeDetails GetCollegeDetailsUsingId(string courseId)
+        //{
+
+        //    CollegeDetails collegeDetails = null;
+
+        //    try
+        //    {
+        //        collegeDetails = EapDSL.GetCollegeDetailsUsingId(courseId);
+                
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.Out.WriteLine("*** Error : EapBL.cs:GetCollegeDetailsUsingId()", ex.Message.ToString());
+        //    }
+            
+        //    return collegeDetails;
+        //}
+        //public static int CollegeDetailsUpdate(CollegeDetails collegeDetails)
+        //{
+        //    int output = 0;
+           
+
+        //    try
+        //    {
+
+        //        output = EapDSL.CollegeDetailsUpdate(collegeDetails);
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.Out.WriteLine("*** Error : EapBL.cs:CollegeDetailsUpdate()", ex.Message.ToString());
+        //    }
+           
+        //    return output;
+        //}
+        //public static int CollegeCourseUpdate(CollegeDetails collegeDetails)
+        //{
+        //    int output = 0;
+
+
+        //    try
+        //    {
+
+        //        output = EapDSL.CollegeCourseUpdate(collegeDetails);
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.Out.WriteLine("*** Error : EapBL.cs:CollegeCourseUpdate()", ex.Message.ToString());
+        //    }
+
+        //    return output;
+        //}
+        //public static DataSet GetCollegeDetails()
+        //{
+        //    string sql = "";
+        //    DataSet dsCollegeDetails = null;
+
+
+        //    try
+        //    {
+
+        //        dsCollegeDetails = EapDSL.GetCollegeDetails();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.Out.WriteLine("*** Error : EapBL.cs:GetCollegeDetails()", ex.Message.ToString());
+        //    }
+
+
+        //    return dsCollegeDetails;
+
+        //}
+        //public static DataSet GetDataLike(string likeCollegeName)
+        //{
+
+        //    DataSet dsData = null;
+
+        //    try
+        //    {
+        //        dsData = EapDSL.GetDataLike(likeCollegeName);
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.Out.WriteLine("*** Error : EapBL.cs:GetDataLike()", ex.Message.ToString());
+        //    }
+
+        //    return dsData;
+        //}
+        //public static int CollegeDelete(string collegeName)
+        //{
+        //    int output = 0;
+        //    try
+        //    {
+
+        //        output = EapDSL.CollegeDelete(collegeName);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.Out.WriteLine("*** Error : EapBL.cs: CollegeDelete", ex.Message.ToString());
+        //    }
+        //    return output;
+
+
+        //}
+        public static DataTable CandidateLogin(string user,string password)
+        {
+            //DataSet dsData = null;
+            DataTable dtLogin = null;
 
             try
             {
-                dsCollegeId = EapDSL.GetCollegeIds();
+                dtLogin = EapDSL.CandidateLogin(user, password);
+
 
             }
             catch (Exception ex)
             {
-                Console.Out.WriteLine("*** Error : EapBL.cs:GetCollegeIds()", ex.Message.ToString());
+                Console.Out.WriteLine("*** Error : EapBL.cs:CandidateLogin()", ex.Message.ToString());
             }
 
-            return dsCollegeId;
+
+            return dtLogin;
+
         }
-
-        public static CollegeDetails GetCollegeDetailsUsingId(string courseId)
+        public static CollegeDetails LoadCollegePreference(string collegeName)
         {
-
             CollegeDetails collegeDetails = null;
 
             try
             {
-                collegeDetails = EapDSL.GetCollegeDetailsUsingId(courseId);
-                
+                collegeDetails = EapDSL.LoadCollegePreference(collegeName);
 
             }
             catch (Exception ex)
             {
-                Console.Out.WriteLine("*** Error : EapBL.cs:GetCollegeDetailsUsingId()", ex.Message.ToString());
+                Console.Out.WriteLine("*** Error : EapBL.cs:LoadCollegePreference()", ex.Message.ToString());
             }
-            
+           
+
             return collegeDetails;
-        }
-        public static int CollegeDetailsUpdate(CollegeDetails collegeDetails)
-        {
-            int output = 0;
-           
-
-            try
-            {
-
-                output = EapDSL.CollegeDetailsUpdate(collegeDetails);
-
-            }
-            catch (Exception ex)
-            {
-                Console.Out.WriteLine("*** Error : EapBL.cs:CollegeDetailsUpdate()", ex.Message.ToString());
-            }
-           
-            return output;
-        }
-        public static int CollegeCourseUpdate(CollegeDetails collegeDetails)
-        {
-            int output = 0;
-
-
-            try
-            {
-
-                output = EapDSL.CollegeCourseUpdate(collegeDetails);
-
-            }
-            catch (Exception ex)
-            {
-                Console.Out.WriteLine("*** Error : EapBL.cs:CollegeCourseUpdate()", ex.Message.ToString());
-            }
-
-            return output;
-        }
-        public static DataSet GetCollegeDetails()
-        {
-            string sql = "";
-            DataSet dsCollegeDetails = null;
-
-
-            try
-            {
-
-                dsCollegeDetails = EapDSL.GetCollegeDetails();
-            }
-            catch (Exception ex)
-            {
-                Console.Out.WriteLine("*** Error : EapBL.cs:GetCollegeDetails()", ex.Message.ToString());
-            }
-
-
-            return dsCollegeDetails;
 
         }
-        public static DataSet GetDataLike(string likeCollegeName)
-        {
 
-            DataSet dsData = null;
-
-            try
-            {
-                dsData = EapDSL.GetDataLike(likeCollegeName);
-
-            }
-            catch (Exception ex)
-            {
-                Console.Out.WriteLine("*** Error : EapBL.cs:GetDataLike()", ex.Message.ToString());
-            }
-
-            return dsData;
-        }
-        public static int CollegeDelete(string collegeName)
-        {
-            int output = 0;
-            try
-            {
-
-                output = EapDSL.CollegeDelete(collegeName);
-            }
-            catch (Exception ex)
-            {
-                Console.Out.WriteLine("*** Error : EapBL.cs: CollegeDelete", ex.Message.ToString());
-            }
-            return output;
-
-
-        }
     }
 }

@@ -1,4 +1,4 @@
-﻿ SELECT course_details.course_name
+﻿SELECT course_details.course_name, 
   FROM course_details
   WHERE course_details.course_id=(SELECT college_coures.courseid
               FROM college_coures

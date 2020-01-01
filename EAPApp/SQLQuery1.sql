@@ -1,1 +1,1 @@
-﻿update college_details set college_name ='ttytf',total_seats ='10',college_address ='huhk',college_phone =852 where college_id = '665465'
+﻿insert into candidate_details (candidate_10th_school,candidate_10th_percentage,candidate_12th_school,candidate_12th_percentage,candiate_physics,candiate_chemistry,candiate_maths) values('Abraham Marthoma Memorial Higher Secondary School, Edayaranmula',76,'Aayirooppara Govt. Higher Secondary School (HSS), Pothencode',78,56,65,77)

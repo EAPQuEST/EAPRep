@@ -14,7 +14,7 @@ namespace PresentataionLayer
 {
     public partial class CandidateEntrance : Form
     {
-     
+        CandidateDetails candidateDetails = null;
         public CandidateEntrance()
         {
             InitializeComponent();
@@ -38,13 +38,13 @@ namespace PresentataionLayer
         {
 
         }
-       
-       
 
-          
+
+
+
         private void btnCandidateEntranceSubmit_Click(object sender, EventArgs e)
         {
-            CandidateDetails candidateDetails = null;
+
             int output = 0;
             int outputentrance = 0;
 
@@ -72,15 +72,8 @@ namespace PresentataionLayer
 
                 output = EapBL.StudentCoursePreferenceInsert(candidateDetails);
                 outputentrance = EapBL.StudentDetailsInsert(candidateDetails);
-                if (output > 0 && outputentrance>0)
+                if (output > 0 && outputentrance > 0)
                 {
-                    MessageBox.Show("Register Number \t\t:" + candidateDetails.RegisterNumber +
-                "\nRank\t:" + candidateDetails.EntranceRank +
-                "\nEntrance Science Mark\t:" + candidateDetails.EntranceScienceMark +
-                "\nEntrance Maths Mark\t\t:" + candidateDetails.EntranceMathsMark +
-                "\nCollege Preference 1\t\t :" + candidateDetails.Collegeprefernce1 +
-                "\nCollege Preference 2\t\t:" + candidateDetails.Collegeprefernce2 +
-                "\nCollege Preference 3\t\t:" + candidateDetails.CollegePrefernce3);
                     lblMessage.Text = "Successfully added";
 
                     this.Hide();
@@ -91,7 +84,7 @@ namespace PresentataionLayer
                 {
                     lblMessage.Text = "Failed";
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -106,19 +99,79 @@ namespace PresentataionLayer
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            
-                //"\nCourse Preference 11\t\t:" + candidateDetails.CollegeCourse11 +
-                //"\nCourse Preference 12\t\t:" + candidateDetails.CollegeCourse12 +
-                //"\nCourse Preference 12\t\t:" + candidateDetails.CollegeCourse13 +
-                //"\nCourse Preference 21\t\t:" + candidateDetails.CollegeCourse21 +
-                //"\nCourse Preference 22\t\t:" + candidateDetails.CollegeCourse22 +
-                //"\nCourse Preference 23\t\t:" + candidateDetails.CollegeCourse23 +
-                //"\nCourse Preference 31\t\t:" + candidateDetails.CollegeCourse31 +
-                //"\nCourse Preference 32\t\t:" + candidateDetails.CollegeCourse32 +
-                //"\nCourse Preference 33\t\t:" + candidateDetails.CollegeCourse33);
+            MessageBox.Show("Register Number \t\t:" + candidateDetails.RegisterNumber + "\nRank\t:" + candidateDetails.EntranceRank + "\nDepartment\t:" +
+                candidateDetails.EntranceScienceMark + "\nEmail\t\t:" + candidateDetails.EntranceMathsMark + "\nMob\t\t :" + candidateDetails.Collegeprefernce1 + "\nDOB\t\t:" + candidateDetails.Collegeprefernce2 + "\nGender\t\t:" +
+                candidateDetails.CollegePrefernce3 + "\nHobbies\t\t:" + candidateDetails.CollegeCourse11);
 
 
+        }
 
+        public void LoadCoursePreference()
+        {
+
+            CollegeDetails collegeDetails = null;
+            DataSet dsCoursePreference = new DataSet();
+            try
+            {
+                collegeDetails = EapBL.LoadCollegePreference(cmbCollegePreference1.Text);
+                if (collegeDetails != null)
+                {
+
+                    //for (int i = 0; i < dsCoursePreference.Tables[0].Rows.Count; i++)
+                    //{
+                    //    var item = dsCoursePreference.Tables[0].Rows[i]["course_name"].ToString();
+                    //    //for (int j = 0; j < clbCoursesAvailable.Items.Count; j++)
+                    //    //{
+                    //    //    if (clbCoursesAvailable.Items[j].ToString() == item)
+                    //    //    {
+                    //    //        clbCoursesAvailable.SetItemChecked(j, true);
+                    //    //        break;
+                    //    //    }
+                    //    //}
+                    //}
+                    cmbCoursePreference11.DataSource = dsCoursePreference.Tables[0];
+                    cmbCoursePreference11.ValueMember = "course_name";
+                    cmbCoursePreference11.DisplayMember = "course_name";
+                }
+
+
+            }
+            catch (FormatException ex)
+            {
+                lblMessage.Text = ex.Message.ToString();
+            }
+        }
+
+        private void cmbCollegePreference1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadCoursePreference();
+        }
+
+        private void CandidateEntrance_Load(object sender, EventArgs e)
+        {
+            LoadCollegeName();
+        }
+        private void LoadCollegeName()
+        {
+           
+            DataSet dsCollegeName = new DataSet();
+            try
+            {
+                dsCollegeName = EapBLAdmin.GetCollegeName();
+                if (dsCollegeName != null)
+                {
+                    
+                   cmbCollegePreference1.DataSource = dsCollegeName.Tables[0];
+                    cmbCollegePreference1.ValueMember = "college_name";
+                    cmbCollegePreference1.DisplayMember = "college_name";
+                }
+
+
+            }
+            catch (FormatException ex)
+            {
+                lblMessage.Text = ex.Message.ToString();
+            }
         }
     }
 }
