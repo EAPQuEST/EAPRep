@@ -503,6 +503,7 @@
             this.cmbCollegePreference1.Size = new System.Drawing.Size(245, 21);
             this.cmbCollegePreference1.TabIndex = 114;
             this.cmbCollegePreference1.Text = "Not Selected";
+            this.cmbCollegePreference1.SelectedIndexChanged += new System.EventHandler(this.cmbCollegePreference1_SelectedIndexChanged);
             // 
             // button2
             // 
@@ -711,6 +712,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "CandidateEntrance";
             this.Text = "CandidateEntrance";
+            this.Load += new System.EventHandler(this.CandidateEntrance_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

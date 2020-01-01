@@ -89,5 +89,10 @@ namespace PresentataionLayer
             AllotmentWindow allotmentWindow = new AllotmentWindow();
             allotmentWindow.Show();
         }
+
+        private void CandidateEducationalDetails_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

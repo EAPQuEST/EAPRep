@@ -109,12 +109,12 @@ namespace PresentataionLayer
         public void LoadCoursePreference()
         {
 
-            CollegeDetails coursePreference = null;
+            CollegeDetails collegeDetails = null;
             DataSet dsCoursePreference = new DataSet();
             try
             {
-                coursePreference = EapBL.GetCollegeDetailsUsingId(cmbCollegePreference1.Text);
-                if (coursePreference != null)
+                collegeDetails = EapBL.LoadCollegePreference(cmbCollegePreference1.Text);
+                if (collegeDetails != null)
                 {
 
                     //for (int i = 0; i < dsCoursePreference.Tables[0].Rows.Count; i++)
@@ -132,6 +132,38 @@ namespace PresentataionLayer
                     cmbCoursePreference11.DataSource = dsCoursePreference.Tables[0];
                     cmbCoursePreference11.ValueMember = "course_name";
                     cmbCoursePreference11.DisplayMember = "course_name";
+                }
+
+
+            }
+            catch (FormatException ex)
+            {
+                lblMessage.Text = ex.Message.ToString();
+            }
+        }
+
+        private void cmbCollegePreference1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadCoursePreference();
+        }
+
+        private void CandidateEntrance_Load(object sender, EventArgs e)
+        {
+            LoadCollegeName();
+        }
+        private void LoadCollegeName()
+        {
+           
+            DataSet dsCollegeName = new DataSet();
+            try
+            {
+                dsCollegeName = EapBLAdmin.GetCollegeName();
+                if (dsCollegeName != null)
+                {
+                    
+                   cmbCollegePreference1.DataSource = dsCollegeName.Tables[0];
+                    cmbCollegePreference1.ValueMember = "college_name";
+                    cmbCollegePreference1.DisplayMember = "college_name";
                 }
 
 

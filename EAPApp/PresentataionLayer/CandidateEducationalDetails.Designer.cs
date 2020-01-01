@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CandidateEducationalDetails));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblUserId = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tspHome = new System.Windows.Forms.ToolStripButton();
             this.btnCandidateNext = new System.Windows.Forms.Button();
-            this.lblUserId = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -101,6 +101,14 @@
             this.panel1.Size = new System.Drawing.Size(800, 507);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblUserId
+            // 
+            this.lblUserId.AutoSize = true;
+            this.lblUserId.Location = new System.Drawing.Point(679, 54);
+            this.lblUserId.Name = "lblUserId";
+            this.lblUserId.Size = new System.Drawing.Size(0, 13);
+            this.lblUserId.TabIndex = 78;
             // 
             // label12
             // 
@@ -453,14 +461,6 @@
             this.btnCandidateNext.UseVisualStyleBackColor = false;
             this.btnCandidateNext.Click += new System.EventHandler(this.btnCandidateNext_Click);
             // 
-            // lblUserId
-            // 
-            this.lblUserId.AutoSize = true;
-            this.lblUserId.Location = new System.Drawing.Point(679, 54);
-            this.lblUserId.Name = "lblUserId";
-            this.lblUserId.Size = new System.Drawing.Size(0, 13);
-            this.lblUserId.TabIndex = 78;
-            // 
             // CandidateEducationalDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -471,6 +471,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "CandidateEducationalDetails";
             this.Text = "CandidateRegistration2";
+            this.Load += new System.EventHandler(this.CandidateEducationalDetails_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

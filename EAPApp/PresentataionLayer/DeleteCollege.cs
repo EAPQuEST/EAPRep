@@ -24,7 +24,7 @@ namespace PresentataionLayer
             DataSet dsCollegeDetails = null;
             try
             {
-                dsCollegeDetails = EapBL.GetCollegeDetails();
+                dsCollegeDetails = EapBLAdmin.GetCollegeDetails();
 
                 if (dsCollegeDetails != null)
                 {
@@ -49,7 +49,7 @@ namespace PresentataionLayer
             DataSet dsData = null;
             try
             {
-                dsData =EapBL.GetDataLike(txtDelete.Text);
+                dsData = EapBLAdmin.GetDataLike(txtDelete.Text);
                 if (dsData != null)
                 {
 
@@ -92,7 +92,7 @@ namespace PresentataionLayer
                 if (MessageBox.Show("Do you want to delete ?", "S I S", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
-                    output = EapBL.CollegeDelete(txtDelete.Text);
+                    output = EapBLAdmin.CollegeDelete(txtDelete.Text);
                     
 
                     if (output > 0)

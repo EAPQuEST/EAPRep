@@ -22,56 +22,17 @@ namespace PresentataionLayer
 
         private void btnUpdateCollege_Click(object sender, EventArgs e)
         {
-            CollegeDetails collegeDetails = null;
-            int output = 0;
-            int outputcourse = 0;
-            try
-            {
-                collegeDetails = new CollegeDetails();
-                collegeDetails.CollegeID = cmbCollegeId.Text;
-                collegeDetails.CollegeName = txtCollegeName.Text;
-                collegeDetails.TotalSeats = Convert.ToInt32(txtTotalSeats.Text);
-                collegeDetails.CollegeAddress = txtAddress.Text;
-                collegeDetails.CollegePhone = Convert.ToInt32(txtContactNumber.Text);
-                for (int i = 0; i < clbCoursesAvailable.Items.Count; i++)
-                {
-                    if (clbCoursesAvailable.GetItemChecked(i))
-                    {
-                        collegeDetails.CourseName = (string)clbCoursesAvailable.Items[i];
-                        outputcourse = EapBL.CollegeCourseUpdate(collegeDetails);
-
-                    }
-                }
-
-
-                output = EapBL.CollegeDetailsUpdate(collegeDetails);
-                if (output > 0)
-                {
-                    lblMessage.Text = "Successfully updated";
-                   
-
-
-                }
-                else
-                {
-                    lblMessage.Text = "Try again later";
-                }
-
-            }
-            catch (Exception ex)
-            {
-                lblMessage.Text = ex.Message.ToString();
-            }
+            
         }
 
         private void LoadAddressId()
         {
             DataSet dsCollegeIds = null;
-            dsCollegeIds = EapBL.GetCollegeIds();
+            dsCollegeIds = EapBLAdmin.GetCollegeIds();
 
             try
             {
-                dsCollegeIds = EapBL.GetCollegeIds();
+                dsCollegeIds = EapBLAdmin.GetCollegeIds();
                 if (dsCollegeIds != null)
                 {
 
@@ -93,36 +54,86 @@ namespace PresentataionLayer
 
         private void cmbCollegeId_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void cmbCollegeId_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
             CollegeDetails collegeDetails = null;
             DataSet dsCollegeDetails = new DataSet();
             try
             {
-                collegeDetails = EapBL.GetCollegeDetailsUsingId(cmbCollegeId.Text);
+                collegeDetails = EapBLAdmin.GetCollegeDetailsUsingId(cmbCollegeId.Text);
                 if (collegeDetails != null)
                 {
                     txtCollegeName.Text = collegeDetails.CollegeName;
                     txtTotalSeats.Text = collegeDetails.TotalSeats.ToString();
                     txtContactNumber.Text = collegeDetails.CollegePhone.ToString();
                     txtAddress.Text = collegeDetails.CollegeAddress;
-                    for (int i = 0; i < dsCollegeDetails.Tables[0].Rows.Count; i++)
-                    {
-                        var item = dsCollegeDetails.Tables[0].Rows[i]["course_name"].ToString();
-                        for (int j = 0; j < clbCoursesAvailable.Items.Count; j++)
-                        {
-                            if (clbCoursesAvailable.Items[j].ToString() == item)
-                            {
-                                clbCoursesAvailable.SetItemChecked(j, true);
-                                break;
-                            }
-                        }
-                    }
+                    //for (int i = 0; i < dsCollegeDetails.Tables[0].Rows.Count; i++)
+                    //{
+                    //    var item = dsCollegeDetails.Tables[0].Rows[i]["course_name"].ToString();
+                    //    for (int j = 0; j < clbCoursesAvailable.Items.Count; j++)
+                    //    {
+                    //        if (clbCoursesAvailable.Items[j].ToString() == item)
+                    //        {
+                    //            clbCoursesAvailable.SetItemChecked(j, true);
+                    //            break;
+                    //        }
+                    //    }
+                    //}
 
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
+            }
+
+        }
+
+        private void btnUpdateCollege_Click_1(object sender, EventArgs e)
+        {
+            CollegeDetails collegeDetails = null;
+            int output = 0;
+            int outputcourse = 0;
+            try
+            {
+                collegeDetails = new CollegeDetails();
+                collegeDetails.CollegeID = cmbCollegeId.Text;
+                collegeDetails.CollegeName = txtCollegeName.Text;
+                collegeDetails.TotalSeats = Convert.ToInt32(txtTotalSeats.Text);
+                collegeDetails.CollegeAddress = txtAddress.Text;
+                collegeDetails.CollegePhone = Convert.ToInt32(txtContactNumber.Text);
+                for (int i = 0; i < clbCoursesAvailable.Items.Count; i++)
+                {
+                    if (clbCoursesAvailable.GetItemChecked(i))
+                    {
+                        collegeDetails.CourseName = (string)clbCoursesAvailable.Items[i];
+                        outputcourse = EapBLAdmin.CollegeCourseUpdate(collegeDetails);
+
+                    }
+                }
+
+
+                output = EapBLAdmin.CollegeDetailsUpdate(collegeDetails);
+                if (output > 0)
+                {
+                    lblMessage.Text = "Successfully updated";
+
+
+
+                }
+                else
+                {
+                    lblMessage.Text = "Try again later";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                lblMessage.Text = ex.Message.ToString();
             }
 
         }

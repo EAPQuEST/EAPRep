@@ -32,6 +32,7 @@
             this.tlsAddCollege = new System.Windows.Forms.ToolStrip();
             this.tlsBtnHomeAdd = new System.Windows.Forms.ToolStripButton();
             this.pnlCollegeDetails = new System.Windows.Forms.Panel();
+            this.lblMessage = new System.Windows.Forms.Label();
             this.cmbCollegeId = new System.Windows.Forms.ComboBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtContactNumber = new System.Windows.Forms.TextBox();
@@ -48,7 +49,6 @@
             this.clbCoursesAvailable = new System.Windows.Forms.CheckedListBox();
             this.lblCourseDetails = new System.Windows.Forms.Label();
             this.lblCourseAvailable = new System.Windows.Forms.Label();
-            this.lblMessage = new System.Windows.Forms.Label();
             this.tlsAddCollege.SuspendLayout();
             this.pnlCollegeDetails.SuspendLayout();
             this.pnlCourseDetails.SuspendLayout();
@@ -96,6 +96,15 @@
             this.pnlCollegeDetails.Size = new System.Drawing.Size(409, 411);
             this.pnlCollegeDetails.TabIndex = 7;
             // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.ForeColor = System.Drawing.Color.Red;
+            this.lblMessage.Location = new System.Drawing.Point(46, 14);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(0, 13);
+            this.lblMessage.TabIndex = 12;
+            // 
             // cmbCollegeId
             // 
             this.cmbCollegeId.FormattingEnabled = true;
@@ -104,6 +113,7 @@
             this.cmbCollegeId.Size = new System.Drawing.Size(176, 21);
             this.cmbCollegeId.TabIndex = 11;
             this.cmbCollegeId.Text = "(Select ID)";
+            this.cmbCollegeId.SelectedIndexChanged += new System.EventHandler(this.cmbCollegeId_SelectedIndexChanged_1);
             // 
             // txtAddress
             // 
@@ -219,6 +229,7 @@
             this.btnUpdateCollege.TabIndex = 13;
             this.btnUpdateCollege.Text = "UPDATE";
             this.btnUpdateCollege.UseVisualStyleBackColor = false;
+            this.btnUpdateCollege.Click += new System.EventHandler(this.btnUpdateCollege_Click_1);
             // 
             // clbCoursesAvailable
             // 
@@ -263,15 +274,6 @@
             this.lblCourseAvailable.Size = new System.Drawing.Size(143, 15);
             this.lblCourseAvailable.TabIndex = 7;
             this.lblCourseAvailable.Text = "COURSES AVAILABLE :";
-            // 
-            // lblMessage
-            // 
-            this.lblMessage.AutoSize = true;
-            this.lblMessage.ForeColor = System.Drawing.Color.Red;
-            this.lblMessage.Location = new System.Drawing.Point(46, 14);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(0, 13);
-            this.lblMessage.TabIndex = 12;
             // 
             // UpdateCollege
             // 
