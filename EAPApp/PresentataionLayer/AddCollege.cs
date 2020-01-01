@@ -42,33 +42,100 @@ namespace PresentataionLayer
 
             try
             {
-                collegeDetails = new CollegeDetails();
-                collegeDetails.CollegeID = txtCollegeID.Text;
-                collegeDetails.CollegeName = txtCollegeName.Text;
-                collegeDetails.TotalSeats =Convert.ToInt32( txtTotalSeat.Text);
-                collegeDetails.CollegeAddress = txtAddress.Text;
-                collegeDetails.CollegePhone = Convert.ToInt32(txtContactNumber.Text);
-                for (int i = 0; i < clbCoursesAvailable.Items.Count; i++)
+                if (txtCollegeID.Text == string.Empty || txtCollegeName.Text == string.Empty || txtTotalSeat.Text == string.Empty ||
+                      txtAddress.Text == string.Empty || txtContactNumber.Text == string.Empty)
                 {
-                    if (clbCoursesAvailable.GetItemChecked(i))
+                    // MessageBox.Show("Enter all the details");
+                    foreach (Control control in this.Controls)
                     {
-                        collegeDetails.CourseName= (string)clbCoursesAvailable.Items[i];
-                        outputcourse = EapBL.CollegeCourseInsert(collegeDetails);
-                        
+                        if (!Validate())
+                        {
+                            DialogResult = DialogResult.None;
+                            return;
+                        }
                     }
                 }
 
-                output = EapBL.CollegeDetailsInsert(collegeDetails);
-                if(output>0 || outputcourse>0)
-                {
-                    lblMessage.Text = "Successfully added";
-                }
                 else
                 {
-                    lblMessage.Text = "Failed";
+
+                    collegeDetails = new CollegeDetails();
+
+                    if (txtCollegeID.Text == string.Empty)
+                    {
+                        lblMessage.Text = "Enter the College ID";
+                        return;
+                    }
+                    else
+                    {
+                        collegeDetails.CollegeID = txtCollegeID.Text;
+                    }
+                    if (txtCollegeName.Text == string.Empty)
+                    {
+                        lblMessage.Text = "Enter the College Name";
+                        return;
+                    }
+                    else
+                    {
+                        collegeDetails.CollegeName = txtCollegeName.Text;
+                    }
+                    if (txtTotalSeat.Text == string.Empty)
+                    {
+                        lblMessage.Text = "Enter the number of total seats";
+                        return;
+                    }
+                    else
+                    {
+                        collegeDetails.TotalSeats = Convert.ToInt32(txtTotalSeat.Text);
+                    }
+                    if (txtAddress.Text == string.Empty)
+                    {
+                        lblMessage.Text = "Enter the address";
+                        return;
+                    }
+                    else
+                    {
+                        collegeDetails.CollegeAddress = txtAddress.Text;
+                    }
+                    if (txtContactNumber.Text == string.Empty)
+                    {
+                        lblMessage.Text = "Enter the contact number";
+                        return;
+                    }
+                    else
+                    {
+                        collegeDetails.CollegePhone = Convert.ToInt32(txtContactNumber.Text);
+                    }
+                    if (clbCoursesAvailable.Items.Count <0)
+                    {
+                        lblMessage.Text = "Select the courses available";
+                        return;
+                    }
+                    else
+                    {
+                        for (int i = 0; i < clbCoursesAvailable.Items.Count; i++)
+                        {
+                            if (clbCoursesAvailable.GetItemChecked(i))
+                            {
+                                collegeDetails.CourseName = (string)clbCoursesAvailable.Items[i];
+                                outputcourse = EapBL.CollegeCourseInsert(collegeDetails);
+
+                            }
+                        }
+                    }
+
+                    output = EapBL.CollegeDetailsInsert(collegeDetails);
+                    if (output > 0 || outputcourse > 0)
+                    {
+                        lblMessage.Text = "Successfully added";
+                    }
+                    else
+                    {
+                        lblMessage.Text = "Failed";
+                    }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }

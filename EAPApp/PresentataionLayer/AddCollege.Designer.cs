@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCollege));
             this.pnlCollegeDetails = new System.Windows.Forms.Panel();
             this.lblMessage = new System.Windows.Forms.Label();
@@ -45,18 +46,20 @@
             this.tlsAddCollege = new System.Windows.Forms.ToolStrip();
             this.tlsBtnHomeAdd = new System.Windows.Forms.ToolStripButton();
             this.pnlCourseDetails = new System.Windows.Forms.Panel();
-            this.lblCourseDetails = new System.Windows.Forms.Label();
-            this.clbCoursesAvailable = new System.Windows.Forms.CheckedListBox();
             this.btnAddCollege = new System.Windows.Forms.Button();
+            this.clbCoursesAvailable = new System.Windows.Forms.CheckedListBox();
+            this.lblCourseDetails = new System.Windows.Forms.Label();
             this.lblCourseAvailable = new System.Windows.Forms.Label();
+            this.epAdminAddCollege = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlCollegeDetails.SuspendLayout();
             this.tlsAddCollege.SuspendLayout();
             this.pnlCourseDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epAdminAddCollege)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCollegeDetails
             // 
-            this.pnlCollegeDetails.BackColor = System.Drawing.Color.White;
+            this.pnlCollegeDetails.BackColor = System.Drawing.Color.AliceBlue;
             this.pnlCollegeDetails.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlCollegeDetails.Controls.Add(this.lblMessage);
             this.pnlCollegeDetails.Controls.Add(this.txtAddress);
@@ -86,6 +89,7 @@
             // 
             // txtAddress
             // 
+            this.txtAddress.BackColor = System.Drawing.Color.White;
             this.txtAddress.Location = new System.Drawing.Point(195, 317);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
@@ -94,6 +98,7 @@
             // 
             // txtContactNumber
             // 
+            this.txtContactNumber.BackColor = System.Drawing.Color.White;
             this.txtContactNumber.Location = new System.Drawing.Point(195, 259);
             this.txtContactNumber.Name = "txtContactNumber";
             this.txtContactNumber.Size = new System.Drawing.Size(176, 20);
@@ -101,6 +106,7 @@
             // 
             // txtTotalSeat
             // 
+            this.txtTotalSeat.BackColor = System.Drawing.Color.White;
             this.txtTotalSeat.Location = new System.Drawing.Point(195, 208);
             this.txtTotalSeat.Name = "txtTotalSeat";
             this.txtTotalSeat.Size = new System.Drawing.Size(176, 20);
@@ -108,6 +114,7 @@
             // 
             // txtCollegeName
             // 
+            this.txtCollegeName.BackColor = System.Drawing.Color.White;
             this.txtCollegeName.Location = new System.Drawing.Point(195, 154);
             this.txtCollegeName.Name = "txtCollegeName";
             this.txtCollegeName.Size = new System.Drawing.Size(176, 20);
@@ -115,6 +122,7 @@
             // 
             // txtCollegeID
             // 
+            this.txtCollegeID.BackColor = System.Drawing.Color.White;
             this.txtCollegeID.Location = new System.Drawing.Point(195, 97);
             this.txtCollegeID.Name = "txtCollegeID";
             this.txtCollegeID.Size = new System.Drawing.Size(176, 20);
@@ -126,9 +134,9 @@
             this.lblContactNumber.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContactNumber.Location = new System.Drawing.Point(30, 262);
             this.lblContactNumber.Name = "lblContactNumber";
-            this.lblContactNumber.Size = new System.Drawing.Size(160, 17);
+            this.lblContactNumber.Size = new System.Drawing.Size(141, 17);
             this.lblContactNumber.TabIndex = 5;
-            this.lblContactNumber.Text = "CONTACT NUMBER    :";
+            this.lblContactNumber.Text = "CONTACT NUMBER";
             // 
             // lblAddress
             // 
@@ -136,9 +144,9 @@
             this.lblAddress.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.Location = new System.Drawing.Point(30, 317);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(207, 17);
+            this.lblAddress.Size = new System.Drawing.Size(100, 17);
             this.lblAddress.TabIndex = 4;
-            this.lblAddress.Text = "ADDRESS                                :";
+            this.lblAddress.Text = "ADDRESS      ";
             // 
             // lblCollegeId
             // 
@@ -146,9 +154,9 @@
             this.lblCollegeId.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCollegeId.Location = new System.Drawing.Point(30, 97);
             this.lblCollegeId.Name = "lblCollegeId";
-            this.lblCollegeId.Size = new System.Drawing.Size(200, 17);
+            this.lblCollegeId.Size = new System.Drawing.Size(125, 17);
             this.lblCollegeId.TabIndex = 3;
-            this.lblCollegeId.Text = "COLLEGE ID                         :";
+            this.lblCollegeId.Text = "COLLEGE ID       ";
             // 
             // lblCollegeTotalSeats
             // 
@@ -156,9 +164,9 @@
             this.lblCollegeTotalSeats.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCollegeTotalSeats.Location = new System.Drawing.Point(30, 208);
             this.lblCollegeTotalSeats.Name = "lblCollegeTotalSeats";
-            this.lblCollegeTotalSeats.Size = new System.Drawing.Size(196, 17);
+            this.lblCollegeTotalSeats.Size = new System.Drawing.Size(137, 17);
             this.lblCollegeTotalSeats.TabIndex = 2;
-            this.lblCollegeTotalSeats.Text = "TOTAL SEATS                      :";
+            this.lblCollegeTotalSeats.Text = "TOTAL SEATS        ";
             // 
             // lblCollegeName
             // 
@@ -166,17 +174,17 @@
             this.lblCollegeName.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCollegeName.Location = new System.Drawing.Point(30, 154);
             this.lblCollegeName.Name = "lblCollegeName";
-            this.lblCollegeName.Size = new System.Drawing.Size(182, 17);
+            this.lblCollegeName.Size = new System.Drawing.Size(135, 17);
             this.lblCollegeName.TabIndex = 1;
-            this.lblCollegeName.Text = "COLLEGE NAME              :";
+            this.lblCollegeName.Text = "COLLEGE NAME   ";
             // 
             // lblCollegeDetails
             // 
             this.lblCollegeDetails.AutoSize = true;
-            this.lblCollegeDetails.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCollegeDetails.Location = new System.Drawing.Point(150, 32);
+            this.lblCollegeDetails.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCollegeDetails.Location = new System.Drawing.Point(106, 20);
             this.lblCollegeDetails.Name = "lblCollegeDetails";
-            this.lblCollegeDetails.Size = new System.Drawing.Size(159, 17);
+            this.lblCollegeDetails.Size = new System.Drawing.Size(185, 21);
             this.lblCollegeDetails.TabIndex = 0;
             this.lblCollegeDetails.Text = "COLLEGE DETAILS";
             // 
@@ -204,7 +212,7 @@
             // 
             // pnlCourseDetails
             // 
-            this.pnlCourseDetails.BackColor = System.Drawing.Color.White;
+            this.pnlCourseDetails.BackColor = System.Drawing.Color.AliceBlue;
             this.pnlCourseDetails.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlCourseDetails.Controls.Add(this.btnAddCollege);
             this.pnlCourseDetails.Controls.Add(this.clbCoursesAvailable);
@@ -215,15 +223,16 @@
             this.pnlCourseDetails.Size = new System.Drawing.Size(427, 406);
             this.pnlCourseDetails.TabIndex = 5;
             // 
-            // lblCourseDetails
+            // btnAddCollege
             // 
-            this.lblCourseDetails.AutoSize = true;
-            this.lblCourseDetails.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourseDetails.Location = new System.Drawing.Point(160, 32);
-            this.lblCourseDetails.Name = "lblCourseDetails";
-            this.lblCourseDetails.Size = new System.Drawing.Size(147, 17);
-            this.lblCourseDetails.TabIndex = 6;
-            this.lblCourseDetails.Text = "COURSE DETAILS";
+            this.btnAddCollege.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCollege.Location = new System.Drawing.Point(280, 352);
+            this.btnAddCollege.Name = "btnAddCollege";
+            this.btnAddCollege.Size = new System.Drawing.Size(131, 33);
+            this.btnAddCollege.TabIndex = 13;
+            this.btnAddCollege.Text = "INSERT";
+            this.btnAddCollege.UseVisualStyleBackColor = true;
+            this.btnAddCollege.Click += new System.EventHandler(this.btnAddCollege_Click);
             // 
             // clbCoursesAvailable
             // 
@@ -250,16 +259,15 @@
             this.clbCoursesAvailable.Size = new System.Drawing.Size(236, 199);
             this.clbCoursesAvailable.TabIndex = 12;
             // 
-            // btnAddCollege
+            // lblCourseDetails
             // 
-            this.btnAddCollege.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCollege.Location = new System.Drawing.Point(280, 352);
-            this.btnAddCollege.Name = "btnAddCollege";
-            this.btnAddCollege.Size = new System.Drawing.Size(131, 33);
-            this.btnAddCollege.TabIndex = 13;
-            this.btnAddCollege.Text = "INSERT";
-            this.btnAddCollege.UseVisualStyleBackColor = true;
-            this.btnAddCollege.Click += new System.EventHandler(this.btnAddCollege_Click);
+            this.lblCourseDetails.AutoSize = true;
+            this.lblCourseDetails.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCourseDetails.Location = new System.Drawing.Point(152, 20);
+            this.lblCourseDetails.Name = "lblCourseDetails";
+            this.lblCourseDetails.Size = new System.Drawing.Size(169, 21);
+            this.lblCourseDetails.TabIndex = 6;
+            this.lblCourseDetails.Text = "COURSE DETAILS";
             // 
             // lblCourseAvailable
             // 
@@ -267,9 +275,13 @@
             this.lblCourseAvailable.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCourseAvailable.Location = new System.Drawing.Point(3, 97);
             this.lblCourseAvailable.Name = "lblCourseAvailable";
-            this.lblCourseAvailable.Size = new System.Drawing.Size(171, 17);
+            this.lblCourseAvailable.Size = new System.Drawing.Size(164, 17);
             this.lblCourseAvailable.TabIndex = 7;
-            this.lblCourseAvailable.Text = "COURSES AVAILABLE :";
+            this.lblCourseAvailable.Text = "COURSES AVAILABLE";
+            // 
+            // epAdminAddCollege
+            // 
+            this.epAdminAddCollege.ContainerControl = this;
             // 
             // AddCollege
             // 
@@ -289,6 +301,7 @@
             this.tlsAddCollege.PerformLayout();
             this.pnlCourseDetails.ResumeLayout(false);
             this.pnlCourseDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epAdminAddCollege)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,5 +329,6 @@
         private System.Windows.Forms.CheckedListBox clbCoursesAvailable;
         private System.Windows.Forms.Label lblCourseDetails;
         private System.Windows.Forms.Label lblCourseAvailable;
+        private System.Windows.Forms.ErrorProvider epAdminAddCollege;
     }
 }

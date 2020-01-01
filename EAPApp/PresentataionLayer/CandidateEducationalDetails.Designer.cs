@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CandidateEducationalDetails));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
@@ -60,8 +61,10 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tspHome = new System.Windows.Forms.ToolStripButton();
             this.btnCandidateNext = new System.Windows.Forms.Button();
+            this.epCandidateEducation = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epCandidateEducation)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -138,7 +141,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(207, 332);
+            this.label9.Location = new System.Drawing.Point(160, 332);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(14, 18);
             this.label9.TabIndex = 74;
@@ -160,7 +163,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(207, 175);
+            this.label7.Location = new System.Drawing.Point(160, 174);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(14, 18);
             this.label7.TabIndex = 72;
@@ -180,6 +183,7 @@
             // lblMessage
             // 
             this.lblMessage.AutoSize = true;
+            this.lblMessage.ForeColor = System.Drawing.Color.Red;
             this.lblMessage.Location = new System.Drawing.Point(489, 62);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(0, 13);
@@ -192,9 +196,9 @@
             this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label3.Location = new System.Drawing.Point(80, 335);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 15);
+            this.label3.Size = new System.Drawing.Size(170, 15);
             this.label3.TabIndex = 68;
-            this.label3.Text = "GRADE/PERCENTAGE            :";
+            this.label3.Text = "PERCENTAGE                           :";
             // 
             // label4
             // 
@@ -291,6 +295,7 @@
             this.cmb12thSchoolName.Size = new System.Drawing.Size(209, 21);
             this.cmb12thSchoolName.TabIndex = 62;
             this.cmb12thSchoolName.Text = "Not Selected";
+            this.cmb12thSchoolName.Validating += new System.ComponentModel.CancelEventHandler(this.cmb12thSchoolName_Validating);
             // 
             // cmb10thSchoolName
             // 
@@ -324,6 +329,7 @@
             this.cmb10thSchoolName.Size = new System.Drawing.Size(209, 21);
             this.cmb10thSchoolName.TabIndex = 61;
             this.cmb10thSchoolName.Text = "Not Selected";
+            this.cmb10thSchoolName.Validating += new System.ComponentModel.CancelEventHandler(this.cmb10thSchoolName_Validating);
             // 
             // txt10thMark
             // 
@@ -331,6 +337,7 @@
             this.txt10thMark.Name = "txt10thMark";
             this.txt10thMark.Size = new System.Drawing.Size(209, 20);
             this.txt10thMark.TabIndex = 60;
+            this.txt10thMark.Validating += new System.ComponentModel.CancelEventHandler(this.txt10thMark_Validating);
             // 
             // txtMaths
             // 
@@ -338,6 +345,7 @@
             this.txtMaths.Name = "txtMaths";
             this.txtMaths.Size = new System.Drawing.Size(209, 20);
             this.txtMaths.TabIndex = 59;
+            this.txtMaths.Validating += new System.ComponentModel.CancelEventHandler(this.txtMaths_Validating);
             // 
             // txtChemistry
             // 
@@ -345,6 +353,7 @@
             this.txtChemistry.Name = "txtChemistry";
             this.txtChemistry.Size = new System.Drawing.Size(209, 20);
             this.txtChemistry.TabIndex = 58;
+            this.txtChemistry.Validating += new System.ComponentModel.CancelEventHandler(this.txtChemistry_Validating);
             // 
             // txtPhysics
             // 
@@ -352,6 +361,9 @@
             this.txtPhysics.Name = "txtPhysics";
             this.txtPhysics.Size = new System.Drawing.Size(209, 20);
             this.txtPhysics.TabIndex = 57;
+            this.txtPhysics.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPhysics_KeyDown);
+            this.txtPhysics.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhysics_KeyPress);
+            this.txtPhysics.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhysics_Validating);
             // 
             // txt12thMark
             // 
@@ -359,6 +371,7 @@
             this.txt12thMark.Name = "txt12thMark";
             this.txt12thMark.Size = new System.Drawing.Size(209, 20);
             this.txt12thMark.TabIndex = 56;
+            this.txt12thMark.Validating += new System.ComponentModel.CancelEventHandler(this.txt12thMark_Validating);
             // 
             // lblMathsMark
             // 
@@ -400,9 +413,9 @@
             this.lbl10mark.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lbl10mark.Location = new System.Drawing.Point(80, 177);
             this.lbl10mark.Name = "lbl10mark";
-            this.lbl10mark.Size = new System.Drawing.Size(169, 15);
+            this.lbl10mark.Size = new System.Drawing.Size(170, 15);
             this.lbl10mark.TabIndex = 50;
-            this.lbl10mark.Text = "GRADE/PERCENTAGE            :";
+            this.lbl10mark.Text = "PERCENTAGE                           :";
             // 
             // lbl10SchoolName
             // 
@@ -451,6 +464,10 @@
             this.btnCandidateNext.UseVisualStyleBackColor = false;
             this.btnCandidateNext.Click += new System.EventHandler(this.btnCandidateNext_Click);
             // 
+            // epCandidateEducation
+            // 
+            this.epCandidateEducation.ContainerControl = this;
+            // 
             // CandidateEducationalDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -465,6 +482,7 @@
             this.panel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epCandidateEducation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -503,5 +521,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ErrorProvider epCandidateEducation;
     }
 }

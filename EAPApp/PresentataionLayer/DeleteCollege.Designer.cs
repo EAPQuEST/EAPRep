@@ -32,11 +32,11 @@
             this.tlsDeleteCollege = new System.Windows.Forms.ToolStrip();
             this.tlsBtnHomeDelete = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblMessage = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtDelete = new System.Windows.Forms.TextBox();
             this.dgvDeleteView = new System.Windows.Forms.DataGridView();
             this.lblDeleteId = new System.Windows.Forms.Label();
-            this.lblMessage = new System.Windows.Forms.Label();
             this.tlsDeleteCollege.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeleteView)).BeginInit();
@@ -64,7 +64,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.AliceBlue;
             this.panel1.Controls.Add(this.lblMessage);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.txtDelete);
@@ -75,10 +75,18 @@
             this.panel1.Size = new System.Drawing.Size(861, 431);
             this.panel1.TabIndex = 3;
             // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(51, 17);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(0, 13);
+            this.lblMessage.TabIndex = 6;
+            // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(643, 19);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(109, 50);
@@ -97,6 +105,7 @@
             // 
             // dgvDeleteView
             // 
+            this.dgvDeleteView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvDeleteView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDeleteView.Location = new System.Drawing.Point(3, 83);
             this.dgvDeleteView.Name = "dgvDeleteView";
@@ -107,20 +116,12 @@
             // lblDeleteId
             // 
             this.lblDeleteId.AutoSize = true;
-            this.lblDeleteId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeleteId.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeleteId.Location = new System.Drawing.Point(60, 33);
             this.lblDeleteId.Name = "lblDeleteId";
-            this.lblDeleteId.Size = new System.Drawing.Size(270, 20);
+            this.lblDeleteId.Size = new System.Drawing.Size(227, 18);
             this.lblDeleteId.TabIndex = 2;
-            this.lblDeleteId.Text = "ENTER COLLEGE ID/NAME     : ";
-            // 
-            // lblMessage
-            // 
-            this.lblMessage.AutoSize = true;
-            this.lblMessage.Location = new System.Drawing.Point(51, 17);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(0, 13);
-            this.lblMessage.TabIndex = 6;
+            this.lblDeleteId.Text = "ENTER COLLEGE NAME     : ";
             // 
             // DeleteCollege
             // 
