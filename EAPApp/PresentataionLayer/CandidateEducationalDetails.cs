@@ -14,11 +14,11 @@ namespace PresentataionLayer
 {
     public partial class CandidateEducationalDetails : Form
     {
-        int countPhysicsMark = 0;
-        bool flagPhysicsMark = false;
+      
         public CandidateEducationalDetails()
         {
             InitializeComponent();
+            lblUserId.Text = LoginInfo.userID;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

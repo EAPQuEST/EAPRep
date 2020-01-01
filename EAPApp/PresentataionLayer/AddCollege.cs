@@ -118,13 +118,13 @@ namespace PresentataionLayer
                             if (clbCoursesAvailable.GetItemChecked(i))
                             {
                                 collegeDetails.CourseName = (string)clbCoursesAvailable.Items[i];
-                                outputcourse = EapBL.CollegeCourseInsert(collegeDetails);
+                                outputcourse = EapBLAdmin.CollegeCourseInsert(collegeDetails);
 
                             }
                         }
                     }
 
-                    output = EapBL.CollegeDetailsInsert(collegeDetails);
+                    output = EapBLAdmin.CollegeDetailsInsert(collegeDetails);
                     if (output > 0 || outputcourse > 0)
                     {
                         lblMessage.Text = "Successfully added";

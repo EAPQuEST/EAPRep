@@ -62,6 +62,7 @@
             this.tspHome = new System.Windows.Forms.ToolStripButton();
             this.btnCandidateNext = new System.Windows.Forms.Button();
             this.epCandidateEducation = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblUserId = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epCandidateEducation)).BeginInit();
@@ -70,6 +71,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblUserId);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
@@ -468,6 +470,14 @@
             // 
             this.epCandidateEducation.ContainerControl = this;
             // 
+            // lblUserId
+            // 
+            this.lblUserId.AutoSize = true;
+            this.lblUserId.Location = new System.Drawing.Point(680, 25);
+            this.lblUserId.Name = "lblUserId";
+            this.lblUserId.Size = new System.Drawing.Size(0, 13);
+            this.lblUserId.TabIndex = 78;
+            // 
             // CandidateEducationalDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -522,5 +532,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ErrorProvider epCandidateEducation;
+        private System.Windows.Forms.Label lblUserId;
     }
 }
