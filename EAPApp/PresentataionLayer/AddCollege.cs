@@ -45,7 +45,7 @@ namespace PresentataionLayer
                 collegeDetails = new CollegeDetails();
                 collegeDetails.CollegeID = txtCollegeID.Text;
                 collegeDetails.CollegeName = txtCollegeName.Text;
-                collegeDetails.TotalSeats =Convert.ToInt32( txtTotalSeat.Text);
+                //collegeDetails.TotalSeats =Convert.ToInt32( txtTotalSeat.Text);
                 collegeDetails.CollegeAddress = txtAddress.Text;
                 collegeDetails.CollegePhone = Convert.ToInt32(txtContactNumber.Text);
                 for (int i = 0; i < clbCoursesAvailable.Items.Count; i++)
@@ -67,7 +67,7 @@ namespace PresentataionLayer
                     {
                         lblMessage.Text = "Failed";
                     }
-                }
+                
             }
             catch (Exception ex)
             {

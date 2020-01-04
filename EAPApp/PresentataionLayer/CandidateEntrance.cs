@@ -124,6 +124,9 @@ namespace PresentataionLayer
                     cmbCoursePreference11.DataSource = dsCoursePreference.Tables[0];
                     cmbCoursePreference11.ValueMember = "course_name";
                     cmbCoursePreference11.DisplayMember = "course_name";
+
+                   
+
                 }
 
 
@@ -183,6 +186,11 @@ namespace PresentataionLayer
             {
                 lblMessage.Text = ex.Message.ToString();
             }
+        }
+
+        private void cmbCoursePreference12_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -667,6 +667,7 @@
             this.cmbCoursePreference12.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference12.TabIndex = 135;
             this.cmbCoursePreference12.Text = "Not Selected";
+            this.cmbCoursePreference12.SelectedIndexChanged += new System.EventHandler(this.cmbCoursePreference12_SelectedIndexChanged);
             // 
             // cmbCoursePreference11
             // 
