@@ -22,11 +22,11 @@ namespace DataServiceLayer.DataLayer
             SqlCommand cmd = null;
             try
             {
-                sql = "insert into college_details(college_id,college_name,total_seats,college_address,college_phone) values(";
+                sql = "insert into college_details(college_id,college_name,college_address,college_phone) values(";
 
                 sql = sql + "'" + collegeDetails.CollegeID + "',";
                 sql = sql + "'" + collegeDetails.CollegeName + "',";
-                sql = sql + "" + collegeDetails.TotalSeats + ",";
+                
                 sql = sql + "'" + collegeDetails.CollegeAddress + "',";
                 sql = sql + "'" + collegeDetails.CollegePhone + "')";
 

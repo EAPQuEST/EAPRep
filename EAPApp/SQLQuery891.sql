@@ -1,0 +1,1 @@
+﻿alter table college_details drop column total_seats
