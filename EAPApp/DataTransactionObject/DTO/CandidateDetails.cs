@@ -271,6 +271,14 @@ namespace DataTransactionObject.DTO
             set { reservation = value; }
         }
 
+        private string candidatePassword;
+
+        public string CandidatePassword
+        {
+            get { return candidatePassword; }
+            set { candidatePassword = value; }
+        }
+
 
 
     }
