@@ -41,18 +41,19 @@
             this.lblCollegeId = new System.Windows.Forms.Label();
             this.lblCollegeName = new System.Windows.Forms.Label();
             this.lblCollegeDetails = new System.Windows.Forms.Label();
-            this.tlsAddCollege = new System.Windows.Forms.ToolStrip();
-            this.tlsBtnHomeAdd = new System.Windows.Forms.ToolStripButton();
             this.pnlCourseDetails = new System.Windows.Forms.Panel();
             this.btnAddCollege = new System.Windows.Forms.Button();
             this.clbCoursesAvailable = new System.Windows.Forms.CheckedListBox();
             this.lblCourseDetails = new System.Windows.Forms.Label();
             this.lblCourseAvailable = new System.Windows.Forms.Label();
             this.epAdminAddCollege = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tlsDeleteCollege = new System.Windows.Forms.ToolStrip();
+            this.tlsBtnHomeDelete = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.pnlCollegeDetails.SuspendLayout();
-            this.tlsAddCollege.SuspendLayout();
             this.pnlCourseDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epAdminAddCollege)).BeginInit();
+            this.tlsDeleteCollege.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlCollegeDetails
@@ -166,28 +167,6 @@
             this.lblCollegeDetails.TabIndex = 0;
             this.lblCollegeDetails.Text = "COLLEGE DETAILS";
             // 
-            // tlsAddCollege
-            // 
-            this.tlsAddCollege.BackColor = System.Drawing.Color.CadetBlue;
-            this.tlsAddCollege.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tlsAddCollege.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tlsBtnHomeAdd});
-            this.tlsAddCollege.Location = new System.Drawing.Point(0, 0);
-            this.tlsAddCollege.Name = "tlsAddCollege";
-            this.tlsAddCollege.Size = new System.Drawing.Size(868, 25);
-            this.tlsAddCollege.TabIndex = 6;
-            this.tlsAddCollege.Text = "toolStrip1";
-            // 
-            // tlsBtnHomeAdd
-            // 
-            this.tlsBtnHomeAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tlsBtnHomeAdd.Image = ((System.Drawing.Image)(resources.GetObject("tlsBtnHomeAdd.Image")));
-            this.tlsBtnHomeAdd.ImageTransparentColor = System.Drawing.Color.MediumAquamarine;
-            this.tlsBtnHomeAdd.Name = "tlsBtnHomeAdd";
-            this.tlsBtnHomeAdd.Size = new System.Drawing.Size(23, 22);
-            this.tlsBtnHomeAdd.Text = "Home";
-            this.tlsBtnHomeAdd.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
             // pnlCourseDetails
             // 
             this.pnlCourseDetails.BackColor = System.Drawing.Color.AliceBlue;
@@ -262,13 +241,42 @@
             // 
             this.epAdminAddCollege.ContainerControl = this;
             // 
+            // tlsDeleteCollege
+            // 
+            this.tlsDeleteCollege.BackColor = System.Drawing.Color.CadetBlue;
+            this.tlsDeleteCollege.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tlsBtnHomeDelete,
+            this.toolStripLabel1});
+            this.tlsDeleteCollege.Location = new System.Drawing.Point(0, 0);
+            this.tlsDeleteCollege.Name = "tlsDeleteCollege";
+            this.tlsDeleteCollege.Size = new System.Drawing.Size(868, 25);
+            this.tlsDeleteCollege.TabIndex = 10;
+            this.tlsDeleteCollege.Text = "toolStrip1";
+            // 
+            // tlsBtnHomeDelete
+            // 
+            this.tlsBtnHomeDelete.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tlsBtnHomeDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tlsBtnHomeDelete.Image = ((System.Drawing.Image)(resources.GetObject("tlsBtnHomeDelete.Image")));
+            this.tlsBtnHomeDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tlsBtnHomeDelete.Name = "tlsBtnHomeDelete";
+            this.tlsBtnHomeDelete.Size = new System.Drawing.Size(23, 22);
+            this.tlsBtnHomeDelete.Text = "Sign Out";
+            this.tlsBtnHomeDelete.Click += new System.EventHandler(this.tlsBtnHomeDelete_Click);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(72, 22);
+            this.toolStripLabel1.Text = "Add College";
+            // 
             // AddCollege
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(868, 450);
-            this.Controls.Add(this.tlsAddCollege);
+            this.Controls.Add(this.tlsDeleteCollege);
             this.Controls.Add(this.pnlCollegeDetails);
             this.Controls.Add(this.pnlCourseDetails);
             this.Name = "AddCollege";
@@ -276,11 +284,11 @@
             this.Load += new System.EventHandler(this.AddCollege_Load);
             this.pnlCollegeDetails.ResumeLayout(false);
             this.pnlCollegeDetails.PerformLayout();
-            this.tlsAddCollege.ResumeLayout(false);
-            this.tlsAddCollege.PerformLayout();
             this.pnlCourseDetails.ResumeLayout(false);
             this.pnlCourseDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epAdminAddCollege)).EndInit();
+            this.tlsDeleteCollege.ResumeLayout(false);
+            this.tlsDeleteCollege.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,8 +306,6 @@
         private System.Windows.Forms.Label lblCollegeId;
         private System.Windows.Forms.Label lblCollegeName;
         private System.Windows.Forms.Label lblCollegeDetails;
-        private System.Windows.Forms.ToolStrip tlsAddCollege;
-        private System.Windows.Forms.ToolStripButton tlsBtnHomeAdd;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Panel pnlCourseDetails;
         private System.Windows.Forms.Button btnAddCollege;
@@ -307,5 +313,8 @@
         private System.Windows.Forms.Label lblCourseDetails;
         private System.Windows.Forms.Label lblCourseAvailable;
         private System.Windows.Forms.ErrorProvider epAdminAddCollege;
+        private System.Windows.Forms.ToolStrip tlsDeleteCollege;
+        private System.Windows.Forms.ToolStripButton tlsBtnHomeDelete;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }

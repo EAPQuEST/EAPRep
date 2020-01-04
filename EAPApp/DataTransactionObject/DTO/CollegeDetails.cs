@@ -71,7 +71,21 @@ namespace DataTransactionObject.DTO
             get { return courseSeat; }
             set { courseSeat = value; }
         }
+        private string username;
 
+        public string Username
+        {
+            get { return username; }
+            set { username = value; }
+        }
+
+        private string password;
+
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
 
 
 

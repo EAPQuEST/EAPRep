@@ -207,5 +207,12 @@ namespace PresentataionLayer
         //        lblMessage.Text = ex.Message.ToString();
         //    }
         }
+
+        private void tlsBtnHomeDelete_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AllotmentWindow allotmentWindow = new AllotmentWindow();
+            allotmentWindow.Show();
+        }
     }
 }

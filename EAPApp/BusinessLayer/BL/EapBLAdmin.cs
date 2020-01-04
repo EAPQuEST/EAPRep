@@ -9,8 +9,55 @@ using System.Data;
 
 namespace BusinessLayer.BL
 {
+
+
+
     public class EapBLAdmin
     {
+
+        public static DataTable AdminChangePassword(string password)
+        {
+            //DataSet dsData = null;
+            DataTable dtLogin = null;
+
+            try
+            {
+                dtLogin = EapDSLAdmin.AdminChangePassword(password);
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:AdminChangePassword()", ex.Message.ToString());
+            }
+
+
+            return dtLogin;
+
+        }
+
+
+        public static int AdminNewPassword(string username,string password)
+        {
+            int output = 0;
+            try
+            {
+
+                output = EapDSLAdmin.AdminNewPassword(username, password);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:AdminNewPassword", ex.Message.ToString());
+            }
+
+            return output;
+
+
+        }
+
+
+
         public static int CollegeDetailsInsert(CollegeDetails collegeDetails)
         {
             int output = 0;
@@ -247,6 +294,28 @@ namespace BusinessLayer.BL
             }
             return output;
 
+
+        }
+
+
+        public static DataTable AdminLogin(string user, string password)
+        {
+            //DataSet dsData = null;
+            DataTable dtLogin = null;
+
+            try
+            {
+                dtLogin = EapDSLAdmin.AdminLogin(user, password);
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:AdminLogin()", ex.Message.ToString());
+            }
+
+
+            return dtLogin;
 
         }
 

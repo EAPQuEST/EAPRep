@@ -45,5 +45,12 @@ namespace PresentataionLayer
         {
 
         }
+
+        private void tspHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AllotmentWindow allotmentWindow = new AllotmentWindow();
+            allotmentWindow.Show();
+        }
     }
 }

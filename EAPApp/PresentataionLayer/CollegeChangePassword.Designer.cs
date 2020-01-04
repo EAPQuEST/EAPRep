@@ -1,6 +1,6 @@
 ﻿namespace PresentataionLayer
 {
-    partial class CandidateChangePassword
+    partial class CollegeChangePassword
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CandidateChangePassword));
-            this.lblTitle = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CollegeChangePassword));
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.pnlCandidateChangePassword = new System.Windows.Forms.Panel();
-            this.txtCandidateChangePasswordID = new System.Windows.Forms.TextBox();
+            this.txtCollegeChangePasswordID = new System.Windows.Forms.TextBox();
             this.lblCandidateChangePasswordID = new System.Windows.Forms.Label();
             this.lblMessage = new System.Windows.Forms.Label();
             this.txtNewPassword = new System.Windows.Forms.TextBox();
@@ -39,28 +39,28 @@
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.lblNewPassword = new System.Windows.Forms.Label();
             this.lblCurrentPassword = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.tspBtnBack = new System.Windows.Forms.ToolStripButton();
-            this.pnlCandidateChangePassword.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.pnlCandidateChangePassword.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblTitle
+            // toolStrip1
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblTitle.Location = new System.Drawing.Point(269, 62);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(265, 25);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "CHANGE PASSWORD";
+            this.toolStrip1.BackColor = System.Drawing.Color.LightBlue;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tspBtnBack});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.TabIndex = 31;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // pnlCandidateChangePassword
             // 
             this.pnlCandidateChangePassword.BackColor = System.Drawing.SystemColors.Menu;
             this.pnlCandidateChangePassword.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlCandidateChangePassword.Controls.Add(this.txtCandidateChangePasswordID);
+            this.pnlCandidateChangePassword.Controls.Add(this.txtCollegeChangePasswordID);
             this.pnlCandidateChangePassword.Controls.Add(this.lblCandidateChangePasswordID);
             this.pnlCandidateChangePassword.Controls.Add(this.lblMessage);
             this.pnlCandidateChangePassword.Controls.Add(this.txtNewPassword);
@@ -68,17 +68,17 @@
             this.pnlCandidateChangePassword.Controls.Add(this.btnChangePassword);
             this.pnlCandidateChangePassword.Controls.Add(this.lblNewPassword);
             this.pnlCandidateChangePassword.Controls.Add(this.lblCurrentPassword);
-            this.pnlCandidateChangePassword.Location = new System.Drawing.Point(135, 134);
+            this.pnlCandidateChangePassword.Location = new System.Drawing.Point(137, 146);
             this.pnlCandidateChangePassword.Name = "pnlCandidateChangePassword";
             this.pnlCandidateChangePassword.Size = new System.Drawing.Size(506, 231);
-            this.pnlCandidateChangePassword.TabIndex = 1;
+            this.pnlCandidateChangePassword.TabIndex = 30;
             // 
-            // txtCandidateChangePasswordID
+            // txtCollegeChangePasswordID
             // 
-            this.txtCandidateChangePasswordID.Location = new System.Drawing.Point(213, 28);
-            this.txtCandidateChangePasswordID.Name = "txtCandidateChangePasswordID";
-            this.txtCandidateChangePasswordID.Size = new System.Drawing.Size(214, 20);
-            this.txtCandidateChangePasswordID.TabIndex = 7;
+            this.txtCollegeChangePasswordID.Location = new System.Drawing.Point(213, 28);
+            this.txtCollegeChangePasswordID.Name = "txtCollegeChangePasswordID";
+            this.txtCollegeChangePasswordID.Size = new System.Drawing.Size(214, 20);
+            this.txtCollegeChangePasswordID.TabIndex = 7;
             // 
             // lblCandidateChangePasswordID
             // 
@@ -100,7 +100,7 @@
             // 
             // txtNewPassword
             // 
-            this.txtNewPassword.Location = new System.Drawing.Point(213, 107);
+            this.txtNewPassword.Location = new System.Drawing.Point(213, 113);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.Size = new System.Drawing.Size(214, 20);
             this.txtNewPassword.TabIndex = 4;
@@ -146,16 +146,16 @@
             this.lblCurrentPassword.TabIndex = 0;
             this.lblCurrentPassword.Text = "Current Password";
             // 
-            // toolStrip1
+            // lblTitle
             // 
-            this.toolStrip1.BackColor = System.Drawing.Color.LightBlue;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tspBtnBack});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
-            this.toolStrip1.TabIndex = 28;
-            this.toolStrip1.Text = "toolStrip1";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblTitle.Location = new System.Drawing.Point(271, 74);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(265, 25);
+            this.lblTitle.TabIndex = 29;
+            this.lblTitle.Text = "CHANGE PASSWORD";
             // 
             // tspBtnBack
             // 
@@ -167,7 +167,7 @@
             this.tspBtnBack.Text = "Back";
             this.tspBtnBack.Click += new System.EventHandler(this.tspBtnBack_Click);
             // 
-            // CandidateChangePassword
+            // CollegeChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -176,14 +176,12 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pnlCandidateChangePassword);
             this.Controls.Add(this.lblTitle);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "CandidateChangePassword";
-            this.Text = "CandidateChangePassword";
-            this.Load += new System.EventHandler(this.CandidateChangePassword_Load);
-            this.pnlCandidateChangePassword.ResumeLayout(false);
-            this.pnlCandidateChangePassword.PerformLayout();
+            this.Name = "CollegeChangePassword";
+            this.Text = "CollegeChangePassword";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.pnlCandidateChangePassword.ResumeLayout(false);
+            this.pnlCandidateChangePassword.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,17 +189,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton tspBtnBack;
         private System.Windows.Forms.Panel pnlCandidateChangePassword;
+        private System.Windows.Forms.TextBox txtCollegeChangePasswordID;
+        private System.Windows.Forms.Label lblCandidateChangePasswordID;
+        private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.TextBox txtNewPassword;
         private System.Windows.Forms.TextBox txtCurrentPassword;
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.Label lblNewPassword;
         private System.Windows.Forms.Label lblCurrentPassword;
-        private System.Windows.Forms.Label lblMessage;
-        private System.Windows.Forms.TextBox txtCandidateChangePasswordID;
-        private System.Windows.Forms.Label lblCandidateChangePasswordID;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton tspBtnBack;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

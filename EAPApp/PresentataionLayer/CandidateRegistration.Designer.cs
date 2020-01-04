@@ -33,8 +33,6 @@
             this.btnCandidateRegister = new System.Windows.Forms.Button();
             this.lblTitleCandidate = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tspHome = new System.Windows.Forms.ToolStripButton();
-            this.tspBtnBack = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMessage = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,6 +59,7 @@
             this.lblCandidateName = new System.Windows.Forms.Label();
             this.lblCandidateId = new System.Windows.Forms.Label();
             this.epRegistration = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tspBtnBack = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epRegistration)).BeginInit();
@@ -96,34 +95,12 @@
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.LightBlue;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tspHome,
             this.tspBtnBack});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(799, 25);
             this.toolStrip1.TabIndex = 25;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // tspHome
-            // 
-            this.tspHome.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tspHome.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tspHome.Image = ((System.Drawing.Image)(resources.GetObject("tspHome.Image")));
-            this.tspHome.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tspHome.Name = "tspHome";
-            this.tspHome.Size = new System.Drawing.Size(23, 22);
-            this.tspHome.Text = "Home";
-            this.tspHome.Click += new System.EventHandler(this.tspHome_Click);
-            // 
-            // tspBtnBack
-            // 
-            this.tspBtnBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tspBtnBack.Image = ((System.Drawing.Image)(resources.GetObject("tspBtnBack.Image")));
-            this.tspBtnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tspBtnBack.Name = "tspBtnBack";
-            this.tspBtnBack.Size = new System.Drawing.Size(23, 22);
-            this.tspBtnBack.Text = "Back";
-            this.tspBtnBack.Click += new System.EventHandler(this.tspBtnBack_Click);
             // 
             // panel1
             // 
@@ -412,6 +389,16 @@
             // 
             this.epRegistration.ContainerControl = this;
             // 
+            // tspBtnBack
+            // 
+            this.tspBtnBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tspBtnBack.Image = ((System.Drawing.Image)(resources.GetObject("tspBtnBack.Image")));
+            this.tspBtnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tspBtnBack.Name = "tspBtnBack";
+            this.tspBtnBack.Size = new System.Drawing.Size(23, 22);
+            this.tspBtnBack.Text = "Back";
+            this.tspBtnBack.Click += new System.EventHandler(this.tspBtnBack_Click);
+            // 
             // CandidateRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,7 +437,6 @@
         private System.Windows.Forms.Label lblCandidateId;
         private System.Windows.Forms.Label lblTitleCandidate;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton tspHome;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtContactNumber;
         private System.Windows.Forms.Label lblContactNumber;

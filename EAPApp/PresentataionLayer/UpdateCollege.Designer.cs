@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateCollege));
-            this.tlsAddCollege = new System.Windows.Forms.ToolStrip();
-            this.tlsBtnHomeAdd = new System.Windows.Forms.ToolStripButton();
             this.pnlCollegeDetails = new System.Windows.Forms.Panel();
             this.btnUpdateCollege = new System.Windows.Forms.Button();
             this.lblMessage = new System.Windows.Forms.Label();
@@ -45,30 +43,12 @@
             this.lblCollegeTotalSeats = new System.Windows.Forms.Label();
             this.lblCollegeName = new System.Windows.Forms.Label();
             this.lblCollegeDetails = new System.Windows.Forms.Label();
-            this.tlsAddCollege.SuspendLayout();
+            this.tlsDeleteCollege = new System.Windows.Forms.ToolStrip();
+            this.tlsBtnHomeDelete = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.pnlCollegeDetails.SuspendLayout();
+            this.tlsDeleteCollege.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tlsAddCollege
-            // 
-            this.tlsAddCollege.BackColor = System.Drawing.Color.CadetBlue;
-            this.tlsAddCollege.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tlsAddCollege.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tlsBtnHomeAdd});
-            this.tlsAddCollege.Location = new System.Drawing.Point(0, 0);
-            this.tlsAddCollege.Name = "tlsAddCollege";
-            this.tlsAddCollege.Size = new System.Drawing.Size(845, 25);
-            this.tlsAddCollege.TabIndex = 9;
-            this.tlsAddCollege.Text = "toolStrip1";
-            // 
-            // tlsBtnHomeAdd
-            // 
-            this.tlsBtnHomeAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tlsBtnHomeAdd.Image = ((System.Drawing.Image)(resources.GetObject("tlsBtnHomeAdd.Image")));
-            this.tlsBtnHomeAdd.ImageTransparentColor = System.Drawing.Color.MediumAquamarine;
-            this.tlsBtnHomeAdd.Name = "tlsBtnHomeAdd";
-            this.tlsBtnHomeAdd.Size = new System.Drawing.Size(23, 22);
-            this.tlsBtnHomeAdd.Text = "Home";
             // 
             // pnlCollegeDetails
             // 
@@ -214,28 +194,54 @@
             this.lblCollegeDetails.TabIndex = 0;
             this.lblCollegeDetails.Text = "COLLEGE DETAILS";
             // 
+            // tlsDeleteCollege
+            // 
+            this.tlsDeleteCollege.BackColor = System.Drawing.Color.CadetBlue;
+            this.tlsDeleteCollege.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tlsBtnHomeDelete,
+            this.toolStripLabel1});
+            this.tlsDeleteCollege.Location = new System.Drawing.Point(0, 0);
+            this.tlsDeleteCollege.Name = "tlsDeleteCollege";
+            this.tlsDeleteCollege.Size = new System.Drawing.Size(845, 25);
+            this.tlsDeleteCollege.TabIndex = 16;
+            this.tlsDeleteCollege.Text = "toolStrip1";
+            // 
+            // tlsBtnHomeDelete
+            // 
+            this.tlsBtnHomeDelete.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tlsBtnHomeDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tlsBtnHomeDelete.Image = ((System.Drawing.Image)(resources.GetObject("tlsBtnHomeDelete.Image")));
+            this.tlsBtnHomeDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tlsBtnHomeDelete.Name = "tlsBtnHomeDelete";
+            this.tlsBtnHomeDelete.Size = new System.Drawing.Size(23, 22);
+            this.tlsBtnHomeDelete.Text = "Sign Out";
+            this.tlsBtnHomeDelete.Click += new System.EventHandler(this.tlsBtnHomeDelete_Click);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(88, 22);
+            this.toolStripLabel1.Text = "Update College";
+            // 
             // UpdateCollege
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(845, 446);
-            this.Controls.Add(this.tlsAddCollege);
+            this.Controls.Add(this.tlsDeleteCollege);
             this.Controls.Add(this.pnlCollegeDetails);
             this.Name = "UpdateCollege";
             this.Text = "UpdateCollege";
-            this.tlsAddCollege.ResumeLayout(false);
-            this.tlsAddCollege.PerformLayout();
             this.pnlCollegeDetails.ResumeLayout(false);
             this.pnlCollegeDetails.PerformLayout();
+            this.tlsDeleteCollege.ResumeLayout(false);
+            this.tlsDeleteCollege.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ToolStrip tlsAddCollege;
-        private System.Windows.Forms.ToolStripButton tlsBtnHomeAdd;
         private System.Windows.Forms.Panel pnlCollegeDetails;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtContactNumber;
@@ -250,5 +256,8 @@
         private System.Windows.Forms.ComboBox cmbCollegeId;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Button btnUpdateCollege;
+        private System.Windows.Forms.ToolStrip tlsDeleteCollege;
+        private System.Windows.Forms.ToolStripButton tlsBtnHomeDelete;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }

@@ -29,40 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteCollege));
-            this.tlsDeleteCollege = new System.Windows.Forms.ToolStrip();
-            this.tlsBtnHomeDelete = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMessage = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtDelete = new System.Windows.Forms.TextBox();
             this.dgvDeleteView = new System.Windows.Forms.DataGridView();
             this.lblDeleteId = new System.Windows.Forms.Label();
+            this.tlsDeleteCollege = new System.Windows.Forms.ToolStrip();
+            this.tlsBtnHomeDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.tlsDeleteCollege.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeleteView)).BeginInit();
+            this.tlsDeleteCollege.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tlsDeleteCollege
-            // 
-            this.tlsDeleteCollege.BackColor = System.Drawing.Color.CadetBlue;
-            this.tlsDeleteCollege.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tlsBtnHomeDelete,
-            this.toolStripLabel1});
-            this.tlsDeleteCollege.Location = new System.Drawing.Point(0, 0);
-            this.tlsDeleteCollege.Name = "tlsDeleteCollege";
-            this.tlsDeleteCollege.Size = new System.Drawing.Size(861, 25);
-            this.tlsDeleteCollege.TabIndex = 2;
-            this.tlsDeleteCollege.Text = "toolStrip1";
-            // 
-            // tlsBtnHomeDelete
-            // 
-            this.tlsBtnHomeDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tlsBtnHomeDelete.Image = ((System.Drawing.Image)(resources.GetObject("tlsBtnHomeDelete.Image")));
-            this.tlsBtnHomeDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tlsBtnHomeDelete.Name = "tlsBtnHomeDelete";
-            this.tlsBtnHomeDelete.Size = new System.Drawing.Size(23, 22);
-            this.tlsBtnHomeDelete.Text = "Home";
             // 
             // panel1
             // 
@@ -125,6 +104,29 @@
             this.lblDeleteId.TabIndex = 2;
             this.lblDeleteId.Text = "ENTER COLLEGE NAME     : ";
             // 
+            // tlsDeleteCollege
+            // 
+            this.tlsDeleteCollege.BackColor = System.Drawing.Color.CadetBlue;
+            this.tlsDeleteCollege.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tlsBtnHomeDelete,
+            this.toolStripLabel1});
+            this.tlsDeleteCollege.Location = new System.Drawing.Point(0, 0);
+            this.tlsDeleteCollege.Name = "tlsDeleteCollege";
+            this.tlsDeleteCollege.Size = new System.Drawing.Size(861, 25);
+            this.tlsDeleteCollege.TabIndex = 11;
+            this.tlsDeleteCollege.Text = "toolStrip1";
+            // 
+            // tlsBtnHomeDelete
+            // 
+            this.tlsBtnHomeDelete.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tlsBtnHomeDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tlsBtnHomeDelete.Image = ((System.Drawing.Image)(resources.GetObject("tlsBtnHomeDelete.Image")));
+            this.tlsBtnHomeDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tlsBtnHomeDelete.Name = "tlsBtnHomeDelete";
+            this.tlsBtnHomeDelete.Size = new System.Drawing.Size(23, 22);
+            this.tlsBtnHomeDelete.Text = "Sign Out";
+            this.tlsBtnHomeDelete.Click += new System.EventHandler(this.tlsBtnHomeDelete_Click);
+            // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
@@ -136,29 +138,29 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(861, 458);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tlsDeleteCollege);
+            this.Controls.Add(this.panel1);
             this.Name = "DeleteCollege";
             this.Text = "DeleteCollege";
-            this.tlsDeleteCollege.ResumeLayout(false);
-            this.tlsDeleteCollege.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeleteView)).EndInit();
+            this.tlsDeleteCollege.ResumeLayout(false);
+            this.tlsDeleteCollege.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ToolStrip tlsDeleteCollege;
-        private System.Windows.Forms.ToolStripButton tlsBtnHomeDelete;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox txtDelete;
         private System.Windows.Forms.DataGridView dgvDeleteView;
         private System.Windows.Forms.Label lblDeleteId;
         private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.ToolStrip tlsDeleteCollege;
+        private System.Windows.Forms.ToolStripButton tlsBtnHomeDelete;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }
