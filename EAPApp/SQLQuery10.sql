@@ -1,1 +1,1 @@
-﻿select course_details.course_name from course_details cross join college_details where college_details.college_name='hmm'
+﻿insert into candidate_details (candidate_id,candidate_10th_school,candidate_10th_percentage,candidate_12th_school,candidate_12th_percentage,candiate_physics,candiate_chemistry,candiate_maths,reservation) values('503','Infant Jesus School, Kollam',78,'Good Shepherd Kuriannoor',77,100,100,100,'Sport')

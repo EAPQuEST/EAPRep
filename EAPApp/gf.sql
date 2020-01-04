@@ -1,0 +1,1 @@
+﻿insert into college_coures(collegeid, courseid) values((select college_id from college_details where college_name = 'weew'),(select course_id from course_details where course_name = 'Mechanical Engineering'))

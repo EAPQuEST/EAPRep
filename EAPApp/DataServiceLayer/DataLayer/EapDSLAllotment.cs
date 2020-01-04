@@ -8,11 +8,11 @@ using DataTransactionObject.DTO;
 using DataServiceLayer.Helper;
 using System.Data;
 
+
 namespace DataServiceLayer.DataLayer
 {
-   public class EapDSLAllotment
+    public class EapDSLAllotment
     {
-
         public static DataTable GetEachRow()
         {
             string sql = "";
@@ -42,7 +42,7 @@ namespace DataServiceLayer.DataLayer
             }
             return dt;
         }
-        public static int FetchByRow()
+        public static int  FetchByRow()
         {
             int output = 0;
             DataTable dt = null;
@@ -100,7 +100,7 @@ namespace DataServiceLayer.DataLayer
 
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 Console.WriteLine("EapDSLAllotment.FetchByRow()");
 
@@ -111,16 +111,16 @@ namespace DataServiceLayer.DataLayer
 
         public static AllotmentObject GetTotalSeats(AllotmentObject allotmentObject)
         {
-
+            
             SqlConnection con = null;
-
+            
             DataTable dt = null;
             SqlDataAdapter adapter = null;
-
+            
             string sql = "";
             try
             {
-                sql = "select numberof_seats,obc,sc_st,sports from college_coures where collegeid='" + allotmentObject.CollegeId + "' and courseid='" + allotmentObject.CourseId + "'";
+                sql = "select numberof_seats,obc,sc_st,sports from college_coures where collegeid='" + allotmentObject.CollegeId + "' and courseid='"+allotmentObject.CourseId+"'";
                 con = DatabaseHelper.GetConnection();
                 con.Open();
                 dt = new DataTable();
@@ -133,16 +133,16 @@ namespace DataServiceLayer.DataLayer
                 foreach (DataRow dr in dt.Rows)
                 {
 
-                    allotmentObject.GeneralSeats = Convert.ToInt32(dr["numberof_seats"]);
+                    allotmentObject.GeneralSeats =Convert.ToInt32( dr["numberof_seats"]);
                     allotmentObject.ObcSeats = Convert.ToInt32(dr["obc"]);
-                    allotmentObject.SC_STSeats = Convert.ToInt32(dr["sc_st"]);
+                    allotmentObject.SC_STSeats= Convert.ToInt32(dr["sc_st"]);
                     allotmentObject.SportSeats = Convert.ToInt32(dr["sports"]);
 
 
                 }
 
 
-            }
+                }
 
 
             catch (Exception ex)
@@ -154,7 +154,7 @@ namespace DataServiceLayer.DataLayer
                 con.Close();
                 adapter.Dispose();
             }
-
+           
 
 
             return allotmentObject;
@@ -169,7 +169,7 @@ namespace DataServiceLayer.DataLayer
         public static int UpdateStatus(AllotmentObject allotmentObject)
         {
             int output = 0;
-
+         
             string sql1 = "";
             string sql2 = "";
             string sql3 = "";
@@ -207,22 +207,22 @@ namespace DataServiceLayer.DataLayer
                     sql2 = "update college_coures set numberof_seats=" + allotmentObject.GeneralSeats + " where collegeid='" + allotmentObject.CollegeId + "' and courseid='" + allotmentObject.CourseId + "'";
                     sql3 = "update new1allotment set status='Alloted',reservation='General' where candidate_id='" + allotmentObject.CandidateId + "' and college_id='" + allotmentObject.CollegeId + "' and course_id='" + allotmentObject.CourseId + "'";
                 }
-
-
-
+                
+                
+                
 
 
 
                 con = DatabaseHelper.GetConnection();
                 con.Open();
-
+              
                 cmd1 = new SqlCommand(sql1, con);
                 cmd2 = new SqlCommand(sql2, con);
                 cmd3 = new SqlCommand(sql3, con);
 
 
 
-
+               
                 cmd1.ExecuteNonQuery();
                 cmd2.ExecuteNonQuery();
                 cmd3.ExecuteNonQuery();
@@ -237,14 +237,17 @@ namespace DataServiceLayer.DataLayer
             finally
             {
                 con.Close();
-
+                
                 cmd1.Dispose();
                 cmd2.Dispose();
                 cmd3.Dispose();
             }
             return output;
-
+            
         }
+
+
+
 
     }
 }

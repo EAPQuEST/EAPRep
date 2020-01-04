@@ -1,0 +1,1 @@
+﻿select * from viewallotment order by total_marks

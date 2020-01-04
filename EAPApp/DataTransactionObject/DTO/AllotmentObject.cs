@@ -8,6 +8,7 @@ namespace DataTransactionObject.DTO
 {
     public class AllotmentObject
     {
+
         private int generalSeats;
 
         public int GeneralSeats
@@ -87,5 +88,9 @@ namespace DataTransactionObject.DTO
             get { return total; }
             set { total = value; }
         }
+
+
+
+
     }
 }
