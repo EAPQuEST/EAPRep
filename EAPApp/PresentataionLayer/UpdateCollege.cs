@@ -106,15 +106,15 @@ namespace PresentataionLayer
                 collegeDetails.TotalSeats = Convert.ToInt32(txtTotalSeats.Text);
                 collegeDetails.CollegeAddress = txtAddress.Text;
                 collegeDetails.CollegePhone = Convert.ToInt32(txtContactNumber.Text);
-                for (int i = 0; i < clbCoursesAvailable.Items.Count; i++)
-                {
-                    if (clbCoursesAvailable.GetItemChecked(i))
-                    {
-                        collegeDetails.CourseName = (string)clbCoursesAvailable.Items[i];
-                        outputcourse = EapBLAdmin.CollegeCourseUpdate(collegeDetails);
+                //for (int i = 0; i < clbCoursesAvailable.Items.Count; i++)
+                //{
+                //    if (clbCoursesAvailable.GetItemChecked(i))
+                //    {
+                //        collegeDetails.CourseName = (string)clbCoursesAvailable.Items[i];
+                //        outputcourse = EapBLAdmin.CollegeCourseUpdate(collegeDetails);
 
-                    }
-                }
+                //    }
+                //}
 
 
                 output = EapBLAdmin.CollegeDetailsUpdate(collegeDetails);
@@ -136,6 +136,76 @@ namespace PresentataionLayer
                 lblMessage.Text = ex.Message.ToString();
             }
 
+        }
+
+        //private void btnUpdateCourse_Click(object sender, EventArgs e)
+        //{
+
+        //}
+
+        //private void btnUpdateCollegeDetails_Click(object sender, EventArgs e)
+        //{
+
+        //}
+
+        private void btnUpdateCourse_Click_1(object sender, EventArgs e)
+        {
+            //CollegeDetails collegeDetails = null;
+            //int output = 0;
+            //int outputcourse = 0;
+
+            //try
+            //{
+            //    clbCoursesAvailable.Items.Clear();
+            //    foreach (String s in clbCoursesAvailable.CheckedItems)
+            //    {
+            //       // collegeDetails.Items.Add(s);
+            //    }
+            //    output = EapBLAdmin.CollegeDetailsInsert(collegeDetails);
+            //}
+            //catch (Exception ex)
+            //{
+
+            //}02153
+            
+        }
+            private void btnUpdateCollege_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbCollegeId_SelectedIndexChanged_2(object sender, EventArgs e)
+        {
+        //    CollegeDetails collegeDetails = null;
+        //    try
+        //    {
+
+
+        //        collegeDetails = EapBLAdmin.GetCourseById(cmbCollegeId.Text);
+                //if (candidateDetails != null)
+                //{
+
+
+
+                //}
+             
+
+                //string[] s = new string[] { };
+                //while (dr.Read())
+                //{
+                //    s = dr["course"].ToString().Split(',');
+                //}
+
+
+
+
+
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        lblMessage.Text = ex.Message.ToString();
+        //    }
         }
     }
 }

@@ -132,6 +132,7 @@
             this.cmbSearchId.Size = new System.Drawing.Size(257, 21);
             this.cmbSearchId.TabIndex = 31;
             this.cmbSearchId.Text = "(Search Candidate Id)";
+            this.cmbSearchId.SelectedIndexChanged += new System.EventHandler(this.cmbSearchId_SelectedIndexChanged);
             // 
             // CollegeAuthority
             // 
@@ -145,6 +146,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "CollegeAuthority";
             this.Text = "CollegeAuthority";
+            this.Load += new System.EventHandler(this.CollegeAuthority_Load);
             this.panel1.ResumeLayout(false);
             this.tspCollegeAuthority.ResumeLayout(false);
             this.tspCollegeAuthority.PerformLayout();

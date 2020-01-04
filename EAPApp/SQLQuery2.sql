@@ -1,1 +1,1 @@
-﻿select candidate_id from candidate_registration
+﻿delete from college_coures where courseid='EC101'

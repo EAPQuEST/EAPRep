@@ -26,6 +26,68 @@ namespace BusinessLayer.BL
             return output;
 
         }
+
+
+        public static int CourseDelete(string courseName)
+        {
+            int output = 0;
+            try
+            {
+
+                output = EapDSLAdmin.CourseDelete(courseName);
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBLAdmin.cs: CourseDelete", ex.Message.ToString());
+            }
+            return output;
+
+
+        }
+
+
+        public static int CourseAdd(CollegeDetails collegeDetails)
+        {
+            int output = 0;
+            try
+            {
+
+                output = EapDSLAdmin.CourseAdd(collegeDetails);
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBLAdmin.cs: CourseAdd", ex.Message.ToString());
+            }
+            return output;
+
+
+        }
+
+
+
+        public static DataSet ViewCollegeList()
+        {
+
+
+
+            DataSet dsCollegeList = null;
+
+            try
+            {
+                dsCollegeList = EapDSLAdmin.ViewCollegeList();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*****Error : EapBLAdmin.cs::ViewCollegeList", ex.Message.ToString());
+
+            }
+
+            return dsCollegeList;
+        }
+
+
         public static int CollegeCourseInsert(CollegeDetails collegeDetails)
         {
             int output = 0;
@@ -78,6 +140,26 @@ namespace BusinessLayer.BL
 
             return collegeDetails;
         }
+
+        //public static CollegeDetails GetCourseById(string collegeId)
+        //{
+
+        //    CollegeDetails collegeDetails = null;
+
+        //    try
+        //    {
+        //        collegeDetails = EapDSLAdmin.GetCourseById(collegeId);
+
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.Out.WriteLine("*** Error : EapBLAdmin.cs:GetCourseById()", ex.Message.ToString());
+        //    }
+
+        //    return collegeDetails;
+        //}
+
         public static int CollegeDetailsUpdate(CollegeDetails collegeDetails)
         {
             int output = 0;
@@ -170,6 +252,45 @@ namespace BusinessLayer.BL
 
 
 
+        public static DataSet GetCourseName(string collegeName)
+        {
+
+            DataSet dsCourseName = null;
+
+            try
+            {
+
+                dsCourseName = EapDSLAdmin.GetCourseName(collegeName);
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBLAdmin.cs:GetCourseName()", ex.Message.ToString());
+            }
+
+            return dsCourseName;
+        }
+
+        public static DataSet GetCourseShowAll()
+        {
+
+            DataSet dsCourseName = null;
+
+            try
+            {
+
+                dsCourseName = EapDSLAdmin.GetCourseShowAll();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBLAdmin.cs:GetCourseShowAll()", ex.Message.ToString());
+            }
+
+            return dsCourseName;
+        }
 
         public static DataSet GetCollegeName()
         {
@@ -190,5 +311,48 @@ namespace BusinessLayer.BL
            
             return dsCollegeName;
         }
+
+
+        public static int GenerateAllotment(CandidateDetails candidateDetails)
+        {
+            int output = 0;
+            string sql = "";
+
+            try
+            {
+
+                candidateDetails.Total = candidateDetails.CandidatePhysics + candidateDetails.CandidateChemistry + candidateDetails.CandidateMaths + candidateDetails.EntranceScienceMark + candidateDetails.EntranceMathsMark;
+                output = EapDSLAdmin.GenerateAllotment(candidateDetails);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBLAdmin.cs:GenerateAllotment()", ex.Message.ToString());
+            }
+
+            return output;
+        }
+
+        public static int AllotStudents()
+        {
+
+            int output = 0;
+
+            try
+            {
+                output = EapDSLAdmin.AllotStudents();
+            }
+
+
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBLAdmin.cs.cs:AllotStudents", ex.Message.ToString());
+            }
+
+            return output;
+
+        }
+
+
     }
 }

@@ -74,6 +74,8 @@
             this.cmbCoursePreference11 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lblUserId = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -82,6 +84,7 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -250,7 +253,7 @@
             this.tspHome.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tspHome.Name = "tspHome";
             this.tspHome.Size = new System.Drawing.Size(23, 22);
-            this.tspHome.Text = "Home";
+            this.tspHome.Text = "Sign Out";
             this.tspHome.Click += new System.EventHandler(this.tspHome_Click);
             // 
             // tspBtnBack
@@ -279,6 +282,7 @@
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.lblPreference2);
             this.panel2.Controls.Add(this.lblPreference3);
             this.panel2.Controls.Add(this.label1);
@@ -527,6 +531,7 @@
             // 
             // panel3
             // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.cmbCoursePreference33);
             this.panel3.Controls.Add(this.cmbCoursePreference32);
@@ -698,11 +703,34 @@
             this.btnView.UseVisualStyleBackColor = false;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.BackColor = System.Drawing.Color.LightBlue;
+            this.lblID.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(579, 0);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(96, 17);
+            this.lblID.TabIndex = 123;
+            this.lblID.Text = "Candidate ID :";
+            // 
+            // lblUserId
+            // 
+            this.lblUserId.AutoSize = true;
+            this.lblUserId.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserId.Location = new System.Drawing.Point(681, 0);
+            this.lblUserId.Name = "lblUserId";
+            this.lblUserId.Size = new System.Drawing.Size(0, 17);
+            this.lblUserId.TabIndex = 79;
+            // 
             // CandidateEntrance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(828, 606);
+            this.Controls.Add(this.lblUserId);
+            this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.panel3);
@@ -773,5 +801,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnView;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Label lblUserId;
     }
 }

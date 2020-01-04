@@ -58,11 +58,14 @@
             this.lblPhysicsMark = new System.Windows.Forms.Label();
             this.lbl10mark = new System.Windows.Forms.Label();
             this.lbl10SchoolName = new System.Windows.Forms.Label();
+            this.lblUserId = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tspHome = new System.Windows.Forms.ToolStripButton();
             this.btnCandidateNext = new System.Windows.Forms.Button();
             this.epCandidateEducation = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblUserId = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lblReservation = new System.Windows.Forms.Label();
+            this.comboBoxReservation = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epCandidateEducation)).BeginInit();
@@ -71,7 +74,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.lblUserId);
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.comboBoxReservation);
+            this.panel1.Controls.Add(this.lblReservation);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
@@ -430,6 +435,15 @@
             this.lbl10SchoolName.TabIndex = 49;
             this.lbl10SchoolName.Text = "SCHOOL NAME                       :";
             // 
+            // lblUserId
+            // 
+            this.lblUserId.AutoSize = true;
+            this.lblUserId.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserId.Location = new System.Drawing.Point(675, 4);
+            this.lblUserId.Name = "lblUserId";
+            this.lblUserId.Size = new System.Drawing.Size(0, 17);
+            this.lblUserId.TabIndex = 78;
+            // 
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.LightBlue;
@@ -449,7 +463,7 @@
             this.tspHome.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tspHome.Name = "tspHome";
             this.tspHome.Size = new System.Drawing.Size(23, 22);
-            this.tspHome.Text = "Home";
+            this.tspHome.Text = "Sign Out";
             this.tspHome.Click += new System.EventHandler(this.tspHome_Click);
             // 
             // btnCandidateNext
@@ -470,19 +484,66 @@
             // 
             this.epCandidateEducation.ContainerControl = this;
             // 
-            // lblUserId
+            // lblID
             // 
-            this.lblUserId.AutoSize = true;
-            this.lblUserId.Location = new System.Drawing.Point(680, 25);
-            this.lblUserId.Name = "lblUserId";
-            this.lblUserId.Size = new System.Drawing.Size(0, 13);
-            this.lblUserId.TabIndex = 78;
+            this.lblID.AutoSize = true;
+            this.lblID.BackColor = System.Drawing.Color.LightBlue;
+            this.lblID.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(573, 0);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(96, 17);
+            this.lblID.TabIndex = 79;
+            this.lblID.Text = "Candidate ID :";
+            // 
+            // lblReservation
+            // 
+            this.lblReservation.AutoSize = true;
+            this.lblReservation.Location = new System.Drawing.Point(138, 54);
+            this.lblReservation.Name = "lblReservation";
+            this.lblReservation.Size = new System.Drawing.Size(35, 13);
+            this.lblReservation.TabIndex = 78;
+            this.lblReservation.Text = "label6";
+            // 
+            // comboBoxReservation
+            // 
+            this.comboBoxReservation.FormattingEnabled = true;
+            this.comboBoxReservation.Items.AddRange(new object[] {
+            "Abraham Marthoma Memorial Higher Secondary School, Edayaranmula",
+            "Al Huda Central School, Kadampuzha",
+            "Basel Evangelical Mission Higher Secondary School, Palakkad",
+            "Bharatiya Vidya Bhavan, Taliparamba",
+            "Chinmaya Vidyalaya, Kannur",
+            "Don Bosco Higher Secondary School, Irinjalakuda",
+            "GHSS Irikkur",
+            "Government Higher Secondary School, Pandikkad",
+            "Hidhayathul Islam Higher Secondary School",
+            "Infant Jesus School, Kollam",
+            "Jawahar Navodaya Vidyalaya, Thiruvananthapuram",
+            "Kerala Higher Secondary Examination Board",
+            "Little Flower Convent Higher Secondary School, Irinjalakuda",
+            "Mar Augustine Memorial Higher Secondary School, Koratty",
+            "Nirmala Higher Secondary School, Chemperi",
+            "Ottapalam Seventh-day Adventist Higher Secondary School",
+            "Pandit Mothilal Government Model Higher Secondary School",
+            "Rani Jai Higher Secondary School",
+            "Sacred Heart Girls\' High School, Thalassery",
+            "St. Dominic\'s Convent English Medium School, Palakkad",
+            "Sree Narayana Central School",
+            "Tagore Vidyaniketan, Taliparamba",
+            "Namboodiri Vidyalayam"});
+            this.comboBoxReservation.Location = new System.Drawing.Point(239, 54);
+            this.comboBoxReservation.Name = "comboBoxReservation";
+            this.comboBoxReservation.Size = new System.Drawing.Size(209, 21);
+            this.comboBoxReservation.TabIndex = 79;
+            this.comboBoxReservation.Text = "Not Selected";
             // 
             // CandidateEducationalDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 622);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.lblUserId);
             this.Controls.Add(this.btnCandidateNext);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel1);
@@ -533,5 +594,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ErrorProvider epCandidateEducation;
         private System.Windows.Forms.Label lblUserId;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.ComboBox comboBoxReservation;
+        private System.Windows.Forms.Label lblReservation;
     }
 }

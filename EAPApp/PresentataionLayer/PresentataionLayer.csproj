@@ -74,6 +74,24 @@
     <Compile Include="AddCollege.Designer.cs">
       <DependentUpon>AddCollege.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminAlottedList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAlottedList.Designer.cs">
+      <DependentUpon>AdminAlottedList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCollegeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCollegeList.Designer.cs">
+      <DependentUpon>AdminCollegeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDeleteCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDeleteCourse.Designer.cs">
+      <DependentUpon>AdminDeleteCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +103,18 @@
     </Compile>
     <Compile Include="AllotmentWindow.Designer.cs">
       <DependentUpon>AllotmentWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Candidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate.Designer.cs">
+      <DependentUpon>Candidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CandidateChangePassword.Designer.cs">
+      <DependentUpon>CandidateChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="CandidateEntrance.cs">
       <SubType>Form</SubType>
@@ -103,6 +133,12 @@
     </Compile>
     <Compile Include="CandidateEducationalDetails.Designer.cs">
       <DependentUpon>CandidateEducationalDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateViewAllotment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CandidateViewAllotment.Designer.cs">
+      <DependentUpon>CandidateViewAllotment.cs</DependentUpon>
     </Compile>
     <Compile Include="CollegeAuthority.cs">
       <SubType>Form</SubType>
@@ -143,11 +179,26 @@
     <EmbeddedResource Include="AddCollege.resx">
       <DependentUpon>AddCollege.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminAlottedList.resx">
+      <DependentUpon>AdminAlottedList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCollegeList.resx">
+      <DependentUpon>AdminCollegeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDeleteCourse.resx">
+      <DependentUpon>AdminDeleteCourse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrator.resx">
       <DependentUpon>Administrator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllotmentWindow.resx">
       <DependentUpon>AllotmentWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidate.resx">
+      <DependentUpon>Candidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CandidateChangePassword.resx">
+      <DependentUpon>CandidateChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CandidateEntrance.resx">
       <DependentUpon>CandidateEntrance.cs</DependentUpon>
@@ -255,6 +306,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\envelope-blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\envelope-blue1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -67,7 +67,13 @@ namespace DataTransactionObject.DTO
             get { return candidateAddress; }
             set { candidateAddress = value; }
         }
+        private string candidatePassword;
 
+        public string CandidatePassword
+        {
+            get { return candidatePassword; }
+            set { candidatePassword = value; }
+        }
         private string candidateSchoolName10;
 
         public string CandidateSchoolName10
@@ -253,6 +259,15 @@ namespace DataTransactionObject.DTO
         {
             get { return entranceMathsMark; }
             set { entranceMathsMark = value; }
+        }
+
+
+        private string reservation;
+
+        public string Reservation
+        {
+            get { return reservation; }
+            set { reservation = value; }
         }
 
     }

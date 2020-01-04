@@ -59,6 +59,28 @@ namespace BusinessLayer.BL
 
 
         }
+
+        public static int CandidateNewPassword(CandidateDetails candidateDetails)
+        {
+            int output = 0;
+            try
+            {
+
+                output = EapDSL.CandidateNewPassword(candidateDetails);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:CandidateNewPassword", ex.Message.ToString());
+            }
+
+            return output;
+
+
+        }
+        
+
+
         public static int CandidateRegistrationInsert(CandidateDetails candidateDetails)
         {
             int output = 0;
@@ -241,13 +263,59 @@ namespace BusinessLayer.BL
             return dtLogin;
 
         }
-        public static CollegeDetails LoadCollegePreference(string collegeName)
+
+
+        public static DataTable CandidateChangePassword( string password)
         {
-            CollegeDetails collegeDetails = null;
+            //DataSet dsData = null;
+            DataTable dtLogin = null;
 
             try
             {
-                collegeDetails = EapDSL.LoadCollegePreference(collegeName);
+                dtLogin = EapDSL.CandidateChangePassword(password);
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:CandidateChangePassword()", ex.Message.ToString());
+            }
+
+
+            return dtLogin;
+
+        }
+
+
+
+        public static DataTable AdminLogin(string user, string password)
+        {
+            //DataSet dsData = null;
+            DataTable dtLogin = null;
+
+            try
+            {
+                dtLogin = EapDSL.AdminLogin(user, password);
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:AdminLogin()", ex.Message.ToString());
+            }
+
+
+            return dtLogin;
+
+        }
+
+
+        public static DataSet LoadCollegePreference(string collegeName)
+        {
+            DataSet dsData = null;
+            try
+            {
+                dsData = EapDSL.LoadCollegePreference(collegeName);
 
             }
             catch (Exception ex)
@@ -256,8 +324,27 @@ namespace BusinessLayer.BL
             }
            
 
-            return collegeDetails;
+            return dsData;
 
+        }
+
+        public static DataSet GetCandidateIds()
+        {
+            string sql = "";
+
+            DataSet dsCandidateId = null;
+
+            try
+            {
+                dsCandidateId = EapDSL.GetCandidateId();
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:GetCandidateIds()", ex.Message.ToString());
+            }
+
+            return dsCandidateId;
         }
 
     }

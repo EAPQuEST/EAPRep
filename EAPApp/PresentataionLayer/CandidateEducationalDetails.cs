@@ -36,22 +36,6 @@ namespace PresentataionLayer
             {
 
 
-                //if (cmb10thSchoolName.Text == string.Empty || txt10thMark.Text == string.Empty || cmb12thSchoolName.Text == string.Empty ||
-                //       txt12thMark.Text == string.Empty || txtPhysics.Text == string.Empty || txtChemistry.Text == string.Empty || txtMaths.Text == string.Empty)
-                //{
-                //     //MessageBox.Show("Enter all the details");
-                //    foreach (Control control in this.Controls)
-                //    {
-                //        if (!Validate())
-                //        {
-                //            DialogResult = DialogResult.None;
-                //            return;
-                //        }
-                //    }
-                //}
-
-                //else
-                //{
                 //validation
 
                 candidateDetails = new CandidateDetails();
@@ -60,6 +44,7 @@ namespace PresentataionLayer
                 candidateDetails.CandidatePhysics = Convert.ToInt32(txtPhysics.Text);
                 candidateDetails.CandidateChemistry = Convert.ToInt32(txtChemistry.Text);
                 candidateDetails.CandidateMaths = Convert.ToInt32(txtMaths.Text);
+                candidateDetails.Reservation = comboBoxReservation.Text.ToString();
 
 
                 if (cmb10thSchoolName.SelectedIndex == -1)
@@ -93,59 +78,7 @@ namespace PresentataionLayer
                 }
                 else
                 {
-
-                    //if (candidateDetails.Candidatemark10 > 100 || candidateDetails.Candidatemark10 < 0)
-                    //{
-                    //    lblMessage.Text = "Enter a valid mark (0-100) !!!";
-                    //    return;
-                    //}
-                    //else
-                    //{
-
-                    //    candidateDetails.Candidatemark10 = Convert.ToInt32(txt10thMark.Text);
-                    //}
-
-
-
-                    //if (candidateDetails.Candidatemark12 > 100 || candidateDetails.Candidatemark12 < 0)
-                    //{
-                    //    lblMessage.Text = "Enter a valid mark (0-100) !!!";
-                    //    return;
-                    //}
-                    //else
-                    //{
-
-                    //    candidateDetails.Candidatemark12 = Convert.ToInt32(txt12thMark.Text);
-                    //}
-                    //if (candidateDetails.CandidatePhysics > 100 || candidateDetails.CandidatePhysics < 0)
-                    //{
-                    //    lblMessage.Text = "Enter a valid mark (0-100) !!!";
-                    //    return;
-                    //}
-                    //else
-                    //{
-                    //    candidateDetails.CandidatePhysics = Convert.ToInt32(txtPhysics.Text);
-                    //}
-                    //if (candidateDetails.CandidateChemistry > 100 || candidateDetails.CandidateChemistry < 0)
-                    //{
-                    //    lblMessage.Text = "Enter a valid mark (0-100) !!!";
-                    //    return;
-                    //}
-                    //else
-                    //{
-                    //    candidateDetails.CandidateChemistry = Convert.ToInt32(txtChemistry.Text);
-                    //}
-                    //if (candidateDetails.CandidateMaths > 100 || candidateDetails.CandidateMaths < 0)
-                    //{
-                    //    lblMessage.Text = "Enter a valid mark (0-100) !!!";
-                    //    return;
-                    //}
-                    //else
-                    //{
-                    //    candidateDetails.CandidateMaths = Convert.ToInt32(txtMaths.Text);
-                    //}
-
-
+                                       
                     output = EapBL.StudentDetailsInsert(candidateDetails);
                     if (output > 0)
                     {

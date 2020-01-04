@@ -222,6 +222,7 @@
             this.pnlCourseDetails.Name = "pnlCourseDetails";
             this.pnlCourseDetails.Size = new System.Drawing.Size(427, 406);
             this.pnlCourseDetails.TabIndex = 5;
+            this.pnlCourseDetails.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCourseDetails_Paint);
             // 
             // btnAddCollege
             // 

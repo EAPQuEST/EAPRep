@@ -37,6 +37,7 @@
             this.txtDelete = new System.Windows.Forms.TextBox();
             this.dgvDeleteView = new System.Windows.Forms.DataGridView();
             this.lblDeleteId = new System.Windows.Forms.Label();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tlsDeleteCollege.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeleteView)).BeginInit();
@@ -46,7 +47,8 @@
             // 
             this.tlsDeleteCollege.BackColor = System.Drawing.Color.CadetBlue;
             this.tlsDeleteCollege.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tlsBtnHomeDelete});
+            this.tlsBtnHomeDelete,
+            this.toolStripLabel1});
             this.tlsDeleteCollege.Location = new System.Drawing.Point(0, 0);
             this.tlsDeleteCollege.Name = "tlsDeleteCollege";
             this.tlsDeleteCollege.Size = new System.Drawing.Size(861, 25);
@@ -123,6 +125,12 @@
             this.lblDeleteId.TabIndex = 2;
             this.lblDeleteId.Text = "ENTER COLLEGE NAME     : ";
             // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(83, 22);
+            this.toolStripLabel1.Text = "Delete College";
+            // 
             // DeleteCollege
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,5 +159,6 @@
         private System.Windows.Forms.DataGridView dgvDeleteView;
         private System.Windows.Forms.Label lblDeleteId;
         private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }

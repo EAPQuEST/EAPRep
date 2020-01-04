@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\AllotmentObject.cs" />
     <Compile Include="DTO\CandidateDetails.cs" />
     <Compile Include="DTO\CollegeDetails.cs" />
     <Compile Include="DTO\LoginInfo.cs" />

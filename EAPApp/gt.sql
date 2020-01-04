@@ -1,0 +1,1 @@
+﻿select candidate_id from candidate_registration

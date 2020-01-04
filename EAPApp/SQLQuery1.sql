@@ -1,1 +1,1 @@
-﻿insert into candidate_details (candidate_10th_school,candidate_10th_percentage,candidate_12th_school,candidate_12th_percentage,candiate_physics,candiate_chemistry,candiate_maths) values('Abraham Marthoma Memorial Higher Secondary School, Edayaranmula',76,'Aayirooppara Govt. Higher Secondary School (HSS), Pothencode',78,56,65,77)
+﻿select course_name from course_details where course_id IN(SELECT  college_coures.courseid FROM college_coures WHERE collegeid ='drfgbfd')

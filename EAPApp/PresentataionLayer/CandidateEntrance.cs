@@ -18,6 +18,7 @@ namespace PresentataionLayer
         public CandidateEntrance()
         {
             InitializeComponent();
+            lblUserId.Text = LoginInfo.userID;
         }
 
         private void tspHome_Click(object sender, EventArgs e)
@@ -47,6 +48,7 @@ namespace PresentataionLayer
 
             int output = 0;
             int outputentrance = 0;
+            int outputAllotment = 0;
 
             try
             {
@@ -69,7 +71,7 @@ namespace PresentataionLayer
                 candidateDetails.CollegeCourse32 = cmbCoursePreference32.Text;
                 candidateDetails.CollegeCourse33 = cmbCoursePreference33.Text;
 
-
+                outputAllotment = EapBLAdmin.GenerateAllotment(candidateDetails);
                 output = EapBL.StudentCoursePreferenceInsert(candidateDetails);
                 outputentrance = EapBL.StudentDetailsInsert(candidateDetails);
                 if (output > 0 && outputentrance > 0)
@@ -109,26 +111,16 @@ namespace PresentataionLayer
         public void LoadCoursePreference()
         {
 
-            CollegeDetails collegeDetails = null;
+            //CollegeDetails collegeDetails = null;
             DataSet dsCoursePreference = new DataSet();
             try
             {
-                collegeDetails = EapBL.LoadCollegePreference(cmbCollegePreference1.Text);
-                if (collegeDetails != null)
+                dsCoursePreference = EapBL.LoadCollegePreference(cmbCollegePreference1.SelectedValue.ToString());
+               // collegeDetails = EapBL.LoadCollegePreference(cmbCollegePreference1.Text);
+                if (dsCoursePreference != null)
                 {
 
-                    //for (int i = 0; i < dsCoursePreference.Tables[0].Rows.Count; i++)
-                    //{
-                    //    var item = dsCoursePreference.Tables[0].Rows[i]["course_name"].ToString();
-                    //    //for (int j = 0; j < clbCoursesAvailable.Items.Count; j++)
-                    //    //{
-                    //    //    if (clbCoursesAvailable.Items[j].ToString() == item)
-                    //    //    {
-                    //    //        clbCoursesAvailable.SetItemChecked(j, true);
-                    //    //        break;
-                    //    //    }
-                    //    //}
-                    //}
+                   
                     cmbCoursePreference11.DataSource = dsCoursePreference.Tables[0];
                     cmbCoursePreference11.ValueMember = "course_name";
                     cmbCoursePreference11.DisplayMember = "course_name";
@@ -144,7 +136,23 @@ namespace PresentataionLayer
 
         private void cmbCollegePreference1_SelectedIndexChanged(object sender, EventArgs e)
         {
+           
+            string selectedValue = cmbCollegePreference1.SelectedValue.ToString();
+
+            ComboBox cmb = (ComboBox)sender;
+            int selectedIndex = cmb.SelectedIndex;
+            // string selectedValue = (string)cmb.SelectedValue;
+
+            //  ComboboxItem selectedCar = (ComboboxItem)cmb.SelectedItem;
+            MessageBox.Show(String.Format("Index: [{0}]  Value={1}", selectedIndex, selectedValue));
+            // }
+
+
             LoadCoursePreference();
+
+
+
+
         }
 
         private void CandidateEntrance_Load(object sender, EventArgs e)
