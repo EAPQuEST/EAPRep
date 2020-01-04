@@ -280,6 +280,8 @@ namespace DataTransactionObject.DTO
         }
 
 
+        
+     
         private string college_Id;
 
         public string College_ID
@@ -310,43 +312,7 @@ namespace DataTransactionObject.DTO
             set { course_Name = value; }
         }
 
-        private string college_Id;
-
-        public string College_ID
-        {
-            get { return college_Id; }
-            set { college_Id = value; }
-        }
-        private string course_Id;
-
-        public string Course_ID
-        {
-            get { return course_Id; }
-            set { course_Id = value; }
-        }
-
-        private string college_Name;
-
-        public string College_Name
-        {
-            get { return college_Name; }
-            set { college_Name = value; }
-        }
-        private string course_Name;
-
-        public string Course_Name
-        {
-            get { return course_Name; }
-            set { course_Name = value; }
-        }
-
-        private string candidatePassword;
-
-        public string CandidatePassword
-        {
-            get { return candidatePassword; }
-            set { candidatePassword = value; }
-        }
+        
 
 
 
