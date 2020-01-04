@@ -151,18 +151,20 @@
             // 
             // tlsBtnHomeDelete
             // 
+            this.tlsBtnHomeDelete.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.tlsBtnHomeDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tlsBtnHomeDelete.Image = ((System.Drawing.Image)(resources.GetObject("tlsBtnHomeDelete.Image")));
             this.tlsBtnHomeDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tlsBtnHomeDelete.Name = "tlsBtnHomeDelete";
             this.tlsBtnHomeDelete.Size = new System.Drawing.Size(23, 22);
-            this.tlsBtnHomeDelete.Text = "Home";
+            this.tlsBtnHomeDelete.Text = "Sign Out";
+            this.tlsBtnHomeDelete.Click += new System.EventHandler(this.tlsBtnHomeDelete_Click);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(80, 22);
-            this.toolStripLabel1.Text = "Delete Course";
+            this.toolStripLabel1.Size = new System.Drawing.Size(85, 22);
+            this.toolStripLabel1.Text = "Update Course";
             // 
             // pnlCourseDetails
             // 

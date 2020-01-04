@@ -297,9 +297,45 @@ namespace PresentataionLayer
 
         private void btnCollegeLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            CollegeAuthority collegeAuthority = new CollegeAuthority();
-            collegeAuthority.Show();
+
+            string usernameCollege;
+            string passwordCollege;
+            LoginInfo.userID = txtCollegeUsername.Text;
+            usernameCollege = LoginInfo.userID;
+            LoginInfo.password = txtCollegePassword.Text;
+            passwordCollege = LoginInfo.password;
+            //DataSet dsLogin = null;
+            DataTable dtLogin = null;
+            //if (dsLogin.Rows[0][0].ToString() == "1")
+            try
+            {
+
+                dtLogin = EapBLCollege.CollegeLogin(usernameCollege, passwordCollege);
+                //if (dtLogin.Rows[0][0].ToString() == "1")
+                if (dtLogin.Rows.Count > 0)
+                {
+                    lblMessageCollege.Text = "";
+                    MessageBox.Show("Login successfull");
+
+
+                    this.Hide();
+                    CollegeAuthority collegeAuthority = new CollegeAuthority();
+                    collegeAuthority.Show();
+
+                }
+                else
+                {
+                    lblMessageCollege.Text = "Invalid username/password !!!";
+                }
+
+            }
+            catch (FormatException ex)
+            {
+                //lblMessage.Text = ex.Message.ToString();
+            }
+
+
+
         }
 
         private void btnAdminLogin_Click(object sender, EventArgs e)
@@ -318,7 +354,7 @@ namespace PresentataionLayer
             try
             {
 
-                dtLogin = EapBL.AdminLogin(usernameAdmin, passwordAdmin);
+                dtLogin = EapBLAdmin.AdminLogin(usernameAdmin, passwordAdmin);
                 //if (dtLogin.Rows[0][0].ToString() == "1")
                 if (dtLogin.Rows.Count > 0)
                 {
@@ -388,6 +424,25 @@ namespace PresentataionLayer
         private void llblChangePassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+        }
+
+        private void llblAdminChangePassword_MouseClick(object sender, MouseEventArgs e)
+        {
+          
+        }
+
+        private void linkLabel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.Hide();
+            CollegeChangePassword collegeChangePassword = new CollegeChangePassword();
+            collegeChangePassword.Show();
+        }
+
+        private void llblAdminChangePassword_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            this.Hide();
+            AdminChangePassword adminChangePassword = new AdminChangePassword();
+            adminChangePassword.Show();
         }
     }
 }

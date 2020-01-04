@@ -44,10 +44,18 @@ namespace PresentataionLayer
                 candidateDetails.CandidatePhysics = Convert.ToInt32(txtPhysics.Text);
                 candidateDetails.CandidateChemistry = Convert.ToInt32(txtChemistry.Text);
                 candidateDetails.CandidateMaths = Convert.ToInt32(txtMaths.Text);
-                candidateDetails.Reservation = comboBoxReservation.Text.ToString();
 
+                if (comboBoxReservation.SelectedIndex == -1)
+                {
+                    lblMessage.Text = "Please select a reservation criteria !!!";
+                    return;
 
-                if (cmb10thSchoolName.SelectedIndex == -1)
+                }
+                else
+                {
+                    candidateDetails.Reservation = comboBoxReservation.Text.ToString();
+                }
+                    if (cmb10thSchoolName.SelectedIndex == -1)
                 {
                     lblMessage.Text = "Please select a school !!!";
                     return;
@@ -107,7 +115,7 @@ namespace PresentataionLayer
             }
             catch (Exception ex)
             {
-                lblMessage.Text = ex.Message.ToString();
+                lblMessage.Text = "Enter Mark in correct format";
             }
             
 
@@ -254,6 +262,11 @@ namespace PresentataionLayer
             //{
             //    e.Handled = true;           //handling the event
             //}
+        }
+
+        private void comboBoxReservation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

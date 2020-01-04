@@ -288,27 +288,7 @@ namespace BusinessLayer.BL
 
 
 
-        public static DataTable AdminLogin(string user, string password)
-        {
-            //DataSet dsData = null;
-            DataTable dtLogin = null;
-
-            try
-            {
-                dtLogin = EapDSL.AdminLogin(user, password);
-
-
-            }
-            catch (Exception ex)
-            {
-                Console.Out.WriteLine("*** Error : EapBL.cs:AdminLogin()", ex.Message.ToString());
-            }
-
-
-            return dtLogin;
-
-        }
-
+        
 
         public static DataSet LoadCollegePreference(string collegeName)
         {

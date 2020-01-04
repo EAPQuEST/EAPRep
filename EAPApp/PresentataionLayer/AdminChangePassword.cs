@@ -12,45 +12,47 @@ using BusinessLayer.BL;
 
 namespace PresentataionLayer
 {
-    public partial class CandidateChangePassword : Form
+    public partial class AdminChangePassword : Form
     {
-        public CandidateChangePassword()
+        public AdminChangePassword()
         {
             InitializeComponent();
         }
 
-        private void CandidateChangePassword_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-
-
-            CandidateDetails candidateDetails = null;
+            
             int output = 0;
 
-            string password;
-         
-            
+            string usernameAdmin;
+            string passwordAdmin;
+            string newPasswordAdmin;
+
+
             LoginInfo.password = txtCurrentPassword.Text;
-            password = LoginInfo.password;
+            passwordAdmin = LoginInfo.password;
             //DataSet dsLogin = null;
             DataTable dtLogin = null;
             //if (dsLogin.Rows[0][0].ToString() == "1")
+            
+
+               
+          
+            //if (dsLogin.Rows[0][0].ToString() == "1")
             try
             {
-                candidateDetails = new CandidateDetails();
-                dtLogin = EapBL.CandidateChangePassword(password);
+                dtLogin = EapBLAdmin.AdminChangePassword(passwordAdmin);
+               
                 //if (dtLogin.Rows[0][0].ToString() == "1")
                 if (dtLogin.Rows.Count > 0)
                 {
                     lblMessage.Text = "";
-                   
-                    candidateDetails.CandidateId = txtCandidateChangePasswordID.Text;
-                    candidateDetails.CandidatePassword = txtNewPassword.Text;
-                    output = EapBL.CandidateNewPassword(candidateDetails);
+
+                    LoginInfo.userID = txtAdminChangePasswordID.Text;
+                    usernameAdmin = LoginInfo.userID;
+                    LoginInfo.Newpassword = txtNewPassword.Text;
+                    newPasswordAdmin = LoginInfo.Newpassword;
+                    output = EapBLAdmin.AdminNewPassword(usernameAdmin, newPasswordAdmin);
                     if (output > 0)
                     {
 
@@ -76,9 +78,6 @@ namespace PresentataionLayer
             {
                 //lblMessage.Text = ex.Message.ToString();
             }
-
-
-            
         }
 
         private void tspBtnBack_Click(object sender, EventArgs e)
@@ -86,6 +85,10 @@ namespace PresentataionLayer
             this.Hide();
             AllotmentWindow allotmentWindow = new AllotmentWindow();
             allotmentWindow.Show();
+        }
+
+        private void tspHome_Click(object sender, EventArgs e)
+        {
         }
     }
 }

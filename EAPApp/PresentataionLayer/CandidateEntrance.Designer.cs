@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CandidateEntrance));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.lblRegisterNumber = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tspHome = new System.Windows.Forms.ToolStripButton();
-            this.tspBtnBack = new System.Windows.Forms.ToolStripButton();
             this.btnCandidateEntranceSubmit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblPreference2 = new System.Windows.Forms.Label();
@@ -73,13 +73,14 @@
             this.cmbCoursePreference12 = new System.Windows.Forms.ComboBox();
             this.cmbCoursePreference11 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.btnView = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
             this.lblUserId = new System.Windows.Forms.Label();
+            this.epValidation = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epValidation)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -178,6 +179,7 @@
             this.txtRank.Name = "txtRank";
             this.txtRank.Size = new System.Drawing.Size(209, 20);
             this.txtRank.TabIndex = 60;
+            this.txtRank.Validating += new System.ComponentModel.CancelEventHandler(this.txtRank_Validating);
             // 
             // txtMathsMark
             // 
@@ -185,6 +187,7 @@
             this.txtMathsMark.Name = "txtMathsMark";
             this.txtMathsMark.Size = new System.Drawing.Size(209, 20);
             this.txtMathsMark.TabIndex = 58;
+            this.txtMathsMark.Validating += new System.ComponentModel.CancelEventHandler(this.txtMathsMark_Validating);
             // 
             // txtRegisterNumber
             // 
@@ -192,6 +195,7 @@
             this.txtRegisterNumber.Name = "txtRegisterNumber";
             this.txtRegisterNumber.Size = new System.Drawing.Size(209, 20);
             this.txtRegisterNumber.TabIndex = 57;
+            this.txtRegisterNumber.Validating += new System.ComponentModel.CancelEventHandler(this.txtRegisterNumber_Validating);
             // 
             // txtScienceMark
             // 
@@ -199,6 +203,7 @@
             this.txtScienceMark.Name = "txtScienceMark";
             this.txtScienceMark.Size = new System.Drawing.Size(209, 20);
             this.txtScienceMark.TabIndex = 56;
+            this.txtScienceMark.Validating += new System.ComponentModel.CancelEventHandler(this.txtScienceMark_Validating);
             // 
             // lblMaths
             // 
@@ -237,8 +242,7 @@
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.LightBlue;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tspHome,
-            this.tspBtnBack});
+            this.tspHome});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(828, 25);
@@ -255,16 +259,6 @@
             this.tspHome.Size = new System.Drawing.Size(23, 22);
             this.tspHome.Text = "Sign Out";
             this.tspHome.Click += new System.EventHandler(this.tspHome_Click);
-            // 
-            // tspBtnBack
-            // 
-            this.tspBtnBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tspBtnBack.Image = ((System.Drawing.Image)(resources.GetObject("tspBtnBack.Image")));
-            this.tspBtnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tspBtnBack.Name = "tspBtnBack";
-            this.tspBtnBack.Size = new System.Drawing.Size(23, 22);
-            this.tspBtnBack.Text = "Back";
-            this.tspBtnBack.Click += new System.EventHandler(this.tspBtnBack_Click);
             // 
             // btnCandidateEntranceSubmit
             // 
@@ -689,20 +683,6 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // btnView
-            // 
-            this.btnView.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnView.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnView.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnView.Location = new System.Drawing.Point(523, 555);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(124, 42);
-            this.btnView.TabIndex = 122;
-            this.btnView.Text = "VIEW";
-            this.btnView.UseVisualStyleBackColor = false;
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
-            // 
             // lblID
             // 
             this.lblID.AutoSize = true;
@@ -723,6 +703,10 @@
             this.lblUserId.Size = new System.Drawing.Size(0, 17);
             this.lblUserId.TabIndex = 79;
             // 
+            // epValidation
+            // 
+            this.epValidation.ContainerControl = this;
+            // 
             // CandidateEntrance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -731,7 +715,6 @@
             this.ClientSize = new System.Drawing.Size(828, 606);
             this.Controls.Add(this.lblUserId);
             this.Controls.Add(this.lblID);
-            this.Controls.Add(this.btnView);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -749,6 +732,7 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epValidation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -769,7 +753,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tspHome;
         private System.Windows.Forms.Button btnCandidateEntranceSubmit;
-        private System.Windows.Forms.ToolStripButton tspBtnBack;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblPreference2;
         private System.Windows.Forms.Label lblPreference3;
@@ -800,8 +783,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblUserId;
+        private System.Windows.Forms.ErrorProvider epValidation;
     }
 }

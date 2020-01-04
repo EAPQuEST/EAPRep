@@ -7,44 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataTransactionObject.DTO;
 using BusinessLayer.BL;
 
 namespace PresentataionLayer
 {
-    public partial class AdminCollegeList : Form
+    public partial class AllotmentProcess : Form
     {
-        public AdminCollegeList()
+        public AllotmentProcess()
         {
             InitializeComponent();
-            
         }
 
-
-
-        private void LoadCollegeList()
+        private void btnGenerateAllotment_Click(object sender, EventArgs e)
         {
-            DataSet dsCollegeList = null;
-            try
+            int output = 0;
+            output = EapBLAllotment.FetchByRow();
+            if (output > 0)
             {
-                dsCollegeList = EapBLAdmin.ViewCollegeList();
-                if (dsCollegeList != null)
-                {
-                    dgvCollegeList.DataSource = dsCollegeList.Tables[0];
-
-                }
-              
-
+                MessageBox.Show("Allottment Successfull");
             }
-            catch (Exception ex)
+            else
             {
-               
+                MessageBox.Show("Try Again");
             }
-        }
-
-        private void AdminCollegeList_Load(object sender, EventArgs e)
-        {
-            LoadCollegeList();
         }
 
         private void tlsBtnHomeDelete_Click(object sender, EventArgs e)
@@ -54,13 +39,4 @@ namespace PresentataionLayer
             allotmentWindow.Show();
         }
     }
-
-
-
-
-
-
-
-
-
 }

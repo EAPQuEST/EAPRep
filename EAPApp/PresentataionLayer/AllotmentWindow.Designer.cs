@@ -45,14 +45,17 @@
             this.tslCandidateLogin = new System.Windows.Forms.ToolStripLabel();
             this.btnCandidateSignIn = new System.Windows.Forms.Button();
             this.tbcCollege = new System.Windows.Forms.TabPage();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lblMessageCollege = new System.Windows.Forms.Label();
             this.btnCollegeLogin = new System.Windows.Forms.Button();
             this.txtCollegePassword = new System.Windows.Forms.TextBox();
             this.txtCollegeUsername = new System.Windows.Forms.TextBox();
             this.tbcAdmin = new System.Windows.Forms.TabPage();
+            this.llblAdminChangePassword = new System.Windows.Forms.LinkLabel();
             this.toolStrip3 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -261,6 +264,7 @@
             // 
             // tbcCollege
             // 
+            this.tbcCollege.Controls.Add(this.linkLabel1);
             this.tbcCollege.Controls.Add(this.toolStrip2);
             this.tbcCollege.Controls.Add(this.panel5);
             this.tbcCollege.Controls.Add(this.panel6);
@@ -271,6 +275,19 @@
             this.tbcCollege.TabIndex = 1;
             this.tbcCollege.Text = "College";
             this.tbcCollege.UseVisualStyleBackColor = true;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.DarkBlue;
+            this.linkLabel1.Location = new System.Drawing.Point(678, 39);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(115, 17);
+            this.linkLabel1.TabIndex = 9;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Change Password";
+            this.linkLabel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.linkLabel1_MouseClick);
             // 
             // toolStrip2
             // 
@@ -308,6 +325,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.lblMessageCollege);
             this.panel6.Controls.Add(this.btnCollegeLogin);
             this.panel6.Controls.Add(this.txtCollegePassword);
             this.panel6.Controls.Add(this.txtCollegeUsername);
@@ -315,6 +333,16 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(334, 320);
             this.panel6.TabIndex = 7;
+            // 
+            // lblMessageCollege
+            // 
+            this.lblMessageCollege.AutoSize = true;
+            this.lblMessageCollege.Font = new System.Drawing.Font("Maiandra GD", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessageCollege.ForeColor = System.Drawing.Color.Red;
+            this.lblMessageCollege.Location = new System.Drawing.Point(80, 77);
+            this.lblMessageCollege.Name = "lblMessageCollege";
+            this.lblMessageCollege.Size = new System.Drawing.Size(0, 18);
+            this.lblMessageCollege.TabIndex = 3;
             // 
             // btnCollegeLogin
             // 
@@ -361,6 +389,7 @@
             // 
             // tbcAdmin
             // 
+            this.tbcAdmin.Controls.Add(this.llblAdminChangePassword);
             this.tbcAdmin.Controls.Add(this.toolStrip3);
             this.tbcAdmin.Controls.Add(this.panel3);
             this.tbcAdmin.Controls.Add(this.panel4);
@@ -371,6 +400,19 @@
             this.tbcAdmin.TabIndex = 2;
             this.tbcAdmin.Text = "Admin";
             this.tbcAdmin.UseVisualStyleBackColor = true;
+            // 
+            // llblAdminChangePassword
+            // 
+            this.llblAdminChangePassword.AutoSize = true;
+            this.llblAdminChangePassword.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblAdminChangePassword.LinkColor = System.Drawing.Color.DarkBlue;
+            this.llblAdminChangePassword.Location = new System.Drawing.Point(681, 39);
+            this.llblAdminChangePassword.Name = "llblAdminChangePassword";
+            this.llblAdminChangePassword.Size = new System.Drawing.Size(115, 17);
+            this.llblAdminChangePassword.TabIndex = 10;
+            this.llblAdminChangePassword.TabStop = true;
+            this.llblAdminChangePassword.Text = "Change Password";
+            this.llblAdminChangePassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.llblAdminChangePassword_MouseClick_1);
             // 
             // toolStrip3
             // 
@@ -546,5 +588,8 @@
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Label lblMessageAdmin;
         private System.Windows.Forms.LinkLabel llblChangePassword;
+        private System.Windows.Forms.Label lblMessageCollege;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel llblAdminChangePassword;
     }
 }

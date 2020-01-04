@@ -53,30 +53,169 @@ namespace PresentataionLayer
             try
             {
                 candidateDetails = new CandidateDetails();
+
+
                 candidateDetails.RegisterNumber = Convert.ToInt32(txtRegisterNumber.Text);
                 candidateDetails.EntranceRank = Convert.ToInt32(txtRank.Text);
+
+
                 candidateDetails.EntranceScienceMark = Convert.ToInt32(txtScienceMark.Text);
                 candidateDetails.EntranceMathsMark = Convert.ToInt32(txtMathsMark.Text);
 
-                candidateDetails.Collegeprefernce1 = cmbCollegePreference1.Text;
-                candidateDetails.Collegeprefernce2 = cmbCollegePreference2.Text;
-                candidateDetails.CollegePrefernce3 = cmbCollegePreference3.Text;
-                candidateDetails.CollegeCourse11 = cmbCoursePreference11.Text;
-                candidateDetails.CollegeCourse12 = cmbCoursePreference12.Text;
-                candidateDetails.CollegeCourse13 = cmbCoursePreference13.Text;
-                candidateDetails.CollegeCourse21 = cmbCoursePreference21.Text;
-                candidateDetails.CollegeCourse22 = cmbCoursePreference22.Text;
-                candidateDetails.CollegeCourse23 = cmbCoursePreference23.Text;
-                candidateDetails.CollegeCourse31 = cmbCoursePreference31.Text;
-                candidateDetails.CollegeCourse32 = cmbCoursePreference32.Text;
-                candidateDetails.CollegeCourse33 = cmbCoursePreference33.Text;
 
-                outputAllotment = EapBLAdmin.GenerateAllotment(candidateDetails);
+                if (cmbCollegePreference1.SelectedIndex == -1)
+                {
+                    lblMessage.Text = "Please select a college Preference 1 !!!";
+                    return;
+
+                }
+                else
+                {
+                    candidateDetails.Collegeprefernce1 = cmbCollegePreference1.Text;
+                }
+                if (cmbCollegePreference2.SelectedIndex == -1)
+                {
+                    lblMessage.Text = "Please select a college Preference 2 !!!";
+                    return;
+
+                }
+                else
+                {
+                    candidateDetails.Collegeprefernce2 = cmbCollegePreference2.Text;
+                }
+
+                if (cmbCollegePreference3.SelectedIndex == -1)
+                {
+                    lblMessage.Text = "Please select a college Preference 1 !!!";
+                    return;
+
+                }
+                else
+                {
+                    candidateDetails.CollegePrefernce3 = cmbCollegePreference3.Text;
+                }
+                if (cmbCoursePreference11.SelectedIndex == -1)
+                {
+                    lblMessage.Text = "Please select a course Preference !!!";
+                    return;
+
+                }
+                else
+                {
+                    candidateDetails.CollegeCourse11 = cmbCoursePreference11.Text;
+                }
+                if (cmbCoursePreference12.SelectedIndex == -1)
+                {
+                    lblMessage.Text = "Please select a course Preference !!!";
+                    return;
+
+                }
+                else
+                {
+                    candidateDetails.CollegeCourse12 = cmbCoursePreference12.Text;
+                }
+
+                if (cmbCoursePreference13.SelectedIndex == -1)
+                {
+                    lblMessage.Text = "Please select a course Preference !!!";
+                    return;
+
+                }
+                else
+                {
+                    candidateDetails.CollegeCourse13 = cmbCoursePreference13.Text;
+                }
+
+
+                               
+
+
+                if (cmbCoursePreference21.SelectedIndex == -1)
+                {
+                    lblMessage.Text = "Please select a course Preference !!!";
+                    return;
+
+                }
+                else
+                {
+                    candidateDetails.CollegeCourse21 = cmbCoursePreference21.Text;
+                }
+                if (cmbCoursePreference22.SelectedIndex == -1)
+                {
+                    lblMessage.Text = "Please select a course Preference !!!";
+                    return;
+
+                }
+                else
+                {
+                    candidateDetails.CollegeCourse22 = cmbCoursePreference22.Text;
+                }
+                if (cmbCoursePreference23.SelectedIndex == -1)
+                {
+                    lblMessage.Text = "Please select a course Preference !!!";
+                    return;
+
+                }
+                else
+                {
+                    candidateDetails.CollegeCourse23 = cmbCoursePreference23.Text;
+                }
+
+
+
+
+
+                if (cmbCoursePreference31.SelectedIndex == -1)
+                {
+                    lblMessage.Text = "Please select a course Preference !!!";
+                    return;
+
+                }
+                else
+                {
+                    candidateDetails.CollegeCourse31 = cmbCoursePreference31.Text;
+                }
+                if (cmbCoursePreference32.SelectedIndex == -1)
+                {
+                    lblMessage.Text = "Please select a course Preference !!!";
+                    return;
+
+                }
+                else
+                {
+                    candidateDetails.CollegeCourse32 = cmbCoursePreference32.Text;
+                }
+                if (cmbCoursePreference33.SelectedIndex == -1)
+                {
+                    lblMessage.Text = "Please select a course Preference !!!";
+                    return;
+
+                }
+                else
+                {
+                    candidateDetails.CollegeCourse33 = cmbCoursePreference33.Text;
+                }
+                               
+
+
+                if (candidateDetails.EntranceScienceMark > 100 || candidateDetails.EntranceScienceMark < 0 ||
+                    candidateDetails.EntranceMathsMark > 100 || candidateDetails.EntranceMathsMark < 0  )
+                {
+                    lblMessage.Text = "Enter a valid mark (0-100) !!!";
+                    return;
+                }
+                else
+                {
+                    outputentrance = EapBL.StudentDetailsInsert(candidateDetails);
+                }
+
+
+                    outputAllotment = EapBLAdmin.GenerateAllotment(candidateDetails);
                 output = EapBL.StudentCoursePreferenceInsert(candidateDetails);
-                outputentrance = EapBL.StudentDetailsInsert(candidateDetails);
+               
                 if (output > 0 && outputentrance > 0)
                 {
-                    lblMessage.Text = "Successfully added";
+                    MessageBox.Show("Successfully added");
 
                     this.Hide();
                     AllotmentWindow allotmentWindow = new AllotmentWindow();
@@ -90,7 +229,7 @@ namespace PresentataionLayer
             }
             catch (Exception ex)
             {
-
+                ex.Message.ToString();
             }
         }
 
@@ -101,9 +240,7 @@ namespace PresentataionLayer
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Register Number \t\t:" + candidateDetails.RegisterNumber + "\nRank\t:" + candidateDetails.EntranceRank + "\nDepartment\t:" +
-                candidateDetails.EntranceScienceMark + "\nEmail\t\t:" + candidateDetails.EntranceMathsMark + "\nMob\t\t :" + candidateDetails.Collegeprefernce1 + "\nDOB\t\t:" + candidateDetails.Collegeprefernce2 + "\nGender\t\t:" +
-                candidateDetails.CollegePrefernce3 + "\nHobbies\t\t:" + candidateDetails.CollegeCourse11);
+           
 
 
         }
@@ -173,7 +310,7 @@ namespace PresentataionLayer
                 {
                     
                    cmbCollegePreference1.DataSource = dsCollegeName.Tables[0];
-                    cmbCollegePreference1.ValueMember = "college_id";
+                    cmbCollegePreference1.ValueMember = "college_name";
                     cmbCollegePreference1.DisplayMember = "college_name";
                 }
 
@@ -182,6 +319,54 @@ namespace PresentataionLayer
             catch (FormatException ex)
             {
                 lblMessage.Text = ex.Message.ToString();
+            }
+        }
+
+        private void txtRegisterNumber_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtRegisterNumber.Text == string.Empty)
+            {
+                epValidation.SetError(txtRegisterNumber, "Register Number  is required !");
+            }
+            else
+            {
+                epValidation.SetError(txtRegisterNumber, string.Empty);
+            }
+        }
+
+        private void txtRank_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtRank.Text == string.Empty)
+            {
+                epValidation.SetError(txtRank, "Rank is required !");
+            }
+            else
+            {
+                epValidation.SetError(txtRank, string.Empty);
+            }
+        }
+
+        private void txtScienceMark_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtScienceMark.Text == string.Empty)
+            {
+                epValidation.SetError(txtScienceMark, "Mark is required !");
+            }
+            else
+            {
+                epValidation.SetError(txtScienceMark, string.Empty);
+            }
+        }
+
+        private void txtMathsMark_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtMathsMark.Text == string.Empty)
+            {
+                epValidation.SetError(txtMathsMark, "Mark is required !");
+            }
+            else
+            {
+                epValidation.SetError(txtMathsMark, string.Empty);
             }
         }
     }

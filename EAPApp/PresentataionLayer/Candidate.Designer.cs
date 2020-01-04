@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Candidate));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.educationalDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewAllotmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUserId = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tspHome = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -81,12 +85,35 @@
             this.lblID.TabIndex = 4;
             this.lblID.Text = "Candidate ID :";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.LightBlue;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tspHome});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.TabIndex = 27;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // tspHome
+            // 
+            this.tspHome.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tspHome.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tspHome.Image = ((System.Drawing.Image)(resources.GetObject("tspHome.Image")));
+            this.tspHome.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tspHome.Name = "tspHome";
+            this.tspHome.Size = new System.Drawing.Size(23, 22);
+            this.tspHome.Text = "Sign Out";
+            this.tspHome.Click += new System.EventHandler(this.tspHome_Click);
+            // 
             // Candidate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PresentataionLayer.Properties.Resources.envelope_blue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblUserId);
             this.Controls.Add(this.menuStrip1);
@@ -97,6 +124,8 @@
             this.Load += new System.EventHandler(this.Candidate_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,5 +138,7 @@
         private System.Windows.Forms.ToolStripMenuItem viewAllotmentToolStripMenuItem;
         private System.Windows.Forms.Label lblUserId;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton tspHome;
     }
 }

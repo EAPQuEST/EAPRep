@@ -12,7 +12,84 @@ namespace DataServiceLayer.DataLayer
 {
     public class EapDSLAdmin
     {
-       // public static object DBHelper { get; private set; }
+        // public static object DBHelper { get; private set; }
+
+
+        public static int AdminNewPassword(string username,string password)
+        {
+            int output = 0;
+            string sql = "";
+            SqlConnection con = null;
+            SqlCommand cmd = null;
+            try
+            {
+                sql = "update password_details  set ";
+
+                sql = sql + "password ='" + password + "'";
+                sql = sql + " where username = '" + username + "'and user_type='admin'";
+
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+
+                output = cmd.ExecuteNonQuery();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:AdminNewPassword", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                cmd.Dispose();
+            }
+            return output;
+
+
+        }
+
+
+
+
+        public static DataTable AdminChangePassword(string password)
+        {
+            string sql = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            //DataSet dsLogin = null;
+            DataTable dtLogin = null;
+
+
+            try
+            {
+                //sql = "select count(*) as cnt from login_database"
+                sql = "select password from password_details where password='" + password + "'and user_type='admin'";
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                //dsLogin = new DataSet();
+                dtLogin = new DataTable();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dtLogin);
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:AdminChangePassword()", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+
+            return dtLogin;
+        }
+
+
+
 
         public static int CollegeDetailsInsert(CollegeDetails collegeDetails)  //college insert
         {
@@ -50,6 +127,42 @@ namespace DataServiceLayer.DataLayer
 
         }
 
+
+
+        public static DataTable AdminLogin(string user, string password)
+        {
+            string sql = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            //DataSet dsLogin = null;
+            DataTable dtLogin = null;
+
+
+            try
+            {
+                //sql = "select count(*) as cnt from login_database"
+                sql = "select username,password from password_details where username='" + user + "'and password='" + password + "'and user_type='admin'";
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                //dsLogin = new DataSet();
+                dtLogin = new DataTable();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dtLogin);
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:AdminLogin()", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+
+            return dtLogin;
+        }
 
 
 

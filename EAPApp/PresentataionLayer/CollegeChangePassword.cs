@@ -12,28 +12,21 @@ using BusinessLayer.BL;
 
 namespace PresentataionLayer
 {
-    public partial class CandidateChangePassword : Form
+    public partial class CollegeChangePassword : Form
     {
-        public CandidateChangePassword()
+        public CollegeChangePassword()
         {
             InitializeComponent();
         }
 
-        private void CandidateChangePassword_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-
-
-            CandidateDetails candidateDetails = null;
+            CollegeDetails collegeDetails = null;
             int output = 0;
 
             string password;
-         
-            
+
+
             LoginInfo.password = txtCurrentPassword.Text;
             password = LoginInfo.password;
             //DataSet dsLogin = null;
@@ -41,16 +34,16 @@ namespace PresentataionLayer
             //if (dsLogin.Rows[0][0].ToString() == "1")
             try
             {
-                candidateDetails = new CandidateDetails();
-                dtLogin = EapBL.CandidateChangePassword(password);
+                collegeDetails = new CollegeDetails();
+                dtLogin = EapBLCollege.CollegeChangePassword(password);
                 //if (dtLogin.Rows[0][0].ToString() == "1")
                 if (dtLogin.Rows.Count > 0)
                 {
                     lblMessage.Text = "";
-                   
-                    candidateDetails.CandidateId = txtCandidateChangePasswordID.Text;
-                    candidateDetails.CandidatePassword = txtNewPassword.Text;
-                    output = EapBL.CandidateNewPassword(candidateDetails);
+
+                    collegeDetails.Username = txtCollegeChangePasswordID.Text;
+                    collegeDetails.Password = txtNewPassword.Text;
+                    output = EapBLCollege.CollegeNewPassword(collegeDetails);
                     if (output > 0)
                     {
 
@@ -77,8 +70,6 @@ namespace PresentataionLayer
                 //lblMessage.Text = ex.Message.ToString();
             }
 
-
-            
         }
 
         private void tspBtnBack_Click(object sender, EventArgs e)
