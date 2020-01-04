@@ -302,6 +302,14 @@ namespace DataTransactionObject.DTO
             set { course_Name = value; }
         }
 
+        private string candidatePassword;
+
+        public string CandidatePassword
+        {
+            get { return candidatePassword; }
+            set { candidatePassword = value; }
+        }
+
 
 
     }

@@ -10,5 +10,7 @@ namespace DataTransactionObject.DTO
     {
         public static string userID;
         public static string password;
+        public static string Newpassword;
+
     }
 }
