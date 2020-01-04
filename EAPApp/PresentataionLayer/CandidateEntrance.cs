@@ -159,6 +159,9 @@ namespace PresentataionLayer
         {
             LoadCollegeName();
         }
+        /// <summary>
+        /// 
+        /// </summary>
         private void LoadCollegeName()
         {
            
@@ -170,7 +173,7 @@ namespace PresentataionLayer
                 {
                     
                    cmbCollegePreference1.DataSource = dsCollegeName.Tables[0];
-                    cmbCollegePreference1.ValueMember = "college_name";
+                    cmbCollegePreference1.ValueMember = "college_id";
                     cmbCollegePreference1.DisplayMember = "college_name";
                 }
 

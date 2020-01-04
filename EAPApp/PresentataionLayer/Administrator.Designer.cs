@@ -108,17 +108,7 @@
             // 
             // btnGenerateAllotment
             // 
-            this.btnGenerateAllotment.Location = new System.Drawing.Point(413, 266);
-            this.btnGenerateAllotment.Name = "btnGenerateAllotment";
-            this.btnGenerateAllotment.Size = new System.Drawing.Size(191, 83);
-            this.btnGenerateAllotment.TabIndex = 2;
-            this.btnGenerateAllotment.Text = "Generate Allotment";
-            this.btnGenerateAllotment.UseVisualStyleBackColor = true;
-            this.btnGenerateAllotment.Click += new System.EventHandler(this.btnGenerateAllotment_Click);
-            // 
-            // btnGenerateAllotment
-            // 
-            this.btnGenerateAllotment.Location = new System.Drawing.Point(359, 202);
+            this.btnGenerateAllotment.Location = new System.Drawing.Point(198, 145);
             this.btnGenerateAllotment.Name = "btnGenerateAllotment";
             this.btnGenerateAllotment.Size = new System.Drawing.Size(224, 78);
             this.btnGenerateAllotment.TabIndex = 2;
