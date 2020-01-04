@@ -1,0 +1,1 @@
+﻿alter table candidate_details add  reservation varchar(20) 

@@ -7,10 +7,9 @@ using DataTransactionObject.DTO;
 using DataServiceLayer.DataLayer;
 using System.Data;
 
-
 namespace BusinessLayer.BL
 {
-   public class EapBLAllotment
+    public class EapBLAllotment
     {
         public static int FetchByRow()
         {
@@ -21,14 +20,14 @@ namespace BusinessLayer.BL
                 output = EapDSLAllotment.FetchByRow();
 
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 Console.WriteLine("EapBLAllotment.FetchByRow()");
             }
+            
 
 
-
-
+            
             return output;
 
         }

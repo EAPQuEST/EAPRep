@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataTransactionObject.DTO
 {
-    class AllotmentObject
+    public class AllotmentObject
     {
+
         private int generalSeats;
 
         public int GeneralSeats
@@ -87,5 +88,9 @@ namespace DataTransactionObject.DTO
             get { return total; }
             set { total = value; }
         }
+
+
+
+
     }
 }
