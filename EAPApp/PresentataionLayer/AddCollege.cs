@@ -44,7 +44,7 @@ namespace PresentataionLayer
 
             try
             {
-                if (txtCollegeID.Text == string.Empty || txtCollegeName.Text == string.Empty || txtTotalSeat.Text == string.Empty ||
+                if (txtCollegeID.Text == string.Empty || txtCollegeName.Text == string.Empty ||  
                       txtAddress.Text == string.Empty || txtContactNumber.Text == string.Empty)
                 {
                     // MessageBox.Show("Enter all the details");
@@ -81,15 +81,7 @@ namespace PresentataionLayer
                     {
                         collegeDetails.CollegeName = txtCollegeName.Text;
                     }
-                    if (txtTotalSeat.Text == string.Empty)
-                    {
-                        lblMessage.Text = "Enter the number of total seats";
-                        return;
-                    }
-                    else
-                    {
-                        collegeDetails.TotalSeats = Convert.ToInt32(txtTotalSeat.Text);
-                    }
+                   
                     if (txtAddress.Text == string.Empty)
                     {
                         lblMessage.Text = "Enter the address";
