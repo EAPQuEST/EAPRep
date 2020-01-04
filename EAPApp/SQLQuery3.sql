@@ -1,1 +1,1 @@
-﻿insert into allotment(candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status) values('502','1026','General','243',(select college_id from college_details where college_name='fhvgbjhnk'),(select course_id from course_details where course_name='Information Technology'),'waitlist' )
+﻿select course_name from course_details where course_id IN(SELECT  college_coures.courseid FROM college_coures WHERE collegeid IN(select college_details.college_id FROM college_details where college_name='drfgbfd'))

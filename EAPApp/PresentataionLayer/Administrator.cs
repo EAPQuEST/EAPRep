@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataTransactionObject.DTO;
 using BusinessLayer.BL;
+
 
 namespace PresentataionLayer
 {
@@ -26,6 +26,7 @@ namespace PresentataionLayer
 
         private void addCollegeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            
             AddCollege addCollege = new AddCollege();
             addCollege.Show();
             addCollege.MdiParent = this;
@@ -50,34 +51,51 @@ namespace PresentataionLayer
             updateCollege.MdiParent = this;
         }
 
-        private void btnGenerateAllotment_Click(object sender, EventArgs e)
+        private void viewCollegeListToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //int output = 0;
-            //output = EapBLAdmin.AllotStudents();
-            //if(output>0)
-            //{
-            //    MessageBox.Show("Allotment list Published");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Failed");
-            //}
-            //DataTable ds = null;
-            //string candidateId = string.Empty;
-            //string reservation = string.Empty;
-            //string totalMarks = string.Empty;
-            //string collegeId = string.Empty;
-            //string courseId = string.Empty;
-            //int seatNumber = 0;
-            
-           
+            AdminCollegeList adminCollegeList = new AdminCollegeList();
+            adminCollegeList.Show();
+            adminCollegeList.MdiParent = this;
         }
 
         private void viewAllottedListToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AllotmentProcessWindow allotmentProcessWindow = new AllotmentProcessWindow();
+            AdminAlottedList adminAlottedList = new AdminAlottedList();
+            adminAlottedList.Show();
+            adminAlottedList.MdiParent = this;
+        }
+
+        private void deleteCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdminDeleteCourse adminDeleteCourse = new AdminDeleteCourse();
+            adminDeleteCourse.Show();
+            adminDeleteCourse.MdiParent = this;
+        }
+
+        private void btnGenerateAllotment_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void allotmentProcessToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AllotmentProcess allotmentProcess = new AllotmentProcess();
+            allotmentProcess.Show();
+            allotmentProcess.MdiParent = this;
+        }
+
+        private void tlsBtnHomeDelete_Click(object sender, EventArgs e)
+        {
             this.Hide();
-            allotmentProcessWindow.Show();
+            AllotmentWindow allotmentWindow = new AllotmentWindow();
+            allotmentWindow.Show();
+        }
+
+        private void updateCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdminDeleteCourse adminDeleteCourse = new AdminDeleteCourse();
+            adminDeleteCourse.Show();
+            adminDeleteCourse.MdiParent = this;
         }
     }
 }

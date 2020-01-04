@@ -74,17 +74,41 @@
     <Compile Include="AddCollege.Designer.cs">
       <DependentUpon>AddCollege.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminAlottedList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAlottedList.Designer.cs">
+      <DependentUpon>AdminAlottedList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminChangePassword.Designer.cs">
+      <DependentUpon>AdminChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCollegeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCollegeList.Designer.cs">
+      <DependentUpon>AdminCollegeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDeleteCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDeleteCourse.Designer.cs">
+      <DependentUpon>AdminDeleteCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrator.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administrator.Designer.cs">
       <DependentUpon>Administrator.cs</DependentUpon>
     </Compile>
-    <Compile Include="AllotmentProcessWindow.cs">
+    <Compile Include="AllotmentProcess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AllotmentProcessWindow.Designer.cs">
-      <DependentUpon>AllotmentProcessWindow.cs</DependentUpon>
+    <Compile Include="AllotmentProcess.Designer.cs">
+      <DependentUpon>AllotmentProcess.cs</DependentUpon>
     </Compile>
     <Compile Include="AllotmentWindow.cs">
       <SubType>Form</SubType>
@@ -97,6 +121,12 @@
     </Compile>
     <Compile Include="Candidate.Designer.cs">
       <DependentUpon>Candidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CandidateChangePassword.Designer.cs">
+      <DependentUpon>CandidateChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="CandidateEntrance.cs">
       <SubType>Form</SubType>
@@ -127,6 +157,12 @@
     </Compile>
     <Compile Include="CollegeAuthority.Designer.cs">
       <DependentUpon>CollegeAuthority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CollegeChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CollegeChangePassword.Designer.cs">
+      <DependentUpon>CollegeChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="DeleteCollege.cs">
       <SubType>Form</SubType>
@@ -161,17 +197,32 @@
     <EmbeddedResource Include="AddCollege.resx">
       <DependentUpon>AddCollege.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminAlottedList.resx">
+      <DependentUpon>AdminAlottedList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminChangePassword.resx">
+      <DependentUpon>AdminChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCollegeList.resx">
+      <DependentUpon>AdminCollegeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDeleteCourse.resx">
+      <DependentUpon>AdminDeleteCourse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrator.resx">
       <DependentUpon>Administrator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AllotmentProcessWindow.resx">
-      <DependentUpon>AllotmentProcessWindow.cs</DependentUpon>
+    <EmbeddedResource Include="AllotmentProcess.resx">
+      <DependentUpon>AllotmentProcess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllotmentWindow.resx">
       <DependentUpon>AllotmentWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate.resx">
       <DependentUpon>Candidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CandidateChangePassword.resx">
+      <DependentUpon>CandidateChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CandidateEntrance.resx">
       <DependentUpon>CandidateEntrance.cs</DependentUpon>
@@ -187,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CollegeAuthority.resx">
       <DependentUpon>CollegeAuthority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CollegeChangePassword.resx">
+      <DependentUpon>CollegeChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteCollege.resx">
       <DependentUpon>DeleteCollege.cs</DependentUpon>
@@ -282,6 +336,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\envelope-blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\envelope-blue1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

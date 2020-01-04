@@ -113,6 +113,26 @@ namespace PresentataionLayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap envelope_blue {
+            get {
+                object obj = ResourceManager.GetObject("envelope-blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap envelope_blue1 {
+            get {
+                object obj = ResourceManager.GetObject("envelope-blue1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Kerala_Government_Emblem {
             get {
                 object obj = ResourceManager.GetObject("Kerala_Government_Emblem", resourceCulture);

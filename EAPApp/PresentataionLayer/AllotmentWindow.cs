@@ -14,28 +14,7 @@ namespace PresentataionLayer
 {
     public partial class AllotmentWindow : Form
     {
-    //ADMIN
-
-        //Panel panelAdmin;
-        //Label lblheaderAdmin;
-        //TextBox txtUsernameAdmin;
-        //TextBox txtPasswordAdmin;
-        //Button btnAdminLogin;
-
-        ////COLLEGE
-
-        //Panel panelCollege;
-        //Label lblheaderCollege;
-        //TextBox txtUsernameCollege;
-        //TextBox txtPasswordCollege;
-        //Button btnCollegelogin;
-
-        ////CANDIDATE
-
-        //Panel panelCandidate;
-        //Label lblheaderCandidate;
-        //Button btnExistingUser;
-        //Button btnNewUser;
+ 
 
 
         public AllotmentWindow()
@@ -46,199 +25,17 @@ namespace PresentataionLayer
 
     private void btnAdmin_Click(object sender, EventArgs e)
     {
-    //    try
-    //    {
-    //        //REMOVE COLLEGE
-    //        try
-    //        {
-
-    //            panelCollege.Controls.Remove(lblheaderCollege);
-    //            panelCollege.Controls.Remove(txtUsernameCollege);
-    //            panelCollege.Controls.Remove(btnCollegelogin);
-    //            panelCollege.Controls.Remove(txtPasswordCollege);
-    //            Controls.Remove(btnCollegelogin);
-    //            Controls.Remove(panelCollege);
-
-    //        }
-
-    //        //REMOVE CANDIDATE
-
-    //        catch (Exception)
-    //        {
-    //            panelCandidate.Controls.Remove(lblheaderCandidate);
-    //            panelCandidate.Controls.Remove(btnExistingUser);
-    //            panelCandidate.Controls.Remove(btnNewUser);
-    //            Controls.Remove(btnExistingUser);
-    //            Controls.Remove(btnNewUser);
-    //            Controls.Remove(panelCandidate);
-    //        }
-
-    //    }
-    //    catch (Exception) { }
-    //    finally
-    //    {
-
-    //        panelAdmin = new Panel();
-    //        txtUsernameAdmin = new TextBox();
-    //        txtPasswordAdmin = new TextBox();
-    //        btnAdminLogin = new Button();
-    //        btnAdminLogin.Location = new Point(80, 240);
-    //        btnAdminLogin.Text = "LOGIN";
-    //        btnAdminLogin.BackColor = Color.PaleTurquoise;
-    //        panelAdmin.Location = new System.Drawing.Point(300, 190);
-    //        panelAdmin.Name = "pnlAdmin";
-    //        panelAdmin.Size = new System.Drawing.Size(450, 350);
-    //        panelAdmin.BackColor = Color.AntiqueWhite;
-    //        lblheaderAdmin = new Label();
-    //        lblheaderAdmin.Location = new Point(150, 20);
-    //        lblheaderAdmin.Size = new Size(350, 350);
-    //        lblheaderAdmin.Text = "ADMIN LOGIN";
-
-
-    //        txtUsernameAdmin.Location = new Point(50, 80);
-    //        txtUsernameAdmin.Text = "Username";
-
-    //        txtPasswordAdmin.Location = new Point(50, 150);
-    //        txtPasswordAdmin.Text = "Password";
-
-
-
-    //        panelAdmin.Controls.Add(lblheaderAdmin);
-    //        panelAdmin.Controls.Add(txtUsernameAdmin);
-    //        panelAdmin.Controls.Add(txtPasswordAdmin);
-    //        panelAdmin.Controls.Add(btnAdminLogin);
-
-    //        Controls.Add(panelAdmin);
-    //    }
+   
     }
 
 
 
     private void btnCandidate_Click(object sender, EventArgs e)
     {
-        //try
-        //{
-        //    //REMOVE COLLEGE
-
-        //    try
-        //    {
-        //        panelCollege.Controls.Remove(lblheaderCollege);
-        //        panelCollege.Controls.Remove(txtUsernameCollege);
-        //        panelCollege.Controls.Remove(btnCollegelogin);
-        //        panelCollege.Controls.Remove(txtPasswordCollege);
-        //        Controls.Remove(btnCollegelogin);
-        //        Controls.Remove(panelCollege);
-        //    }
-        //    //REMOVE ADMIN
-        //    catch (Exception)
-        //    {
-        //        panelAdmin.Controls.Remove(lblheaderAdmin);
-        //        panelAdmin.Controls.Remove(txtUsernameAdmin);
-        //        panelAdmin.Controls.Remove(txtUsernameAdmin);
-        //        panelAdmin.Controls.Remove(btnAdminLogin);
-        //        Controls.Remove(panelAdmin);
-
-
-
-        //    }
-        //}
-        //catch (Exception) { }
-        //finally
-        //{
-        //    panelCandidate = new Panel();
-        //    panelCandidate.Location = new System.Drawing.Point(300, 190);
-        //    panelCandidate.Name = "pnlCandidate";
-        //    panelCandidate.Size = new System.Drawing.Size(450, 350);
-        //    panelCandidate.BackColor = Color.AntiqueWhite;
-        //    lblheaderCandidate = new Label();
-        //    lblheaderCandidate.Location = new Point(150, 20);
-        //    lblheaderCandidate.Size = new Size(350, 350);
-        //    lblheaderCandidate.Text = "CANDIDATE LOGIN";
-
-        //    btnExistingUser = new Button();
-        //    btnExistingUser.Size = new Size(105, 50);
-        //    btnExistingUser.Location = new Point(40, 100);
-        //    btnExistingUser.BackColor = Color.AliceBlue;
-        //    btnExistingUser.Text = "EXISTING USER";
-
-        //    btnNewUser = new Button();
-        //    btnNewUser.Size = new Size(105, 50);
-        //    btnNewUser.Location = new Point(40, 180);
-        //    btnNewUser.BackColor = Color.AliceBlue;
-        //    btnNewUser.Text = "NEW USER";
-
-        //    panelCandidate.Controls.Add(lblheaderCandidate);
-        //    panelCandidate.Controls.Add(btnExistingUser);
-        //    // Controls.Add(btnExistingUser);
-        //    panelCandidate.Controls.Add(btnNewUser);
-        //    //Controls.Add(btnNewUser);
-        //    Controls.Add(panelCandidate);
-        //}
 
     }
     private void btnCollge_Click(object sender, EventArgs e)
     {
-        //try
-        //{
-        //    // REMOVE ADMIN
-        //    try
-        //    {
-        //        panelAdmin.Controls.Remove(lblheaderAdmin);
-        //        panelAdmin.Controls.Remove(txtUsernameAdmin);
-        //        panelAdmin.Controls.Remove(btnAdminLogin);
-        //        panelAdmin.Controls.Remove(txtPasswordAdmin);
-        //        Controls.Remove(panelAdmin);
-
-        //    }
-
-        //    //REMOVE CANDIDATE
-        //    catch (Exception)
-        //    {
-        //        panelCandidate.Controls.Remove(lblheaderCandidate);
-        //        panelCandidate.Controls.Remove(btnExistingUser);
-
-        //        panelCandidate.Controls.Remove(btnNewUser);
-
-        //        Controls.Remove(panelCandidate);
-        //    }
-        //}
-        //catch (Exception) { }
-        //finally
-        //{
-        //    panelCollege = new Panel();
-        //    panelCollege.Location = new System.Drawing.Point(300, 190);
-        //    panelCollege.Name = "pnlCollege";
-        //    panelCollege.Size = new System.Drawing.Size(450, 350);
-        //    panelCollege.BackColor = Color.AntiqueWhite;
-
-        //    lblheaderCollege = new Label();
-        //    lblheaderCollege.Location = new Point(150, 20);
-        //    lblheaderCollege.Size = new Size(350, 350);
-        //    lblheaderCollege.Text = "COLLEGE  LOGIN";
-
-        //    txtUsernameCollege = new TextBox();
-        //    txtUsernameCollege.Location = new Point(50, 80);
-        //    txtUsernameCollege.Text = "Username";
-
-        //    txtPasswordCollege = new TextBox();
-        //    txtPasswordCollege.Location = new Point(50, 150);
-        //    txtPasswordCollege.Text = "Password";
-
-        //    btnCollegelogin = new Button();
-        //    btnCollegelogin.Location = new Point(480, 450);
-        //    btnCollegelogin.Text = "LOGIN";
-        //    btnCollegelogin.BackColor = Color.PaleTurquoise;
-
-        //    panelCollege.Controls.Add(lblheaderCollege);
-        //    panelCollege.Controls.Add(txtUsernameCollege);
-        //    panelCollege.Controls.Add(txtPasswordCollege);
-        //    panelCollege.Controls.Add(btnCollegelogin);
-
-
-        //    Controls.Add(btnCollegelogin);
-        //    Controls.Add(panelCollege);
-
-      //  }
 
     }
 
@@ -281,6 +78,8 @@ namespace PresentataionLayer
 
         private void btnExistingLogin_Click(object sender, EventArgs e)
         {
+
+
             string username;
             string password;
             LoginInfo.userID = txtCandidateUsername.Text;
@@ -297,7 +96,9 @@ namespace PresentataionLayer
                 //if (dtLogin.Rows[0][0].ToString() == "1")
                 if (dtLogin.Rows.Count > 0)
                 {
-                    MessageBox.Show("Login successfully");
+                    lblMessage.Text = "";
+                    MessageBox.Show("Login successfull");
+
                     this.Hide();
                     Candidate candidate = new Candidate();
                     candidate.Show();
@@ -305,7 +106,7 @@ namespace PresentataionLayer
                 }
                 else
                 {
-                    MessageBox.Show("Failed to Login");
+                    lblMessage.Text = "Invalid username/password !!!";
                 }
 
             }
@@ -314,15 +115,21 @@ namespace PresentataionLayer
                 //lblMessage.Text = ex.Message.ToString();
             }
 
-
-
-
-
-
         }
+        //change password
+
+
+      
+
+
+
         //Candidate Login
         private void txtCandidateUsername_MouseEnter(object sender, EventArgs e)
         {
+        }
+        private void txtCandidateUsername_MouseClick(object sender, MouseEventArgs e)
+        {
+
             if (txtCandidateUsername.Text == "Username")
             {
                 txtCandidateUsername.Text = "";
@@ -331,7 +138,6 @@ namespace PresentataionLayer
 
             }
         }
-
         private void txtCandidateUsername_MouseLeave(object sender, EventArgs e)
         {
 
@@ -344,6 +150,10 @@ namespace PresentataionLayer
         }
 
         private void txtCandidatePassword_MouseEnter(object sender, EventArgs e)
+        {
+           
+        }
+        private void txtCandidatePassword_MouseClick(object sender, MouseEventArgs e)
         {
             if (txtCandidatePassword.Text == "Password")
             {
@@ -361,9 +171,10 @@ namespace PresentataionLayer
 
             if (txtCandidatePassword.Text == "")
             {
+                txtCandidatePassword.Font = new Font(txtCandidatePassword.Font.FontFamily, txtCandidatePassword.Font.Size, FontStyle.Italic);
                 txtCandidatePassword.Text = "Password";
                 txtCandidatePassword.ForeColor = Color.Gray;
-                txtCandidatePassword.Font = new Font(txtCandidatePassword.Font.FontFamily, txtCandidatePassword.Font.Size, FontStyle.Italic);
+               
             }
         }
 
@@ -379,6 +190,9 @@ namespace PresentataionLayer
      //college Login
         private void txtCollegeUsername_MouseEnter(object sender, EventArgs e)
         {
+        }
+        private void txtCollegeUsername_MouseClick(object sender, MouseEventArgs e)
+        {
             if (txtCollegeUsername.Text == "Username")
             {
                 txtCollegeUsername.Text = "";
@@ -387,7 +201,6 @@ namespace PresentataionLayer
 
             }
         }
-
         private void txtCollegeUsername_MouseLeave(object sender, EventArgs e)
         {
 
@@ -402,6 +215,10 @@ namespace PresentataionLayer
         private void txtCollegePassword_MouseEnter(object sender, EventArgs e)
         {
 
+          
+        }
+        private void txtCollegePassword_MouseClick(object sender, MouseEventArgs e)
+        {
             if (txtCollegePassword.Text == "Password")
             {
                 txtCollegePassword.Text = "";
@@ -412,7 +229,6 @@ namespace PresentataionLayer
                 txtCollegePassword.MaxLength = 14;
             }
         }
-
         private void txtCollegePassword_MouseLeave(object sender, EventArgs e)
         {
             if (txtCollegePassword.Text == "")
@@ -427,6 +243,10 @@ namespace PresentataionLayer
 
         private void txtAdminUsername_MouseEnter(object sender, EventArgs e)
         {
+           
+        }
+        private void txtAdminUsername_MouseClick(object sender, MouseEventArgs e)
+        {
             if (txtAdminUsername.Text == "Username")
             {
                 txtAdminUsername.Text = "";
@@ -435,7 +255,6 @@ namespace PresentataionLayer
 
             }
         }
-
         private void txtAdminUsername_MouseLeave(object sender, EventArgs e)
         {
 
@@ -449,6 +268,10 @@ namespace PresentataionLayer
 
         private void txtAdminPassword_MouseEnter(object sender, EventArgs e)
         {
+        }
+        private void txtAdminPassword_MouseClick(object sender, MouseEventArgs e)
+        {
+
             if (txtAdminPassword.Text == "Password")
             {
                 txtAdminPassword.Text = "";
@@ -456,16 +279,16 @@ namespace PresentataionLayer
                 txtAdminPassword.ForeColor = Color.Black;
                 txtAdminPassword.Font = new Font(txtAdminPassword.Font.FontFamily, txtAdminPassword.Font.Size, FontStyle.Regular);
                 txtAdminPassword.PasswordChar = '*';
-                txtAdminPassword.MaxLength = 14;
+                txtAdminPassword.MaxLength = 10;
             }
         }
-
         private void txtAdminPassword_MouseLeave(object sender, EventArgs e)
         {
 
             if (txtAdminPassword.Text == "")
             {
                 txtAdminPassword.Text = "Password";
+               
                 txtAdminPassword.ForeColor = Color.Gray;
                 txtAdminPassword.Font = new Font(txtAdminPassword.Font.FontFamily, txtAdminPassword.Font.Size, FontStyle.Italic);
             }
@@ -474,16 +297,152 @@ namespace PresentataionLayer
 
         private void btnCollegeLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            CollegeAuthority collegeAuthority = new CollegeAuthority();
-            collegeAuthority.Show();
+
+            string usernameCollege;
+            string passwordCollege;
+            LoginInfo.userID = txtCollegeUsername.Text;
+            usernameCollege = LoginInfo.userID;
+            LoginInfo.password = txtCollegePassword.Text;
+            passwordCollege = LoginInfo.password;
+            //DataSet dsLogin = null;
+            DataTable dtLogin = null;
+            //if (dsLogin.Rows[0][0].ToString() == "1")
+            try
+            {
+
+                dtLogin = EapBLCollege.CollegeLogin(usernameCollege, passwordCollege);
+                //if (dtLogin.Rows[0][0].ToString() == "1")
+                if (dtLogin.Rows.Count > 0)
+                {
+                    lblMessageCollege.Text = "";
+                    MessageBox.Show("Login successfull");
+
+
+                    this.Hide();
+                    CollegeAuthority collegeAuthority = new CollegeAuthority();
+                    collegeAuthority.Show();
+
+                }
+                else
+                {
+                    lblMessageCollege.Text = "Invalid username/password !!!";
+                }
+
+            }
+            catch (FormatException ex)
+            {
+                //lblMessage.Text = ex.Message.ToString();
+            }
+
+
+
         }
 
         private void btnAdminLogin_Click(object sender, EventArgs e)
         {
+
+
+            string usernameAdmin;
+            string passwordAdmin;
+            LoginInfo.userID = txtAdminUsername.Text;
+            usernameAdmin = LoginInfo.userID;
+            LoginInfo.password = txtAdminPassword.Text;
+            passwordAdmin = LoginInfo.password;
+            //DataSet dsLogin = null;
+            DataTable dtLogin = null;
+            //if (dsLogin.Rows[0][0].ToString() == "1")
+            try
+            {
+
+                dtLogin = EapBLAdmin.AdminLogin(usernameAdmin, passwordAdmin);
+                //if (dtLogin.Rows[0][0].ToString() == "1")
+                if (dtLogin.Rows.Count > 0)
+                {
+                    lblMessageAdmin.Text = "";
+                    MessageBox.Show("Login successfull");
+
+                    this.Hide();
+                    Administrator administrator = new Administrator();
+                    administrator.Show();
+
+                }
+                else
+                {
+                    lblMessageAdmin.Text = "Invalid username/password !!!";
+                }
+
+            }
+            catch (FormatException ex)
+            {
+                //lblMessage.Text = ex.Message.ToString();
+            }
+
+
+
+           
+        }
+
+        private void txtCandidatePassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCandidateUsername_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtCandidateUsername.Text) && txtCandidateUsername.Text=="Username")
+            {
+                e.Cancel = true;
+                txtCandidateUsername.Focus();
+                epCandidateLogin.SetError(txtCandidateUsername, "Username is required!!");
+            }
+            else
+            {
+                e.Cancel = false;
+                epCandidateLogin.SetError(txtCandidateUsername, "");
+            }
+        }
+
+        private void label1_MouseClick(object sender, MouseEventArgs e)
+        {
             this.Hide();
-            Administrator administrator = new Administrator();
-            administrator.Show();
+            CandidateRegistration candidate = new CandidateRegistration();
+            candidate.Show();
+        }
+
+        private void tbcCandidate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void llblChangePassword_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.Hide();
+            CandidateChangePassword candidateChangePassword = new CandidateChangePassword();
+            candidateChangePassword.Show();
+        }
+
+        private void llblChangePassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void llblAdminChangePassword_MouseClick(object sender, MouseEventArgs e)
+        {
+          
+        }
+
+        private void linkLabel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.Hide();
+            CollegeChangePassword collegeChangePassword = new CollegeChangePassword();
+            collegeChangePassword.Show();
+        }
+
+        private void llblAdminChangePassword_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            this.Hide();
+            AdminChangePassword adminChangePassword = new AdminChangePassword();
+            adminChangePassword.Show();
         }
     }
 }

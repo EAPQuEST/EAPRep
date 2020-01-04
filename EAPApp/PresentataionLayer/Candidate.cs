@@ -17,17 +17,24 @@ namespace PresentataionLayer
         public Candidate()
         {
             InitializeComponent();
+            lblUserId.Text = LoginInfo.userID;
         }
 
-        private void alllotmentDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void educationalDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CandidateEducationalDetails candidateEducationalDetails = new CandidateEducationalDetails();
             candidateEducationalDetails.Show();
             candidateEducationalDetails.MdiParent = this;
-
         }
 
-        private void viewAlotmentToolStripMenuItem_Click(object sender, EventArgs e)
+        private void entranceDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //CandidateEntrance candidateEntrance = new CandidateEntrance();
+            //candidateEntrance.Show();
+            //candidateEntrance.MdiParent = this;
+        }
+
+        private void viewAllotmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CandidateViewAllotment candidateViewAllotment = new CandidateViewAllotment();
             candidateViewAllotment.Show();
@@ -36,11 +43,14 @@ namespace PresentataionLayer
 
         private void Candidate_Load(object sender, EventArgs e)
         {
-           
 
         }
 
-
-        
+        private void tspHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AllotmentWindow allotmentWindow = new AllotmentWindow();
+            allotmentWindow.Show();
+        }
     }
 }

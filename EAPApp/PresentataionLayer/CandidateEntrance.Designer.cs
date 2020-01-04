@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CandidateEntrance));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.lblRegisterNumber = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tspHome = new System.Windows.Forms.ToolStripButton();
-            this.tspBtnBack = new System.Windows.Forms.ToolStripButton();
             this.btnCandidateEntranceSubmit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblPreference2 = new System.Windows.Forms.Label();
@@ -73,14 +73,19 @@
             this.cmbCoursePreference12 = new System.Windows.Forms.ComboBox();
             this.cmbCoursePreference11 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lblUserId = new System.Windows.Forms.Label();
+            this.epValidation = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epValidation)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -174,6 +179,7 @@
             this.txtRank.Name = "txtRank";
             this.txtRank.Size = new System.Drawing.Size(209, 20);
             this.txtRank.TabIndex = 60;
+            this.txtRank.Validating += new System.ComponentModel.CancelEventHandler(this.txtRank_Validating);
             // 
             // txtMathsMark
             // 
@@ -181,6 +187,7 @@
             this.txtMathsMark.Name = "txtMathsMark";
             this.txtMathsMark.Size = new System.Drawing.Size(209, 20);
             this.txtMathsMark.TabIndex = 58;
+            this.txtMathsMark.Validating += new System.ComponentModel.CancelEventHandler(this.txtMathsMark_Validating);
             // 
             // txtRegisterNumber
             // 
@@ -188,6 +195,7 @@
             this.txtRegisterNumber.Name = "txtRegisterNumber";
             this.txtRegisterNumber.Size = new System.Drawing.Size(209, 20);
             this.txtRegisterNumber.TabIndex = 57;
+            this.txtRegisterNumber.Validating += new System.ComponentModel.CancelEventHandler(this.txtRegisterNumber_Validating);
             // 
             // txtScienceMark
             // 
@@ -195,6 +203,7 @@
             this.txtScienceMark.Name = "txtScienceMark";
             this.txtScienceMark.Size = new System.Drawing.Size(209, 20);
             this.txtScienceMark.TabIndex = 56;
+            this.txtScienceMark.Validating += new System.ComponentModel.CancelEventHandler(this.txtScienceMark_Validating);
             // 
             // lblMaths
             // 
@@ -233,8 +242,7 @@
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.LightBlue;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tspHome,
-            this.tspBtnBack});
+            this.tspHome});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(828, 25);
@@ -249,18 +257,8 @@
             this.tspHome.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tspHome.Name = "tspHome";
             this.tspHome.Size = new System.Drawing.Size(23, 22);
-            this.tspHome.Text = "Home";
+            this.tspHome.Text = "Sign Out";
             this.tspHome.Click += new System.EventHandler(this.tspHome_Click);
-            // 
-            // tspBtnBack
-            // 
-            this.tspBtnBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tspBtnBack.Image = ((System.Drawing.Image)(resources.GetObject("tspBtnBack.Image")));
-            this.tspBtnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tspBtnBack.Name = "tspBtnBack";
-            this.tspBtnBack.Size = new System.Drawing.Size(23, 22);
-            this.tspBtnBack.Text = "Back";
-            this.tspBtnBack.Click += new System.EventHandler(this.tspBtnBack_Click);
             // 
             // btnCandidateEntranceSubmit
             // 
@@ -278,6 +276,7 @@
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.lblPreference2);
             this.panel2.Controls.Add(this.lblPreference3);
             this.panel2.Controls.Add(this.label1);
@@ -387,7 +386,6 @@
             this.cmbCollegePreference3.Size = new System.Drawing.Size(245, 21);
             this.cmbCollegePreference3.TabIndex = 117;
             this.cmbCollegePreference3.Text = "Not Selected";
-            this.cmbCollegePreference3.SelectedIndexChanged += new System.EventHandler(this.cmbCollegePreference3_SelectedIndexChanged);
             // 
             // cmbCollegePreference2
             // 
@@ -440,7 +438,6 @@
             this.cmbCollegePreference2.Size = new System.Drawing.Size(245, 21);
             this.cmbCollegePreference2.TabIndex = 116;
             this.cmbCollegePreference2.Text = "Not Selected";
-            this.cmbCollegePreference2.SelectedIndexChanged += new System.EventHandler(this.cmbCollegePreference2_SelectedIndexChanged);
             // 
             // lblPreference1
             // 
@@ -528,6 +525,7 @@
             // 
             // panel3
             // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.cmbCoursePreference33);
             this.panel3.Controls.Add(this.cmbCoursePreference32);
@@ -663,6 +661,7 @@
             this.cmbCoursePreference12.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference12.TabIndex = 135;
             this.cmbCoursePreference12.Text = "Not Selected";
+            //this.cmbCoursePreference12.SelectedIndexChanged += new System.EventHandler(this.cmbCoursePreference12_SelectedIndexChanged);
             // 
             // cmbCoursePreference11
             // 
@@ -685,11 +684,38 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.BackColor = System.Drawing.Color.LightBlue;
+            this.lblID.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(579, 0);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(96, 17);
+            this.lblID.TabIndex = 123;
+            this.lblID.Text = "Candidate ID :";
+            // 
+            // lblUserId
+            // 
+            this.lblUserId.AutoSize = true;
+            this.lblUserId.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserId.Location = new System.Drawing.Point(681, 0);
+            this.lblUserId.Name = "lblUserId";
+            this.lblUserId.Size = new System.Drawing.Size(0, 17);
+            this.lblUserId.TabIndex = 79;
+            // 
+            // epValidation
+            // 
+            this.epValidation.ContainerControl = this;
+            // 
             // CandidateEntrance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(828, 606);
+            this.Controls.Add(this.lblUserId);
+            this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -707,6 +733,7 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epValidation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -727,7 +754,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tspHome;
         private System.Windows.Forms.Button btnCandidateEntranceSubmit;
-        private System.Windows.Forms.ToolStripButton tspBtnBack;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblPreference2;
         private System.Windows.Forms.Label lblPreference3;
@@ -758,5 +784,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Label lblUserId;
+        private System.Windows.Forms.ErrorProvider epValidation;
     }
 }

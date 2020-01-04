@@ -1,2 +1,1 @@
-﻿update new1allotment set status='WL'
-select * from new1allotment
+﻿delete from college_coures where courseid='EC101'
