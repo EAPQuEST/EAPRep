@@ -33,13 +33,11 @@
             this.lblMessage = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtContactNumber = new System.Windows.Forms.TextBox();
-            this.txtTotalSeat = new System.Windows.Forms.TextBox();
             this.txtCollegeName = new System.Windows.Forms.TextBox();
             this.txtCollegeID = new System.Windows.Forms.TextBox();
             this.lblContactNumber = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblCollegeId = new System.Windows.Forms.Label();
-            this.lblCollegeTotalSeats = new System.Windows.Forms.Label();
             this.lblCollegeName = new System.Windows.Forms.Label();
             this.lblCollegeDetails = new System.Windows.Forms.Label();
             this.tlsAddCollege = new System.Windows.Forms.ToolStrip();
@@ -61,13 +59,11 @@
             this.pnlCollegeDetails.Controls.Add(this.lblMessage);
             this.pnlCollegeDetails.Controls.Add(this.txtAddress);
             this.pnlCollegeDetails.Controls.Add(this.txtContactNumber);
-            this.pnlCollegeDetails.Controls.Add(this.txtTotalSeat);
             this.pnlCollegeDetails.Controls.Add(this.txtCollegeName);
             this.pnlCollegeDetails.Controls.Add(this.txtCollegeID);
             this.pnlCollegeDetails.Controls.Add(this.lblContactNumber);
             this.pnlCollegeDetails.Controls.Add(this.lblAddress);
             this.pnlCollegeDetails.Controls.Add(this.lblCollegeId);
-            this.pnlCollegeDetails.Controls.Add(this.lblCollegeTotalSeats);
             this.pnlCollegeDetails.Controls.Add(this.lblCollegeName);
             this.pnlCollegeDetails.Controls.Add(this.lblCollegeDetails);
             this.pnlCollegeDetails.Location = new System.Drawing.Point(5, 28);
@@ -86,7 +82,7 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(195, 317);
+            this.txtAddress.Location = new System.Drawing.Point(196, 279);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(176, 68);
@@ -94,17 +90,10 @@
             // 
             // txtContactNumber
             // 
-            this.txtContactNumber.Location = new System.Drawing.Point(195, 259);
+            this.txtContactNumber.Location = new System.Drawing.Point(196, 219);
             this.txtContactNumber.Name = "txtContactNumber";
             this.txtContactNumber.Size = new System.Drawing.Size(176, 20);
             this.txtContactNumber.TabIndex = 9;
-            // 
-            // txtTotalSeat
-            // 
-            this.txtTotalSeat.Location = new System.Drawing.Point(195, 208);
-            this.txtTotalSeat.Name = "txtTotalSeat";
-            this.txtTotalSeat.Size = new System.Drawing.Size(176, 20);
-            this.txtTotalSeat.TabIndex = 8;
             // 
             // txtCollegeName
             // 
@@ -124,7 +113,7 @@
             // 
             this.lblContactNumber.AutoSize = true;
             this.lblContactNumber.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContactNumber.Location = new System.Drawing.Point(30, 262);
+            this.lblContactNumber.Location = new System.Drawing.Point(30, 219);
             this.lblContactNumber.Name = "lblContactNumber";
             this.lblContactNumber.Size = new System.Drawing.Size(160, 17);
             this.lblContactNumber.TabIndex = 5;
@@ -134,11 +123,12 @@
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(30, 317);
+            this.lblAddress.Location = new System.Drawing.Point(30, 279);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(207, 17);
+            this.lblAddress.Size = new System.Drawing.Size(175, 17);
             this.lblAddress.TabIndex = 4;
-            this.lblAddress.Text = "ADDRESS                                :";
+            this.lblAddress.Text = "ADDRESS                        :";
+            this.lblAddress.Click += new System.EventHandler(this.lblAddress_Click);
             // 
             // lblCollegeId
             // 
@@ -149,16 +139,6 @@
             this.lblCollegeId.Size = new System.Drawing.Size(200, 17);
             this.lblCollegeId.TabIndex = 3;
             this.lblCollegeId.Text = "COLLEGE ID                         :";
-            // 
-            // lblCollegeTotalSeats
-            // 
-            this.lblCollegeTotalSeats.AutoSize = true;
-            this.lblCollegeTotalSeats.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCollegeTotalSeats.Location = new System.Drawing.Point(30, 208);
-            this.lblCollegeTotalSeats.Name = "lblCollegeTotalSeats";
-            this.lblCollegeTotalSeats.Size = new System.Drawing.Size(196, 17);
-            this.lblCollegeTotalSeats.TabIndex = 2;
-            this.lblCollegeTotalSeats.Text = "TOTAL SEATS                      :";
             // 
             // lblCollegeName
             // 
@@ -300,13 +280,11 @@
         private System.Windows.Forms.Panel pnlCollegeDetails;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtContactNumber;
-        private System.Windows.Forms.TextBox txtTotalSeat;
         private System.Windows.Forms.TextBox txtCollegeName;
         private System.Windows.Forms.TextBox txtCollegeID;
         private System.Windows.Forms.Label lblContactNumber;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblCollegeId;
-        private System.Windows.Forms.Label lblCollegeTotalSeats;
         private System.Windows.Forms.Label lblCollegeName;
         private System.Windows.Forms.Label lblCollegeDetails;
         private System.Windows.Forms.ToolStrip tlsAddCollege;
