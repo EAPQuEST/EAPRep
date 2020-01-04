@@ -546,14 +546,14 @@ namespace DataServiceLayer.DataLayer
             SqlCommand cmd = null;
             try
             {
-               
-                string sqlnested = "select course_id from course_details where course_name='" + collegeDetails.CourseName + "'";
-                string s = "select college_id from college_details where college_name'" + collegeDetails.CollegeName + "'";
-                sql = "update college_coures set ";
+
+                string sqlnested = "(select college_id from college_details where college_name = '" + collegeDetails.CollegeName + "')";
+                string s = "(select course_id from course_details where course_name = '" + collegeDetails.CourseName + "')";
+                sql = "insert into college_coures(collegeid, courseid) values";
 
 
-                sql = sql + "(" + sqlnested + ")";
-                sql = sql + "where college_id = '" + s + "'";
+                sql = sql + "(" + sqlnested + "," + s + ")";
+            
 
                 con = DatabaseHelper.GetConnection();
                 con.Open();

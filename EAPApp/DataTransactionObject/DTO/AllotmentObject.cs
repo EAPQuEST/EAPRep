@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataTransactionObject.DTO
 {
-    class AllotmentObject
+    public class AllotmentObject
     {
         private int generalSeats;
 
