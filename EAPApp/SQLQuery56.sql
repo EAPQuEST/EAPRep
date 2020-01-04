@@ -1,0 +1,1 @@
+﻿select candidate_id,college_id,course_id,reservation from new1allotment where status='Alloted'

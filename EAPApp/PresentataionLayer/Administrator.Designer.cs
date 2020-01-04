@@ -36,7 +36,6 @@
             this.deleteCollegeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnGenerateAllotment = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,8 +60,9 @@
             // viewAllottedListToolStripMenuItem
             // 
             this.viewAllottedListToolStripMenuItem.Name = "viewAllottedListToolStripMenuItem";
-            this.viewAllottedListToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
-            this.viewAllottedListToolStripMenuItem.Text = "Allotted List";
+            this.viewAllottedListToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
+            this.viewAllottedListToolStripMenuItem.Text = "Allottment Process";
+            this.viewAllottedListToolStripMenuItem.Click += new System.EventHandler(this.viewAllottedListToolStripMenuItem_Click);
             // 
             // addCollegeToolStripMenuItem
             // 
@@ -103,16 +103,6 @@
             this.deleteCourseToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.deleteCourseToolStripMenuItem.Text = "Delete Course";
             // 
-            // btnGenerateAllotment
-            // 
-            this.btnGenerateAllotment.Location = new System.Drawing.Point(359, 202);
-            this.btnGenerateAllotment.Name = "btnGenerateAllotment";
-            this.btnGenerateAllotment.Size = new System.Drawing.Size(224, 78);
-            this.btnGenerateAllotment.TabIndex = 2;
-            this.btnGenerateAllotment.Text = "Generate Allotment";
-            this.btnGenerateAllotment.UseVisualStyleBackColor = true;
-            this.btnGenerateAllotment.Click += new System.EventHandler(this.btnGenerateAllotment_Click);
-            // 
             // Administrator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,7 +110,6 @@
             this.BackgroundImage = global::PresentataionLayer.Properties.Resources.thA3H5LBHN;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(957, 600);
-            this.Controls.Add(this.btnGenerateAllotment);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.IsMdiContainer = true;
@@ -145,6 +134,5 @@
         private System.Windows.Forms.ToolStripMenuItem deleteCollegeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addCourseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteCourseToolStripMenuItem;
-        private System.Windows.Forms.Button btnGenerateAllotment;
     }
 }

@@ -33,8 +33,10 @@ namespace PresentataionLayer
 
             try
             {
+                //string userId = LoginInfo.userID;
 
                 candidateDetails = new CandidateDetails();
+                
                 candidateDetails.Reservation = comboBoxReservation.Text.ToString();
                 candidateDetails.CandidateSchoolName10 = cmb10thSchoolName.Text;
                 candidateDetails.Candidatemark10 = Convert.ToInt32(txt10thMark.Text);
@@ -94,6 +96,8 @@ namespace PresentataionLayer
         private void CandidateEducationalDetails_Load(object sender, EventArgs e)
         {
 
+            LoadDetailstoForm();
+
         }
         //private int comboReservationText;
 
@@ -106,6 +110,45 @@ namespace PresentataionLayer
         private void comboBoxReservation_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+
         }
+        private void LoadDetailstoForm()
+        {
+            //CandidateEducationalDetails loadForm = new CandidateEducationalDetails();
+            CandidateDetails candidateDetails = null;
+            try
+            {
+                candidateDetails = new CandidateDetails();
+
+                candidateDetails=EapBL.LoadCandidateDetails();
+
+                comboBoxReservation.Text = candidateDetails.Reservation;
+                cmb10thSchoolName.Text = candidateDetails.CandidateSchoolName10;
+                txt10thMark.Text = candidateDetails.Candidatemark10.ToString();
+                cmb12thSchoolName.Text = candidateDetails.CandidateSchoolName12;
+                txt12thMark.Text = candidateDetails.Candidatemark12.ToString();
+                txtChemistry.Text = candidateDetails.CandidateChemistry.ToString();
+                txtPhysics.Text = candidateDetails.CandidateChemistry.ToString();
+                txtMaths.Text = candidateDetails.CandidateMaths.ToString();
+
+                txtMaths.ReadOnly = true;
+                txtPhysics.ReadOnly = true;
+                txtChemistry.ReadOnly = true;
+                txt10thMark.ReadOnly = true;
+                txt12thMark.ReadOnly = true;
+
+                cmb10thSchoolName.Enabled = false;
+                cmb12thSchoolName.Enabled = false;
+                comboBoxReservation.Enabled = false;
+
+
+            }
+            catch (Exception ex)
+            {
+                lblMessage.Text = ex.Message.ToString();
+            }
+        }
+
+
     }
 }

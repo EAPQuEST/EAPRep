@@ -485,8 +485,8 @@ namespace DataServiceLayer.DataLayer
             return dtLogin;
         }
 
-            public static DataSet LoadCollegePreference(string collegeName)
-            {
+        public static DataSet LoadCollegePreference(string collegeName)
+        {
                 string sql = "";
                 string nestedsql;
                 SqlConnection con = null;
@@ -526,8 +526,139 @@ namespace DataServiceLayer.DataLayer
 
                 return dsPreference;
 
+        }
+        public static CandidateDetails LoadCandidateDetails()
+        {
+            string sql = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            DataSet dsCandidate = null;
+            CandidateDetails candidateDetails = null;
+            int count = 0;
+
+            try
+            {
+                sql ="select * from candidate_details where candidate_id='"+LoginInfo.userID+"'";
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                dsCandidate = new DataSet();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dsCandidate);
+                Object[] Data = null;
+                count = dsCandidate.Tables[0].Rows.Count;
+                if (count>0)
+                {
+                    Data = dsCandidate.Tables[0].Rows[0].ItemArray;
+                    candidateDetails = new CandidateDetails();
+                    candidateDetails.CandidateSchoolName10 = Data[0].ToString();
+                    candidateDetails.Candidatemark10 = Convert.ToInt32(Data[1].ToString());
+                    candidateDetails.CandidateSchoolName12 = Data[2].ToString();
+                    candidateDetails.Candidatemark12 = Convert.ToInt32(Data[3].ToString());
+                    candidateDetails.CandidatePhysics = Convert.ToInt32(Data[4].ToString());
+                    candidateDetails.CandidateChemistry = Convert.ToInt32(Data[5].ToString());
+                    candidateDetails.CandidateMaths = Convert.ToInt32(Data[6].ToString());
+                    candidateDetails.CandidateId = Data[7].ToString();
+                    candidateDetails.Reservation = Data[8].ToString();
+                    
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:GetCollegeDetailsUsingId()", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
             }
 
+
+
+            return candidateDetails;
+
         }
+
+
+        public static CandidateDetails ViewAllotmentResult()
+        {
+            string sql1 = "";
+            string sql2 = "";
+            string sql3 = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter1 = null;
+            SqlDataAdapter adapter2 = null;
+            SqlDataAdapter adapter3 = null;
+            DataSet dsCandidate = null;
+            DataSet dsCandidate2 = null;
+            DataSet dsCandidate3 = null;
+            CandidateDetails candidateDetails = null;
+            int count = 0;
+
+            try
+            {
+                sql1 = "select college_id,course_id from new1allotment where candidate_id='" + LoginInfo.userID + "' and status='Alloted'";
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                
+                adapter1 = new SqlDataAdapter(sql1, con);
+                dsCandidate = new DataSet();
+                adapter1.Fill(dsCandidate);
+                Object[] Data = null;
+                Object[] Data2 = null;
+                Object[] Data3 = null;
+                count = dsCandidate.Tables[0].Rows.Count;
+                if (count > 0)
+                {
+                    candidateDetails = new CandidateDetails();
+                    
+                    Data = dsCandidate.Tables[0].Rows[0].ItemArray;
+                    candidateDetails.College_ID = Data[0].ToString();
+                    candidateDetails.Course_ID = Data[1].ToString();
+
+                    sql2 = "select college_name from college_details where college_id='"+candidateDetails.College_ID+ "'";
+                    dsCandidate2 = new DataSet();
+                    adapter2 = new SqlDataAdapter(sql2, con);
+                    adapter2.Fill(dsCandidate2);
+                   
+                    Data2 = dsCandidate2.Tables[0].Rows[0].ItemArray;
+
+                    candidateDetails.College_Name = Data2[0].ToString();
+
+                   
+
+                    sql3 = "select course_name from course_details where course_id='"+candidateDetails.Course_ID+"'";
+                    dsCandidate3 = new DataSet();
+                    adapter3 = new SqlDataAdapter(sql3, con);
+                    adapter3.Fill(dsCandidate3);
+                    Data3 = dsCandidate3.Tables[0].Rows[0].ItemArray;
+
+                    candidateDetails.Course_Name = Data3[0].ToString();
+
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:ViewAllotmentResult()", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter1.Dispose();
+                adapter2.Dispose();
+                adapter3.Dispose();
+            }
+
+
+
+            return candidateDetails;
+
+        }
+
+
+    }
     }
 

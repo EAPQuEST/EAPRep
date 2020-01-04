@@ -259,6 +259,51 @@ namespace BusinessLayer.BL
             return dsData;
 
         }
+        public static CandidateDetails LoadCandidateDetails()
+        {
+           
+            CandidateDetails candidateDetails = null;
 
+            try
+            {
+
+                candidateDetails = EapDSL.LoadCandidateDetails();
+
+
+                
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:LoadCandidateDetails()", ex.Message.ToString());
+            }
+            
+
+
+            return candidateDetails;
+
+        }
+
+
+        public static CandidateDetails ViewAllotmentResult()
+        {
+            CandidateDetails candidateDetails = null;
+
+            try
+            {
+                candidateDetails = EapDSL.ViewAllotmentResult();
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:ViewAllotmentResult()", ex.Message.ToString());
+            }
+          
+
+
+
+            return candidateDetails;
+
+        }
     }
 }

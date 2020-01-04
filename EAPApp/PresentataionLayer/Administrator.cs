@@ -69,17 +69,15 @@ namespace PresentataionLayer
             //string collegeId = string.Empty;
             //string courseId = string.Empty;
             //int seatNumber = 0;
-            int output = 0;
-            output = EapBLAllotment.FetchByRow();
-            if(output>0)
-            {
-                MessageBox.Show("Allottment Successfull");
-            }
-            else
-            {
-                MessageBox.Show("Try Again");
-            }
+            
            
+        }
+
+        private void viewAllottedListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AllotmentProcessWindow allotmentProcessWindow = new AllotmentProcessWindow();
+            this.Hide();
+            allotmentProcessWindow.Show();
         }
     }
 }

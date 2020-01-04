@@ -73,7 +73,6 @@
             this.cmbCoursePreference12 = new System.Windows.Forms.ComboBox();
             this.cmbCoursePreference11 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.btnView = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -388,6 +387,7 @@
             this.cmbCollegePreference3.Size = new System.Drawing.Size(245, 21);
             this.cmbCollegePreference3.TabIndex = 117;
             this.cmbCollegePreference3.Text = "Not Selected";
+            this.cmbCollegePreference3.SelectedIndexChanged += new System.EventHandler(this.cmbCollegePreference3_SelectedIndexChanged);
             // 
             // cmbCollegePreference2
             // 
@@ -440,6 +440,7 @@
             this.cmbCollegePreference2.Size = new System.Drawing.Size(245, 21);
             this.cmbCollegePreference2.TabIndex = 116;
             this.cmbCollegePreference2.Text = "Not Selected";
+            this.cmbCollegePreference2.SelectedIndexChanged += new System.EventHandler(this.cmbCollegePreference2_SelectedIndexChanged);
             // 
             // lblPreference1
             // 
@@ -684,26 +685,11 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // btnView
-            // 
-            this.btnView.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnView.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnView.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnView.Location = new System.Drawing.Point(523, 555);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(124, 42);
-            this.btnView.TabIndex = 122;
-            this.btnView.Text = "VIEW";
-            this.btnView.UseVisualStyleBackColor = false;
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
-            // 
             // CandidateEntrance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(828, 606);
-            this.Controls.Add(this.btnView);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -772,6 +758,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnView;
     }
 }

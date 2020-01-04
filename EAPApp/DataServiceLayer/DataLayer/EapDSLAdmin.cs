@@ -549,8 +549,37 @@ namespace DataServiceLayer.DataLayer
             return output;
 
         }
-        
 
+
+
+        public static DataSet GetStudents()
+        {
+            string sql = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            DataSet dsStudents = null;
+
+            try
+            {
+                sql = "select candidate_id,college_id,course_id,reservation from new1allotment where status='Alloted'";
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                dsStudents = new DataSet();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dsStudents);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSLAdmin.cs:GetStudents", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+            return dsStudents;
+        }
 
 
 

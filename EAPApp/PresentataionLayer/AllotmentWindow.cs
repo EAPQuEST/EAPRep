@@ -299,8 +299,8 @@ namespace PresentataionLayer
                 {
                     MessageBox.Show("Login successfully");
                     this.Hide();
-                    CandidateEducationalDetails candidateEducationalDetails = new CandidateEducationalDetails();
-                    candidateEducationalDetails.Show();
+                    Candidate candidate = new Candidate();
+                    candidate.Show();
 
                 }
                 else

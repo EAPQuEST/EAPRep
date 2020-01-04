@@ -231,6 +231,26 @@ namespace BusinessLayer.BL
             return output;
 
         }
-        
+
+
+
+        public static DataSet GetStudents()
+        {
+            string sql = "";
+
+            DataSet dsStudents = null;
+
+            try
+            {
+                dsStudents = EapDSLAdmin.GetStudents();
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSLAdmin.cs:GetStudents", ex.Message.ToString());
+            }
+
+            return dsStudents;
+        }
+
     }
 }

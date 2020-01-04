@@ -169,7 +169,6 @@
             this.txtCandidatePassword.Size = new System.Drawing.Size(232, 28);
             this.txtCandidatePassword.TabIndex = 1;
             this.txtCandidatePassword.Text = "Password";
-            //this.txtCandidatePassword.TextChanged += new System.EventHandler(this.txtCandidatePassword_TextChanged);
             this.txtCandidatePassword.MouseEnter += new System.EventHandler(this.txtCandidatePassword_MouseEnter);
             this.txtCandidatePassword.MouseLeave += new System.EventHandler(this.txtCandidatePassword_MouseLeave);
             // 
@@ -185,7 +184,6 @@
             this.txtCandidateUsername.Text = "Username";
             this.txtCandidateUsername.MouseEnter += new System.EventHandler(this.txtCandidateUsername_MouseEnter);
             this.txtCandidateUsername.MouseLeave += new System.EventHandler(this.txtCandidateUsername_MouseLeave);
-            //this.txtCandidateUsername.Validating += new System.ComponentModel.CancelEventHandler(this.txtCandidateUsername_Validating);
             // 
             // toolStrip1
             // 
@@ -219,7 +217,7 @@
             this.btnCandidateSignIn.Name = "btnCandidateSignIn";
             this.btnCandidateSignIn.Size = new System.Drawing.Size(114, 33);
             this.btnCandidateSignIn.TabIndex = 2;
-            this.btnCandidateSignIn.Text = "Sign In";
+            this.btnCandidateSignIn.Text = "Sign Up";
             this.btnCandidateSignIn.UseVisualStyleBackColor = false;
             this.btnCandidateSignIn.Click += new System.EventHandler(this.btnNewUser1_Click);
             // 
