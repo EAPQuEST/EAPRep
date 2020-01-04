@@ -97,7 +97,7 @@
             this.panel1.Controls.Add(this.lblRegisterNumber);
             this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(814, 240);
+            this.panel1.Size = new System.Drawing.Size(814, 253);
             this.panel1.TabIndex = 1;
             // 
             // label6
@@ -288,9 +288,9 @@
             this.panel2.Controls.Add(this.lblPreference1);
             this.panel2.Controls.Add(this.cmbCollegePreference1);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Location = new System.Drawing.Point(3, 274);
+            this.panel2.Location = new System.Drawing.Point(3, 297);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(406, 275);
+            this.panel2.Size = new System.Drawing.Size(406, 252);
             this.panel2.TabIndex = 71;
             // 
             // lblPreference2
@@ -541,9 +541,9 @@
             this.panel3.Controls.Add(this.cmbCoursePreference12);
             this.panel3.Controls.Add(this.cmbCoursePreference11);
             this.panel3.Controls.Add(this.button3);
-            this.panel3.Location = new System.Drawing.Point(407, 274);
+            this.panel3.Location = new System.Drawing.Point(411, 297);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(407, 275);
+            this.panel3.Size = new System.Drawing.Size(403, 252);
             this.panel3.TabIndex = 72;
             // 
             // label8

@@ -1,0 +1,1 @@
+﻿update new1allotment set status='WL'

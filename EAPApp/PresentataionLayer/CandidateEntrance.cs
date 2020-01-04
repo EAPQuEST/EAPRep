@@ -46,6 +46,7 @@ namespace PresentataionLayer
         {
 
             int output = 0;
+            int outputAllotment = 0;
             int outputentrance = 0;
 
             try
@@ -55,7 +56,9 @@ namespace PresentataionLayer
                 candidateDetails.EntranceRank = Convert.ToInt32(txtRank.Text);
                 candidateDetails.EntranceScienceMark = Convert.ToInt32(txtScienceMark.Text);
                 candidateDetails.EntranceMathsMark = Convert.ToInt32(txtMathsMark.Text);
-
+                //CandidateEducationalDetails cd = new CandidateEducationalDetails();
+           
+                
                 candidateDetails.Collegeprefernce1 = cmbCollegePreference1.Text;
                 candidateDetails.Collegeprefernce2 = cmbCollegePreference2.Text;
                 candidateDetails.CollegePrefernce3 = cmbCollegePreference3.Text;
@@ -69,9 +72,11 @@ namespace PresentataionLayer
                 candidateDetails.CollegeCourse32 = cmbCoursePreference32.Text;
                 candidateDetails.CollegeCourse33 = cmbCoursePreference33.Text;
 
-
-                output = EapBL.StudentCoursePreferenceInsert(candidateDetails);
+                outputAllotment = EapBLAdmin.GenerateAllotment(candidateDetails);
                 outputentrance = EapBL.StudentDetailsInsert(candidateDetails);
+                output = EapBL.StudentCoursePreferenceInsert(candidateDetails);
+                
+               
                 if (output > 0 && outputentrance > 0)
                 {
                     lblMessage.Text = "Successfully added";
@@ -109,26 +114,15 @@ namespace PresentataionLayer
         public void LoadCoursePreference()
         {
 
-            CollegeDetails collegeDetails = null;
+            //CollegeDetails collegeDetails = null;
             DataSet dsCoursePreference = new DataSet();
             try
             {
-                collegeDetails = EapBL.LoadCollegePreference(cmbCollegePreference1.Text);
-                if (collegeDetails != null)
+                dsCoursePreference = EapBL.LoadCollegePreference(cmbCollegePreference1.SelectedValue.ToString());
+                if (dsCoursePreference != null)
                 {
 
-                    //for (int i = 0; i < dsCoursePreference.Tables[0].Rows.Count; i++)
-                    //{
-                    //    var item = dsCoursePreference.Tables[0].Rows[i]["course_name"].ToString();
-                    //    //for (int j = 0; j < clbCoursesAvailable.Items.Count; j++)
-                    //    //{
-                    //    //    if (clbCoursesAvailable.Items[j].ToString() == item)
-                    //    //    {
-                    //    //        clbCoursesAvailable.SetItemChecked(j, true);
-                    //    //        break;
-                    //    //    }
-                    //    //}
-                    //}
+                   
                     cmbCoursePreference11.DataSource = dsCoursePreference.Tables[0];
                     cmbCoursePreference11.ValueMember = "course_name";
                     cmbCoursePreference11.DisplayMember = "course_name";
@@ -144,8 +138,19 @@ namespace PresentataionLayer
 
         private void cmbCollegePreference1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string selectedValue = cmbCollegePreference1.SelectedValue.ToString();
+
+            ComboBox cmb = (ComboBox)sender;
+            int selectedIndex = cmb.SelectedIndex;
+           // string selectedValue = (string)cmb.SelectedValue;
+
+          //  ComboboxItem selectedCar = (ComboboxItem)cmb.SelectedItem;
+            MessageBox.Show(String.Format("Index: [{0}]  Value={1}", selectedIndex, selectedValue));
+       // }
+
+
             LoadCoursePreference();
-        }
+    }
 
         private void CandidateEntrance_Load(object sender, EventArgs e)
         {
@@ -162,7 +167,7 @@ namespace PresentataionLayer
                 {
                     
                    cmbCollegePreference1.DataSource = dsCollegeName.Tables[0];
-                    cmbCollegePreference1.ValueMember = "college_name";
+                    cmbCollegePreference1.ValueMember = "college_id";
                     cmbCollegePreference1.DisplayMember = "college_name";
                 }
 

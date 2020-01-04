@@ -241,13 +241,13 @@ namespace BusinessLayer.BL
             return dtLogin;
 
         }
-        public static CollegeDetails LoadCollegePreference(string collegeName)
+        public static DataSet LoadCollegePreference(string collegeName)
         {
-            CollegeDetails collegeDetails = null;
+            DataSet dsData = null;
 
             try
             {
-                collegeDetails = EapDSL.LoadCollegePreference(collegeName);
+                dsData = EapDSL.LoadCollegePreference(collegeName);
 
             }
             catch (Exception ex)
@@ -256,7 +256,7 @@ namespace BusinessLayer.BL
             }
            
 
-            return collegeDetails;
+            return dsData;
 
         }
 

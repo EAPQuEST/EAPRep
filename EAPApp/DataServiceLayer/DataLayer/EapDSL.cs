@@ -93,17 +93,18 @@ namespace DataServiceLayer.DataLayer
             SqlCommand cmd = null;
             try
             {
-                sql = "insert into candidate_details (candidate_10th_school,candidate_10th_percentage,candidate_12th_school,candidate_12th_percentage," +
-                    "candiate_physics,candiate_chemistry,candiate_maths) values(";
-              
+                sql = "insert into candidate_details (candidate_id,candidate_10th_school,candidate_10th_percentage,candidate_12th_school,candidate_12th_percentage," +
+                    "candiate_physics,candiate_chemistry,candiate_maths,reservation) values(";
+                sql = sql + "'" + LoginInfo.userID + "',";
                 sql = sql + "'" + candidateDetails.CandidateSchoolName10 + "',";
                 sql = sql  + candidateDetails.Candidatemark10 + ",";
                 sql = sql + "'" + candidateDetails.CandidateSchoolName12 + "',";
                 sql = sql  + candidateDetails.Candidatemark12 + ",";
                 sql = sql + candidateDetails.CandidatePhysics + ",";
                 sql = sql  + candidateDetails.CandidateChemistry + ",";
-                sql = sql  + candidateDetails.CandidateMaths + ")";
-              
+                sql = sql  + candidateDetails.CandidateMaths + ",";
+                sql = sql + "'" + candidateDetails.Reservation + "')";
+
 
                 con = DatabaseHelper.GetConnection();
                 con.Open();
@@ -461,7 +462,7 @@ namespace DataServiceLayer.DataLayer
             try
             {
                 //sql = "select count(*) as cnt from login_database"
-                sql = "select candidate_id,candidate_dob from candidate_registration where candidate_id='" + user + "'and candidate_dob='" + password + "'";
+                sql = "select candidate_id,candidate_dob from candidate_registration where candidate_id='" + user + "'and candidate_DOB='" + password + "'";
                 con = DatabaseHelper.GetConnection();
                 con.Open();
                 //dsLogin = new DataSet();
@@ -484,23 +485,27 @@ namespace DataServiceLayer.DataLayer
             return dtLogin;
         }
 
-            public static CollegeDetails LoadCollegePreference(string collegeName)
+            public static DataSet LoadCollegePreference(string collegeName)
             {
                 string sql = "";
                 string nestedsql;
                 SqlConnection con = null;
                 SqlDataAdapter adapter = null;
                 DataSet dsPreference = null;
-                CollegeDetails collegeDetails = null;
+                //CollegeDetails collegeDetails = null;
 
 
             try
             {
-                    string sql1="select college_id from college_details where college_name='" + collegeName + "'";
-                    nestedsql = "select courseid from college_coures where collegeid=";
-                    nestedsql = nestedsql + "(" + sql1 + ")";
-                    sql = "select course_name from course_details where course_id=";
-                    sql=sql + "(" + nestedsql + ")";
+                //select course_name from course_details where course_id IN(SELECT  college_coures.courseid
+                //   FROM college_coures
+                //  WHERE collegeid = 'jtmgm')
+                //string sql1="select college_id from college_details where college_name='" + collegeName + "'";
+                //nestedsql = "select courseid from college_coures where collegeid=";
+                //nestedsql = nestedsql + "(" + sql1 + ")";
+                //sql = "select course_name from course_details where course_id=";
+                //sql=sql + "(" + nestedsql + ")";
+                    sql = "select course_name from course_details where course_id IN(SELECT  college_coures.courseid FROM college_coures WHERE collegeid ='" + collegeName + "')";
                     con = DatabaseHelper.GetConnection();
                     con.Open();
                     dsPreference = new DataSet();
@@ -519,7 +524,7 @@ namespace DataServiceLayer.DataLayer
                     adapter.Dispose();
                 }
 
-                return collegeDetails;
+                return dsPreference;
 
             }
 

@@ -291,11 +291,11 @@ namespace PresentataionLayer
             DataTable dtLogin = null;
             //if (dsLogin.Rows[0][0].ToString() == "1")
             try
-            { 
+            {
 
                 dtLogin = EapBL.CandidateLogin(username, password);
                 //if (dtLogin.Rows[0][0].ToString() == "1")
-                if(dtLogin.Rows.Count>0)
+                if (dtLogin.Rows.Count > 0)
                 {
                     MessageBox.Show("Login successfully");
                     this.Hide();
@@ -317,7 +317,7 @@ namespace PresentataionLayer
 
 
 
-            
+
 
         }
         //Candidate Login

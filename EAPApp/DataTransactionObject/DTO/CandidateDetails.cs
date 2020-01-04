@@ -255,5 +255,23 @@ namespace DataTransactionObject.DTO
             set { entranceMathsMark = value; }
         }
 
+        private int total;
+
+        public int Total
+        {
+            get { return total; }
+            set { total = value; }
+        }
+
+        private string reservation;
+
+        public string Reservation
+        {
+            get { return reservation; }
+            set { reservation = value; }
+        }
+
+
+
     }
 }

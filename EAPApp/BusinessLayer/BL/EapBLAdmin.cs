@@ -190,5 +190,47 @@ namespace BusinessLayer.BL
            
             return dsCollegeName;
         }
+
+
+        public static int GenerateAllotment(CandidateDetails candidateDetails)
+        {
+            int output = 0;
+            string sql = "";
+
+            try
+            {
+               
+                candidateDetails.Total = candidateDetails.CandidatePhysics + candidateDetails.CandidateChemistry + candidateDetails.CandidateMaths+candidateDetails.EntranceScienceMark+candidateDetails.EntranceMathsMark;
+                output = EapDSLAdmin.GenerateAllotment(candidateDetails);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBLAdmin.cs:GenerateAllotment()", ex.Message.ToString());
+            }
+           
+            return output;
+        }
+
+        public static int AllotStudents()
+        {
+            
+            int output = 0;
+            
+            try
+            {
+                output = EapDSLAdmin.AllotStudents();
+            }
+
+
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBLAdmin.cs.cs:AllotStudents", ex.Message.ToString());
+            }
+           
+            return output;
+
+        }
+        
     }
 }

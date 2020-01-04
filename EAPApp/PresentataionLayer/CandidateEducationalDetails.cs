@@ -35,6 +35,7 @@ namespace PresentataionLayer
             {
 
                 candidateDetails = new CandidateDetails();
+                candidateDetails.Reservation = comboBoxReservation.Text.ToString();
                 candidateDetails.CandidateSchoolName10 = cmb10thSchoolName.Text;
                 candidateDetails.Candidatemark10 = Convert.ToInt32(txt10thMark.Text);
                 candidateDetails.CandidateSchoolName12 = cmb12thSchoolName.Text;
@@ -91,6 +92,18 @@ namespace PresentataionLayer
         }
 
         private void CandidateEducationalDetails_Load(object sender, EventArgs e)
+        {
+
+        }
+        //private int comboReservationText;
+
+        //public int ComboReservationText
+        //{
+        //    get { return comboBoxReservation.Text.ToString(); }
+        //    set { comboReservationText = value; }
+        //}
+
+        private void comboBoxReservation_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

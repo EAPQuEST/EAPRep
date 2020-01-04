@@ -81,6 +81,7 @@
   <ItemGroup>
     <Compile Include="DataLayer\EapDSL.cs" />
     <Compile Include="DataLayer\EapDSLAdmin.cs" />
+    <Compile Include="DataLayer\EapDSLAllotment.cs" />
     <Compile Include="DataLayer\EapDSLCollege.cs" />
     <Compile Include="Helper\DatabaseHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

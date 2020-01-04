@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="BL\EapBL.cs" />
     <Compile Include="BL\EapBLAdmin.cs" />
+    <Compile Include="BL\EapBLAllotment.cs" />
     <Compile Include="BL\EapBLCollege.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

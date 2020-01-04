@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CandidateEducationalDetails));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxReservation = new System.Windows.Forms.ComboBox();
+            this.lblReservation = new System.Windows.Forms.Label();
             this.lblUserId = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -68,6 +70,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.comboBoxReservation);
+            this.panel1.Controls.Add(this.lblReservation);
             this.panel1.Controls.Add(this.lblUserId);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
@@ -101,6 +105,29 @@
             this.panel1.Size = new System.Drawing.Size(800, 507);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // comboBoxReservation
+            // 
+            this.comboBoxReservation.FormattingEnabled = true;
+            this.comboBoxReservation.Items.AddRange(new object[] {
+            "OBC",
+            "General",
+            "SC/ST",
+            "Sport"});
+            this.comboBoxReservation.Location = new System.Drawing.Point(190, 53);
+            this.comboBoxReservation.Name = "comboBoxReservation";
+            this.comboBoxReservation.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxReservation.TabIndex = 80;
+            this.comboBoxReservation.SelectedIndexChanged += new System.EventHandler(this.comboBoxReservation_SelectedIndexChanged);
+            // 
+            // lblReservation
+            // 
+            this.lblReservation.AutoSize = true;
+            this.lblReservation.Location = new System.Drawing.Point(49, 53);
+            this.lblReservation.Name = "lblReservation";
+            this.lblReservation.Size = new System.Drawing.Size(64, 13);
+            this.lblReservation.TabIndex = 79;
+            this.lblReservation.Text = "Reservation";
             // 
             // lblUserId
             // 
@@ -515,5 +542,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblUserId;
+        private System.Windows.Forms.ComboBox comboBoxReservation;
+        private System.Windows.Forms.Label lblReservation;
     }
 }

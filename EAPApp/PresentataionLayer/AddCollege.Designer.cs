@@ -45,9 +45,9 @@
             this.tlsAddCollege = new System.Windows.Forms.ToolStrip();
             this.tlsBtnHomeAdd = new System.Windows.Forms.ToolStripButton();
             this.pnlCourseDetails = new System.Windows.Forms.Panel();
-            this.lblCourseDetails = new System.Windows.Forms.Label();
-            this.clbCoursesAvailable = new System.Windows.Forms.CheckedListBox();
             this.btnAddCollege = new System.Windows.Forms.Button();
+            this.clbCoursesAvailable = new System.Windows.Forms.CheckedListBox();
+            this.lblCourseDetails = new System.Windows.Forms.Label();
             this.lblCourseAvailable = new System.Windows.Forms.Label();
             this.pnlCollegeDetails.SuspendLayout();
             this.tlsAddCollege.SuspendLayout();
@@ -214,16 +214,18 @@
             this.pnlCourseDetails.Name = "pnlCourseDetails";
             this.pnlCourseDetails.Size = new System.Drawing.Size(427, 406);
             this.pnlCourseDetails.TabIndex = 5;
+            this.pnlCourseDetails.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCourseDetails_Paint);
             // 
-            // lblCourseDetails
+            // btnAddCollege
             // 
-            this.lblCourseDetails.AutoSize = true;
-            this.lblCourseDetails.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourseDetails.Location = new System.Drawing.Point(160, 32);
-            this.lblCourseDetails.Name = "lblCourseDetails";
-            this.lblCourseDetails.Size = new System.Drawing.Size(147, 17);
-            this.lblCourseDetails.TabIndex = 6;
-            this.lblCourseDetails.Text = "COURSE DETAILS";
+            this.btnAddCollege.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCollege.Location = new System.Drawing.Point(280, 352);
+            this.btnAddCollege.Name = "btnAddCollege";
+            this.btnAddCollege.Size = new System.Drawing.Size(131, 33);
+            this.btnAddCollege.TabIndex = 13;
+            this.btnAddCollege.Text = "INSERT";
+            this.btnAddCollege.UseVisualStyleBackColor = true;
+            this.btnAddCollege.Click += new System.EventHandler(this.btnAddCollege_Click);
             // 
             // clbCoursesAvailable
             // 
@@ -250,16 +252,15 @@
             this.clbCoursesAvailable.Size = new System.Drawing.Size(236, 199);
             this.clbCoursesAvailable.TabIndex = 12;
             // 
-            // btnAddCollege
+            // lblCourseDetails
             // 
-            this.btnAddCollege.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCollege.Location = new System.Drawing.Point(280, 352);
-            this.btnAddCollege.Name = "btnAddCollege";
-            this.btnAddCollege.Size = new System.Drawing.Size(131, 33);
-            this.btnAddCollege.TabIndex = 13;
-            this.btnAddCollege.Text = "INSERT";
-            this.btnAddCollege.UseVisualStyleBackColor = true;
-            this.btnAddCollege.Click += new System.EventHandler(this.btnAddCollege_Click);
+            this.lblCourseDetails.AutoSize = true;
+            this.lblCourseDetails.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCourseDetails.Location = new System.Drawing.Point(160, 32);
+            this.lblCourseDetails.Name = "lblCourseDetails";
+            this.lblCourseDetails.Size = new System.Drawing.Size(147, 17);
+            this.lblCourseDetails.TabIndex = 6;
+            this.lblCourseDetails.Text = "COURSE DETAILS";
             // 
             // lblCourseAvailable
             // 

@@ -1,1 +1,2 @@
-﻿select candidate_id from candidate_registration
+﻿update new1allotment set status='WL'
+select * from new1allotment

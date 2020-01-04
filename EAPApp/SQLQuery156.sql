@@ -1,0 +1,1 @@
+﻿select candiate_physics+candiate_chemistry+candiate_maths from candidate_details where candidate_id='601'

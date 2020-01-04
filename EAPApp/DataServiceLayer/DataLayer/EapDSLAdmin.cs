@@ -332,13 +332,14 @@ namespace DataServiceLayer.DataLayer
         public static DataSet GetCollegeName()
         {
             string sql = "";
+            
             SqlConnection con = null;
             SqlDataAdapter adapter = null;
             DataSet dsCollegeName = null;
 
             try
             {
-                sql = "select college_name  from college_details";
+                sql = "select college_name,college_id  from college_details";
                 con = DatabaseHelper.GetConnection();
                 con.Open();
                 dsCollegeName = new DataSet();
@@ -357,5 +358,206 @@ namespace DataServiceLayer.DataLayer
             }
             return dsCollegeName;
         }
+
+        public static int GenerateAllotment(CandidateDetails candidateDetails)
+        {
+            int output = 0;
+            string sql = "";
+            string sql1 = "";
+            string sql2 = "";
+            string sql3 = "";
+            string sql4 = "";
+            string sql5 = "";
+            string sql6 = "";
+            string sql7 = "";
+            string sql8 = "";
+       
+            SqlConnection con = null;
+            SqlCommand cmd = null;
+            SqlCommand cmd1 = null;
+            SqlCommand cmd2 = null;
+            SqlCommand cmd3 = null;
+            SqlCommand cmd4 = null;
+            SqlCommand cmd5 = null;
+            SqlCommand cmd6 = null;
+            SqlCommand cmd7 = null;
+            SqlCommand cmd8 = null;
+
+
+            try
+            {
+                sql = "insert into allotment(candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status) values(";
+                sql = sql + "'" + LoginInfo.userID + "',";
+                sql = sql + "'" + candidateDetails.RegisterNumber + "',";
+                sql = sql + "(select reservation from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql = sql + "(select candiate_physics+candiate_chemistry+candiate_maths+'" + candidateDetails.Total + "'from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql = sql + "(select college_id from college_details where college_name='"+candidateDetails.Collegeprefernce1+"'),"  ;
+                sql = sql + "(select course_id from course_details where course_name='" + candidateDetails.CollegeCourse11 + "'),";
+                sql = sql + "'waitlist')";
+
+
+                sql1 = "insert into allotment(candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status) values(";
+                sql1 = sql1 + "'" + LoginInfo.userID + "',";
+                sql1 = sql1 + "'" + candidateDetails.RegisterNumber + "',";
+                sql1 = sql1 + "(select reservation from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql1 = sql1 + "(select candiate_physics+candiate_chemistry+candiate_maths+'" + candidateDetails.Total + "'from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql1 = sql1 + "(select college_id from college_details where college_name='" + candidateDetails.Collegeprefernce1 + "'),";
+                sql1 = sql1 + "(select course_id from course_details where course_name='" + candidateDetails.CollegeCourse12 + "'),";
+                sql1 = sql1 + "'waitlist')";
+
+                sql2 = "insert into allotment(candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status) values(";
+                 sql2 =  sql2 + "'" + LoginInfo.userID + "',";
+                 sql2 =  sql2 + "'" + candidateDetails.RegisterNumber + "',";
+                sql2 = sql2 + "(select reservation from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql2 = sql2 + "(select candiate_physics+candiate_chemistry+candiate_maths+'" + candidateDetails.Total + "'from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql2 =  sql2 + "(select college_id from college_details where college_name='" + candidateDetails.Collegeprefernce1 + "'),";
+                 sql2 =  sql2 + "(select course_id from course_details where course_name='" + candidateDetails.CollegeCourse13 + "'),";
+                 sql2 = sql2 + "'waitlist')";
+
+                sql3 = "insert into allotment(candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status) values(";
+                sql3 = sql3 + "'" + LoginInfo.userID + "',";
+                sql3 = sql3 + "'" + candidateDetails.RegisterNumber + "',";
+                sql3 = sql3 + "(select reservation from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql3= sql3 + "(select candiate_physics+candiate_chemistry+candiate_maths+'" + candidateDetails.Total + "'from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql3 = sql3 + "(select college_id from college_details where college_name='" + candidateDetails.Collegeprefernce2 + "'),";
+                sql3 = sql3 + "(select course_id from course_details where course_name='" + candidateDetails.CollegeCourse21 + "'),";
+                sql3 = sql3 + "'waitlist')";
+
+                sql4 = "insert into allotment(candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status) values(";
+                sql4 = sql4 + "'" + LoginInfo.userID + "',";
+                sql4 = sql4 + "'" + candidateDetails.RegisterNumber + "',";
+                sql4 = sql4 + "(select reservation from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql4 = sql4 + "(select candiate_physics+candiate_chemistry+candiate_maths+'" + candidateDetails.Total + "'from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql4 = sql4 + "(select college_id from college_details where college_name='" + candidateDetails.Collegeprefernce2 + "'),";
+                sql4 = sql4 + "(select course_id from course_details where course_name='" + candidateDetails.CollegeCourse22 + "'),";
+                sql4 = sql4 + "'waitlist')";
+
+                sql5 = "insert into allotment(candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status) values(";
+                sql5 = sql5 + "'" + LoginInfo.userID + "',";
+                sql5 = sql5 + "'" + candidateDetails.RegisterNumber + "',";
+                sql5 = sql5 + "(select reservation from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql5 = sql5 + "(select candiate_physics+candiate_chemistry+candiate_maths+'" + candidateDetails.Total + "'from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql5 = sql5 + "(select college_id from college_details where college_name='" + candidateDetails.Collegeprefernce2 + "'),";
+                sql5 = sql5 + "(select course_id from course_details where course_name='" + candidateDetails.CollegeCourse23 + "'),";
+                sql5 = sql5 + "'waitlist')";
+
+                sql6 = "insert into allotment(candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status) values(";
+                sql6 = sql6 + "'" + LoginInfo.userID + "',";
+                sql6 = sql6 + "'" + candidateDetails.RegisterNumber + "',";
+                sql6 = sql6 + "(select reservation from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql6 = sql6 + "(select candiate_physics+candiate_chemistry+candiate_maths+'" + candidateDetails.Total + "'from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql6 = sql6 + "(select college_id from college_details where college_name='" + candidateDetails.CollegePrefernce3 + "'),";
+                sql6 = sql6 + "(select course_id from course_details where course_name='" + candidateDetails.CollegeCourse31 + "'),";
+                sql6 = sql6 + "'waitlist')";
+
+                sql7 = "insert into allotment(candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status) values(";
+                sql7 = sql7 + "'" + LoginInfo.userID + "',";
+                sql7 = sql7 + "'" + candidateDetails.RegisterNumber + "',";
+                sql7 = sql7 + "(select reservation from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql7 = sql7 + "(select candiate_physics+candiate_chemistry+candiate_maths+'" + candidateDetails.Total + "'from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql7 = sql7 + "(select college_id from college_details where college_name='" + candidateDetails.CollegePrefernce3 + "'),";
+                sql7 = sql7 + "(select course_id from course_details where course_name='" + candidateDetails.CollegeCourse32 + "'),";
+                sql7 = sql7 + "'waitlist')";
+
+                sql8 = "insert into allotment(candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status) values(";
+                sql8 = sql8 + "'" + LoginInfo.userID + "',";
+                sql8 = sql8 + "'" + candidateDetails.RegisterNumber + "',";
+                sql8 = sql8 + "(select reservation from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql8 = sql8 + "(select candiate_physics+candiate_chemistry+candiate_maths+'" + candidateDetails.Total +"'from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql8 = sql8 + "(select college_id from college_details where college_name='" + candidateDetails.CollegePrefernce3 + "'),";
+                sql8 = sql8 + "(select course_id from course_details where course_name='" + candidateDetails.CollegeCourse33 + "'),";
+                sql8 = sql8 + "'waitlist') ";
+
+               
+
+                
+
+
+
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+                cmd1 = new SqlCommand(sql1, con);
+                cmd2 = new SqlCommand(sql2, con);
+                cmd3 = new SqlCommand(sql3, con);
+                cmd4 = new SqlCommand(sql4, con);
+                cmd5 = new SqlCommand(sql5, con);
+                cmd6 = new SqlCommand(sql6, con);
+                cmd7 = new SqlCommand(sql7, con);
+                cmd8 = new SqlCommand(sql8, con);
+         
+                output = cmd.ExecuteNonQuery();
+                cmd1.ExecuteNonQuery();
+                cmd2.ExecuteNonQuery();
+                cmd3.ExecuteNonQuery();
+                cmd4.ExecuteNonQuery();
+                cmd5.ExecuteNonQuery();
+                cmd6.ExecuteNonQuery();
+                cmd7.ExecuteNonQuery();
+                cmd8.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSLAdmin.cs:GenerateAllotment()", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                cmd.Dispose();
+                cmd1.Dispose();
+                cmd2.Dispose();
+                cmd3.Dispose();
+                cmd4.Dispose();
+                cmd5.Dispose();
+                cmd6.Dispose();
+                cmd7.Dispose();
+                cmd8.Dispose();
+            }
+            return output;
+        }
+
+
+        public static int AllotStudents()
+        {
+            SqlConnection con = null;
+            SqlCommand cmd = null;
+            int output = 0;
+            string sql1 = "";
+            try
+            {
+                //string s = "select candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status from allotment where total_marks >= 200 order by total_marks desc";
+                sql1 = "create table newTable as select * from allotment where total_marks >=200 order by total_marks desc";
+               // sql1 = "insert into viewallotment (candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status) select candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status from allotment where total_marks >=200 order by total_marks desc";
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql1, con);
+
+                output = cmd.ExecuteNonQuery();
+            }
+
+
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSLAdmin.cs:AllotStudents()", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                cmd.Dispose();
+            }
+            return output;
+
+        }
+        
+
+
+
+
+
+
+
+
+
     }
 }
