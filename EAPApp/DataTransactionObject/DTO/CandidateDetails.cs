@@ -223,9 +223,9 @@ namespace DataTransactionObject.DTO
             set { collegeCourse33 = value; }
         }
 
-        private int registerNumber;
+        private string registerNumber;
 
-        public int RegisterNumber
+        public string RegisterNumber
         {
             get { return registerNumber; }
             set { registerNumber = value; }
@@ -312,7 +312,16 @@ namespace DataTransactionObject.DTO
             set { course_Name = value; }
         }
 
-        
+
+        private int count;
+
+        public int Count
+        {
+            get { return count; }
+            set { count = value; }
+        }
+
+
 
 
 

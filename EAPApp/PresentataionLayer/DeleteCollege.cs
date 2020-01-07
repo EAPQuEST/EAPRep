@@ -19,7 +19,7 @@ namespace PresentataionLayer
             InitializeComponent();
             LoadCollegeDetails();
         }
-        private void LoadCollegeDetails()
+        private void LoadCollegeDetails()                                               //To display all the college details
         {
             DataSet dsCollegeDetails = null;
             try
@@ -44,7 +44,7 @@ namespace PresentataionLayer
             }
         }
 
-        private void txtDelete_TextChanged(object sender, EventArgs e)
+        private void txtDelete_TextChanged(object sender, EventArgs e)                          //Delete College
         {
             DataSet dsData = null;
             try

@@ -32,7 +32,9 @@
             this.btnGenerateAllotment = new System.Windows.Forms.Button();
             this.tlsDeleteCollege = new System.Windows.Forms.ToolStrip();
             this.tlsBtnHomeDelete = new System.Windows.Forms.ToolStripButton();
+            this.dgvAllotedTable = new System.Windows.Forms.DataGridView();
             this.tlsDeleteCollege.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllotedTable)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGenerateAllotment
@@ -40,9 +42,9 @@
             this.btnGenerateAllotment.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnGenerateAllotment.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerateAllotment.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.btnGenerateAllotment.Location = new System.Drawing.Point(0, 381);
+            this.btnGenerateAllotment.Location = new System.Drawing.Point(0, 612);
             this.btnGenerateAllotment.Name = "btnGenerateAllotment";
-            this.btnGenerateAllotment.Size = new System.Drawing.Size(800, 69);
+            this.btnGenerateAllotment.Size = new System.Drawing.Size(1264, 69);
             this.btnGenerateAllotment.TabIndex = 3;
             this.btnGenerateAllotment.Text = "Generate Allotment";
             this.btnGenerateAllotment.UseVisualStyleBackColor = true;
@@ -55,7 +57,7 @@
             this.tlsBtnHomeDelete});
             this.tlsDeleteCollege.Location = new System.Drawing.Point(0, 0);
             this.tlsDeleteCollege.Name = "tlsDeleteCollege";
-            this.tlsDeleteCollege.Size = new System.Drawing.Size(800, 25);
+            this.tlsDeleteCollege.Size = new System.Drawing.Size(1264, 25);
             this.tlsDeleteCollege.TabIndex = 10;
             this.tlsDeleteCollege.Text = "toolStrip1";
             // 
@@ -70,17 +72,28 @@
             this.tlsBtnHomeDelete.Text = "Home";
             this.tlsBtnHomeDelete.Click += new System.EventHandler(this.tlsBtnHomeDelete_Click);
             // 
+            // dgvAllotedTable
+            // 
+            this.dgvAllotedTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAllotedTable.Location = new System.Drawing.Point(390, 152);
+            this.dgvAllotedTable.Name = "dgvAllotedTable";
+            this.dgvAllotedTable.Size = new System.Drawing.Size(445, 216);
+            this.dgvAllotedTable.TabIndex = 11;
+            // 
             // AllotmentProcess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.dgvAllotedTable);
             this.Controls.Add(this.tlsDeleteCollege);
             this.Controls.Add(this.btnGenerateAllotment);
             this.Name = "AllotmentProcess";
             this.Text = "AllotmentProcess";
+            this.Load += new System.EventHandler(this.AllotmentProcess_Load);
             this.tlsDeleteCollege.ResumeLayout(false);
             this.tlsDeleteCollege.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllotedTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,5 +104,6 @@
         private System.Windows.Forms.Button btnGenerateAllotment;
         private System.Windows.Forms.ToolStrip tlsDeleteCollege;
         private System.Windows.Forms.ToolStripButton tlsBtnHomeDelete;
+        private System.Windows.Forms.DataGridView dgvAllotedTable;
     }
 }

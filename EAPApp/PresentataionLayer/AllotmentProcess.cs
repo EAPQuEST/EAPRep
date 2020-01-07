@@ -18,7 +18,7 @@ namespace PresentataionLayer
             InitializeComponent();
         }
 
-        private void btnGenerateAllotment_Click(object sender, EventArgs e)
+        private void btnGenerateAllotment_Click(object sender, EventArgs e)                         //Generate allotted list
         {
             int output = 0;
             output = EapBLAllotment.FetchByRow();
@@ -37,6 +37,35 @@ namespace PresentataionLayer
             this.Hide();
             AllotmentWindow allotmentWindow = new AllotmentWindow();
             allotmentWindow.Show();
+        }
+
+        private void LoadStudents()                                                         //Show alloted list in data grid view
+        {
+            DataSet dsStudents = null;
+            try
+            {
+                dsStudents = EapBLAdmin.GetStudents();
+                if (dsStudents != null)
+                {
+
+                    dgvAllotedTable.DataSource = dsStudents.Tables[0];
+
+                }
+                else
+                {
+                    Console.WriteLine("Loadstudents():Error");
+                }
+
+            }
+            catch (FormatException ex)
+            {
+                // lblMessage.Text = ex.Message.ToString();
+            }
+        }
+
+        private void AllotmentProcess_Load(object sender, EventArgs e)
+        {
+            LoadStudents();
         }
     }
 }

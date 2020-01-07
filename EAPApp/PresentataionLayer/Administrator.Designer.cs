@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrator));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.viewCollegeListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewAllottedListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCollegeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCollegeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteCollegeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,12 +47,11 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewCollegeListToolStripMenuItem,
-            this.viewAllottedListToolStripMenuItem,
             this.addCollegeToolStripMenuItem,
             this.allotmentProcessToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(957, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1264, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,13 +61,6 @@
             this.viewCollegeListToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.viewCollegeListToolStripMenuItem.Text = "College List";
             this.viewCollegeListToolStripMenuItem.Click += new System.EventHandler(this.viewCollegeListToolStripMenuItem_Click);
-            // 
-            // viewAllottedListToolStripMenuItem
-            // 
-            this.viewAllottedListToolStripMenuItem.Name = "viewAllottedListToolStripMenuItem";
-            this.viewAllottedListToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
-            this.viewAllottedListToolStripMenuItem.Text = "Allotted List";
-            this.viewAllottedListToolStripMenuItem.Click += new System.EventHandler(this.viewAllottedListToolStripMenuItem_Click);
             // 
             // addCollegeToolStripMenuItem
             // 
@@ -86,28 +77,28 @@
             // addCollegeToolStripMenuItem1
             // 
             this.addCollegeToolStripMenuItem1.Name = "addCollegeToolStripMenuItem1";
-            this.addCollegeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.addCollegeToolStripMenuItem1.Size = new System.Drawing.Size(155, 22);
             this.addCollegeToolStripMenuItem1.Text = "Add College";
             this.addCollegeToolStripMenuItem1.Click += new System.EventHandler(this.addCollegeToolStripMenuItem1_Click);
             // 
             // deleteCollegeToolStripMenuItem
             // 
             this.deleteCollegeToolStripMenuItem.Name = "deleteCollegeToolStripMenuItem";
-            this.deleteCollegeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteCollegeToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.deleteCollegeToolStripMenuItem.Text = "Delete College";
             this.deleteCollegeToolStripMenuItem.Click += new System.EventHandler(this.deleteCollegeToolStripMenuItem_Click);
             // 
             // deleteCourseToolStripMenuItem
             // 
             this.deleteCourseToolStripMenuItem.Name = "deleteCourseToolStripMenuItem";
-            this.deleteCourseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteCourseToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.deleteCourseToolStripMenuItem.Text = "Update College";
             this.deleteCourseToolStripMenuItem.Click += new System.EventHandler(this.deleteCourseToolStripMenuItem_Click);
             // 
             // updateCourseToolStripMenuItem
             // 
             this.updateCourseToolStripMenuItem.Name = "updateCourseToolStripMenuItem";
-            this.updateCourseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateCourseToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.updateCourseToolStripMenuItem.Text = "Update Course";
             this.updateCourseToolStripMenuItem.Click += new System.EventHandler(this.updateCourseToolStripMenuItem_Click);
             // 
@@ -125,7 +116,7 @@
             this.tlsBtnHomeDelete});
             this.tlsDeleteCollege.Location = new System.Drawing.Point(0, 24);
             this.tlsDeleteCollege.Name = "tlsDeleteCollege";
-            this.tlsDeleteCollege.Size = new System.Drawing.Size(957, 25);
+            this.tlsDeleteCollege.Size = new System.Drawing.Size(1264, 25);
             this.tlsDeleteCollege.TabIndex = 8;
             this.tlsDeleteCollege.Text = "toolStrip1";
             // 
@@ -146,7 +137,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PresentataionLayer.Properties.Resources.envelope_blue1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(957, 600);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.tlsDeleteCollege);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
@@ -168,7 +159,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem viewCollegeListToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewAllottedListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addCollegeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addCollegeToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem deleteCollegeToolStripMenuItem;

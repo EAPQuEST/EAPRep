@@ -25,7 +25,7 @@ namespace PresentataionLayer
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)                      //Registration details
         {
             
 
@@ -107,7 +107,7 @@ namespace PresentataionLayer
                     }
 
 
-                    if (txtEmail.Text == string.Empty || (!txtEmail.Text.Contains('@')) || (!txtEmail.Text.Contains('.')))
+                    if (txtEmail.Text == string.Empty || (!txtEmail.Text.Contains("@gmail.com")) || (!txtEmail.Text.Contains("@yahoo.com")) )
                     {
                         lblMessage.Text = "Enter a valid email id !!!";
                         return;
@@ -132,7 +132,7 @@ namespace PresentataionLayer
 
                     if (output > 0)
                     {
-                        MessageBox.Show("Registration Successfull!!!");
+                        MessageBox.Show("Registration Successfull!!!  Your default Password is your DOB in MM/DD/YYYY format.");
                         this.Hide();
                         AllotmentWindow allotmentWindow = new AllotmentWindow();
                         allotmentWindow.Show();

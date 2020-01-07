@@ -67,9 +67,9 @@ namespace PresentataionLayer
 
         private void deleteCourseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AdminDeleteCourse adminDeleteCourse = new AdminDeleteCourse();
-            adminDeleteCourse.Show();
-            adminDeleteCourse.MdiParent = this;
+            UpdateCollege updateCollege = new UpdateCollege();
+            updateCollege.Show();
+            updateCollege.MdiParent = this;
         }
 
         private void btnGenerateAllotment_Click(object sender, EventArgs e)

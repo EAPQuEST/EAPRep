@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminChangePassword));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tspBtnBack = new System.Windows.Forms.ToolStripButton();
             this.pnlCandidateChangePassword = new System.Windows.Forms.Panel();
             this.txtAdminChangePasswordID = new System.Windows.Forms.TextBox();
             this.lblCandidateChangePasswordID = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.lblNewPassword = new System.Windows.Forms.Label();
             this.lblCurrentPassword = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.tspBtnBack = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.pnlCandidateChangePassword.SuspendLayout();
             this.SuspendLayout();
@@ -52,9 +52,19 @@
             this.tspBtnBack});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1264, 25);
             this.toolStrip1.TabIndex = 34;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // tspBtnBack
+            // 
+            this.tspBtnBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tspBtnBack.Image = ((System.Drawing.Image)(resources.GetObject("tspBtnBack.Image")));
+            this.tspBtnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tspBtnBack.Name = "tspBtnBack";
+            this.tspBtnBack.Size = new System.Drawing.Size(23, 22);
+            this.tspBtnBack.Text = "Back";
+            this.tspBtnBack.Click += new System.EventHandler(this.tspBtnBack_Click);
             // 
             // pnlCandidateChangePassword
             // 
@@ -68,7 +78,7 @@
             this.pnlCandidateChangePassword.Controls.Add(this.btnChangePassword);
             this.pnlCandidateChangePassword.Controls.Add(this.lblNewPassword);
             this.pnlCandidateChangePassword.Controls.Add(this.lblCurrentPassword);
-            this.pnlCandidateChangePassword.Location = new System.Drawing.Point(140, 147);
+            this.pnlCandidateChangePassword.Location = new System.Drawing.Point(383, 225);
             this.pnlCandidateChangePassword.Name = "pnlCandidateChangePassword";
             this.pnlCandidateChangePassword.Size = new System.Drawing.Size(506, 231);
             this.pnlCandidateChangePassword.TabIndex = 33;
@@ -102,6 +112,7 @@
             // 
             this.txtNewPassword.Location = new System.Drawing.Point(213, 113);
             this.txtNewPassword.Name = "txtNewPassword";
+            this.txtNewPassword.PasswordChar = '*';
             this.txtNewPassword.Size = new System.Drawing.Size(214, 20);
             this.txtNewPassword.TabIndex = 4;
             // 
@@ -109,6 +120,7 @@
             // 
             this.txtCurrentPassword.Location = new System.Drawing.Point(213, 70);
             this.txtCurrentPassword.Name = "txtCurrentPassword";
+            this.txtCurrentPassword.PasswordChar = '*';
             this.txtCurrentPassword.Size = new System.Drawing.Size(214, 20);
             this.txtCurrentPassword.TabIndex = 3;
             // 
@@ -151,28 +163,18 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblTitle.Location = new System.Drawing.Point(274, 75);
+            this.lblTitle.Location = new System.Drawing.Point(517, 153);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(265, 25);
             this.lblTitle.TabIndex = 32;
             this.lblTitle.Text = "CHANGE PASSWORD";
-            // 
-            // tspBtnBack
-            // 
-            this.tspBtnBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tspBtnBack.Image = ((System.Drawing.Image)(resources.GetObject("tspBtnBack.Image")));
-            this.tspBtnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tspBtnBack.Name = "tspBtnBack";
-            this.tspBtnBack.Size = new System.Drawing.Size(23, 22);
-            this.tspBtnBack.Text = "Back";
-            this.tspBtnBack.Click += new System.EventHandler(this.tspBtnBack_Click);
             // 
             // AdminChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pnlCandidateChangePassword);
             this.Controls.Add(this.lblTitle);

@@ -1,1 +1,1 @@
-﻿insert into candidate_details (candidate_id,candidate_10th_school,candidate_10th_percentage,candidate_12th_school,candidate_12th_percentage,candiate_physics,candiate_chemistry,candiate_maths,reservation) values('503','Infant Jesus School, Kollam',78,'Good Shepherd Kuriannoor',77,100,100,100,'Sport')
+﻿select * from allotment order by total_marks desc

@@ -19,7 +19,7 @@ namespace PresentataionLayer
             InitializeComponent();
         }
 
-        private void btnChangePassword_Click(object sender, EventArgs e)
+        private void btnChangePassword_Click(object sender, EventArgs e)                        //To change password for college login
         {
             CollegeDetails collegeDetails = null;
             int output = 0;

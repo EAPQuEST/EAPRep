@@ -14,7 +14,7 @@ namespace DataServiceLayer.DataLayer
 {
     public class EapDSL
     {
-        
+        //to insert candidate educational details
         public static int StudentDetailsInsert(CandidateDetails candidateDetails)
         {
             int output = 0;
@@ -57,6 +57,9 @@ namespace DataServiceLayer.DataLayer
 
 
         }
+
+
+        //to insert the candidate basic details to register
         public static int CandidateRegistrationInsert(CandidateDetails candidateDetails)
         {
             int output = 0;
@@ -67,7 +70,7 @@ namespace DataServiceLayer.DataLayer
             try
             {
                 sql = "insert into candidate_registration(candidate_id,candidate_name,candidate_gender,candidate_DOB," +
-                      "candidate_phone,candidate_email,candidate_address) values(";
+                      "candidate_phone,candidate_email,candidate_address,candidate_password) values(";
 
                 sql = sql + "'" + candidateDetails.CandidateId + "',";
                 sql = sql + "'" + candidateDetails.CandidateName + "',";
@@ -75,7 +78,8 @@ namespace DataServiceLayer.DataLayer
                 sql = sql + "'" + candidateDetails.CandidateDOB + "',";
                 sql = sql + "'" + candidateDetails.CandidateNumber + "',";
                 sql = sql + "'" + candidateDetails.CandidateEmail + "',";
-                sql = sql + "'" + candidateDetails.CandidateAddress + "')";
+                sql = sql + "'" + candidateDetails.CandidateAddress + "',";
+                sql = sql + "'" + candidateDetails.CandidateDOB + "')";
 
                 con = DatabaseHelper.GetConnection();
                 con.Open();
@@ -96,6 +100,8 @@ namespace DataServiceLayer.DataLayer
             return output;
 
         }
+
+        //to insert the candidate course preference
         public static int StudentCoursePreferenceInsert(CandidateDetails candidateDetails)
         {
             int output = 0;
@@ -105,7 +111,7 @@ namespace DataServiceLayer.DataLayer
             try
             {
                 sql = "insert into candidate_preference(candidate_id,college_preference1,college_preference2,college_preference3,course_preference11,course_preference12,course_preference13,course_preference21,course_preference22,course_preference23,course_preference31,course_preference32,course_preference33) values(";
-                sql = sql + "'" + candidateDetails.CandidateId + "',";
+                sql = sql + "'" + LoginInfo.userID + "',";
                 sql = sql + "'" + candidateDetails.Collegeprefernce1 + "',";
                 sql = sql + "'" + candidateDetails.Collegeprefernce2 + "',";
                 sql = sql + "'" + candidateDetails.CollegePrefernce3 + "',";
@@ -119,6 +125,11 @@ namespace DataServiceLayer.DataLayer
                 sql = sql + "'" + candidateDetails.CollegeCourse32 + "',";
                 sql = sql + "'" + candidateDetails.CollegeCourse33 + "')";
 
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+
+                output = cmd.ExecuteNonQuery();
 
             }
             catch (Exception ex)
@@ -134,7 +145,7 @@ namespace DataServiceLayer.DataLayer
 
 
         }
-       
+        //check the username and password for login
         public static DataTable CandidateLogin(string user, string password)
         {
             string sql = "";
@@ -147,7 +158,7 @@ namespace DataServiceLayer.DataLayer
             try
             {
                 //sql = "select count(*) as cnt from login_database"
-                sql = "select candidate_id,candidate_dob from candidate_registration where candidate_id='" + user + "'and candidate_DOB='" + password + "'";
+                sql = "select candidate_id,candidate_password from candidate_registration where candidate_id='" + user + "'and candidate_password='" + password + "'";
                 con = DatabaseHelper.GetConnection();
                 con.Open();
                 //dsLogin = new DataSet();
@@ -170,6 +181,7 @@ namespace DataServiceLayer.DataLayer
             return dtLogin;
         }
 
+        //load courses available within a particular college in the combo box
         public static DataSet LoadCollegePreference(string collegeName)
         {
                 string sql = "";
@@ -205,44 +217,66 @@ namespace DataServiceLayer.DataLayer
                 return dsPreference;
 
         }
+
+        //load the educational details of already applied candidates for the allotment in the text box
         public static CandidateDetails LoadCandidateDetails()
         {
             string sql = "";
+            string sql1 = "";
             SqlConnection con = null;
             SqlDataAdapter adapter = null;
+            SqlDataAdapter adapter1 = null;
             DataSet dsCandidate = null;
+            DataSet dsCandidate1 = null;
             CandidateDetails candidateDetails = null;
             int count = 0;
+            
 
             try
             {
                 sql ="select * from candidate_details where candidate_id='"+LoginInfo.userID+"'";
+               // sql1= "select * from candidate_preference where candcandidate_id='" + LoginInfo.userID + "'";
                 con = DatabaseHelper.GetConnection();
                 con.Open();
                 dsCandidate = new DataSet();
+                //dsCandidate1 = new DataSet();
                 adapter = new SqlDataAdapter(sql, con);
                 adapter.Fill(dsCandidate);
+               // adapter1 = new SqlDataAdapter(sql1, con);
+               // adapter1.Fill(dsCandidate1);
+                
                 Object[] Data = null;
+                //Object[] Data1 = null;
                 count = dsCandidate.Tables[0].Rows.Count;
                 if (count>0)
                 {
-                    Data = dsCandidate.Tables[0].Rows[0].ItemArray;
-                    candidateDetails = new CandidateDetails();
-                    candidateDetails.CandidateSchoolName10 = Data[0].ToString();
-                    candidateDetails.Candidatemark10 = Convert.ToInt32(Data[1].ToString());
-                    candidateDetails.CandidateSchoolName12 = Data[2].ToString();
-                    candidateDetails.Candidatemark12 = Convert.ToInt32(Data[3].ToString());
-                    candidateDetails.CandidatePhysics = Convert.ToInt32(Data[4].ToString());
-                    candidateDetails.CandidateChemistry = Convert.ToInt32(Data[5].ToString());
-                    candidateDetails.CandidateMaths = Convert.ToInt32(Data[6].ToString());
-                    candidateDetails.CandidateId = Data[7].ToString();
-                    candidateDetails.Reservation = Data[8].ToString();
+                    //if(dsCandidate1.Tables[0].Rows.Count>0)
+                    //{
+                    //    candidateDetails.Count = 0;
+                    //}
+                    //else
+                    //{
+                        Data = dsCandidate.Tables[0].Rows[0].ItemArray;
+                        candidateDetails = new CandidateDetails();
+                        candidateDetails.CandidateSchoolName10 = Data[0].ToString();
+                        candidateDetails.Candidatemark10 = Convert.ToInt32(Data[1].ToString());
+                        candidateDetails.CandidateSchoolName12 = Data[2].ToString();
+                        candidateDetails.Candidatemark12 = Convert.ToInt32(Data[3].ToString());
+                        candidateDetails.CandidatePhysics = Convert.ToInt32(Data[4].ToString());
+                        candidateDetails.CandidateChemistry = Convert.ToInt32(Data[5].ToString());
+                        candidateDetails.CandidateMaths = Convert.ToInt32(Data[6].ToString());
+                        candidateDetails.CandidateId = Data[7].ToString();
+                        candidateDetails.Reservation = Data[8].ToString();
+                    //}
+                   
+
                     
                 }
 
             }
             catch (Exception ex)
             {
+
                 Console.Out.WriteLine("*** Error : EapDSL.cs:GetCollegeDetailsUsingId()", ex.Message.ToString());
             }
             finally
@@ -257,7 +291,7 @@ namespace DataServiceLayer.DataLayer
 
         }
 
-
+        //view the allotment result 
         public static CandidateDetails ViewAllotmentResult()
         {
             string sql1 = "";
@@ -275,7 +309,7 @@ namespace DataServiceLayer.DataLayer
 
             try
             {
-                sql1 = "select college_id,course_id from new1allotment where candidate_id='" + LoginInfo.userID + "' and status='Alloted'";
+                sql1 = "select college_id,course_id from allotment where candidate_id='" + LoginInfo.userID + "' and status='Alloted'";
                 con = DatabaseHelper.GetConnection();
                 con.Open();
                 
@@ -367,7 +401,7 @@ namespace DataServiceLayer.DataLayer
 
 
 
-
+        //to check if the current password is correct or not
         public static DataTable CandidateChangePassword(string password)
         {
             string sql = "";
@@ -403,7 +437,7 @@ namespace DataServiceLayer.DataLayer
 
 
 
-
+        //to change the password if the user credentials entered is correct
         public static int CandidateNewPassword(CandidateDetails candidateDetails)
         {
             int output = 0;
@@ -434,7 +468,67 @@ namespace DataServiceLayer.DataLayer
 
         }
 
+                     
+        //to check if the candidate has already applied for allotment
+
+        public static int CheckExistingCandidate(string candidateId)
+        {
+            int output = 0;
+            string sql = "";
+            
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+           
+            DataSet dsCandidate = null;
+            
+            
+            int count = 0;
+
+
+            try
+            {
+                sql = "select * from candidate_preference where candidate_id='" + candidateId + "'"; 
+              
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                dsCandidate = new DataSet();
+               
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dsCandidate);
+               
+                
+              
+                count = dsCandidate.Tables[0].Rows.Count;
+                if (count > 0)
+                {
+
+                    output = 1;
+                    
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                Console.Out.WriteLine("*** Error : EapDSL.cs:CheckExistingCandidate()", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+
+
+
+            return output;
+
+        }
+
+
+
 
     }
-    }
+}
 

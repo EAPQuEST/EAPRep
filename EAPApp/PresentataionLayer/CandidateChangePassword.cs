@@ -24,7 +24,7 @@ namespace PresentataionLayer
 
         }
 
-        private void btnChangePassword_Click(object sender, EventArgs e)
+        private void btnChangePassword_Click(object sender, EventArgs e)                                //Change password for candidate login
         {
 
 
@@ -36,14 +36,14 @@ namespace PresentataionLayer
             
             LoginInfo.password = txtCurrentPassword.Text;
             password = LoginInfo.password;
-            //DataSet dsLogin = null;
+            
             DataTable dtLogin = null;
-            //if (dsLogin.Rows[0][0].ToString() == "1")
+           
             try
             {
                 candidateDetails = new CandidateDetails();
                 dtLogin = EapBL.CandidateChangePassword(password);
-                //if (dtLogin.Rows[0][0].ToString() == "1")
+               
                 if (dtLogin.Rows.Count > 0)
                 {
                     lblMessage.Text = "";

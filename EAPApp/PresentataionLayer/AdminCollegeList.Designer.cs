@@ -40,7 +40,7 @@
             // dgvCollegeList
             // 
             this.dgvCollegeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCollegeList.Location = new System.Drawing.Point(2, 64);
+            this.dgvCollegeList.Location = new System.Drawing.Point(217, 132);
             this.dgvCollegeList.Name = "dgvCollegeList";
             this.dgvCollegeList.Size = new System.Drawing.Size(796, 384);
             this.dgvCollegeList.TabIndex = 0;
@@ -50,7 +50,7 @@
             this.lblTitleCollegeList.AutoSize = true;
             this.lblTitleCollegeList.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleCollegeList.ForeColor = System.Drawing.Color.Indigo;
-            this.lblTitleCollegeList.Location = new System.Drawing.Point(297, 37);
+            this.lblTitleCollegeList.Location = new System.Drawing.Point(505, 75);
             this.lblTitleCollegeList.Name = "lblTitleCollegeList";
             this.lblTitleCollegeList.Size = new System.Drawing.Size(171, 24);
             this.lblTitleCollegeList.TabIndex = 1;
@@ -63,7 +63,7 @@
             this.tlsBtnHomeDelete});
             this.tlsDeleteCollege.Location = new System.Drawing.Point(0, 0);
             this.tlsDeleteCollege.Name = "tlsDeleteCollege";
-            this.tlsDeleteCollege.Size = new System.Drawing.Size(800, 25);
+            this.tlsDeleteCollege.Size = new System.Drawing.Size(1264, 25);
             this.tlsDeleteCollege.TabIndex = 8;
             this.tlsDeleteCollege.Text = "toolStrip1";
             // 
@@ -83,7 +83,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.tlsDeleteCollege);
             this.Controls.Add(this.lblTitleCollegeList);
             this.Controls.Add(this.dgvCollegeList);

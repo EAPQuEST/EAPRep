@@ -1,1 +1,1 @@
-﻿alter table candidate_details add  reservation varchar(20) 
+﻿select * from new1allotment order by total_marks desc

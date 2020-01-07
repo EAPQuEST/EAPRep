@@ -12,11 +12,10 @@ namespace BusinessLayer.BL
    public class EapBLCollege
     {
 
+        //update status of the allotted candidates to confirmed
         public static int UpdateStatus(string candidateId)
         {
             int output = 0;
-
-           
 
             try
             {
@@ -31,7 +30,7 @@ namespace BusinessLayer.BL
             return output;
         }
 
-
+        //check the current password of the college is correct
 
         public static DataTable CollegeChangePassword(string password)
         {
@@ -54,7 +53,7 @@ namespace BusinessLayer.BL
 
         }
 
-
+        //change the old password and set new password
         public static int CollegeNewPassword(CollegeDetails collegeDetails)
         {
             int output = 0;
@@ -75,7 +74,7 @@ namespace BusinessLayer.BL
         }
 
 
-
+        //login to college page if the user credentials are correct
         public static DataTable CollegeLogin(string user, string password)
         {
             //DataSet dsData = null;
@@ -97,6 +96,7 @@ namespace BusinessLayer.BL
 
         }
 
+        //to get the details of the candidates using their id
         public static DataSet GetCandidateIdLike(string likeId)
         {
 
@@ -116,7 +116,7 @@ namespace BusinessLayer.BL
             return dsCandidate;
         }
 
-
+        //get name of the candidates using their id
         public static DataSet GetCandidateName(string likeId)
         {
 

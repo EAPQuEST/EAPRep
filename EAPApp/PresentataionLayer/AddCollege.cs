@@ -36,7 +36,7 @@ namespace PresentataionLayer
             allotmentWindow.Show();
         }
 
-        private void btnAddCollege_Click(object sender, EventArgs e)
+        private void btnAddCollege_Click(object sender, EventArgs e)                            //Adding College details and Course details
         {
             CollegeDetails collegeDetails = null;
             int output = 0;
@@ -63,7 +63,7 @@ namespace PresentataionLayer
 
                     collegeDetails = new CollegeDetails();
 
-                    if (txtCollegeID.Text == string.Empty)
+                    if (txtCollegeID.Text == string.Empty)                          
                     {
                         lblMessage.Text = "Enter the College ID";
                         return;
@@ -98,7 +98,7 @@ namespace PresentataionLayer
                     }
                     else
                     {
-                        collegeDetails.CollegePhone = Convert.ToInt32(txtContactNumber.Text);
+                        collegeDetails.CollegePhone = Convert.ToInt64(txtContactNumber.Text);
                     }
                     if (clbCoursesAvailable.Items.Count <0)
                     {
@@ -131,6 +131,7 @@ namespace PresentataionLayer
             }
             catch (Exception ex)
             {
+                lblMessage.Text = ex.Message.ToString();
 
             }
 
@@ -147,6 +148,11 @@ namespace PresentataionLayer
             this.Hide();
             AllotmentWindow allotmentWindow = new AllotmentWindow();
             allotmentWindow.Show();
+        }
+
+        private void lblCourseDetails_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

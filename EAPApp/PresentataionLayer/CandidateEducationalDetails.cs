@@ -26,7 +26,7 @@ namespace PresentataionLayer
 
         }
 
-        private void btnCandidateNext_Click(object sender, EventArgs e)
+        private void btnCandidateNext_Click(object sender, EventArgs e)                                 //Candidate educational details
         {
 
             CandidateDetails candidateDetails = null;
@@ -268,5 +268,59 @@ namespace PresentataionLayer
         {
 
         }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void CandidateEducationalDetails_Load(object sender, EventArgs e)
+        {
+            LoadDetailstoForm();
+        }
+
+        public int LoadDetailstoForm()
+        {
+            //CandidateEducationalDetails loadForm = new CandidateEducationalDetails();
+            int output = 0;
+            CandidateDetails candidateDetails = null;
+            try
+            {
+                candidateDetails = new CandidateDetails();
+
+                candidateDetails = EapBL.LoadCandidateDetails();
+                if (candidateDetails.Count >0)
+                {
+                    return output = 2;
+                }
+
+                comboBoxReservation.Text = candidateDetails.Reservation;
+                cmb10thSchoolName.Text = candidateDetails.CandidateSchoolName10;
+                txt10thMark.Text = candidateDetails.Candidatemark10.ToString();
+                cmb12thSchoolName.Text = candidateDetails.CandidateSchoolName12;
+                txt12thMark.Text = candidateDetails.Candidatemark12.ToString();
+                txtChemistry.Text = candidateDetails.CandidateChemistry.ToString();
+                txtPhysics.Text = candidateDetails.CandidateChemistry.ToString();
+                txtMaths.Text = candidateDetails.CandidateMaths.ToString();
+
+                txtMaths.ReadOnly = true;
+                txtPhysics.ReadOnly = true;
+                txtChemistry.ReadOnly = true;
+                txt10thMark.ReadOnly = true;
+                txt12thMark.ReadOnly = true;
+
+                cmb10thSchoolName.Enabled = false;
+                cmb12thSchoolName.Enabled = false;
+                comboBoxReservation.Enabled = false;
+
+
+            }
+            catch (Exception ex)
+            {
+               // lblMessage.Text = ex.Message.ToString();
+            }
+            return output;
+        }
+
     }
 }

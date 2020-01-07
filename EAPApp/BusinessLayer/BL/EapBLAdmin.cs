@@ -11,6 +11,9 @@ namespace BusinessLayer.BL
 {
     public class EapBLAdmin
     {
+
+
+        //to insert the details of college 
         public static int CollegeDetailsInsert(CollegeDetails collegeDetails)
         {
             int output = 0;
@@ -26,6 +29,9 @@ namespace BusinessLayer.BL
             return output;
 
         }
+
+
+        //insert the courses available in allotment
         public static int CollegeCourseInsert(CollegeDetails collegeDetails)
         {
             int output = 0;
@@ -41,6 +47,8 @@ namespace BusinessLayer.BL
             return output;
 
         }
+
+        //to get the college id
         public static DataSet GetCollegeIds()
         {
             string sql = "";
@@ -60,6 +68,7 @@ namespace BusinessLayer.BL
             return dsCollegeId;
         }
 
+        //to get the details of the college using college id
         public static CollegeDetails GetCollegeDetailsUsingId(string courseId)
         {
 
@@ -78,6 +87,9 @@ namespace BusinessLayer.BL
 
             return collegeDetails;
         }
+
+
+        //update the college details
         public static int CollegeDetailsUpdate(CollegeDetails collegeDetails)
         {
             int output = 0;
@@ -96,6 +108,10 @@ namespace BusinessLayer.BL
 
             return output;
         }
+
+
+
+        //add courses in a college
         public static int CollegeCourseUpdate(CollegeDetails collegeDetails)
         {
             int output = 0;
@@ -114,6 +130,8 @@ namespace BusinessLayer.BL
 
             return output;
         }
+
+        //to get college details
         public static DataSet GetCollegeDetails()
         {
             string sql = "";
@@ -134,6 +152,8 @@ namespace BusinessLayer.BL
             return dsCollegeDetails;
 
         }
+
+        //get college details of the input college name
         public static DataSet GetDataLike(string likeCollegeName)
         {
 
@@ -151,6 +171,8 @@ namespace BusinessLayer.BL
 
             return dsData;
         }
+
+        //to delete a college 
         public static int CollegeDelete(string collegeName)
         {
             int output = 0;
@@ -168,9 +190,7 @@ namespace BusinessLayer.BL
 
         }
 
-
-
-
+        //to get college name and college id
         public static DataSet GetCollegeName()
         {
            
@@ -191,7 +211,7 @@ namespace BusinessLayer.BL
             return dsCollegeName;
         }
 
-
+        //to generate allotment of the candidates
         public static int GenerateAllotment(CandidateDetails candidateDetails)
         {
             int output = 0;
@@ -212,6 +232,7 @@ namespace BusinessLayer.BL
             return output;
         }
 
+        //to allot students 
         public static int AllotStudents()
         {
             
@@ -233,7 +254,7 @@ namespace BusinessLayer.BL
         }
 
 
-
+        //to get details of the allotted students
         public static DataSet GetStudents()
         {
             string sql = "";
@@ -252,5 +273,145 @@ namespace BusinessLayer.BL
             return dsStudents;
         }
 
+
+        //to check the current password of the admin is correct or not
+        public static DataTable AdminChangePassword(string password)
+        {
+            //DataSet dsData = null;
+            DataTable dtLogin = null;
+            try
+            {
+                dtLogin = EapDSLAdmin.AdminChangePassword(password);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:AdminChangePassword()", ex.Message.ToString());
+            }
+
+            return dtLogin;
+        }
+
+
+        //to change password if the user credentials entered is correct
+        public static int AdminNewPassword(string username, string password)
+        {
+            int output = 0;
+            try
+            {
+                output = EapDSLAdmin.AdminNewPassword(username, password);
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:AdminNewPassword", ex.Message.ToString());
+            }
+            return output;
+
+        }
+
+
+        //to view all the details of all the college in the grid view
+        public static DataSet ViewCollegeList()
+        {
+
+            DataSet dsCollegeList = null;
+            try
+            {
+                dsCollegeList = EapDSLAdmin.ViewCollegeList();
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*****Error : EapBLAdmin.cs::ViewCollegeList", ex.Message.ToString());
+            }
+            return dsCollegeList;
+        }
+
+
+        //to get the name of the course in a particular college
+        public static DataSet GetCourseName(string collegeName)
+        {
+            DataSet dsCourseName = null;
+            try
+            {
+                dsCourseName = EapDSLAdmin.GetCourseName(collegeName);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBLAdmin.cs:GetCourseName()", ex.Message.ToString());
+            }
+            return dsCourseName;
+        }
+
+        //to get all the available courses
+        public static DataSet GetCourseShowAll()
+        {
+            DataSet dsCourseName = null;
+            try
+            {
+                dsCourseName = EapDSLAdmin.GetCourseShowAll();
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBLAdmin.cs:GetCourseShowAll()", ex.Message.ToString());
+            }
+            return dsCourseName;
+        }
+
+
+        //to delete courses from a college
+        public static int CourseDelete(string courseName)
+        {
+            int output = 0;
+            try
+            {
+                output = EapDSLAdmin.CourseDelete(courseName);
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBLAdmin.cs: CourseDelete", ex.Message.ToString());
+            }
+            return output;
+
+        }
+
+
+
+        //add courses to a college
+        public static int CourseAdd(CollegeDetails collegeDetails)
+        {
+            int output = 0;
+            try
+            {
+                output = EapDSLAdmin.CourseAdd(collegeDetails);
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBLAdmin.cs: CourseAdd", ex.Message.ToString());
+            }
+            return output;
+
+        }
+
+
+        //check user credentials for the admin to login
+        public static DataTable AdminLogin(string user, string password)
+        {
+            //DataSet dsData = null;
+            DataTable dtLogin = null;
+            try
+            {
+                dtLogin = EapDSLAdmin.AdminLogin(user, password);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:AdminLogin()", ex.Message.ToString());
+            }
+
+            return dtLogin;
+        }
     }
 }

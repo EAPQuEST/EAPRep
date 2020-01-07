@@ -63,10 +63,10 @@
             this.lbl10SchoolName = new System.Windows.Forms.Label();
             this.lblUserId = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tspHome = new System.Windows.Forms.ToolStripButton();
             this.btnCandidateNext = new System.Windows.Forms.Button();
             this.epCandidateEducation = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblID = new System.Windows.Forms.Label();
-            this.tspHome = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epCandidateEducation)).BeginInit();
@@ -108,7 +108,7 @@
             this.panel1.Controls.Add(this.lbl10SchoolName);
             this.panel1.Location = new System.Drawing.Point(0, 43);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 528);
+            this.panel1.Size = new System.Drawing.Size(1264, 549);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -116,7 +116,10 @@
             // 
             this.comboBoxReservation.FormattingEnabled = true;
             this.comboBoxReservation.Items.AddRange(new object[] {
-            "General"});
+            "General",
+            "OBC",
+            "SC/ST",
+            "Sports"});
             this.comboBoxReservation.Location = new System.Drawing.Point(389, 73);
             this.comboBoxReservation.Name = "comboBoxReservation";
             this.comboBoxReservation.Size = new System.Drawing.Size(209, 21);
@@ -299,7 +302,7 @@
             this.button1.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(3, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(800, 35);
+            this.button1.Size = new System.Drawing.Size(1254, 35);
             this.button1.TabIndex = 49;
             this.button1.Text = "   Educational Details";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -472,7 +475,7 @@
             // 
             this.lblUserId.AutoSize = true;
             this.lblUserId.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserId.Location = new System.Drawing.Point(675, 4);
+            this.lblUserId.Location = new System.Drawing.Point(1129, 12);
             this.lblUserId.Name = "lblUserId";
             this.lblUserId.Size = new System.Drawing.Size(0, 17);
             this.lblUserId.TabIndex = 78;
@@ -484,9 +487,21 @@
             this.tspHome});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1264, 25);
             this.toolStrip1.TabIndex = 26;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
+            // 
+            // tspHome
+            // 
+            this.tspHome.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tspHome.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tspHome.Image = ((System.Drawing.Image)(resources.GetObject("tspHome.Image")));
+            this.tspHome.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tspHome.Name = "tspHome";
+            this.tspHome.Size = new System.Drawing.Size(23, 22);
+            this.tspHome.Text = "Sign Out";
+            this.tspHome.Click += new System.EventHandler(this.tspHome_Click);
             // 
             // btnCandidateNext
             // 
@@ -494,7 +509,7 @@
             this.btnCandidateNext.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnCandidateNext.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCandidateNext.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCandidateNext.Location = new System.Drawing.Point(651, 577);
+            this.btnCandidateNext.Location = new System.Drawing.Point(1128, 598);
             this.btnCandidateNext.Name = "btnCandidateNext";
             this.btnCandidateNext.Size = new System.Drawing.Size(124, 42);
             this.btnCandidateNext.TabIndex = 69;
@@ -511,28 +526,17 @@
             this.lblID.AutoSize = true;
             this.lblID.BackColor = System.Drawing.Color.LightBlue;
             this.lblID.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(573, 0);
+            this.lblID.Location = new System.Drawing.Point(990, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(96, 17);
             this.lblID.TabIndex = 79;
             this.lblID.Text = "Candidate ID :";
             // 
-            // tspHome
-            // 
-            this.tspHome.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tspHome.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tspHome.Image = ((System.Drawing.Image)(resources.GetObject("tspHome.Image")));
-            this.tspHome.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tspHome.Name = "tspHome";
-            this.tspHome.Size = new System.Drawing.Size(23, 22);
-            this.tspHome.Text = "Sign Out";
-            this.tspHome.Click += new System.EventHandler(this.tspHome_Click);
-            // 
             // CandidateEducationalDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 622);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblUserId);
             this.Controls.Add(this.btnCandidateNext);
@@ -540,6 +544,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "CandidateEducationalDetails";
             this.Text = "CandidateRegistration2";
+            this.Load += new System.EventHandler(this.CandidateEducationalDetails_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

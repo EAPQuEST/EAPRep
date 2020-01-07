@@ -84,7 +84,7 @@
             this.lblHeading.BackColor = System.Drawing.Color.Transparent;
             this.lblHeading.Font = new System.Drawing.Font("Perpetua Titling MT", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeading.ForeColor = System.Drawing.Color.Navy;
-            this.lblHeading.Location = new System.Drawing.Point(130, 23);
+            this.lblHeading.Location = new System.Drawing.Point(356, 24);
             this.lblHeading.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblHeading.Name = "lblHeading";
             this.lblHeading.Size = new System.Drawing.Size(553, 44);
@@ -100,7 +100,7 @@
             this.tbcLogin.Location = new System.Drawing.Point(0, 89);
             this.tbcLogin.Name = "tbcLogin";
             this.tbcLogin.SelectedIndex = 0;
-            this.tbcLogin.Size = new System.Drawing.Size(807, 549);
+            this.tbcLogin.Size = new System.Drawing.Size(1264, 591);
             this.tbcLogin.TabIndex = 1;
             // 
             // tbcCandidate
@@ -116,7 +116,7 @@
             this.tbcCandidate.Location = new System.Drawing.Point(4, 28);
             this.tbcCandidate.Name = "tbcCandidate";
             this.tbcCandidate.Padding = new System.Windows.Forms.Padding(3);
-            this.tbcCandidate.Size = new System.Drawing.Size(799, 517);
+            this.tbcCandidate.Size = new System.Drawing.Size(1256, 559);
             this.tbcCandidate.TabIndex = 0;
             this.tbcCandidate.Text = "Candidate";
             this.tbcCandidate.Click += new System.EventHandler(this.tbcCandidate_Click);
@@ -126,7 +126,7 @@
             this.llblChangePassword.AutoSize = true;
             this.llblChangePassword.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llblChangePassword.LinkColor = System.Drawing.Color.DarkBlue;
-            this.llblChangePassword.Location = new System.Drawing.Point(677, 37);
+            this.llblChangePassword.Location = new System.Drawing.Point(1133, 28);
             this.llblChangePassword.Name = "llblChangePassword";
             this.llblChangePassword.Size = new System.Drawing.Size(115, 17);
             this.llblChangePassword.TabIndex = 7;
@@ -141,7 +141,7 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(300, 458);
+            this.label1.Location = new System.Drawing.Point(520, 475);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(187, 19);
             this.label1.TabIndex = 6;
@@ -154,7 +154,7 @@
             this.panel1.BackgroundImage = global::PresentataionLayer.Properties.Resources._username_login_1172579;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(326, 53);
+            this.panel1.Location = new System.Drawing.Point(546, 70);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(123, 93);
             this.panel1.TabIndex = 4;
@@ -167,7 +167,7 @@
             this.panel2.Controls.Add(this.btnExistingLogin);
             this.panel2.Controls.Add(this.txtCandidatePassword);
             this.panel2.Controls.Add(this.txtCandidateUsername);
-            this.panel2.Location = new System.Drawing.Point(219, 85);
+            this.panel2.Location = new System.Drawing.Point(439, 102);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(334, 320);
             this.panel2.TabIndex = 5;
@@ -233,7 +233,7 @@
             this.tslCandidateLogin});
             this.toolStrip1.Location = new System.Drawing.Point(3, 3);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(793, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1250, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "Candidate Login";
             // 
@@ -254,11 +254,11 @@
             this.btnCandidateSignIn.BackColor = System.Drawing.Color.Transparent;
             this.btnCandidateSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCandidateSignIn.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnCandidateSignIn.Location = new System.Drawing.Point(335, 411);
+            this.btnCandidateSignIn.Location = new System.Drawing.Point(555, 428);
             this.btnCandidateSignIn.Name = "btnCandidateSignIn";
             this.btnCandidateSignIn.Size = new System.Drawing.Size(114, 33);
             this.btnCandidateSignIn.TabIndex = 2;
-            this.btnCandidateSignIn.Text = "Sign In";
+            this.btnCandidateSignIn.Text = "Sign Up";
             this.btnCandidateSignIn.UseVisualStyleBackColor = false;
             this.btnCandidateSignIn.Click += new System.EventHandler(this.btnNewUser1_Click);
             // 
@@ -271,7 +271,7 @@
             this.tbcCollege.Location = new System.Drawing.Point(4, 28);
             this.tbcCollege.Name = "tbcCollege";
             this.tbcCollege.Padding = new System.Windows.Forms.Padding(3);
-            this.tbcCollege.Size = new System.Drawing.Size(799, 517);
+            this.tbcCollege.Size = new System.Drawing.Size(1256, 559);
             this.tbcCollege.TabIndex = 1;
             this.tbcCollege.Text = "College";
             this.tbcCollege.UseVisualStyleBackColor = true;
@@ -281,7 +281,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.DarkBlue;
-            this.linkLabel1.Location = new System.Drawing.Point(678, 39);
+            this.linkLabel1.Location = new System.Drawing.Point(1141, 28);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(115, 17);
             this.linkLabel1.TabIndex = 9;
@@ -296,7 +296,7 @@
             this.toolStripLabel1});
             this.toolStrip2.Location = new System.Drawing.Point(3, 3);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(793, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(1250, 25);
             this.toolStrip2.TabIndex = 8;
             this.toolStrip2.Text = "College Login";
             // 
@@ -316,7 +316,7 @@
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Location = new System.Drawing.Point(324, 60);
+            this.panel5.Location = new System.Drawing.Point(547, 82);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(119, 92);
             this.panel5.TabIndex = 6;
@@ -329,7 +329,7 @@
             this.panel6.Controls.Add(this.btnCollegeLogin);
             this.panel6.Controls.Add(this.txtCollegePassword);
             this.panel6.Controls.Add(this.txtCollegeUsername);
-            this.panel6.Location = new System.Drawing.Point(217, 91);
+            this.panel6.Location = new System.Drawing.Point(440, 113);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(334, 320);
             this.panel6.TabIndex = 7;
@@ -396,7 +396,7 @@
             this.tbcAdmin.Location = new System.Drawing.Point(4, 28);
             this.tbcAdmin.Name = "tbcAdmin";
             this.tbcAdmin.Padding = new System.Windows.Forms.Padding(3);
-            this.tbcAdmin.Size = new System.Drawing.Size(799, 517);
+            this.tbcAdmin.Size = new System.Drawing.Size(1256, 559);
             this.tbcAdmin.TabIndex = 2;
             this.tbcAdmin.Text = "Admin";
             this.tbcAdmin.UseVisualStyleBackColor = true;
@@ -406,7 +406,7 @@
             this.llblAdminChangePassword.AutoSize = true;
             this.llblAdminChangePassword.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llblAdminChangePassword.LinkColor = System.Drawing.Color.DarkBlue;
-            this.llblAdminChangePassword.Location = new System.Drawing.Point(681, 39);
+            this.llblAdminChangePassword.Location = new System.Drawing.Point(1135, 28);
             this.llblAdminChangePassword.Name = "llblAdminChangePassword";
             this.llblAdminChangePassword.Size = new System.Drawing.Size(115, 17);
             this.llblAdminChangePassword.TabIndex = 10;
@@ -421,7 +421,7 @@
             this.toolStripLabel2});
             this.toolStrip3.Location = new System.Drawing.Point(3, 3);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(793, 25);
+            this.toolStrip3.Size = new System.Drawing.Size(1250, 25);
             this.toolStrip3.TabIndex = 8;
             this.toolStrip3.Text = "Administrator Login";
             // 
@@ -441,7 +441,8 @@
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.Location = new System.Drawing.Point(320, 60);
+            this.panel3.Location = new System.Drawing.Point(549, 66);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(123, 93);
             this.panel3.TabIndex = 6;
@@ -454,7 +455,7 @@
             this.panel4.Controls.Add(this.btnAdminLogin);
             this.panel4.Controls.Add(this.txtAdminPassword);
             this.panel4.Controls.Add(this.txtAdminUsername);
-            this.panel4.Location = new System.Drawing.Point(213, 92);
+            this.panel4.Location = new System.Drawing.Point(442, 98);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(334, 320);
             this.panel4.TabIndex = 7;
@@ -522,7 +523,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = global::PresentataionLayer.Properties.Resources._7557127;
-            this.ClientSize = new System.Drawing.Size(808, 636);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.tbcLogin);
             this.Controls.Add(this.lblHeading);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -1,1 +1,1 @@
-﻿select * from viewallotment order by total_marks
+﻿update allotment set status='WL'

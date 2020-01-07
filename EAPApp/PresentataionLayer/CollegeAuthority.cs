@@ -24,7 +24,7 @@ namespace PresentataionLayer
         {
          
             int output = 0;
-            string searchId = txtSearchID.Text;
+            string searchId = txtViewID.Text;
             
 
             try
@@ -37,7 +37,7 @@ namespace PresentataionLayer
                 if (output > 0)
                 {
                     //lblMessage.Text = "Successfully updated";
-
+                    MessageBox.Show("Succesfull");
 
 
                 }
@@ -93,6 +93,7 @@ namespace PresentataionLayer
         private void CollegeAuthority_Load(object sender, EventArgs e)
         {
             //LoadCandidateId();
+
         }
 
         private void tspHome_Click(object sender, EventArgs e)
@@ -107,7 +108,7 @@ namespace PresentataionLayer
 
         }
 
-        private void txtSearchID_TextChanged(object sender, EventArgs e)
+        private void txtSearchID_TextChanged(object sender, EventArgs e)                            //to display searched candidate id in the gridview
         {
             DataSet dsCandidateId = null;
             try
@@ -135,7 +136,7 @@ namespace PresentataionLayer
 
         
 
-        private void dgvCollegeAllotedList_SelectionChanged(object sender, EventArgs e)
+        private void dgvCollegeAllotedList_SelectionChanged(object sender, EventArgs e)                 //To display selected row in the textbox from the gridview
         {
             string candidateId, entranceId;
             int output = 0;
@@ -149,16 +150,31 @@ namespace PresentataionLayer
 
                 candidateId = Convert.ToString(selectedRow.Cells["candidate_id"].Value);
 
-                entranceId = Convert.ToString(selectedRow.Cells["entrance_id"].Value);
+               // entranceId = Convert.ToString(selectedRow.Cells["entrance_id"].Value);
 
                     
 
                     txtViewID.Text = candidateId;
-                    txtViewEntrance.Text = entranceId;
+                   // txtViewEntrance.Text = entranceId;
 
 
               
             }
+        }
+
+        private void dgvCollegeAllotedList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvCollegeAllotedList_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void tspCollegeAuthority_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

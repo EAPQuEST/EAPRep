@@ -31,9 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CollegeAuthority));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblCandidateInfo = new System.Windows.Forms.Label();
-            this.txtViewEntrance = new System.Windows.Forms.TextBox();
             this.txtViewID = new System.Windows.Forms.TextBox();
-            this.lblViewName = new System.Windows.Forms.Label();
             this.lblViewID = new System.Windows.Forms.Label();
             this.btnConfirmCandidate = new System.Windows.Forms.Button();
             this.tspCollegeAuthority = new System.Windows.Forms.ToolStrip();
@@ -52,13 +50,11 @@
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.lblCandidateInfo);
-            this.panel1.Controls.Add(this.txtViewEntrance);
             this.panel1.Controls.Add(this.txtViewID);
-            this.panel1.Controls.Add(this.lblViewName);
             this.panel1.Controls.Add(this.lblViewID);
-            this.panel1.Location = new System.Drawing.Point(531, 82);
+            this.panel1.Location = new System.Drawing.Point(874, 82);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(270, 314);
+            this.panel1.Size = new System.Drawing.Size(270, 234);
             this.panel1.TabIndex = 0;
             // 
             // lblCandidateInfo
@@ -71,29 +67,12 @@
             this.lblCandidateInfo.TabIndex = 6;
             this.lblCandidateInfo.Text = "CANDIDATE INFORMATION";
             // 
-            // txtViewEntrance
-            // 
-            this.txtViewEntrance.Location = new System.Drawing.Point(102, 157);
-            this.txtViewEntrance.Name = "txtViewEntrance";
-            this.txtViewEntrance.Size = new System.Drawing.Size(161, 20);
-            this.txtViewEntrance.TabIndex = 5;
-            // 
             // txtViewID
             // 
-            this.txtViewID.Location = new System.Drawing.Point(102, 100);
+            this.txtViewID.Location = new System.Drawing.Point(105, 103);
             this.txtViewID.Name = "txtViewID";
             this.txtViewID.Size = new System.Drawing.Size(161, 20);
             this.txtViewID.TabIndex = 3;
-            // 
-            // lblViewName
-            // 
-            this.lblViewName.AutoSize = true;
-            this.lblViewName.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblViewName.Location = new System.Drawing.Point(6, 156);
-            this.lblViewName.Name = "lblViewName";
-            this.lblViewName.Size = new System.Drawing.Size(91, 18);
-            this.lblViewName.TabIndex = 1;
-            this.lblViewName.Text = "Entrance ID";
             // 
             // lblViewID
             // 
@@ -111,9 +90,9 @@
             this.btnConfirmCandidate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConfirmCandidate.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmCandidate.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnConfirmCandidate.Location = new System.Drawing.Point(542, 402);
+            this.btnConfirmCandidate.Location = new System.Drawing.Point(891, 362);
             this.btnConfirmCandidate.Name = "btnConfirmCandidate";
-            this.btnConfirmCandidate.Size = new System.Drawing.Size(246, 38);
+            this.btnConfirmCandidate.Size = new System.Drawing.Size(179, 38);
             this.btnConfirmCandidate.TabIndex = 1;
             this.btnConfirmCandidate.Text = "CONFIRM";
             this.btnConfirmCandidate.UseVisualStyleBackColor = false;
@@ -128,8 +107,9 @@
             this.tspCollegeAuthority.Location = new System.Drawing.Point(0, 0);
             this.tspCollegeAuthority.Name = "tspCollegeAuthority";
             this.tspCollegeAuthority.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.tspCollegeAuthority.Size = new System.Drawing.Size(800, 25);
+            this.tspCollegeAuthority.Size = new System.Drawing.Size(1264, 25);
             this.tspCollegeAuthority.TabIndex = 29;
+            this.tspCollegeAuthority.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tspCollegeAuthority_ItemClicked);
             // 
             // tspHome
             // 
@@ -154,8 +134,10 @@
             this.dgvCollegeAllotedList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCollegeAllotedList.Location = new System.Drawing.Point(0, 82);
             this.dgvCollegeAllotedList.Name = "dgvCollegeAllotedList";
-            this.dgvCollegeAllotedList.Size = new System.Drawing.Size(525, 369);
+            this.dgvCollegeAllotedList.Size = new System.Drawing.Size(744, 499);
             this.dgvCollegeAllotedList.TabIndex = 30;
+            this.dgvCollegeAllotedList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCollegeAllotedList_CellContentClick);
+            this.dgvCollegeAllotedList.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dgvCollegeAllotedList_Scroll);
             this.dgvCollegeAllotedList.SelectionChanged += new System.EventHandler(this.dgvCollegeAllotedList_SelectionChanged);
             // 
             // txtSearchID
@@ -181,7 +163,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.lblSearchID);
             this.Controls.Add(this.txtSearchID);
             this.Controls.Add(this.btnConfirmCandidate);
@@ -210,9 +192,7 @@
         private System.Windows.Forms.ToolStripLabel tspViewAllotedList;
         private System.Windows.Forms.DataGridView dgvCollegeAllotedList;
         private System.Windows.Forms.Label lblCandidateInfo;
-        private System.Windows.Forms.TextBox txtViewEntrance;
         private System.Windows.Forms.TextBox txtViewID;
-        private System.Windows.Forms.Label lblViewName;
         private System.Windows.Forms.Label lblViewID;
         private System.Windows.Forms.TextBox txtSearchID;
         private System.Windows.Forms.Label lblSearchID;

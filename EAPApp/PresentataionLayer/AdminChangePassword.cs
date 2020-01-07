@@ -19,7 +19,7 @@ namespace PresentataionLayer
             InitializeComponent();
         }
 
-        private void btnChangePassword_Click(object sender, EventArgs e)
+        private void btnChangePassword_Click(object sender, EventArgs e)                        //Admin change password using 3 variables
         {
             
             int output = 0;

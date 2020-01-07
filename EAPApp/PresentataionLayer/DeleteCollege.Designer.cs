@@ -53,13 +53,13 @@
             this.panel1.Controls.Add(this.lblDeleteId);
             this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(861, 431);
+            this.panel1.Size = new System.Drawing.Size(1264, 656);
             this.panel1.TabIndex = 3;
             // 
             // lblMessage
             // 
             this.lblMessage.AutoSize = true;
-            this.lblMessage.Location = new System.Drawing.Point(51, 17);
+            this.lblMessage.Location = new System.Drawing.Point(272, 23);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(0, 13);
             this.lblMessage.TabIndex = 6;
@@ -68,7 +68,7 @@
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnDelete.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(643, 19);
+            this.btnDelete.Location = new System.Drawing.Point(805, 24);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(109, 50);
             this.btnDelete.TabIndex = 5;
@@ -78,7 +78,7 @@
             // 
             // txtDelete
             // 
-            this.txtDelete.Location = new System.Drawing.Point(316, 35);
+            this.txtDelete.Location = new System.Drawing.Point(537, 41);
             this.txtDelete.Name = "txtDelete";
             this.txtDelete.Size = new System.Drawing.Size(221, 20);
             this.txtDelete.TabIndex = 4;
@@ -88,9 +88,9 @@
             // 
             this.dgvDeleteView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvDeleteView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDeleteView.Location = new System.Drawing.Point(3, 83);
+            this.dgvDeleteView.Location = new System.Drawing.Point(202, 125);
             this.dgvDeleteView.Name = "dgvDeleteView";
-            this.dgvDeleteView.Size = new System.Drawing.Size(858, 369);
+            this.dgvDeleteView.Size = new System.Drawing.Size(858, 348);
             this.dgvDeleteView.TabIndex = 3;
             this.dgvDeleteView.SelectionChanged += new System.EventHandler(this.dgvDeleteView_SelectionChanged);
             // 
@@ -98,7 +98,7 @@
             // 
             this.lblDeleteId.AutoSize = true;
             this.lblDeleteId.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeleteId.Location = new System.Drawing.Point(60, 33);
+            this.lblDeleteId.Location = new System.Drawing.Point(281, 39);
             this.lblDeleteId.Name = "lblDeleteId";
             this.lblDeleteId.Size = new System.Drawing.Size(227, 18);
             this.lblDeleteId.TabIndex = 2;
@@ -112,7 +112,7 @@
             this.toolStripLabel1});
             this.tlsDeleteCollege.Location = new System.Drawing.Point(0, 0);
             this.tlsDeleteCollege.Name = "tlsDeleteCollege";
-            this.tlsDeleteCollege.Size = new System.Drawing.Size(861, 25);
+            this.tlsDeleteCollege.Size = new System.Drawing.Size(1264, 25);
             this.tlsDeleteCollege.TabIndex = 11;
             this.tlsDeleteCollege.Text = "toolStrip1";
             // 
@@ -137,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 458);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.tlsDeleteCollege);
             this.Controls.Add(this.panel1);
             this.Name = "DeleteCollege";

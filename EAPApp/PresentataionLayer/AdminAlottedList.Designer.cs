@@ -39,7 +39,7 @@
             // dgvAdminAlloted
             // 
             this.dgvAdminAlloted.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAdminAlloted.Location = new System.Drawing.Point(0, 53);
+            this.dgvAdminAlloted.Location = new System.Drawing.Point(151, 97);
             this.dgvAdminAlloted.Name = "dgvAdminAlloted";
             this.dgvAdminAlloted.Size = new System.Drawing.Size(798, 394);
             this.dgvAdminAlloted.TabIndex = 0;
@@ -52,7 +52,7 @@
             this.tlsBtnHomeAdd});
             this.tlsAddCollege.Location = new System.Drawing.Point(0, 0);
             this.tlsAddCollege.Name = "tlsAddCollege";
-            this.tlsAddCollege.Size = new System.Drawing.Size(800, 25);
+            this.tlsAddCollege.Size = new System.Drawing.Size(1264, 25);
             this.tlsAddCollege.TabIndex = 7;
             this.tlsAddCollege.Text = "toolStrip1";
             // 
@@ -70,7 +70,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.tlsAddCollege);
             this.Controls.Add(this.dgvAdminAlloted);
             this.Name = "AdminAlottedList";

@@ -23,7 +23,7 @@ namespace DataServiceLayer.DataLayer
 
             try
             {
-                sql = "select * from new1allotment order by total_marks desc";
+                sql = "select * from allotment order by total_marks desc";
                 con = DatabaseHelper.GetConnection();
                 con.Open();
                 dt = new DataTable();
@@ -42,6 +42,8 @@ namespace DataServiceLayer.DataLayer
             }
             return dt;
         }
+
+        //to get the details according to a row from the allotted details
         public static int  FetchByRow()
         {
             int output = 0;
@@ -182,30 +184,30 @@ namespace DataServiceLayer.DataLayer
             try
             {
 
-                sql1 = "update new1allotment set status='N/A' where candidate_id='" + allotmentObject.CandidateId + "'";
+                sql1 = "update allotment set status='N/A' where candidate_id='" + allotmentObject.CandidateId + "'";
 
 
                 if (allotmentObject.Reservation.Equals("OBC"))
                 {
 
                     sql2 = "update college_coures set obc=" + allotmentObject.ObcSeats + " where collegeid='" + allotmentObject.CollegeId + "' and courseid='" + allotmentObject.CourseId + "'";
-                    sql3 = "update new1allotment set status='Alloted',reservation='OBC' where candidate_id='" + allotmentObject.CandidateId + "' and college_id='" + allotmentObject.CollegeId + "' and course_id='" + allotmentObject.CourseId + "'";
+                    sql3 = "update allotment set status='Alloted',reservation='OBC' where candidate_id='" + allotmentObject.CandidateId + "' and college_id='" + allotmentObject.CollegeId + "' and course_id='" + allotmentObject.CourseId + "'";
                 }
                 else if (allotmentObject.Reservation.Equals("SC/ST"))
                 {
                     sql2 = "update college_coures set sc_st=" + allotmentObject.SC_STSeats + " where collegeid='" + allotmentObject.CollegeId + "' and courseid='" + allotmentObject.CourseId + "'";
-                    sql3 = "update new1allotment set status='Alloted',reservation='SC/ST' where candidate_id='" + allotmentObject.CandidateId + "' and college_id='" + allotmentObject.CollegeId + "' and course_id='" + allotmentObject.CourseId + "'";
+                    sql3 = "update allotment set status='Alloted',reservation='SC/ST' where candidate_id='" + allotmentObject.CandidateId + "' and college_id='" + allotmentObject.CollegeId + "' and course_id='" + allotmentObject.CourseId + "'";
 
                 }
                 else if (allotmentObject.Reservation.Equals("Sport"))
                 {
                     sql2 = "update college_coures set sports=" + allotmentObject.SportSeats + " where collegeid='" + allotmentObject.CollegeId + "' and courseid='" + allotmentObject.CourseId + "'";
-                    sql3 = "update new1allotment set status='Sport',reservation='OBC' where candidate_id='" + allotmentObject.CandidateId + "' and college_id='" + allotmentObject.CollegeId + "' and course_id='" + allotmentObject.CourseId + "'";
+                    sql3 = "update allotment set status='Sport',reservation='OBC' where candidate_id='" + allotmentObject.CandidateId + "' and college_id='" + allotmentObject.CollegeId + "' and course_id='" + allotmentObject.CourseId + "'";
                 }
                 else
                 {
                     sql2 = "update college_coures set numberof_seats=" + allotmentObject.GeneralSeats + " where collegeid='" + allotmentObject.CollegeId + "' and courseid='" + allotmentObject.CourseId + "'";
-                    sql3 = "update new1allotment set status='Alloted',reservation='General' where candidate_id='" + allotmentObject.CandidateId + "' and college_id='" + allotmentObject.CollegeId + "' and course_id='" + allotmentObject.CourseId + "'";
+                    sql3 = "update allotment set status='Alloted',reservation='General' where candidate_id='" + allotmentObject.CandidateId + "' and college_id='" + allotmentObject.CollegeId + "' and course_id='" + allotmentObject.CourseId + "'";
                 }
                 
                 

@@ -22,7 +22,7 @@ namespace PresentataionLayer
 
 
 
-        private void LoadCollegeList()
+        private void LoadCollegeList()                                                      //View college list
         {
             DataSet dsCollegeList = null;
             try

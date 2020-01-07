@@ -20,7 +20,7 @@ namespace PresentataionLayer
         }
 
 
-        private void LoadCollegeName()
+        private void LoadCollegeName()                                                      //Load college names in to combobox
         {
             DataSet dsCollegeName = null;
             try
@@ -45,7 +45,7 @@ namespace PresentataionLayer
                 lblMessage.Text = ex.Message.ToString();
             }
         }
-        private void LoadCourseName()
+        private void LoadCourseName()                                                           //Load course names in to combobox
         {
             DataSet dsCourseName =new DataSet();
             try
@@ -72,7 +72,7 @@ namespace PresentataionLayer
         }
 
 
-        private void LoadCourseNameAdd()
+        private void LoadCourseNameAdd()                                                              //Load course names in to combobox
         {
             DataSet dsCourseNameAdd = new DataSet();
             try
@@ -114,7 +114,7 @@ namespace PresentataionLayer
             LoadCourseName();
         }
 
-        private void btnDeleteCourse_Click(object sender, EventArgs e)
+        private void btnDeleteCourse_Click(object sender, EventArgs e)                              //Delete course from course list
         {
             int output = 0;
             try
@@ -143,7 +143,7 @@ namespace PresentataionLayer
             }
         }
 
-        private void btnAddCourse_Click(object sender, EventArgs e)
+        private void btnAddCourse_Click(object sender, EventArgs e)                                     //To add new courses
         {
 
 

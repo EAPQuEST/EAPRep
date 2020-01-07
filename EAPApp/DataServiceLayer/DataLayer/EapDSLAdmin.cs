@@ -12,7 +12,11 @@ namespace DataServiceLayer.DataLayer
 {
     public class EapDSLAdmin
     {
-        public static int CollegeDetailsInsert(CollegeDetails collegeDetails)  //college insert
+       
+
+
+        //to change password if the user credentials entered is correct
+        public static int AdminNewPassword(string username, string password)
         {
             int output = 0;
             string sql = "";
@@ -20,19 +24,105 @@ namespace DataServiceLayer.DataLayer
             SqlCommand cmd = null;
             try
             {
-                sql = "insert into college_details(college_id,college_name,college_address,college_phone) values(";
+                sql = "update password_details  set ";
 
-                sql = sql + "'" + collegeDetails.CollegeID + "',";
-                sql = sql + "'" + collegeDetails.CollegeName + "',";
-                
-                sql = sql + "'" + collegeDetails.CollegeAddress + "',";
-                sql = sql + "'" + collegeDetails.CollegePhone + "')";
+                sql = sql + "password ='" + password + "'";
+                sql = sql + " where username = '" + username + "'and user_type='admin'";
 
                 con = DatabaseHelper.GetConnection();
                 con.Open();
                 cmd = new SqlCommand(sql, con);
 
                 output = cmd.ExecuteNonQuery();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:AdminNewPassword", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                cmd.Dispose();
+            }
+            return output;
+
+
+        }
+
+
+        //to check the current password of the admin is correct or not
+
+        public static DataTable AdminChangePassword(string password)
+        {
+            string sql = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            //DataSet dsLogin = null;
+            DataTable dtLogin = null;
+
+
+            try
+            {
+                //sql = "select count(*) as cnt from login_database"
+                sql = "select password from password_details where password='" + password + "'and user_type='admin'";
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                //dsLogin = new DataSet();
+                dtLogin = new DataTable();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dtLogin);
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:AdminChangePassword()", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+
+            return dtLogin;
+        }
+
+
+        //to insert the details of college into the database
+
+        public static int CollegeDetailsInsert(CollegeDetails collegeDetails)  //college insert
+        {
+            int output = 0;
+            string sql = "";
+            string sqlPassword = "";
+            SqlConnection con = null;
+            SqlCommand cmd = null;
+            SqlCommand cmd1= null;
+            try
+            {
+                sql = "insert into college_details(college_id,college_name,college_address,college_phone) values(";
+
+                sql = sql + "'" + collegeDetails.CollegeID + "',";
+                sql = sql + "'" + collegeDetails.CollegeName + "',";
+
+                sql = sql + "'" + collegeDetails.CollegeAddress + "',";
+                sql = sql + "'" + collegeDetails.CollegePhone + "')";
+
+                sqlPassword = "insert into password_details(username,password,user_type) values(";
+                sqlPassword = sqlPassword + "'" + collegeDetails.CollegeID + "',";
+                sqlPassword = sqlPassword + "'" + collegeDetails.CollegeID + "',";
+                sqlPassword = sqlPassword+"'college')";
+
+
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+                cmd1 = new SqlCommand(sqlPassword, con);
+                
+                output = cmd.ExecuteNonQuery();
+                cmd1.ExecuteNonQuery();
 
             }
             catch (Exception ex)
@@ -43,10 +133,132 @@ namespace DataServiceLayer.DataLayer
             {
                 con.Close();
                 cmd.Dispose();
+                cmd1.Dispose();
             }
             return output;
 
         }
+
+
+        //check user credentials for the admin to login
+        public static DataTable AdminLogin(string user, string password)
+        {
+            string sql = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            //DataSet dsLogin = null;
+            DataTable dtLogin = null;
+
+
+            try
+            {
+                //sql = "select count(*) as cnt from login_database"
+                sql = "select username,password from password_details where username='" + user + "'and password='" + password + "'and user_type='admin'";
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                //dsLogin = new DataSet();
+                dtLogin = new DataTable();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dtLogin);
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:AdminLogin()", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+
+            return dtLogin;
+        }
+
+
+
+        //to get the name of the course in a particular college
+
+
+        public static DataSet GetCourseName(string collegeName)
+        {
+            string sql = "";
+           // string nestedsql;
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            DataSet dsCourseName = null;
+          
+
+
+            try
+            {
+   
+                sql = "select course_name from course_details where course_id IN(SELECT  college_coures.courseid FROM college_coures WHERE collegeid IN(select college_details.college_id FROM college_details where college_name='" + collegeName + "'))";
+
+
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                dsCourseName = new DataSet();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dsCourseName);
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSL.cs:GetCourseName()", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+
+            return dsCourseName;
+
+        }
+
+
+        //to view all the details of all the college in the grid view
+        public static DataSet ViewCollegeList()
+        {
+            string sql = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+
+
+            DataSet dsCollegeList = null;
+
+            try
+            {
+                sql = "SELECT college_coures.collegeid,college_details.college_name,college_coures.courseid," +
+                    "college_details.college_phone,college_details.college_address FROM college_details " +
+                    "JOIN college_coures ON college_details.college_id = college_coures.collegeid ORDER BY " +
+                    "college_coures.collegeid ASC";
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                dsCollegeList = new DataSet();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dsCollegeList);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*****Error : EapDSLAdmin.cs::ViewCollegeList", ex.Message.ToString());
+
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+
+            }
+            return dsCollegeList;
+        }
+
+        //insert the courses available in allotment
+
         public static int CollegeCourseInsert(CollegeDetails collegeDetails)
         {
             int output = 0;
@@ -56,11 +268,15 @@ namespace DataServiceLayer.DataLayer
             try
             {
                 string sqlnested = "select course_id from course_details where course_name='" + collegeDetails.CourseName + "'";
-                sql = "insert into college_coures(collegeid,courseid) values(";
+                sql = "insert into college_coures(collegeid,courseid,numberof_seats,sc_st,obc,sports) values(";
 
                 sql = sql + "'" + collegeDetails.CollegeID + "',";
                 //sql = sql + "'" + collegeDetails.CourseId + "')";
-                sql = sql + "(" + sqlnested + "))";
+                sql = sql + "(" + sqlnested + ")";
+                sql = sql+"45,";
+                sql = sql + "5,";
+                sql = sql + "5,";
+                sql = sql + "5)";
                 //sql = sql + "" + collegeDetails.CourseSeat+ ")";
 
 
@@ -83,6 +299,8 @@ namespace DataServiceLayer.DataLayer
             return output;
 
         }
+
+        //update the college details
         public static int CollegeDetailsUpdate(CollegeDetails collegeDetails)
         {
             int output = 0;
@@ -94,8 +312,8 @@ namespace DataServiceLayer.DataLayer
             {
                 sql = "update college_details set ";
                 // sql = sql + "college_id ='" + collegeDetails.CollegeID + "',";
-                sql = sql + "college_name ='" + collegeDetails.CollegeName + "',";
-                sql = sql + "total_seats ='" + collegeDetails.TotalSeats + "',";
+                //sql = sql + "college_name ='" + collegeDetails.CollegeName + "',";
+                
                 sql = sql + "college_address ='" + collegeDetails.CollegeAddress + "',";
                 sql = sql + "college_phone =" + collegeDetails.CollegePhone + " ";
 
@@ -121,6 +339,7 @@ namespace DataServiceLayer.DataLayer
             return output;
         }
 
+        //add or delete courses in a college
         public static int CollegeCourseUpdate(CollegeDetails collegeDetails)
         {
             int output = 0;
@@ -157,6 +376,8 @@ namespace DataServiceLayer.DataLayer
             return output;
         }
 
+
+        //to get the college id
         public static DataSet GetCollegeIds()
         {
             string sql = "";
@@ -186,6 +407,8 @@ namespace DataServiceLayer.DataLayer
             return dsCollegeIds;
         }
 
+
+        //to get the details of the college using college id
         public static CollegeDetails GetCollegeDetailsUsingId(string collegeId)
         {
             string sql = "";
@@ -198,8 +421,8 @@ namespace DataServiceLayer.DataLayer
             try
             {
                 sql = "select *  from college_details where college_id='" + collegeId + "'";
-                string s = "select courseid from college_coures where collegeid'" + collegeId + "'";
-                string t = "select course_name from course_details where course_id'" + s + "'";
+                //string s = "select courseid from college_coures where collegeid'" + collegeId + "'";
+               // string t = "select course_name from course_details where course_id'" + s + "'";
                 con = DatabaseHelper.GetConnection();
                 con.Open();
                 dsCollegeDetails = new DataSet();
@@ -213,15 +436,15 @@ namespace DataServiceLayer.DataLayer
                     collegeDetails = new CollegeDetails();
                     collegeDetails.CollegeID = Data[0].ToString();
                     collegeDetails.CollegeName = Data[1].ToString();
-                    collegeDetails.TotalSeats = Convert.ToInt32(Data[2].ToString());
-                    collegeDetails.CollegeAddress = Data[3].ToString();
-                    collegeDetails.CollegePhone = Convert.ToInt64(Data[4].ToString());
-                    collegeDetails.CourseName = Data[5].ToString();
+                   // collegeDetails.TotalSeats = Convert.ToInt32(Data[2].ToString());
+                    collegeDetails.CollegeAddress = Data[2].ToString();
+                    collegeDetails.CollegePhone = Convert.ToInt64(Data[3].ToString());
+                    //collegeDetails.CourseName = Data[5].ToString();
 
 
 
                 }
-                
+
 
 
             }
@@ -236,6 +459,9 @@ namespace DataServiceLayer.DataLayer
             }
             return collegeDetails;
         }
+
+
+        //to get college details
         public static DataSet GetCollegeDetails()
         {
             string sql = "";
@@ -267,6 +493,8 @@ namespace DataServiceLayer.DataLayer
             return dsCollege;
 
         }
+
+        //get college details of the input college name
         public static DataSet GetDataLike(string likeCollegeName)
         {
             string sql = "";
@@ -295,6 +523,8 @@ namespace DataServiceLayer.DataLayer
             }
             return dsData;
         }
+
+        //to delete a college from the database
         public static int CollegeDelete(string collegeName)
         {
             int output = 0;
@@ -329,10 +559,124 @@ namespace DataServiceLayer.DataLayer
 
             return output;
         }
+
+
+        public static int CourseDelete(string courseName)
+        {
+            int output = 0;
+            string sql = "";
+            SqlConnection con = null;
+            SqlCommand cmd = null;
+
+            try
+            {
+                sql = "delete from college_coures where courseid IN(select course_id from course_details where course_name='" + courseName + "')";
+
+
+
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+
+                output = cmd.ExecuteNonQuery();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSLAdmin.cs:CollegeDelete", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                cmd.Dispose();
+            }
+
+
+            return output;
+        }
+
+
+        //to get all the available courses
+        public static DataSet GetCourseShowAll()
+        {
+            string sql = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            DataSet dsCollegeName = null;
+
+            try
+            {
+                sql = "select course_name  from course_details";
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                dsCollegeName = new DataSet();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dsCollegeName);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSLAdmin.cs:GetCollegeShowAll()", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+            return dsCollegeName;
+        }
+
+
+        public static int CourseAdd(CollegeDetails collegeDetails)
+        {
+
+            int output = 0;
+            string sql = "";
+            SqlConnection con = null;
+            SqlCommand cmd = null;
+            try
+            {
+
+                string sqlnested = "(select college_id from college_details where college_name = '" + collegeDetails.CollegeName + "')";
+                string s = "(select course_id from course_details where course_name = '" + collegeDetails.CourseName + "')";
+                sql = "insert into college_coures(collegeid, courseid) values";
+
+
+                sql = sql + "(" + sqlnested + "," + s + ")";
+
+
+                con = DatabaseHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+
+                output = cmd.ExecuteNonQuery();
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapDSLAdmin.cs:CollegeAdd", ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                cmd.Dispose();
+            }
+
+
+            return output;
+        }
+
+
+        //to get college name and college id
+
         public static DataSet GetCollegeName()
         {
             string sql = "";
-            
             SqlConnection con = null;
             SqlDataAdapter adapter = null;
             DataSet dsCollegeName = null;
@@ -359,6 +703,7 @@ namespace DataServiceLayer.DataLayer
             return dsCollegeName;
         }
 
+        //to generate allotment of the candidates
         public static int GenerateAllotment(CandidateDetails candidateDetails)
         {
             int output = 0;
@@ -371,7 +716,7 @@ namespace DataServiceLayer.DataLayer
             string sql6 = "";
             string sql7 = "";
             string sql8 = "";
-       
+
             SqlConnection con = null;
             SqlCommand cmd = null;
             SqlCommand cmd1 = null;
@@ -391,7 +736,7 @@ namespace DataServiceLayer.DataLayer
                 sql = sql + "'" + candidateDetails.RegisterNumber + "',";
                 sql = sql + "(select reservation from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
                 sql = sql + "(select candiate_physics+candiate_chemistry+candiate_maths+'" + candidateDetails.Total + "'from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
-                sql = sql + "(select college_id from college_details where college_name='"+candidateDetails.Collegeprefernce1+"'),"  ;
+                sql = sql + "(select college_id from college_details where college_name='" + candidateDetails.Collegeprefernce1 + "'),";
                 sql = sql + "(select course_id from course_details where course_name='" + candidateDetails.CollegeCourse11 + "'),";
                 sql = sql + "'waitlist')";
 
@@ -406,19 +751,19 @@ namespace DataServiceLayer.DataLayer
                 sql1 = sql1 + "'waitlist')";
 
                 sql2 = "insert into allotment(candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status) values(";
-                 sql2 =  sql2 + "'" + LoginInfo.userID + "',";
-                 sql2 =  sql2 + "'" + candidateDetails.RegisterNumber + "',";
+                sql2 = sql2 + "'" + LoginInfo.userID + "',";
+                sql2 = sql2 + "'" + candidateDetails.RegisterNumber + "',";
                 sql2 = sql2 + "(select reservation from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
                 sql2 = sql2 + "(select candiate_physics+candiate_chemistry+candiate_maths+'" + candidateDetails.Total + "'from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
-                sql2 =  sql2 + "(select college_id from college_details where college_name='" + candidateDetails.Collegeprefernce1 + "'),";
-                 sql2 =  sql2 + "(select course_id from course_details where course_name='" + candidateDetails.CollegeCourse13 + "'),";
-                 sql2 = sql2 + "'waitlist')";
+                sql2 = sql2 + "(select college_id from college_details where college_name='" + candidateDetails.Collegeprefernce1 + "'),";
+                sql2 = sql2 + "(select course_id from course_details where course_name='" + candidateDetails.CollegeCourse13 + "'),";
+                sql2 = sql2 + "'waitlist')";
 
                 sql3 = "insert into allotment(candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status) values(";
                 sql3 = sql3 + "'" + LoginInfo.userID + "',";
                 sql3 = sql3 + "'" + candidateDetails.RegisterNumber + "',";
                 sql3 = sql3 + "(select reservation from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
-                sql3= sql3 + "(select candiate_physics+candiate_chemistry+candiate_maths+'" + candidateDetails.Total + "'from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql3 = sql3 + "(select candiate_physics+candiate_chemistry+candiate_maths+'" + candidateDetails.Total + "'from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
                 sql3 = sql3 + "(select college_id from college_details where college_name='" + candidateDetails.Collegeprefernce2 + "'),";
                 sql3 = sql3 + "(select course_id from course_details where course_name='" + candidateDetails.CollegeCourse21 + "'),";
                 sql3 = sql3 + "'waitlist')";
@@ -463,14 +808,14 @@ namespace DataServiceLayer.DataLayer
                 sql8 = sql8 + "'" + LoginInfo.userID + "',";
                 sql8 = sql8 + "'" + candidateDetails.RegisterNumber + "',";
                 sql8 = sql8 + "(select reservation from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
-                sql8 = sql8 + "(select candiate_physics+candiate_chemistry+candiate_maths+'" + candidateDetails.Total +"'from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
+                sql8 = sql8 + "(select candiate_physics+candiate_chemistry+candiate_maths+'" + candidateDetails.Total + "'from candidate_details where candidate_id='" + LoginInfo.userID + "'),";
                 sql8 = sql8 + "(select college_id from college_details where college_name='" + candidateDetails.CollegePrefernce3 + "'),";
                 sql8 = sql8 + "(select course_id from course_details where course_name='" + candidateDetails.CollegeCourse33 + "'),";
                 sql8 = sql8 + "'waitlist') ";
 
-               
 
-                
+
+
 
 
 
@@ -485,7 +830,7 @@ namespace DataServiceLayer.DataLayer
                 cmd6 = new SqlCommand(sql6, con);
                 cmd7 = new SqlCommand(sql7, con);
                 cmd8 = new SqlCommand(sql8, con);
-         
+
                 output = cmd.ExecuteNonQuery();
                 cmd1.ExecuteNonQuery();
                 cmd2.ExecuteNonQuery();
@@ -517,7 +862,7 @@ namespace DataServiceLayer.DataLayer
             return output;
         }
 
-
+        //to allot students 
         public static int AllotStudents()
         {
             SqlConnection con = null;
@@ -528,7 +873,7 @@ namespace DataServiceLayer.DataLayer
             {
                 //string s = "select candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status from allotment where total_marks >= 200 order by total_marks desc";
                 sql1 = "create table newTable as select * from allotment where total_marks >=200 order by total_marks desc";
-               // sql1 = "insert into viewallotment (candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status) select candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status from allotment where total_marks >=200 order by total_marks desc";
+                // sql1 = "insert into viewallotment (candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status) select candidate_id,entrance_id,reservation,total_marks,college_id,course_id,status from allotment where total_marks >=200 order by total_marks desc";
                 con = DatabaseHelper.GetConnection();
                 con.Open();
                 cmd = new SqlCommand(sql1, con);
@@ -550,8 +895,7 @@ namespace DataServiceLayer.DataLayer
 
         }
 
-
-
+        //to get details of the allotted students
         public static DataSet GetStudents()
         {
             string sql = "";
@@ -561,7 +905,7 @@ namespace DataServiceLayer.DataLayer
 
             try
             {
-                sql = "select candidate_id,college_id,course_id,reservation from new1allotment where status='Alloted'";
+                sql = "select candidate_id,college_id,course_id,reservation from allotment where status='Alloted'";
                 con = DatabaseHelper.GetConnection();
                 con.Open();
                 dsStudents = new DataSet();
@@ -580,13 +924,5 @@ namespace DataServiceLayer.DataLayer
             }
             return dsStudents;
         }
-
-
-
-
-
-
-
-
     }
 }

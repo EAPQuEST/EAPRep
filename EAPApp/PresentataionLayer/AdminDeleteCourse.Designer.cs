@@ -83,9 +83,9 @@
             this.panel1.Controls.Add(this.cmbCourseName);
             this.panel1.Controls.Add(this.btnDeleteCourse);
             this.panel1.Controls.Add(this.lblCoursenameSearch);
-            this.panel1.Location = new System.Drawing.Point(128, 55);
+            this.panel1.Location = new System.Drawing.Point(26, 115);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(530, 247);
+            this.panel1.Size = new System.Drawing.Size(530, 322);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -145,7 +145,7 @@
             this.toolStripLabel1});
             this.tlsDeleteCollege.Location = new System.Drawing.Point(0, 0);
             this.tlsDeleteCollege.Name = "tlsDeleteCollege";
-            this.tlsDeleteCollege.Size = new System.Drawing.Size(800, 25);
+            this.tlsDeleteCollege.Size = new System.Drawing.Size(1264, 25);
             this.tlsDeleteCollege.TabIndex = 7;
             this.tlsDeleteCollege.Text = "toolStrip1";
             // 
@@ -174,7 +174,7 @@
             this.pnlCourseDetails.Controls.Add(this.btnAddCourse);
             this.pnlCourseDetails.Controls.Add(this.label2);
             this.pnlCourseDetails.Controls.Add(this.lblCourseDetails);
-            this.pnlCourseDetails.Location = new System.Drawing.Point(128, 345);
+            this.pnlCourseDetails.Location = new System.Drawing.Point(686, 115);
             this.pnlCourseDetails.Name = "pnlCourseDetails";
             this.pnlCourseDetails.Size = new System.Drawing.Size(530, 322);
             this.pnlCourseDetails.TabIndex = 9;
@@ -225,7 +225,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(800, 775);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.pnlCourseDetails);
             this.Controls.Add(this.tlsDeleteCollege);
             this.Controls.Add(this.panel1);

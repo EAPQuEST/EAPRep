@@ -12,6 +12,8 @@ namespace DataServiceLayer.DataLayer
 {
     public class EapDSLCollege
     {
+
+        //update status of the allotted candidates to confirmed
         public static int UpdateStatus(string candidateId)
         {
             int output = 0;
@@ -20,7 +22,7 @@ namespace DataServiceLayer.DataLayer
             SqlCommand cmd = null;
             try
             {
-                sql = "update new1allotment  set status ='confirmed' where candidate_id ='"+ candidateId+"'";
+                sql = "update allotment  set status ='confirmed' where candidate_id ='"+ candidateId+"' and status='Alloted'";
 
                 con = DatabaseHelper.GetConnection();
                 con.Open();
@@ -46,7 +48,7 @@ namespace DataServiceLayer.DataLayer
 
 
 
-
+        //change the old password and set new password
         public static int CollegeNewPassword(CollegeDetails collegeDetails)
         {
             int output = 0;
@@ -82,9 +84,7 @@ namespace DataServiceLayer.DataLayer
 
         }
 
-
-
-
+        //check the current password of the college is correct
         public static DataTable CollegeChangePassword(string password)
         {
             string sql = "";
@@ -121,7 +121,7 @@ namespace DataServiceLayer.DataLayer
         }
 
 
-
+        //login to college page if the user credentials are correct
 
         public static DataTable CollegeLogin(string user, string password)
         {
@@ -158,6 +158,7 @@ namespace DataServiceLayer.DataLayer
             return dtLogin;
         }
 
+        //to get the details of the candidates using their id
         public static DataSet GetCandidateIdLike(string likeId)
         {
             string sql = "";
@@ -168,7 +169,7 @@ namespace DataServiceLayer.DataLayer
 
             try
             {
-                sql = "select * from new1allotment where candidate_id like '" + likeId + "%'";
+                sql = "select candidate_id,course_id,reservation,status from allotment where college_id='"+LoginInfo.userID+ "' and status='Alloted' or status='confirmed' and candidate_id like '" + likeId + "%'";
                 con = DatabaseHelper.GetConnection();
                 con.Open();
                 dsCandidate = new DataSet();
@@ -190,7 +191,7 @@ namespace DataServiceLayer.DataLayer
             return dsCandidate;
         }
 
-
+        //get name of the candidates using their id
         public static DataSet GetCandidateName(string likeId)
         {
             string sql = "";

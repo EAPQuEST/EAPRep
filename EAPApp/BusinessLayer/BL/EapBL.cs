@@ -11,36 +11,7 @@ namespace BusinessLayer.BL
 {
     public class EapBL
     {
-        //public static int CollegeDetailsInsert(CollegeDetails collegeDetails)
-        //{
-        //    int output = 0;
-        //    try
-        //    {
-
-        //        output = EapDSL.CollegeDetailsInsert(collegeDetails);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.Out.WriteLine("*** Error : EapBL.cs:CollegeDetailsInsert", ex.Message.ToString());
-        //    }
-        //    return output;
-
-        //}
-        //public static int CollegeCourseInsert(CollegeDetails collegeDetails)
-        //{
-        //    int output = 0;
-        //    try
-        //    {
-
-        //        output = EapDSL.CollegeCourseInsert(collegeDetails);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.Out.WriteLine("*** Error : EapBL.cs:CollegeCourseInsert", ex.Message.ToString());
-        //    }
-        //    return output;
-
-        //}
+        //to insert the candidate educational details
         public static int StudentDetailsInsert(CandidateDetails candidateDetails)
         {
             int output = 0;
@@ -59,7 +30,9 @@ namespace BusinessLayer.BL
 
 
         }
-        public static int CandidateRegistrationInsert(CandidateDetails candidateDetails)
+
+        //to insert the candidate basic details to register
+         public static int CandidateRegistrationInsert(CandidateDetails candidateDetails)
         {
             int output = 0;
             try
@@ -77,6 +50,9 @@ namespace BusinessLayer.BL
 
 
         }
+
+
+        //to insert the candidate course preference
         public static int StudentCoursePreferenceInsert(CandidateDetails candidateDetails)
         {
             int output = 0;
@@ -95,132 +71,9 @@ namespace BusinessLayer.BL
 
 
         }
-        //public static DataSet GetCollegeIds()
-        //{
-        //    string sql = "";
+       
 
-        //    DataSet dsCollegeId = null;
-
-        //    try
-        //    {
-        //        dsCollegeId = EapDSL.GetCollegeIds();
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.Out.WriteLine("*** Error : EapBL.cs:GetCollegeIds()", ex.Message.ToString());
-        //    }
-
-        //    return dsCollegeId;
-        //}
-
-        //public static CollegeDetails GetCollegeDetailsUsingId(string courseId)
-        //{
-
-        //    CollegeDetails collegeDetails = null;
-
-        //    try
-        //    {
-        //        collegeDetails = EapDSL.GetCollegeDetailsUsingId(courseId);
-                
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.Out.WriteLine("*** Error : EapBL.cs:GetCollegeDetailsUsingId()", ex.Message.ToString());
-        //    }
-            
-        //    return collegeDetails;
-        //}
-        //public static int CollegeDetailsUpdate(CollegeDetails collegeDetails)
-        //{
-        //    int output = 0;
-           
-
-        //    try
-        //    {
-
-        //        output = EapDSL.CollegeDetailsUpdate(collegeDetails);
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.Out.WriteLine("*** Error : EapBL.cs:CollegeDetailsUpdate()", ex.Message.ToString());
-        //    }
-           
-        //    return output;
-        //}
-        //public static int CollegeCourseUpdate(CollegeDetails collegeDetails)
-        //{
-        //    int output = 0;
-
-
-        //    try
-        //    {
-
-        //        output = EapDSL.CollegeCourseUpdate(collegeDetails);
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.Out.WriteLine("*** Error : EapBL.cs:CollegeCourseUpdate()", ex.Message.ToString());
-        //    }
-
-        //    return output;
-        //}
-        //public static DataSet GetCollegeDetails()
-        //{
-        //    string sql = "";
-        //    DataSet dsCollegeDetails = null;
-
-
-        //    try
-        //    {
-
-        //        dsCollegeDetails = EapDSL.GetCollegeDetails();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.Out.WriteLine("*** Error : EapBL.cs:GetCollegeDetails()", ex.Message.ToString());
-        //    }
-
-
-        //    return dsCollegeDetails;
-
-        //}
-        //public static DataSet GetDataLike(string likeCollegeName)
-        //{
-
-        //    DataSet dsData = null;
-
-        //    try
-        //    {
-        //        dsData = EapDSL.GetDataLike(likeCollegeName);
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.Out.WriteLine("*** Error : EapBL.cs:GetDataLike()", ex.Message.ToString());
-        //    }
-
-        //    return dsData;
-        //}
-        //public static int CollegeDelete(string collegeName)
-        //{
-        //    int output = 0;
-        //    try
-        //    {
-
-        //        output = EapDSL.CollegeDelete(collegeName);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.Out.WriteLine("*** Error : EapBL.cs: CollegeDelete", ex.Message.ToString());
-        //    }
-        //    return output;
-
-
-        //}
+        //check the username and password for login
         public static DataTable CandidateLogin(string user,string password)
         {
             //DataSet dsData = null;
@@ -241,6 +94,9 @@ namespace BusinessLayer.BL
             return dtLogin;
 
         }
+
+
+        //load courses available within a particular college in the combo box
         public static DataSet LoadCollegePreference(string collegeName)
         {
             DataSet dsData = null;
@@ -259,6 +115,9 @@ namespace BusinessLayer.BL
             return dsData;
 
         }
+
+        //load the educational details of already applied candidates for the allotment in the text box
+
         public static CandidateDetails LoadCandidateDetails()
         {
            
@@ -284,7 +143,7 @@ namespace BusinessLayer.BL
 
         }
 
-
+        //view the allotment result 
         public static CandidateDetails ViewAllotmentResult()
         {
             CandidateDetails candidateDetails = null;
@@ -303,6 +162,67 @@ namespace BusinessLayer.BL
 
 
             return candidateDetails;
+
+        }
+
+
+        //to check if the current password is correct or not
+        public static DataTable CandidateChangePassword(string password)
+        {
+            //DataSet dsData = null;
+            DataTable dtLogin = null;
+            try
+            {
+                dtLogin = EapDSL.CandidateChangePassword(password);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:CandidateChangePassword()", ex.Message.ToString());
+            }
+
+            return dtLogin;
+        }
+
+        //to change the password if the user credentials entered is correct
+        public static int CandidateNewPassword(CandidateDetails candidateDetails)
+        {
+            int output = 0;
+            try
+            {
+                output = EapDSL.CandidateNewPassword(candidateDetails);
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("*** Error : EapBL.cs:CandidateNewPassword", ex.Message.ToString());
+            }
+            return output;
+
+        }
+
+
+
+
+        //to check if the candidate has already applied for allotment
+        public static int CheckExistingCandidate(string candidateId)
+        {
+            int output=0;
+
+
+
+            try
+            {
+
+                output = EapDSL.CheckExistingCandidate(candidateId);
+               
+            }
+            catch (Exception ex)
+            {
+
+                Console.Out.WriteLine("*** Error : EapBL.cs:CheckExistingCandidate()", ex.Message.ToString());
+            }
+
+            return output;
 
         }
     }

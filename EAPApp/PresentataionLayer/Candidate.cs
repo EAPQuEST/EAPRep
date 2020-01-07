@@ -22,9 +22,29 @@ namespace PresentataionLayer
 
         private void educationalDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CandidateEducationalDetails candidateEducationalDetails = new CandidateEducationalDetails();
-            candidateEducationalDetails.Show();
-            candidateEducationalDetails.MdiParent = this;
+            int output = 0;
+            string candidateId = lblUserId.Text;
+
+            output =EapBL.CheckExistingCandidate(candidateId);
+            if(output>0)
+            {
+                MessageBox.Show("Candidate Records already Submitted");
+            }
+            else
+            {
+                CandidateEducationalDetails candidateEducationalDetails = new CandidateEducationalDetails();
+                candidateEducationalDetails.Show();
+                candidateEducationalDetails.MdiParent = this;
+
+            }
+            
+           
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Candidate Records already Submitted");
+            //}
+            
         }
 
         private void entranceDetailsToolStripMenuItem_Click(object sender, EventArgs e)

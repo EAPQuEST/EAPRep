@@ -101,7 +101,7 @@
             this.panel1.Controls.Add(this.lblRegisterNumber);
             this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(814, 253);
+            this.panel1.Size = new System.Drawing.Size(1252, 253);
             this.panel1.TabIndex = 1;
             // 
             // label6
@@ -167,7 +167,7 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(814, 36);
+            this.button1.Size = new System.Drawing.Size(1242, 36);
             this.button1.TabIndex = 49;
             this.button1.Text = "   Entrance Details";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -245,7 +245,7 @@
             this.tspHome});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(828, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1264, 25);
             this.toolStrip1.TabIndex = 27;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -266,7 +266,7 @@
             this.btnCandidateEntranceSubmit.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnCandidateEntranceSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCandidateEntranceSubmit.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCandidateEntranceSubmit.Location = new System.Drawing.Point(676, 555);
+            this.btnCandidateEntranceSubmit.Location = new System.Drawing.Point(1132, 596);
             this.btnCandidateEntranceSubmit.Name = "btnCandidateEntranceSubmit";
             this.btnCandidateEntranceSubmit.Size = new System.Drawing.Size(124, 42);
             this.btnCandidateEntranceSubmit.TabIndex = 70;
@@ -288,7 +288,7 @@
             this.panel2.Controls.Add(this.button2);
             this.panel2.Location = new System.Drawing.Point(3, 297);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(406, 252);
+            this.panel2.Size = new System.Drawing.Size(589, 252);
             this.panel2.TabIndex = 71;
             // 
             // lblPreference2
@@ -381,11 +381,12 @@
             "Vimal Jyothi Engineering College",
             "Viswajyothi College of Engineering and Technology",
             "Younus College of Engineering"});
-            this.cmbCollegePreference3.Location = new System.Drawing.Point(133, 215);
+            this.cmbCollegePreference3.Location = new System.Drawing.Point(226, 211);
             this.cmbCollegePreference3.Name = "cmbCollegePreference3";
             this.cmbCollegePreference3.Size = new System.Drawing.Size(245, 21);
             this.cmbCollegePreference3.TabIndex = 117;
             this.cmbCollegePreference3.Text = "Not Selected";
+            this.cmbCollegePreference3.SelectedIndexChanged += new System.EventHandler(this.cmbCollegePreference3_SelectedIndexChanged_1);
             // 
             // cmbCollegePreference2
             // 
@@ -433,11 +434,12 @@
             "Vimal Jyothi Engineering College",
             "Viswajyothi College of Engineering and Technology",
             "Younus College of Engineering"});
-            this.cmbCollegePreference2.Location = new System.Drawing.Point(133, 167);
+            this.cmbCollegePreference2.Location = new System.Drawing.Point(226, 163);
             this.cmbCollegePreference2.Name = "cmbCollegePreference2";
             this.cmbCollegePreference2.Size = new System.Drawing.Size(245, 21);
             this.cmbCollegePreference2.TabIndex = 116;
             this.cmbCollegePreference2.Text = "Not Selected";
+            this.cmbCollegePreference2.SelectedIndexChanged += new System.EventHandler(this.cmbCollegePreference2_SelectedIndexChanged_1);
             // 
             // lblPreference1
             // 
@@ -496,7 +498,7 @@
             "Vimal Jyothi Engineering College",
             "Viswajyothi College of Engineering and Technology",
             "Younus College of Engineering"});
-            this.cmbCollegePreference1.Location = new System.Drawing.Point(133, 118);
+            this.cmbCollegePreference1.Location = new System.Drawing.Point(226, 117);
             this.cmbCollegePreference1.Name = "cmbCollegePreference1";
             this.cmbCollegePreference1.Size = new System.Drawing.Size(245, 21);
             this.cmbCollegePreference1.TabIndex = 114;
@@ -509,7 +511,7 @@
             this.button2.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(-3, 39);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(405, 35);
+            this.button2.Size = new System.Drawing.Size(585, 35);
             this.button2.TabIndex = 113;
             this.button2.Text = "   College Preferences";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -540,9 +542,9 @@
             this.panel3.Controls.Add(this.cmbCoursePreference12);
             this.panel3.Controls.Add(this.cmbCoursePreference11);
             this.panel3.Controls.Add(this.button3);
-            this.panel3.Location = new System.Drawing.Point(411, 297);
+            this.panel3.Location = new System.Drawing.Point(593, 297);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(403, 252);
+            this.panel3.Size = new System.Drawing.Size(654, 252);
             this.panel3.TabIndex = 72;
             // 
             // label8
@@ -559,7 +561,7 @@
             // cmbCoursePreference33
             // 
             this.cmbCoursePreference33.FormattingEnabled = true;
-            this.cmbCoursePreference33.Location = new System.Drawing.Point(273, 215);
+            this.cmbCoursePreference33.Location = new System.Drawing.Point(418, 215);
             this.cmbCoursePreference33.Name = "cmbCoursePreference33";
             this.cmbCoursePreference33.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference33.TabIndex = 145;
@@ -568,7 +570,7 @@
             // cmbCoursePreference32
             // 
             this.cmbCoursePreference32.FormattingEnabled = true;
-            this.cmbCoursePreference32.Location = new System.Drawing.Point(147, 215);
+            this.cmbCoursePreference32.Location = new System.Drawing.Point(224, 215);
             this.cmbCoursePreference32.Name = "cmbCoursePreference32";
             this.cmbCoursePreference32.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference32.TabIndex = 144;
@@ -586,7 +588,7 @@
             // cmbCoursePreference23
             // 
             this.cmbCoursePreference23.FormattingEnabled = true;
-            this.cmbCoursePreference23.Location = new System.Drawing.Point(273, 167);
+            this.cmbCoursePreference23.Location = new System.Drawing.Point(418, 167);
             this.cmbCoursePreference23.Name = "cmbCoursePreference23";
             this.cmbCoursePreference23.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference23.TabIndex = 142;
@@ -595,7 +597,7 @@
             // cmbCoursePreference22
             // 
             this.cmbCoursePreference22.FormattingEnabled = true;
-            this.cmbCoursePreference22.Location = new System.Drawing.Point(147, 167);
+            this.cmbCoursePreference22.Location = new System.Drawing.Point(224, 167);
             this.cmbCoursePreference22.Name = "cmbCoursePreference22";
             this.cmbCoursePreference22.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference22.TabIndex = 141;
@@ -616,7 +618,7 @@
             this.lblCoursePreference2.AutoSize = true;
             this.lblCoursePreference2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCoursePreference2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblCoursePreference2.Location = new System.Drawing.Point(172, 85);
+            this.lblCoursePreference2.Location = new System.Drawing.Point(249, 85);
             this.lblCoursePreference2.Name = "lblCoursePreference2";
             this.lblCoursePreference2.Size = new System.Drawing.Size(79, 15);
             this.lblCoursePreference2.TabIndex = 139;
@@ -627,7 +629,7 @@
             this.lblCoursePreference3.AutoSize = true;
             this.lblCoursePreference3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCoursePreference3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblCoursePreference3.Location = new System.Drawing.Point(298, 85);
+            this.lblCoursePreference3.Location = new System.Drawing.Point(443, 85);
             this.lblCoursePreference3.Name = "lblCoursePreference3";
             this.lblCoursePreference3.Size = new System.Drawing.Size(73, 15);
             this.lblCoursePreference3.TabIndex = 138;
@@ -647,7 +649,7 @@
             // cmbCoursePreference13
             // 
             this.cmbCoursePreference13.FormattingEnabled = true;
-            this.cmbCoursePreference13.Location = new System.Drawing.Point(273, 114);
+            this.cmbCoursePreference13.Location = new System.Drawing.Point(418, 114);
             this.cmbCoursePreference13.Name = "cmbCoursePreference13";
             this.cmbCoursePreference13.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference13.TabIndex = 136;
@@ -656,12 +658,11 @@
             // cmbCoursePreference12
             // 
             this.cmbCoursePreference12.FormattingEnabled = true;
-            this.cmbCoursePreference12.Location = new System.Drawing.Point(147, 114);
+            this.cmbCoursePreference12.Location = new System.Drawing.Point(224, 114);
             this.cmbCoursePreference12.Name = "cmbCoursePreference12";
             this.cmbCoursePreference12.Size = new System.Drawing.Size(120, 21);
             this.cmbCoursePreference12.TabIndex = 135;
             this.cmbCoursePreference12.Text = "Not Selected";
-            //this.cmbCoursePreference12.SelectedIndexChanged += new System.EventHandler(this.cmbCoursePreference12_SelectedIndexChanged);
             // 
             // cmbCoursePreference11
             // 
@@ -676,9 +677,9 @@
             // 
             this.button3.BackColor = System.Drawing.Color.LightBlue;
             this.button3.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(0, 38);
+            this.button3.Location = new System.Drawing.Point(3, 39);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(407, 35);
+            this.button3.Size = new System.Drawing.Size(635, 35);
             this.button3.TabIndex = 133;
             this.button3.Text = "   Course Preferences";
             this.button3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -713,7 +714,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(828, 606);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.lblUserId);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblMessage);
